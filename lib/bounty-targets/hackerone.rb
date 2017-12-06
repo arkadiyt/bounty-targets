@@ -40,10 +40,10 @@ module BountyTargets
       @graphql_client = GraphQL::Client.new(schema: @schema, execute: @http)
       @graphql_client.allow_dynamic_queries = true
 
-      # Trying to paginate more than 25 teams at a time causes results to be silently dropped
+      # Trying to paginate more than 20 teams at a time causes results to be silently dropped
       @query = @graphql_client.parse <<~GRAPHQL
         query($after: String) {
-          teams(first: 25, after: $after) {
+          teams(first: 20, after: $after) {
             pageInfo {
               #{fields_for_type('PageInfo')},
             },

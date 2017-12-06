@@ -55,7 +55,7 @@ module BountyTargets
 
       bugcrowd = BountyTargets::Bugcrowd.new
       bugcrowd_data = bugcrowd.scan
-      IO.write(File.join(output_dir, 'bugcrowd_data.json'), JSON.pretty_generate(bugcrowd_data))
+      IO.write(File.join(output_dir, 'bugcrowd_data.json'), ::JSON.pretty_generate(bugcrowd_data))
 
       domains, wildcards = parse_all_uris(hackerone.uris + bugcrowd.uris)
       IO.write(File.join(output_dir, 'domains.txt'), domains.join("\n"))
