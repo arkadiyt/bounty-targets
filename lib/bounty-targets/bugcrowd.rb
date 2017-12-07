@@ -48,28 +48,25 @@ module BountyTargets
       response = Net::HTTP.get(URI(program_link))
       document = Nokogiri::HTML(response)
 
-      in_scope = document.css('h3 + ul li.bc-target').map do |node|
-        {
-          type: node.css('p').inner_text.strip,
-          target: node.css('code strong').inner_text.strip
-        }
-      end
-
-      out_of_scope = document.css('h4 + ul li.bc-target').map do |node|
-        {
-          type: node.css('p').inner_text.strip,
-          target: node.css('code strong').inner_text.strip
-        }
-      end
-
       {
         name: document.css('div.bounty-header-text h1').inner_text.strip,
         url: program_link,
         targets: {
-          in_scope: in_scope,
-          out_of_scope: out_of_scope
+          in_scope: scopes_to_hashes(document.css('h3 + ul li.bc-target')),
+          out_of_scope: scopes_to_hashes(document.css('h4 + ul li.bc-target'))
         }
       }
+    end
+
+    def scopes_to_hashes(nodes)
+      nodes.map do |node|
+        {
+          type: node.css('p').inner_text.strip,
+          target: node.css('code strong').inner_text.strip
+        }
+      end.sort_by do |scope|
+        scope[:target]
+      end
     end
   end
 end
