@@ -19,6 +19,12 @@ Metrics/LineLength:
 Metrics/MethodLength:
   Enabled: false
 
+Metrics/CyclomaticComplexity:
+  Max: 8
+
+Metrics/PerceivedComplexity:
+  Max: 8
+
 Layout/SpaceInsideHashLiteralBraces:
   EnforcedStyle: no_space
 
@@ -29,6 +35,9 @@ Layout/MultilineMethodCallIndentation:
   Enabled: false
 
 Style/Documentation:
+  Enabled: false
+
+Style/MultilineBlockChain:
   Enabled: false
 
 Style/NumericLiterals:
