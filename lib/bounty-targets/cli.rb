@@ -25,7 +25,7 @@ module BountyTargets
             # Fetch all hackerone/bugcrowd data
             scan!(File.join(Dir.pwd, 'data'))
 
-            return if `git status --porcelain`.empty?
+            break if `git status --porcelain`.empty?
 
             # Generate README file
             erb = ERB.new(IO.read(File.join(root, 'config', 'README.md.erb')))
@@ -35,7 +35,7 @@ module BountyTargets
             # Commit + push
             commits = IO.readlines(File.join(root, 'config', 'commits.txt'))
             commit_message = commits.sample(2).map(&:strip).map(&:capitalize).join(' ') +
-                ' (' + timestamp.strftime('%m-%d-%Y %R') + ')'
+                             ' (' + timestamp.strftime('%m-%d-%Y %R') + ')'
             `git add .`
             `git commit -m '#{commit_message}'`
             `GIT_SSH_COMMAND=#{git_ssh_cmd} git push origin master`
@@ -83,11 +83,8 @@ module BountyTargets
           # Links to source code (except exactly github.com, which is a scope on hackerone)
           next if uri.host == 'github.com' && !['', '/'].include?(uri.path)
 
-          if uri.host.include?('*')
-            wildcards << uri.host.downcase
-          else
-            domains << uri.host.downcase
-          end
+          arr = uri.host.include?('*') ? wildcards : domains
+          arr << uri.host.downcase
         end
       end
 
@@ -97,6 +94,7 @@ module BountyTargets
     def parse_uri(str)
       URI(str)
     rescue URI::InvalidURIError
+      nil
     end
 
     def with_ssh_keys(&_block)

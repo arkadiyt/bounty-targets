@@ -40,10 +40,10 @@ module BountyTargets
       @graphql_client = GraphQL::Client.new(schema: @schema, execute: @http)
       @graphql_client.allow_dynamic_queries = true
 
-      # Trying to paginate more than 20 teams at a time causes results to be silently dropped
+      # Trying to paginate more than 10 teams at a time causes results to be silently dropped
       @query = @graphql_client.parse <<~GRAPHQL
         query($after: String) {
-          teams(first: 20, after: $after) {
+          teams(first: 10, after: $after) {
             pageInfo {
               #{fields_for_type('PageInfo')},
             },
@@ -83,7 +83,7 @@ module BountyTargets
     def convert_to_hash(node)
       node = node.to_h
 
-      result = node.slice(*%w[name url offers_bounties offers_swag])
+      result = node.slice('name', 'url', 'offers_bounties', 'offers_swag')
 
       scopes = Array(node.dig('structured_scopes', 'edges'))
       if scopes.length == 100
@@ -95,12 +95,13 @@ module BountyTargets
           raise StandardError, 'Some scopes timed out'
         end
 
-        scope['node'].slice(*%w[asset_identifier asset_type availability_requirement confidentiality_requirement
-          eligible_for_bounty eligible_for_submission instruction integrity_requirement max_severity])
+        scope['node'].slice('asset_identifier', 'asset_type', 'availability_requirement',
+                            'confidentiality_requirement', 'eligible_for_bounty', 'eligible_for_submission',
+                            'instruction', 'integrity_requirement', 'max_severity')
       end.group_by do |scope|
         scope['eligible_for_submission']
-      end.map do |key, scopes|
-        [key, scopes.sort_by do |scope|
+      end.map do |key, targets|
+        [key, targets.sort_by do |scope|
           scope['asset_identifier']
         end]
       end.to_h
