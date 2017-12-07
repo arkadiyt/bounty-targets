@@ -84,28 +84,33 @@ module BountyTargets
       node = node.to_h
 
       result = node.slice(*%w[name url offers_bounties offers_swag])
-      result['targets'] = {
-        'in_scope' => [],
-        'out_of_scope' => [],
-      }
 
       scopes = Array(node.dig('structured_scopes', 'edges'))
       if scopes.length == 100
         raise StandardError, 'Need to start paginating scopes'
       end
-      scopes.each do |scope|
+
+      scopes = scopes.map do |scope|
         if scope.nil? || scope.empty?
           raise StandardError, 'Some scopes timed out'
         end
 
-        scope = scope['node']
-        key = scope['eligible_for_submission'] == true ? 'in_scope' : 'out_of_scope'
-        scope = scope.slice(*%w[asset_identifier asset_type availability_requirement confidentiality_requirement
+        scope['node'].slice(*%w[asset_identifier asset_type availability_requirement confidentiality_requirement
           eligible_for_bounty eligible_for_submission instruction integrity_requirement max_severity])
-        result['targets'][key] << scope
-      end
+      end.group_by do |scope|
+        scope['eligible_for_submission']
+      end.map do |key, scopes|
+        [key, scopes.sort_by do |scope|
+          scope['asset_identifier']
+        end]
+      end.to_h
 
-      result
+      result.merge(
+        'targets' => {
+          'in_scope' => scopes.fetch(true, []),
+          'out_of_scope' => scopes.fetch(false, [])
+        }
+      )
     end
 
     def fields_for_type(type, exclude = [])
