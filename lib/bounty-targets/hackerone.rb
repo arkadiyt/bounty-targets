@@ -89,7 +89,15 @@ module BountyTargets
         'out_of_scope' => [],
       }
 
-      Array(node.dig('structured_scopes', 'edges')).each do |scope|
+      scopes = Array(node.dig('structured_scopes', 'edges'))
+      if scopes.length == 100
+        raise StandardError, 'Need to start paginating scopes'
+      end
+      scopes.each do |scope|
+        if scope.nil? || scope.empty?
+          raise StandardError, 'Some scopes timed out'
+        end
+
         scope = scope['node']
         key = scope['eligible_for_submission'] == true ? 'in_scope' : 'out_of_scope'
         scope = scope.slice(*%w[asset_identifier asset_type availability_requirement confidentiality_requirement
