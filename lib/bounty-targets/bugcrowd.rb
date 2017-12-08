@@ -29,9 +29,9 @@ module BountyTargets
       program_links = []
 
       uri = URI('https://bugcrowd.com/programs')
-      Kernel.loop do
-        response = Net::HTTP.get(uri)
-        document = Nokogiri::HTML(response)
+      ::Kernel.loop do
+        response = ::Net::HTTP.get(uri)
+        document = ::Nokogiri::HTML(response)
         program_links.concat(document.css('li.bounty h4 a').map do |node|
           "https://bugcrowd.com#{node.attributes['href'].value}"
         end)
@@ -45,8 +45,8 @@ module BountyTargets
     end
 
     def parse_program(program_link)
-      response = Net::HTTP.get(URI(program_link))
-      document = Nokogiri::HTML(response)
+      response = ::Net::HTTP.get(URI(program_link))
+      document = ::Nokogiri::HTML(response)
 
       {
         name: document.css('div.bounty-header-text h1').inner_text.strip,

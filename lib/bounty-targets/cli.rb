@@ -35,7 +35,7 @@ module BountyTargets
             # Commit + push
             commits = IO.readlines(File.join(root, 'config', 'commits.txt'))
             commit_message = commits.sample(2).map(&:strip).map(&:capitalize).join(' ') +
-                             ' (' + timestamp.strftime('%m-%d-%Y %R') + ')'
+              ' (' + timestamp.strftime('%m-%d-%Y %R') + ')'
             `git add .`
             `git commit -m '#{commit_message}'`
             `GIT_SSH_COMMAND=#{git_ssh_cmd} git push origin master`
