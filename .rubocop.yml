@@ -7,9 +7,6 @@ inherit_from:
 Metrics/AbcSize:
   Enabled: false
 
-Metrics/BlockLength:
-  Enabled: false
-
 Metrics/ClassLength:
   Enabled: false
 
@@ -25,20 +22,14 @@ Metrics/CyclomaticComplexity:
 Metrics/PerceivedComplexity:
   Max: 8
 
+Layout/MultilineOperationIndentation:
+  EnforcedStyle: indented
+
 Layout/SpaceInsideHashLiteralBraces:
   EnforcedStyle: no_space
-
-Layout/MultilineMethodCallBraceLayout:
-  Enabled: false
-
-Layout/MultilineMethodCallIndentation:
-  Enabled: false
 
 Style/Documentation:
   Enabled: false
 
 Style/MultilineBlockChain:
-  Enabled: false
-
-Style/NumericLiterals:
   Enabled: false

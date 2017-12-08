@@ -1,3 +1,4 @@
+*.swp
 .bundle
 vendor/bundle
 bin/local
