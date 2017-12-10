@@ -9,6 +9,7 @@ require 'bounty-targets/cli'
 
 Raven.configure do |config|
   config.dsn = ENV['SENTRY_DSN'] if ENV.key?('SENTRY_DSN')
+  config.excluded_exceptions = %w[Interrupt] # Don't alert for ctrl-c
 end
 
 Raven.capture do
