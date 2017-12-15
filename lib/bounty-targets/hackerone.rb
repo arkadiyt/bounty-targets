@@ -54,7 +54,9 @@ module BountyTargets
         break if programs.size == result['total']
       end
 
-      programs
+      programs.sort_by do |program|
+        program[:id]
+      end
     end
 
     def program_targets(program)
