@@ -9,5 +9,5 @@ gem 'sentry-raven', '~> 2.7.1'
 
 group :development, :test do
   gem 'bundler-audit', '~> 0.6.0'
-  gem 'rubocop', '~> 0.51'
+  gem 'rubocop', '~> 0.52'
 end

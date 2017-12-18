@@ -33,3 +33,6 @@ Style/Documentation:
 
 Style/MultilineBlockChain:
   Enabled: false
+
+Style/FormatStringToken:
+  Enabled: false

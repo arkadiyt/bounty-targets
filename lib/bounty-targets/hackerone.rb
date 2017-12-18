@@ -68,11 +68,9 @@ module BountyTargets
         after = page.data.team.structured_scopes.page_info.end_cursor
         page_scopes = page.data.team.structured_scopes.edges
 
-        unless page.errors.details.empty?
-          raise StandardError, page.errors.details.to_s
-        end
-
+        raise StandardError, page.errors.details.to_s unless page.errors.details.empty?
         raise StandardError, 'Some scopes timed out' if page_scopes.any?(&:nil?)
+
         scopes.concat(page_scopes.map do |edge|
           edge.node.to_h
         end)
