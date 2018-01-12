@@ -45,9 +45,9 @@ module BountyTargets
             name: program['name'],
             handle: program['handle'],
             url: "https://hackerone.com#{program['url']}",
-            offers_bounties: program['meta']['offers_bounties'],
-            quick_to_bounty: program['meta']['quick_to_bounty'],
-            quick_to_first_response: program['meta']['quick_to_first_response']
+            offers_bounties: program['meta']['offers_bounties'] || false,
+            quick_to_bounty: program['meta']['quick_to_bounty'] || false,
+            quick_to_first_response: program['meta']['quick_to_first_response'] || false
           }
         end)
 
