@@ -75,13 +75,7 @@ module BountyTargets
           uri = parse_uri(target)
           uri = parse_uri("http://#{target}") if uri&.host.nil?
 
-          next unless uri&.host
-
-          # iOS/Android mobile app links
-          next if %w[itunes.apple.com play.google.com].include?(uri.host)
-
-          # Links to source code (except exactly github.com, which is a scope on hackerone)
-          next if uri.host == 'github.com' && !['', '/'].include?(uri.path)
+          next unless valid_uri?(uri)
 
           arr = uri.host.include?('*') ? wildcards : domains
           arr << uri.host.downcase
@@ -95,6 +89,21 @@ module BountyTargets
       URI(str)
     rescue URI::InvalidURIError
       nil
+    end
+
+    def valid_uri?(uri)
+      return false unless uri&.host
+
+      # iOS/Android mobile app links
+      return false if %w[itunes.apple.com play.google.com].include?(uri.host)
+
+      # Executable files
+      return false if uri.host.end_with?('.exe')
+
+      # Links to source code (except exactly github.com, which is a scope on hackerone)
+      return false if uri.host == 'github.com' && !['', '/'].include?(uri.path)
+
+      true
     end
 
     def with_ssh_keys(&_block)
