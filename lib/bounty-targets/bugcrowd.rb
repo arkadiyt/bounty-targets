@@ -32,7 +32,7 @@ module BountyTargets
       ::Kernel.loop do
         response = ::Net::HTTP.get(uri)
         document = ::Nokogiri::HTML(response)
-        program_links.concat(document.css('li.bounty h4 a').map do |node|
+        program_links.concat(document.css('h4.bc-panel__title a').map do |node|
           "https://bugcrowd.com#{node.attributes['href'].value}"
         end)
 
