@@ -57,7 +57,14 @@ module BountyTargets
       bugcrowd_data = bugcrowd.scan
       IO.write(File.join(output_dir, 'bugcrowd_data.json'), ::JSON.pretty_generate(bugcrowd_data))
 
-      domains, wildcards = parse_all_uris(hackerone.uris + bugcrowd.uris)
+      # Sanity check for changes in page markup, network issues, etc
+      hackerone_uris = hackerone.uris
+      bugcrowd_uris = bugcrowd.uris
+      if hackerone_uris.empty? || bugcrowd_uris.empty?
+        raise StandardError, "Missing uris (#{hackerone_uris.length} hackerone, #{bugcrowd_uris.length} bugcrowd)"
+      end
+
+      domains, wildcards = parse_all_uris(hackerone_uris + bugcrowd_uris)
       IO.write(File.join(output_dir, 'domains.txt'), domains.join("\n"))
       IO.write(File.join(output_dir, 'wildcards.txt'), wildcards.join("\n"))
     end
