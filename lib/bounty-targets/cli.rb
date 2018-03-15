@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'bounty-targets/bugcrowd'
-require 'bounty-targets/erb_context'
 require 'bounty-targets/hackerone'
 require 'erb'
 require 'fileutils'
@@ -29,7 +28,7 @@ module BountyTargets
 
             # Generate README file
             erb = ERB.new(IO.read(File.join(root, 'config', 'README.md.erb')))
-            readme = erb.result(ERBContext.new(timestamp: timestamp.strftime('%A %m/%d/%Y %R (UTC)')).bind)
+            readme = erb.result_with_hash(timestamp: timestamp.strftime('%A %m/%d/%Y %R (UTC)'))
             IO.write('README.md', readme)
 
             # Commit + push

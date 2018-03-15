@@ -56,5 +56,8 @@ DEPENDENCIES
   rubocop (~> 0.53)
   sentry-raven (~> 2.7.1)
 
+RUBY VERSION
+   ruby 2.5.0p0
+
 BUNDLED WITH
    1.16.1
