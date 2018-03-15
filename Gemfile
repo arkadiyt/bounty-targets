@@ -2,6 +2,8 @@
 
 source 'https://rubygems.org'
 
+ruby '2.5.0'
+
 gem 'activesupport', '~> 5.1.5'
 gem 'graphql-client', '~> 0.12.2'
 gem 'nokogiri', '~> 1.8.1'
