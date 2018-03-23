@@ -33,7 +33,12 @@ module BountyTargets
         response = ::Net::HTTP.get(uri)
         document = ::Nokogiri::HTML(response)
         program_links.concat(document.css('h4.bc-panel__title a').map do |node|
-          "https://bugcrowd.com#{node.attributes['href'].value}"
+          uri = URI(node.attributes['href'].value)
+          uri.absolute? ? uri.to_s : "https://bugcrowd.com#{uri}"
+        end.reject do |link|
+          # This is displayed as a "program" on the Bugcrowd directory, but it's
+          # a recruitment ad, not a program
+          link == 'https://www.bugcrowd.com/resource/help-wanted'
         end)
 
         next_page = document.css('li.bc-pagination__item--next a').first
