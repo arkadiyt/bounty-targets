@@ -102,7 +102,7 @@ module BountyTargets
       @query = @graphql_client.parse <<~GRAPHQL
         query($handle: String!, $after: String) {
           team(handle: $handle) {
-            structured_scopes(first: 100, after: $after) {
+            structured_scopes(first: 100, after: $after, archived: false) {
               pageInfo {
                 endCursor,
                 hasNextPage,

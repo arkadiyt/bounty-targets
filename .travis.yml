@@ -1,7 +1,7 @@
 language: ruby
 dist: trusty
 rvm:
-  - ruby-2.5
+  - ruby-2.5.0
 script:
   - bundle exec bundler-audit
   - bundle exec rubocop
