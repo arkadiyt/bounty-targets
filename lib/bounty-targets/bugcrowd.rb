@@ -53,8 +53,11 @@ module BountyTargets
       response = ::Net::HTTP.get(URI(program_link))
       document = ::Nokogiri::HTML(response)
 
+      name = document.css('div.bounty-header-text h1').inner_text.strip
+      raise StandardError, 'Bugcrowd program came back blank' if name.empty?
+
       {
-        name: document.css('div.bounty-header-text h1').inner_text.strip,
+        name: name,
         url: program_link,
         targets: {
           in_scope: scopes_to_hashes(document.css('h3 + ul li.bc-target')),
