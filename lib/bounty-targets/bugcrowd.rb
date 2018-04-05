@@ -56,9 +56,14 @@ module BountyTargets
       name = document.css('div.bounty-header-text h1').inner_text.strip
       raise StandardError, 'Bugcrowd program came back blank' if name.empty?
 
+      allows_disclosure = document.css('div.bc-panel__main').all? do |node|
+        node.inner_text !~ /This program does not allow disclosure/
+      end
+
       {
         name: name,
         url: program_link,
+        allows_disclosure: allows_disclosure,
         targets: {
           in_scope: scopes_to_hashes(document.css('li.bc-target:not(.bc-target--oos)')),
           out_of_scope: scopes_to_hashes(document.css('li.bc-target.bc-target--oos'))
