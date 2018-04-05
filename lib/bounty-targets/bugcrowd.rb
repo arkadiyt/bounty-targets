@@ -60,17 +60,20 @@ module BountyTargets
         name: name,
         url: program_link,
         targets: {
-          in_scope: scopes_to_hashes(document.css('h3 + ul li.bc-target')),
-          out_of_scope: scopes_to_hashes(document.css('h4 + ul li.bc-target'))
+          in_scope: scopes_to_hashes(document.css('li.bc-target:not(.bc-target--oos)')),
+          out_of_scope: scopes_to_hashes(document.css('li.bc-target.bc-target--oos'))
         }
       }
     end
 
     def scopes_to_hashes(nodes)
       nodes.map do |node|
+        scope = node.css('code').inner_text.split("\n").map(&:strip).reject(&:empty?)
+        raise StandardError, "Error parsing bugcrowd scope #{scope}" if scope.length > 2
+
         {
-          type: node.css('p').inner_text.strip,
-          target: node.css('code strong').inner_text.strip
+          type: scope[1] || '',
+          target: scope[0]
         }
       end.sort_by do |scope|
         scope[:target]

@@ -59,7 +59,7 @@ module BountyTargets
       # Sanity check for changes in page markup, network issues, etc
       hackerone_uris = hackerone.uris
       bugcrowd_uris = bugcrowd.uris
-      if hackerone_uris.empty? || bugcrowd_uris.empty?
+      if hackerone_uris.all?(&:empty?) || bugcrowd_uris.all?(&:empty?)
         raise StandardError, "Missing uris (#{hackerone_uris.length} hackerone, #{bugcrowd_uris.length} bugcrowd)"
       end
 
