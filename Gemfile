@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 
 ruby '2.5.0'
 
-gem 'activesupport', '~> 5.1.5'
+gem 'activesupport', '~> 5.2.0'
 gem 'graphql-client', '~> 0.12.2'
 gem 'nokogiri', '~> 1.8.1'
 gem 'sentry-raven', '~> 2.7.1'
