@@ -8,6 +8,7 @@ gem 'activesupport', '~> 5.2.0'
 gem 'graphql-client', '~> 0.12.2'
 gem 'nokogiri', '~> 1.8.1'
 gem 'sentry-raven', '~> 2.7.1'
+gem 'ssrf_filter', '~> 1.0.6'
 
 group :development, :test do
   gem 'bundler-audit', '~> 0.6.0'
