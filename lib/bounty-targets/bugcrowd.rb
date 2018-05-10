@@ -2,6 +2,7 @@
 
 require 'nokogiri'
 require 'net/https'
+require 'ssrf_filter'
 
 module BountyTargets
   class Bugcrowd
@@ -30,7 +31,7 @@ module BountyTargets
 
       uri = URI('https://bugcrowd.com/programs')
       ::Kernel.loop do
-        response = ::Net::HTTP.get(uri)
+        response = SsrfFilter.get(uri).body
         document = ::Nokogiri::HTML(response)
         program_links.concat(document.css('h4.bc-panel__title a').map do |node|
           uri = URI(node.attributes['href'].value)
