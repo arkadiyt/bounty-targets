@@ -54,7 +54,7 @@ module BountyTargets
       response = ::Net::HTTP.get(URI(program_link))
       document = ::Nokogiri::HTML(response)
 
-      name = document.css('div.bounty-header-text h1').inner_text.strip
+      name = document.css('h1.bc-panel__title').inner_text.strip
       raise StandardError, 'Bugcrowd program came back blank' if name.empty?
 
       allows_disclosure = document.css('div.bc-panel__main').all? do |node|
