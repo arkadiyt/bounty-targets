@@ -74,12 +74,13 @@ module BountyTargets
 
     def scopes_to_hashes(nodes)
       nodes.map do |node|
-        scope = node.css('code').inner_text.split("\n").map(&:strip).reject(&:empty?)
-        raise StandardError, "Error parsing bugcrowd scope #{scope}" if scope.length > 2
+        target = node.css('code').inner_text.strip
+        type = node.css('span').inner_text.strip
+        raise StandardError, 'Error parsing bugcrowd target' if target.nil? || target.empty?
 
         {
-          type: scope[1] || '',
-          target: scope[0]
+          type: type || '',
+          target: target
         }
       end.sort_by do |scope|
         scope[:target]
