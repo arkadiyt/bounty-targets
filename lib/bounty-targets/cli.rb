@@ -100,8 +100,8 @@ module BountyTargets
     def valid_uri?(uri)
       return false unless uri&.host
 
-      # iOS/Android mobile app links
-      return false if %w[itunes.apple.com play.google.com].include?(uri.host)
+      # iOS/Android/FireOS mobile app links
+      return false if %w[itunes.apple.com play.google.com www.amazon.com].include?(uri.host)
 
       # Executable files
       return false if uri.host.end_with?('.exe')
