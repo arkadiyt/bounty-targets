@@ -79,7 +79,7 @@ module BountyTargets
         raise StandardError, 'Error parsing bugcrowd target' if target.nil? || target.empty?
 
         {
-          type: type || '',
+          type: (type || '').downcase,
           target: target
         }
       end.sort_by do |scope|
