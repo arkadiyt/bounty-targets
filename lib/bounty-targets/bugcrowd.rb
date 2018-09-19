@@ -66,16 +66,15 @@ module BountyTargets
         url: program_link,
         allows_disclosure: allows_disclosure,
         targets: {
-          in_scope: scopes_to_hashes(document.css('li.bc-target:not(.bc-target--oos)')),
-          out_of_scope: scopes_to_hashes(document.css('li.bc-target.bc-target--oos'))
+          in_scope: scopes_to_hashes(document.css('#user-guides__bounty-brief__in-scope + div > table')),
+          out_of_scope: scopes_to_hashes(document.css('#user-guides__bounty-brief__out-of-scope + div > table'))
         }
       }
     end
 
     def scopes_to_hashes(nodes)
-      nodes.map do |node|
-        target = node.css('code').inner_text.strip
-        type = node.css('span').inner_text.strip
+      nodes.css('tbody > tr').map do |node|
+        target, type = node.css('td').map { |td| td.inner_text.strip }
         raise StandardError, 'Error parsing bugcrowd target' if target.nil? || target.empty?
 
         {
