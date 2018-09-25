@@ -106,8 +106,8 @@ module BountyTargets
       # Executable files
       return false if uri.host.end_with?('.exe')
 
-      # Links to source code (except exactly github.com, which is a scope on hackerone)
-      return false if uri.host == 'github.com' && !['', '/'].include?(uri.path)
+      # Links to source code (except exactly github.com/gitlab.com, which are scopes on hackerone)
+      return false if %w[github.com gitlab.com].include?(uri.host) && !['', '/'].include?(uri.path)
 
       true
     end
