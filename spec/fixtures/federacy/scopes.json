@@ -1,0 +1,50 @@
+[
+  {
+    "id": "9d922a40-7e09-4fab-9b90-8e0fe99e8faa",
+    "user_id": "679a5e47-e704-4d16-8293-09d5dec880ca",
+    "program_id": "50cea250-a08a-4581-93a5-5d973a261f45",
+    "scope_type": "website",
+    "identifier_type": null,
+    "identifier": "www.cointracker.io",
+    "in_scope": true,
+    "bounty": "money",
+    "impact": "high",
+    "created_at": "2018-08-07T02:51:12.644Z",
+    "updated_at": "2018-08-07T02:51:12.644Z",
+    "program_name": "CoinTracker",
+    "updatable": null,
+    "url": "https://api.federacy.com/api/program_scopes/9d922a40-7e09-4fab-9b90-8e0fe99e8faa"
+  },
+  {
+    "id": "294210a7-9bde-4135-90c0-9920cfeb694c",
+    "user_id": "679a5e47-e704-4d16-8293-09d5dec880ca",
+    "program_id": "50cea250-a08a-4581-93a5-5d973a261f45",
+    "scope_type": "mobile app",
+    "identifier_type": null,
+    "identifier": "https://itunes.apple.com/us/app/cointracker-crypto-portfolio/id1401499763?mt=8",
+    "in_scope": true,
+    "bounty": "money",
+    "impact": "high",
+    "created_at": "2018-08-07T02:51:12.646Z",
+    "updated_at": "2018-08-07T02:51:12.646Z",
+    "program_name": "CoinTracker",
+    "updatable": null,
+    "url": "https://api.federacy.com/api/program_scopes/294210a7-9bde-4135-90c0-9920cfeb694c"
+  },
+  {
+    "id": "45d9c240-a223-49f4-943f-d0637b87648b",
+    "user_id": "679a5e47-e704-4d16-8293-09d5dec880ca",
+    "program_id": "50cea250-a08a-4581-93a5-5d973a261f45",
+    "scope_type": "mobile app",
+    "identifier_type": null,
+    "identifier": "https://play.google.com/store/apps/details?id=io.cointracker.android",
+    "in_scope": true,
+    "bounty": "money",
+    "impact": "high",
+    "created_at": "2018-08-07T02:51:12.699Z",
+    "updated_at": "2018-08-07T02:51:12.699Z",
+    "program_name": "CoinTracker",
+    "updatable": null,
+    "url": "https://api.federacy.com/api/program_scopes/45d9c240-a223-49f4-943f-d0637b87648b"
+  }
+]
