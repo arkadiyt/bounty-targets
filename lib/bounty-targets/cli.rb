@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
-require 'bounty-targets/bugcrowd'
-require 'bounty-targets/hackerone'
+require 'bounty-targets'
 require 'erb'
 require 'fileutils'
 require 'tmpdir'
@@ -55,6 +54,10 @@ module BountyTargets
       bugcrowd = BountyTargets::Bugcrowd.new
       bugcrowd_data = bugcrowd.scan
       IO.write(File.join(output_dir, 'bugcrowd_data.json'), ::JSON.pretty_generate(bugcrowd_data))
+
+      federacy = BountyTargets::Federacy.new
+      federacy_data = federacy.scan
+      IO.write(File.join(output_dir, 'federacy_data.json'), ::JSON.pretty_generate(federacy_data))
 
       # Sanity check for changes in page markup, network issues, etc
       hackerone_uris = hackerone.uris
