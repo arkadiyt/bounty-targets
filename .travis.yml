@@ -5,3 +5,4 @@ rvm:
 script:
   - bundle exec bundler-audit
   - bundle exec rubocop
+  - bundle exec rspec

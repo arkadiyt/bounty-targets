@@ -44,6 +44,7 @@ module BountyTargets
 
         next_page = document.css('li.bc-pagination__item--next a').first
         break unless next_page
+
         uri = URI("https://bugcrowd.com#{next_page.attributes['href'].value}")
       end
 

@@ -13,8 +13,8 @@ gem 'ssrf_filter', '~> 1.0.6'
 group :development, :test do
   gem 'bundler-audit', '~> 0.6.0'
   gem 'coveralls', '~> 0.8.22'
+  gem 'pry-byebug', '~> 3.6.0'
   gem 'rspec', '~> 3.8.0'
   gem 'rubocop', '~> 0.59.2'
   gem 'webmock', '~> 3.4.2'
-  gem 'pry-byebug', '~> 3.6.0'
 end

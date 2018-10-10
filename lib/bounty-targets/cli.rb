@@ -45,28 +45,23 @@ module BountyTargets
     def scan!(output_dir)
       FileUtils.mkdir_p(output_dir)
 
-      hackerone = BountyTargets::Hackerone.new
-      IO.write(File.join(output_dir, 'hackerone_data.json'), ::JSON.pretty_generate(hackerone.scan))
-      schema = hackerone.schema
-      IO.write(File.join(output_dir, 'hackerone_schema.graphql'), schema.to_definition)
+      clients = {
+        hackerone: BountyTargets::Hackerone.new,
+        bugcrowd: BountyTargets::Bugcrowd.new,
+        federacy: BountyTargets::Federacy.new,
+        bountygraph: BountyTargets::Bountygraph.new
+      }
 
-      bugcrowd = BountyTargets::Bugcrowd.new
-      IO.write(File.join(output_dir, 'bugcrowd_data.json'), ::JSON.pretty_generate(bugcrowd.scan))
+      clients.map do |name, client|
+        Thread.new do
+          IO.write(File.join(output_dir, "#{name}_data.json"), ::JSON.pretty_generate(client.scan))
+          # Sanity check for changes in page markup, network issues, etc
+          raise StandardError, "Missing uris for #{name}" if client.uris.all?(&:empty?)
+        end
+      end.each(&:value)
+      IO.write(File.join(output_dir, 'hackerone_schema.graphql'), clients[:hackerone].schema.to_definition)
 
-      federacy = BountyTargets::Federacy.new
-      IO.write(File.join(output_dir, 'federacy_data.json'), ::JSON.pretty_generate(federacy.scan))
-
-      bountygraph = BountyTargets::Bountygraph.new
-      IO.write(File.join(output_dir, 'bountygraph_data.json'), ::JSON.pretty_generate(bountygraph.scan))
-
-      # Sanity check for changes in page markup, network issues, etc
-      hackerone_uris = hackerone.uris
-      bugcrowd_uris = bugcrowd.uris
-      if hackerone_uris.all?(&:empty?) || bugcrowd_uris.all?(&:empty?)
-        raise StandardError, "Missing uris (#{hackerone_uris.length} hackerone, #{bugcrowd_uris.length} bugcrowd)"
-      end
-
-      domains, wildcards = parse_all_uris(hackerone_uris + bugcrowd_uris)
+      domains, wildcards = parse_all_uris(clients[:hackerone].uris + clients[:bugcrowd].uris)
       IO.write(File.join(output_dir, 'domains.txt'), domains.join("\n"))
       IO.write(File.join(output_dir, 'wildcards.txt'), wildcards.join("\n"))
     end
