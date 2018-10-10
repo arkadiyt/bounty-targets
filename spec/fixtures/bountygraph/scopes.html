@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BountyGraph - Crowdfunded Bug Bounties and Security Audits</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.80">
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="+ZYC+6sSVy7PSjpzVsBWQg7cK3gfLyu8FSK3TPX4WheqNM/9WolqMV/+jtAxg9+IfR2SQlsNRyMXCGh2f5XX1A==" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+    <link rel="icon" href="/assets/favicon-9659584f16131747069d2c51046b674f609fdf6e5abbfc8c88805636e59f250f.ico">
+    <link rel="icon" type="image/png" href="/assets/favicon-32x32-f5adfa8b012f3e01fbcf036b2de858faccc5827e1e3496802832de483067e9bd.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/assets/favicon-16x16-51698c919346321272329b08f333bbe019566e400f2772e9e468be23d3d0b3f3.png" sizes="16x16">
+    <link rel="stylesheet" media="all" href="/assets/application-cd6330a6084bd63a315796f9bc16d83c226efecd743647409f31a9f83633d879.css" />
+    <script src="/assets/application-7d2398890e8f4b02d15f2263dcfb2fdea92dd4d7eda59ed84958b5530a2e697b.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <header class="clearfix">
+    <div id="header" class="nav-collapse nav-solid fadeInDown">
+        <div class="row clearfix">
+            <div class="col-1">
+                <div id="logo">
+                  <a href="/"><img src="/assets/logo_small-cef17143d1edbe7aa911ed5dade1340a3e092b0903f03c6718ebdd5c875d0d13.png" alt="Logo small" /></a>
+                </div>
+                <nav id="nav-main">
+                    <ul>
+                        <li>
+                            <a href="/about">About</a>
+                        </li>
+                        <li>
+                            <a href="/programs">Programs</a>
+                        </li>
+                        <li>
+                            <a href="/funders">Funders</a>
+                        </li>
+                        <li>
+                            <a href="/users/sign_in">Log in</a>
+                        </li>
+                        <li>
+                            <a href="/users/sign_up">Sign up</a>
+                        </li>
+                   </ul>
+                </nav>
+                <div id="nav-trigger"><span></span></div>
+                <nav id="nav-mobile"></nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+      <div id="content">
+        <aside id="companybios" class="scrollto text-center">
+    <div class="row clearfix">
+        <div class="companybio classic">
+              <img width="300" height="300" alt="BountyGraph Avatar" src="https://res.cloudinary.com/bountygraph/image/upload/s--FlqLj0jm--/c_fill,h_300,w_300/bountygraph_9fb33249-a95e-49e6-8451-363d7761bd3d.png" />
+            <h2>BountyGraph</h2>
+
+            <div class="shortdescription markdown-body"><p>Helping make open-source software secure through crowdfunded bug bounties and audits.</p>
+</div>
+
+            <div class="fundingbar"><div class="progress" style="width: 5.0%"></div></div>
+
+            <p class="fundingdescription">Up to $500 per critical bug of $10,000 goal, <a href="#publicpledges">publicly funded by 1 organization.</a></p>
+
+            <a href="https://bountygraph.com/programs/bountygraph/fund" class="button programbutton buttonemphasis">Fund Program</a>
+            <a href="https://bountygraph.com/programs/bountygraph/reports/new" class="button programbutton buttonemphasis">Submit Report</a>
+        </div>
+        <div class="companyspacer"></div>
+        <div class="programrules">
+          <h2>Program Rules</h2>
+        </div>
+        <div class="longdescription markdown-body">
+          <p>Our bug bounty program aims to discover any vulnerabilities in the BountyGraph platform and reward security researchers accordingly!</p>
+
+<p>We are interested in vulnerabilities that have a clear impact on the security of our service, especially vulnerabilities that would allow an attacker to extract sensitive information from bug reports.</p>
+
+<h2>Scope</h2>
+
+<ul>
+<li><code>bountygraph.com</code></li>
+<li><code>*.bountygraph.com</code></li>
+</ul>
+
+<h2>Exclusions</h2>
+
+<p>The following are out of scope and will not receive a bounty</p>
+
+<ul>
+<li>Denial of service</li>
+<li>Social engineering (including phishing) or physical attacks</li>
+<li>Automated vulnerability scanner output</li>
+<li>Attacks that would require physical access to the user's computer</li>
+<li>Attacks that would require access to the user's email account</li>
+</ul>
+
+<h2>Eligibility</h2>
+
+<p>BountyGraph will determine whether a reported issue is considered a security vulnerability and assign it a severity rating of Low, Moderate, High, or Critical.</p>
+
+<p>Depending on this rating, a valid report will pay out of the money raised so far, at roughly the percentages described in the table below.</p>
+
+<p>Please remember that not all submissions will qualify for a bounty. Generally only the first valid report of a particular bug will be accepted, and the final decision of the bounty reward is at the discretion of the Panel.</p>
+
+        </div>
+        <div class="companyspacer"></div>
+        <div class="payoutpolicy markdown-body">
+          <h2>BountyGraph Payout Policy</h2>
+          <p>Bounties are paid to hackers and project maintainers at the discretion of the funding organizations and the BountyGraph team. To be eligible for a bounty, each submission must meet BountyGraph&#39;s <a href="https://bountygraph.com/guidelines" rel="noopener noreferrer" target="_blank">report guidelines.</a></p>
+
+        </div>
+        <div class="companyspacer"></div>
+        <a name="publicpledges"></a>
+        <div class="publicpledges">
+          <h2>Public Pledges</h2>
+          <div class="publicpledge">
+              <img width="160" height="160" alt="BountyGraph Avatar" src="https://res.cloudinary.com/bountygraph/image/upload/s--boG9hzLV--/c_fill,h_160,w_160/PLEDGE_PROFILE_03d49488-97d5-40e6-b1db-56a0e839d6a5.png" />
+
+            <div class="pledgedisplaynamewrap">
+              <span class="pledgedisplayname">
+                  <a href="https://bountygraph.com/">BountyGraph</a>
+              </span>
+            </div>
+
+            <div class="pledgeamount"><span><strong>Up to $500</strong></span></div>
+          </div>
+        </div>
+    </div>
+</aside>
+
+      </div>
+      <div id="landing-footer" class="clearfix">
+  <div class="row clearfix">
+    <ul class="col-1">
+      <li>
+        <a title="FAQ" href="/faq">
+            FAQ
+        </a>
+      </li>
+      <li>
+        <a title="Terms of Service" href="/terms">
+            Terms of Service
+        </a>
+      </li>
+      <li>
+        <a title="Privacy Policy" href="/privacy">
+            Privacy Policy
+        </a>
+      </li>
+     <li>
+        <a target="_blank" href="https://twitter.com/bountygraph">
+            Twitter
+        </a>
+      </li>
+      <li>
+        <a target="_blank" href="https://bountygraph.tumblr.com/">
+            Blog
+        </a>
+      </li>
+      <li>
+        <a target="_blank" href="mailto:support@bountygraph.com">
+            Contact Us
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+    </div>
+  </body>
+</html>
