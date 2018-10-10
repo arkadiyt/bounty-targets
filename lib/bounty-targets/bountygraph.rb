@@ -26,7 +26,7 @@ module BountyTargets
 
     def directory_index
       document = ::Nokogiri::HTML(::Net::HTTP.get(::URI.parse('https://bountygraph.com/programs')))
-      programs = document.css('div.miniprogramdescription').map do |program|
+      document.css('div.miniprogramdescription').map do |program|
         anchor = program.css('span.miniprogramname > a')
         {
           id: anchor.attr('href').value.gsub(%r{^/programs/}, ''),
@@ -46,6 +46,7 @@ module BountyTargets
       current = document.css('h2:contains("Scope")').first
       ::Kernel.loop do
         break if current.nil? || (current.name == 'h2' && current.inner_text == 'Exclusions')
+
         scopes.concat(current.css('code').map(&:inner_text))
         current = current.next_sibling
       end

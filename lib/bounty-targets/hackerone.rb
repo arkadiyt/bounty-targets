@@ -10,6 +10,7 @@ module BountyTargets
   class Hackerone
     def scan
       return @scan_results if instance_variable_defined?(:@scan_results)
+
       schema # initialize graphql client
 
       @scan_results = directory_index.map do |program|
