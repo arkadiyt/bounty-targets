@@ -46,18 +46,18 @@ module BountyTargets
       FileUtils.mkdir_p(output_dir)
 
       hackerone = BountyTargets::Hackerone.new
-      hackerone_data = hackerone.scan
-      IO.write(File.join(output_dir, 'hackerone_data.json'), ::JSON.pretty_generate(hackerone_data))
+      IO.write(File.join(output_dir, 'hackerone_data.json'), ::JSON.pretty_generate(hackerone.scan))
       schema = hackerone.schema
       IO.write(File.join(output_dir, 'hackerone_schema.graphql'), schema.to_definition)
 
       bugcrowd = BountyTargets::Bugcrowd.new
-      bugcrowd_data = bugcrowd.scan
-      IO.write(File.join(output_dir, 'bugcrowd_data.json'), ::JSON.pretty_generate(bugcrowd_data))
+      IO.write(File.join(output_dir, 'bugcrowd_data.json'), ::JSON.pretty_generate(bugcrowd.scan))
 
       federacy = BountyTargets::Federacy.new
-      federacy_data = federacy.scan
-      IO.write(File.join(output_dir, 'federacy_data.json'), ::JSON.pretty_generate(federacy_data))
+      IO.write(File.join(output_dir, 'federacy_data.json'), ::JSON.pretty_generate(federacy.scan))
+
+      bountygraph = BountyTargets::Bountygraph.new
+      IO.write(File.join(output_dir, 'bountygraph_data.json'), ::JSON.pretty_generate(bountygraph.scan))
 
       # Sanity check for changes in page markup, network issues, etc
       hackerone_uris = hackerone.uris
