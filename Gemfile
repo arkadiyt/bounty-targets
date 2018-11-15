@@ -6,7 +6,7 @@ ruby '2.5.0'
 
 gem 'activesupport', '~> 5.2.1'
 gem 'graphql-client', '~> 0.13.0'
-gem 'nokogiri', '~> 1.8.4'
+gem 'nokogiri', '~> 1.8.5'
 gem 'sentry-raven', '~> 2.7.4'
 gem 'ssrf_filter', '~> 1.0.6'
 
