@@ -3,7 +3,6 @@
 module BountyTargets
 end
 
-require 'bounty-targets/bountygraph'
 require 'bounty-targets/bugcrowd'
 require 'bounty-targets/cli'
 require 'bounty-targets/federacy'

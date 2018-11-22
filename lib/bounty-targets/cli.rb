@@ -20,7 +20,8 @@ module BountyTargets
             `git config user.name 'bounty-targets'`
             `git config user.email '<>'`
 
-            # Fetch all hackerone/bugcrowd data
+            # Fetch all bug bounty data
+            ::FileUtils.rm_rf('data')
             scan!(File.join(Dir.pwd, 'data'))
 
             break if `git status --porcelain`.empty?
@@ -48,8 +49,7 @@ module BountyTargets
       clients = {
         hackerone: BountyTargets::Hackerone.new,
         bugcrowd: BountyTargets::Bugcrowd.new,
-        federacy: BountyTargets::Federacy.new,
-        bountygraph: BountyTargets::Bountygraph.new
+        federacy: BountyTargets::Federacy.new
       }
 
       clients.map do |name, client|
