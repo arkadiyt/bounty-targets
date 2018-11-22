@@ -142,11 +142,12 @@ module BountyTargets
         scope['asset_identifier']
       end
 
-      # Handle Yahoo's unusual usage of scopes
+      # Handle Oath's unusual usage of scopes
+      # This returns some garbage data that gets filtered out later
       yahoo_uris = scan.find do |program|
-        program[:handle] == 'yahoo'
+        program[:handle] == 'oath'
       end['targets']['in_scope'].flat_map do |scope|
-        URI.extract(scope['instruction'].scan(/\(([^)]*)\)/).flatten.join(' '))
+        URI.extract(scope['instruction'] + "\n" + scope['instruction'].scan(/\(([^)]*)\)/).flatten.join(' '))
       end
 
       uris + yahoo_uris
