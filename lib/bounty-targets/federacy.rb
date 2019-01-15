@@ -29,7 +29,7 @@ module BountyTargets
     private
 
     def directory_index
-      programs = ::JSON.parse(::Net::HTTP.get(::URI.parse('https://api.federacy.com/api/programs')))
+      programs = ::JSON.parse(::Net::HTTP.get(::URI.parse('https://one.federacy.com/api/programs')))
       programs.map do |program|
         {
           id: program['id'],
@@ -40,7 +40,7 @@ module BountyTargets
     end
 
     def program_scopes(program)
-      uri = ::URI.parse("https://api.federacy.com/api/program_scopes?program_id=#{program[:id]}")
+      uri = ::URI.parse("https://one.federacy.com/api/program_scopes?program_id=#{program[:id]}")
       response = ::JSON.parse(::Net::HTTP.get(uri))
       scopes = response.group_by { |scope| scope['in_scope'] }
       {
