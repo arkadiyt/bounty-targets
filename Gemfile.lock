@@ -102,7 +102,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activesupport (~> 5.2.2)
   bundler-audit (~> 0.6.1)
   coveralls (~> 0.8.22)
   graphql-client (~> 0.14.0)

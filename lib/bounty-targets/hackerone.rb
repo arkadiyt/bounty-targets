@@ -1,10 +1,11 @@
 # frozen_string_literal: true
 
-require 'active_support/core_ext/hash/slice'
-require 'json'
 require 'graphql/client'
 require 'graphql/client/http'
+require 'json'
+require 'kramdown'
 require 'ssrf_filter'
+require 'twingly/url/utilities'
 
 module BountyTargets
   class Hackerone
@@ -85,7 +86,7 @@ module BountyTargets
         scope['eligible_for_submission']
       end.map do |key, targets|
         [key, targets.sort_by do |scope|
-          scope['asset_identifier']
+          [scope['asset_identifier'], scope['asset_type']]
         end]
       end.to_h
 
@@ -144,13 +145,15 @@ module BountyTargets
 
       # Handle Oath's unusual usage of scopes
       # This returns some garbage data that gets filtered out later
-      yahoo_uris = scan.find do |program|
+      oath_uris = scan.find do |program|
         program[:handle] == 'oath'
       end['targets']['in_scope'].flat_map do |scope|
-        URI.extract(scope['instruction'] + "\n" + scope['instruction'].scan(/\(([^)]*)\)/).flatten.join(' '))
+        markdown = Kramdown::Document.new(scope['instruction']).to_html
+        URI.extract(scope['instruction'] + "\n" + scope['instruction'].scan(/\(([^)]*)\)/).flatten.join(' ')) +
+          Twingly::URL::Utilities.extract_valid_urls(markdown).map(&:to_s)
       end
 
-      uris + yahoo_uris
+      uris + oath_uris
     end
   end
 end
