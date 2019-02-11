@@ -3,6 +3,7 @@
 require 'bounty-targets'
 require 'erb'
 require 'fileutils'
+require 'net/https' # temporary workaround
 require 'tmpdir'
 require 'uri'
 
@@ -49,19 +50,23 @@ module BountyTargets
       clients = {
         hackerone: BountyTargets::Hackerone.new,
         bugcrowd: BountyTargets::Bugcrowd.new,
-        federacy: BountyTargets::Federacy.new
+        federacy: BountyTargets::Federacy.new,
+        hackenproof: BountyTargets::Hackenproof.new
       }
 
-      clients.map do |name, client|
+      uris = clients.map do |name, client|
         Thread.new do
           IO.write(File.join(output_dir, "#{name}_data.json"), ::JSON.pretty_generate(client.scan))
           # Sanity check for changes in page markup, network issues, etc
-          raise StandardError, "Missing uris for #{name}" if client.uris.all?(&:empty?)
+          uris = client.uris
+          raise StandardError, "Missing uris for #{name}" if uris.all?(&:empty?)
+
+          uris
         end
-      end.each(&:value)
+      end.flat_map(&:value)
       IO.write(File.join(output_dir, 'hackerone_schema.graphql'), clients[:hackerone].schema.to_definition)
 
-      domains, wildcards = parse_all_uris(clients[:hackerone].uris + clients[:bugcrowd].uris)
+      domains, wildcards = parse_all_uris(uris)
       IO.write(File.join(output_dir, 'domains.txt'), domains.join("\n"))
       IO.write(File.join(output_dir, 'wildcards.txt'), wildcards.join("\n"))
     end
