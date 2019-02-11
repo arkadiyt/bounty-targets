@@ -19,6 +19,9 @@ Metrics/LineLength:
 Metrics/MethodLength:
   Enabled: false
 
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
 Layout/MultilineOperationIndentation:
   EnforcedStyle: indented
 
