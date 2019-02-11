@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require 'nokogiri'
-require 'net/https'
 require 'ssrf_filter'
 
 module BountyTargets
@@ -52,7 +51,7 @@ module BountyTargets
     end
 
     def parse_program(program_link)
-      response = ::Net::HTTP.get(URI(program_link))
+      response = ::SsrfFilter.get(URI(program_link)).body
       document = ::Nokogiri::HTML(response)
 
       name = document.css('h1.bc-panel__title').inner_text.strip

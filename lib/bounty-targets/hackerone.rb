@@ -2,9 +2,9 @@
 
 require 'active_support/core_ext/hash/slice'
 require 'json'
-require 'net/https'
 require 'graphql/client'
 require 'graphql/client/http'
+require 'ssrf_filter'
 
 module BountyTargets
   class Hackerone
@@ -37,7 +37,7 @@ module BountyTargets
       programs = []
       ::Kernel.loop do
         uri.query = ::URI.encode_www_form(query: 'type:hackerone', sort: 'published_at:ascending', page: page)
-        result = ::JSON.parse(::Net::HTTP.get(uri))
+        result = ::JSON.parse(SsrfFilter.get(uri).body)
         page += 1
 
         programs.concat(result['results'].map do |program|
