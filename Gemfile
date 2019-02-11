@@ -4,11 +4,12 @@ source 'https://rubygems.org'
 
 ruby '2.5.0'
 
-gem 'activesupport', '~> 5.2.2'
 gem 'graphql-client', '~> 0.14.0'
+gem 'kramdown', '~> 2.1.0'
 gem 'nokogiri', '~> 1.10.1'
 gem 'sentry-raven', '~> 2.9.0'
 gem 'ssrf_filter', '~> 1.0.6'
+gem 'twingly-url', '~> 6.0.0'
 
 group :development, :test do
   gem 'bundler-audit', '~> 0.6.1'
