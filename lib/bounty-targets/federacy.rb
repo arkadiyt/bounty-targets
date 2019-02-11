@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'json'
-require 'net/https'
+require 'ssrf_filter'
 require 'uri'
 
 module BountyTargets
@@ -29,7 +29,7 @@ module BountyTargets
     private
 
     def directory_index
-      programs = ::JSON.parse(::Net::HTTP.get(::URI.parse('https://one.federacy.com/api/programs')))
+      programs = ::JSON.parse(SsrfFilter.get(::URI.parse('https://one.federacy.com/api/programs')).body)
       programs.map do |program|
         {
           id: program['id'],
@@ -41,7 +41,7 @@ module BountyTargets
 
     def program_scopes(program)
       uri = ::URI.parse("https://one.federacy.com/api/program_scopes?program_id=#{program[:id]}")
-      response = ::JSON.parse(::Net::HTTP.get(uri))
+      response = ::JSON.parse(SsrfFilter.get(uri).body)
       scopes = response.group_by { |scope| scope['in_scope'] }
       {
         targets: {

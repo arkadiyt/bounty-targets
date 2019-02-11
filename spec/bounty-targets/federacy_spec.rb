@@ -11,7 +11,8 @@ describe BountyTargets::Federacy do
 
   it 'should fetch a list of programs' do
     programs = IO.read('spec/fixtures/federacy/programs.json')
-    stub_request(:get, 'https://one.federacy.com/api/programs').to_return(status: 200, body: programs)
+    stub_request(:get, %r{/api/programs}).with(headers: {host: 'one.federacy.com'})
+      .to_return(status: 200, body: programs)
     expect(subject.directory_index).to eq(
       [
         {
@@ -40,8 +41,9 @@ describe BountyTargets::Federacy do
 
   it 'should fetch program scopes' do
     scopes = IO.read('spec/fixtures/federacy/scopes.json')
-    uri = 'https://one.federacy.com/api/program_scopes?program_id=50cea250-a08a-4581-93a5-5d973a261f45'
-    stub_request(:get, uri).to_return(status: 200, body: scopes)
+    stub_request(:get, %r{/api/program_scopes})
+      .with(headers: {host: 'one.federacy.com'}, query: {program_id: '50cea250-a08a-4581-93a5-5d973a261f45'})
+      .to_return(status: 200, body: scopes)
     expect(subject.program_scopes(id: '50cea250-a08a-4581-93a5-5d973a261f45')).to eq(
       targets: {
         in_scope: [
@@ -68,11 +70,4 @@ describe BountyTargets::Federacy do
       }
     )
   end
-
-  # TODO
-  # it 'should merge results correctly' do
-  # end
-  #
-  # it 'should filter uris' do
-  # end
 end
