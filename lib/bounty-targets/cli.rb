@@ -51,6 +51,7 @@ module BountyTargets
         hackerone: BountyTargets::Hackerone.new,
         bugcrowd: BountyTargets::Bugcrowd.new,
         federacy: BountyTargets::Federacy.new,
+        intigriti: BountyTargets::Intigriti.new,
         hackenproof: BountyTargets::Hackenproof.new
       }
 
