@@ -146,7 +146,7 @@ module BountyTargets
       # Handle Oath's unusual usage of scopes
       # This returns some garbage data that gets filtered out later
       oath_uris = scan.find do |program|
-        program[:handle] == 'oath'
+        program[:handle] == 'verizonmedia'
       end['targets']['in_scope'].flat_map do |scope|
         markdown = Kramdown::Document.new(scope['instruction']).to_html
         URI.extract(scope['instruction'] + "\n" + scope['instruction'].scan(/\(([^)]*)\)/).flatten.join(' ')) +
