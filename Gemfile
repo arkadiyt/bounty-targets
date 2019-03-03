@@ -14,8 +14,8 @@ gem 'twingly-url', '~> 6.0.0'
 group :development, :test do
   gem 'bundler-audit', '~> 0.6.1'
   gem 'coveralls', '~> 0.8.22'
-  gem 'pry-byebug', '~> 3.6.0'
+  gem 'pry-byebug', '~> 3.7.0'
   gem 'rspec', '~> 3.8.0'
-  gem 'rubocop', '~> 0.64.0'
+  gem 'rubocop', '~> 0.65.0'
   gem 'webmock', '~> 3.5.1'
 end
