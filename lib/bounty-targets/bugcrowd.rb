@@ -25,26 +25,24 @@ module BountyTargets
 
     private
 
+    PAGE_SIZE = 25
+
     def directory_index
       program_links = []
 
-      uri = URI('https://bugcrowd.com/programs')
+      offset = 0
+      uri = URI('https://bugcrowd.com/programs.json')
       ::Kernel.loop do
-        response = SsrfFilter.get(uri).body
-        document = ::Nokogiri::HTML(response)
-        program_links.concat(document.css('h4.bc-panel__title a').map do |node|
-          uri = URI(node.attributes['href'].value)
-          uri.absolute? ? uri.to_s : "https://bugcrowd.com#{uri}"
-        end.reject do |link|
-          # This is displayed as a "program" on the Bugcrowd directory, but it's
-          # a recruitment ad, not a program
-          link == 'https://www.bugcrowd.com/resource/help-wanted'
-        end)
+        response = JSON.parse(SsrfFilter.get(uri).body)
+        programs = response['programs'].map do |program|
+          "https://bugcrowd.com#{program['program_url']}"
+        end
+        program_links.concat(programs)
 
-        next_page = document.css('li.bc-pagination__item--next a').first
-        break unless next_page
+        break if programs.length < PAGE_SIZE
 
-        uri = URI("https://bugcrowd.com#{next_page.attributes['href'].value}")
+        offset += PAGE_SIZE
+        uri = URI("https://bugcrowd.com/programs.json?offset[]=#{offset}")
       end
 
       program_links
