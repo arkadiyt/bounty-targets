@@ -28,10 +28,28 @@ module BountyTargets
 
     private
 
+    def retryable(tries = 3)
+      yield
+    rescue StandardError
+      tries -= 1
+      tries <= 0 ? raise : sleep(1) && retry
+    end
+
+    def http_get(url)
+      uri = ::URI.parse(url)
+      retryable do
+        # Can't use ssrf_filter here due to webmock bug handling ipv6 addresses
+        response = Net::HTTP.start(uri.host, uri.port, use_ssl: uri.scheme == 'https') do |http|
+          http.get(uri)
+        end
+        raise StandardError, "Got #{response.code} response from Hackenproof" if response.code != '200'
+
+        response.body
+      end
+    end
+
     def directory_index
-      uri = URI('https://hackenproof.com/programs')
-      # Can't use ssrf_filter here due to webmock bug handling ipv6 addresses
-      document = ::Nokogiri::HTML(::Net::HTTP.get(uri))
+      document = ::Nokogiri::HTML(http_get('https://hackenproof.com/programs'))
 
       document.css('div.bounty-programs-list--item').map do |node|
         link = node.css('h2 a').first
@@ -45,10 +63,7 @@ module BountyTargets
     end
 
     def program_scopes(program)
-      uri = ::URI.parse(program[:url])
-      # Can't use ssrf_filter here due to webmock bug handling ipv6 addresses
-      document = ::Nokogiri::HTML(::Net::HTTP.get(uri))
-
+      document = ::Nokogiri::HTML(http_get(program[:url]))
       h4s = document.css('div#in_scope h4')
       {
         targets: {
