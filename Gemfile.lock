@@ -41,7 +41,7 @@ GEM
     mini_portile2 (2.4.0)
     minitest (5.11.3)
     multipart-post (2.0.0)
-    nokogiri (1.10.1)
+    nokogiri (1.10.4)
       mini_portile2 (~> 2.4.0)
     parallel (1.14.0)
     parser (2.6.0.0)
@@ -112,7 +112,7 @@ DEPENDENCIES
   coveralls (~> 0.8.22)
   graphql-client (~> 0.14.0)
   kramdown (~> 2.1.0)
-  nokogiri (~> 1.10.1)
+  nokogiri (~> 1.10.4)
   pry-byebug (~> 3.7.0)
   rspec (~> 3.8.0)
   rubocop (~> 0.65.0)
@@ -125,4 +125,4 @@ RUBY VERSION
    ruby 2.5.0p0
 
 BUNDLED WITH
-   1.16.3
+   1.17.3
