@@ -28,11 +28,11 @@ module BountyTargets
 
     private
 
-    def retryable(tries = 3)
+    def retryable(tries = 5)
       yield
     rescue StandardError
       tries -= 1
-      tries <= 0 ? raise : sleep(1) && retry
+      tries <= 0 ? raise : sleep(2) && retry
     end
 
     def http_get(url)
