@@ -145,15 +145,17 @@ module BountyTargets
 
       # Handle Oath's unusual usage of scopes
       # This returns some garbage data that gets filtered out later
-      oath_uris = scan.find do |program|
-        program[:handle] == 'verizonmedia'
-      end['targets']['in_scope'].flat_map do |scope|
-        markdown = Kramdown::Document.new(scope['instruction']).to_html
-        URI.extract(scope['instruction'] + "\n" + scope['instruction'].scan(/\(([^)]*)\)/).flatten.join(' ')) +
-          Twingly::URL::Utilities.extract_valid_urls(markdown).map(&:to_s)
+      extra_uris = scan.select do |program|
+        %w[verizonmedia spotify].include?(program[:handle])
+      end.flat_map do |program|
+        program['targets']['in_scope'].flat_map do |scope|
+          markdown = Kramdown::Document.new(scope['instruction']).to_html
+          URI.extract(scope['instruction'] + "\n" + scope['instruction'].scan(/\(([^)]*)\)/).flatten.join(' ')) +
+            Twingly::URL::Utilities.extract_valid_urls(markdown).map(&:to_s)
+        end
       end
 
-      uris + oath_uris
+      uris + extra_uris
     end
   end
 end
