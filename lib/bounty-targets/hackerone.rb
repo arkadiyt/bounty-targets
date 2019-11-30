@@ -66,7 +66,10 @@ module BountyTargets
       after = nil
 
       Kernel.loop do
-        page = @graphql_client.query(@query, variables: {handle: program[:handle], after: after})
+        page = nil
+        retryable do
+          page = @graphql_client.query(@query, variables: {handle: program[:handle], after: after})
+        end
         after = page.data.team.structured_scopes.page_info.end_cursor
         page_scopes = page.data.team.structured_scopes.edges
 
@@ -156,6 +159,13 @@ module BountyTargets
       end
 
       uris + extra_uris
+    end
+
+    def retryable(tries = 5)
+      yield
+    rescue StandardError
+      tries -= 1
+      tries <= 0 ? raise : sleep(2) && retry
     end
   end
 end
