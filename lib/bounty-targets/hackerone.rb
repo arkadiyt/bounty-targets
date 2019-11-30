@@ -66,12 +66,17 @@ module BountyTargets
       after = nil
 
       Kernel.loop do
-        page = @graphql_client.query(@query, variables: {handle: program[:handle], after: after})
-        after = page.data.team.structured_scopes.page_info.end_cursor
-        page_scopes = page.data.team.structured_scopes.edges
+        page = nil
+        page_scopes = nil
+        retryable do
+          page = @graphql_client.query(@query, variables: {handle: program[:handle], after: after})
 
-        raise StandardError, page.errors.details.to_s unless page.errors.details.empty?
-        raise StandardError, 'Some scopes timed out' if page_scopes.any?(&:nil?)
+          after = page.data.team.structured_scopes.page_info.end_cursor
+          page_scopes = page.data.team.structured_scopes.edges
+
+          raise StandardError, page.errors.details.to_s unless page.errors.details.empty?
+          raise StandardError, 'Some scopes timed out' if page_scopes.any?(&:nil?)
+        end
 
         scopes.concat(page_scopes.map do |edge|
           edge.node.to_h
@@ -156,6 +161,13 @@ module BountyTargets
       end
 
       uris + extra_uris
+    end
+
+    def retryable(tries = 5)
+      yield
+    rescue StandardError
+      tries -= 1
+      tries <= 0 ? raise : sleep(2) && retry
     end
   end
 end
