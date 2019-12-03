@@ -29,18 +29,18 @@ module BountyTargets
     private
 
     def directory_index
-      programs = ::JSON.parse(SsrfFilter.get(::URI.parse('https://one.federacy.com/api/programs')).body)
+      programs = ::JSON.parse(SsrfFilter.get(::URI.parse('https://www.federacy.com/api/public_programs')).body)
       programs.map do |program|
         {
           id: program['id'],
           name: program['program_name'],
-          url: program['url']
+          url: "https://www.federacy.com/#{program['slug']}"
         }
       end
     end
 
     def program_scopes(program)
-      uri = ::URI.parse("https://one.federacy.com/api/program_scopes?program_id=#{program[:id]}")
+      uri = ::URI.parse("https://www.federacy.com/api/public_programs/#{program[:id]}/program_scopes")
       response = ::JSON.parse(SsrfFilter.get(uri).body)
       scopes = response.group_by { |scope| scope['in_scope'] }
       {
@@ -55,9 +55,7 @@ module BountyTargets
       Array(scopes).map do |scope|
         {
           type: scope['scope_type'],
-          target: scope['identifier'],
-          bounty: scope['bounty'],
-          impact: scope['impact']
+          target: scope['identifier']
         }
       end
     end
