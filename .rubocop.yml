@@ -19,6 +19,12 @@ Metrics/LineLength:
 Metrics/MethodLength:
   Enabled: false
 
+Layout/CaseIndentation:
+  EnforcedStyle: end
+
+Layout/EndAlignment:
+  EnforcedStyleAlignWith: variable
+
 Layout/MultilineMethodCallIndentation:
   EnforcedStyle: indented
 
