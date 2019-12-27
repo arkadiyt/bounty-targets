@@ -59,10 +59,37 @@ module BountyTargets
         node.inner_text !~ /This program does not allow disclosure/
       end
 
+      managed_by_bugcrowd = document.css('.bc-stat').any? do |node|
+        node.inner_text =~ /Managed by Bugcrowd/
+      end
+
+      safe_harbor = document.css('.bc-stat').find do |node|
+        node.inner_text =~ /safe harbor/i
+      end
+      safe_harbor_value = case safe_harbor.inner_text.strip
+      when 'Safe harbor'
+        'full'
+      when 'Partial safe harbor'
+        'partial'
+      else
+        'none'
+      end
+
+      max_payout = document.css('.bc-program-card__reward')
+      max_payout_amount = max_payout.inner_text.strip.match(/\A.* – \$([0-9,]+).*per vulnerability\Z/m)
+      max_payout_amount = if max_payout_amount.nil?
+        0
+      else
+        max_payout_amount[1].gsub(',', '').to_i
+      end
+
       {
         name: name,
         url: program_link,
         allows_disclosure: allows_disclosure,
+        managed_by_bugcrowd: managed_by_bugcrowd,
+        safe_harbor: safe_harbor_value,
+        max_payout: max_payout_amount,
         targets: {
           in_scope: scopes_to_hashes(document.css('#user-guides__bounty-brief__in-scope + div > table')),
           out_of_scope: scopes_to_hashes(document.css('#user-guides__bounty-brief__out-of-scope + div > table'))
