@@ -49,7 +49,8 @@ module BountyTargets
             url: "https://hackerone.com#{program['url']}",
             offers_bounties: program['meta']['offers_bounties'] || false,
             quick_to_bounty: program['meta']['quick_to_bounty'] || false,
-            quick_to_first_response: program['meta']['quick_to_first_response'] || false
+            quick_to_first_response: program['meta']['quick_to_first_response'] || false,
+            submission_state: program['meta']['submission_state']
           }
         end)
 
@@ -141,6 +142,8 @@ module BountyTargets
 
     def uris
       uris = scan.flat_map do |program|
+        next [] if %w[paused disabled].include?(program[:submission_state])
+
         program['targets']['in_scope']
       end.select do |scope|
         scope['asset_type'] == 'URL'
