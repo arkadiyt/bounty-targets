@@ -17,7 +17,7 @@ module BountyTargets
         Dir.mktmpdir do |tmpdir|
           Dir.chdir(tmpdir) do
             # Clone + setup
-            `GIT_SSH_COMMAND=#{git_ssh_cmd} git clone git@github.com:arkadiyt/bounty-targets-data.git .`
+            `GIT_SSH_COMMAND=#{git_ssh_cmd} git clone #{ENV['GIT_HOST']} .`
             `git config user.name 'bounty-targets'`
             `git config user.email '<>'`
 
