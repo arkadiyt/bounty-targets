@@ -121,9 +121,9 @@ module BountyTargets
 
         privkey_path = File.join(tmpdir, 'id_rsa')
         IO.write(privkey_path, ENV['SSH_PRIV_KEY'])
-	File.chmod(0600, privkey_path)
+        File.chmod(0600, privkey_path)
         IO.write(File.join(tmpdir, 'id_rsa.pub'), ENV['SSH_PUB_KEY'])
-	File.chmod(0644, "#{tmpdir}/id_rsa.pub")
+        File.chmod(0644, "#{tmpdir}/id_rsa.pub")
 
         git_ssh = "\"ssh -i '#{privkey_path}' -o UserKnownHostsFile='#{known_hosts_path}' -o HashKnownHosts='no'\""
 
