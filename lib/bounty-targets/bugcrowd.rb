@@ -17,7 +17,7 @@ module BountyTargets
       scan.flat_map do |program|
         program[:targets][:in_scope]
       end.select do |scope|
-        ['', 'api', 'other', 'website'].include?(scope[:type])
+        ['api testing', 'other', 'website testing'].include?(scope[:type])
       end.map do |scope|
         scope[:target]
       end
