@@ -48,11 +48,12 @@ module BountyTargets
       FileUtils.mkdir_p(output_dir)
 
       clients = {
-        hackerone: BountyTargets::Hackerone.new,
         bugcrowd: BountyTargets::Bugcrowd.new,
         federacy: BountyTargets::Federacy.new,
+        hackenproof: BountyTargets::Hackenproof.new,
+        hackerone: BountyTargets::Hackerone.new,
         intigriti: BountyTargets::Intigriti.new,
-        hackenproof: BountyTargets::Hackenproof.new
+        yeswehack: BountyTargets::YesWeHack.new
       }
 
       uris = clients.map do |name, client|

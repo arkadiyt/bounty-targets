@@ -2,8 +2,6 @@
 
 require 'json'
 require 'ssrf_filter'
-require 'kramdown'
-require 'twingly/url/utilities'
 require 'uri'
 
 module BountyTargets

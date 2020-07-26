@@ -1,0 +1,166 @@
+{
+  "disabled": false,
+  "managed": false,
+  "bounty_reward_max": 2000,
+  "reports_count": 26,
+  "status": "V",
+  "title": "StopCovid France Bug Bounty program",
+  "slug": "stopcovid-bugbounty-program",
+  "banner": {
+    "name": "e34351907898b9e3469e0e28be1a2510",
+    "original_name": "pgm_banner.png",
+    "mime_type": "image/png",
+    "size": 160898,
+    "url": "https://cdn-yeswehack.com/program/banner/e34351907898b9e3469e0e28be1a2510"
+  },
+  "thumbnail": {
+    "name": "4733102a9d8d3fe548f22c5d060b46ec",
+    "original_name": "thumb_pgm.png",
+    "mime_type": "image/png",
+    "size": 42713,
+    "url": "https://cdn-yeswehack.com/program/thumbnail/4733102a9d8d3fe548f22c5d060b46ec"
+  },
+  "rules_html": "<h2>StopCovid</h2>\n<p>Inria, ANSSI, Capgemini, Dassault Systèmes, Inserm, Lunabee Studio, Orange, Santé Publique France et Withings ont créé le 26 avril 2020 l’équipe-projet StopCovid afin de structurer et renforcer leur contribution au projet gouvernemental de mise en place d’une application mobile de contact tracing (StopCovid). Ce projet vise à mettre à disposition des autorités de santé françaises un outil numérique complémentaire d’aide à la gestion de la crise sanitaire concernant le Covid-19. </p>\n<h2>Règle du programme</h2>\n<ul><li>Nous pensons qu'aucune technologie n'est parfaite et qu'il est essentiel de travailler avec des chercheurs et des développeurs qualifiés dans le domaine de la sécurité pour identifier les faiblesses de notre technologie.</li>\n<li>Afin de renforcer la confiance dans ce service, si vous pensez avoir détecté une faille de sécurité dans notre service, nous serons heureux de travailler avec vous pour résoudre le problème rapidement et faire en sorte que vous soyez équitablement récompensé pour votre découverte.</li>\n<li>Tout type d'attaque par déni de service et déni de service distribué est strictement interdit, ainsi que toute perturbation avec les équipements de réseau et l'infrastructure StopCovid.</li>\n</ul><h2>Eligibilité</h2>\n<ul><li>Nous serons heureux de remercier toutes les personnes qui soumettent des rapports de vulnérabilités valides nous permettant d’améliorer la sécurité du projet StopCovid ; toutefois, seules les personnes qui remplissent les conditions d'admissibilité suivantes peuvent recevoir une récompense :</li>\n<li>Vous devez être le premier à signaler une vulnérabilité.</li>\n<li>La vulnérabilité doit être une vulnérabilité admissible (voir ci-dessous)</li>\n<li>Toute vulnérabilité constatée doit être signalée au plus tard 24 heures après sa découverte et exclusivement par le biais de yeswehack.com</li>\n<li>Vous devez envoyer une description textuelle claire du rapport ainsi que les étapes de reproduction, inclure des pièces jointes telles que des captures d'écran ou une de preuve de concept si nécessaire.</li>\n<li>Vous devez éviter les tests qui pourraient entraîner une dégradation ou une interruption de notre service (abstenez-vous d'utiliser des outils automatisés).</li>\n<li>Vous ne devez pas divulguer, manipuler ou détruire les données des utilisateurs.</li>\n<li>Vous ne devez pas être un ancien ou actuel employé de l'un des membres de l’équipe-projet StopCovid.</li>\n<li>Les rapports sur les vulnérabilités sont examinés par nos analystes de la sécurité.</li>\n<li>Notre analyse est toujours basée sur l'exploitation de la vulnérabilité dans le pire scénario.</li>\n<li>Aucune divulgation de la vulnérabilité, y compris partielle, n'est autorisée sans l’accord explicite des gestionnaires du programme.</li>\n</ul><h2>Périmètre du programme</h2>\n<ul><li>Application officielle disponibles sur les stores (Voir Scopes)\n<ul><li>Seules les vulnérabilités de ces versions de l'application sont éligibles à une prime</li>\n</ul></li>\n<li>Notre application est Open-Source et disponible sur notre <a href=\"https://gitlab.inria.fr/stopcovid19\" target=\"_blank\" rel=\"nofollow noopener noreferrer\" title=\"https://gitlab.inria.fr/stopcovid19\">Gitlab</a>. Veuillez ne pas notifier les problèmes de sécurité par l'intermédiaire de gitlab. Les rapports concernant les « issues » accessibles au public ne seront pas récompensés.</li>\n<li>Les recommandations de L'Agence Nationale de la Sécurité des Systèmes d'Information concernant ce projet sont disponibles sur notre <a href=\"https://gitlab.inria.fr/stopcovid19/accueil/-/blob/master/documentation/Stopcovid%20-%20Recommandation%20ANSSI.pdf\" target=\"_blank\" rel=\"nofollow noopener noreferrer\" title=\"https://gitlab.inria.fr/stopcovid19/accueil/-/blob/master/documentation/Stopcovid%20-%20Recommandation%20ANSSI.pdf\">Gitlab</a></li>\n<li>Si une vulnérabilité concerne le fournisseur d'hébergement, vous pouvez soumettre votre rapport ici : <a href=\"https://yeswehack.com/programs/outscale\" target=\"_blank\" rel=\"nofollow noopener noreferrer\" title=\"https://yeswehack.com/programs/outscale\">Outscale Bug Bounty Program</a></li>\n</ul><h2>Récompense</h2>\n<p>Le développement de l’application « StopCovid » étant mené à titre gracieux par l’ensemble des intervenants, YesWeHack prend à sa charge le montant des primes attribuées.</p>\n<table><thead><tr><th>Rating</th>\n<th>CVSS score</th>\n<th>Récompense</th>\n</tr></thead><tbody><tr><td><strong>Low</strong></td>\n<td>0.1 - 3.9</td>\n<td>Special Edition Tee-Shirt</td>\n</tr><tr><td><strong>Medium</strong></td>\n<td>4.0 - 6.9</td>\n<td>Special Edition Tee-Shirt</td>\n</tr><tr><td><strong>High</strong></td>\n<td>7.0 - 8.9</td>\n<td>Special Edition Tee-Shirt and &lt;= 750€</td>\n</tr><tr><td><strong>Critical</strong></td>\n<td>9.0 - 10.0</td>\n<td>Special Edition Tee-Shirt and &lt;= 2 000€</td>\n</tr></tbody></table><h2>Changelog</h2>\n<ul><li>Mise à jour de l'application. - 28/05/2020</li>\n<li>Application officielle des stores - 02/06/2020</li>\n</ul><h1>ENGLISH VERSION</h1>\n<h2>StopCovid</h2>\n<p>Inria, ANSSI, Capgemini, Dassault Systèmes, Inserm, Lunabee Studio, Orange, Santé Publique France and Withings created the StopCovid project team on April the 26th in order to structure and strengthen their contribution to the government project of setting up a mobile contact tracing application (StopCovid). The purpose of this project is to provide the French health authorities with a complementary digital tool to help manage the sanitary emergency against Covid-19.</p>\n<h2>Program Rules</h2>\n<ul><li>We believe that no technology is perfect and that working with skilled security researchers is crucial in identifying weaknesses in our technology.</li>\n<li>If you believe you've found a security bug in our service, we are happy to work with you to resolve the issue promptly and ensure you are fairly rewarded for your discovery.</li>\n<li>Any type of denial of service attacks and distributed denial of service is strictly forbidden, as well as any interference with network equipment and StopCovid infrastructure.</li>\n</ul><h2>Eligibility and Responsible Disclosure</h2>\n<ul><li>We are happy to thank everyone who submits valid reports which help us improve the security of StopCovid Project however, only those that meet the following eligibility requirements may receive a monetary reward:</li>\n<li>You must be the first reporter of a vulnerability.</li>\n<li>The vulnerability must be a qualifying vulnerability (see below)</li>\n<li>Any vulnerability found must be reported no later than 24 hours after discovery and exclusively through yeswehack.com</li>\n<li>You must send a clear textual description of the report along with steps to reproduce the issue, include attachments such as screenshots or proof of concept code as necessary.</li>\n<li>You must avoid tests that could cause degradation or interruption of our service (refrain from using automated tools).</li>\n<li>You must not leak, manipulate, or destroy any user data.</li>\n<li>You must not be a former or current employee of or one of its contractor of the members of the StopCovid project team.</li>\n<li>Reports about vulnerabilities are examined by our security analysts.</li>\n<li>Our analysis is always based on worst case exploitation of the vulnerability.</li>\n<li>No vulnerability disclosure, including partial is allowed without the explicit agreement of the program managers.</li>\n</ul><h2>Scope of this program</h2>\n<ul><li>Official application available on stores (cf Scopes)\n<ul><li>Only vulnerabilities in these versions of the application are eligible to a Reward.</li>\n</ul></li>\n<li>Our software is open source and is <a href=\"https://gitlab.inria.fr/stopcovid19\" target=\"_blank\" rel=\"nofollow noopener noreferrer\" title=\"https://gitlab.inria.fr/stopcovid19\">available on Gitlab</a>. Please do not notify security issues through gitlab. Notifications of publicly available issues will not be rewarded. </li>\n<li>Recommendations of the National Cybersecurity Agency of France (ANSSI) concerning this project are available on our <a href=\"https://gitlab.inria.fr/stopcovid19/accueil/-/blob/master/documentation/Stopcovid%20-%20Recommandation%20ANSSI.pdf\" target=\"_blank\" rel=\"nofollow noopener noreferrer\" title=\"https://gitlab.inria.fr/stopcovid19/accueil/-/blob/master/documentation/Stopcovid%20-%20Recommandation%20ANSSI.pdf\">Gitlab</a></li>\n<li>If your vulnerability relates to the core hosting provider, you can submit your report here: <a href=\"https://yeswehack.com/programs/outscale\" target=\"_blank\" rel=\"nofollow noopener noreferrer\" title=\"https://yeswehack.com/programs/outscale\">Outscale Bug Bounty Program</a></li>\n</ul><h2>Rewards</h2>\n<p>As the development of the \"StopCovid\" application is carried out free of charge by all parties involved, YesWeHack will bear the cost of the rewards</p>\n<table><thead><tr><th>Rating</th>\n<th>CVSS score</th>\n<th>Bounty</th>\n</tr></thead><tbody><tr><td><strong>Low</strong></td>\n<td>0.1 - 3.9</td>\n<td>Special Edition Tee-Shirt</td>\n</tr><tr><td><strong>Medium</strong></td>\n<td>4.0 - 6.9</td>\n<td>Special Edition Tee-Shirt</td>\n</tr><tr><td><strong>High</strong></td>\n<td>7.0 - 8.9</td>\n<td>Special Edition Tee-Shirt and &lt;= 750€</td>\n</tr><tr><td><strong>Critical</strong></td>\n<td>9.0 - 10.0</td>\n<td>Special Edition Tee-Shirt and &lt;= 2 000€</td>\n</tr></tbody></table><h2>Changelog</h2>\n<ul><li>Application updated - 28/05/2020</li>\n<li>Official application on stores - 02/06/2020</li>\n</ul>",
+  "public": true,
+  "hall_of_fame": true,
+  "scopes": [
+    {
+      "scope": "https://play.google.com/store/apps/details?id=fr.gouv.android.stopcovid",
+      "scope_type": "mobile-application-android",
+      "security_requirement": "default"
+    },
+    {
+      "scope": "https://apps.apple.com/fr/app/stopcovid-france/id1511279125",
+      "scope_type": "mobile-application-ios",
+      "security_requirement": "default"
+    },
+    {
+      "scope": "api.stopcovid.gouv.fr",
+      "scope_type": "api",
+      "security_requirement": "default"
+    },
+    {
+      "scope": "app.stopcovid.gouv.fr",
+      "scope_type": "api",
+      "security_requirement": "default"
+    },
+    {
+      "scope": "bonjour.stopcovid.gouv.fr",
+      "scope_type": "api",
+      "security_requirement": "default"
+    }
+  ],
+  "out_of_scope": [
+    "Everything that is not part of the scope"
+  ],
+  "qualifying_vulnerability": [
+    "Remote code execution (RCE)",
+    "Local files access and manipulation (LFI, RFI, XXE, SSRF, XSPA)",
+    "Code injections (HTML, JS, SQL, PHP, ...",
+    "Cross-Site Scripting (XSS)",
+    "Cross-Site Requests Forgery (CSRF) with real security impact",
+    "Open redirect",
+    "Broken authentication & session management",
+    "Insecure direct object references",
+    "CORS with real security impact",
+    "Horizontal and vertical privilege escalation"
+  ],
+  "non_qualifying_vulnerability": [
+    "\"Self\" XSS",
+    "SSL cypher suites",
+    "Missing cookie flags",
+    "SSL/TLS best practices",
+    "Mixed content warnings",
+    "Denial of Service attacks",
+    "Lack of code obfuscation",
+    "\"HTTP Host Header\" XSS",
+    "Clickjacking/UI redressing",
+    "Software version disclosure",
+    "Crashing your own application",
+    "Stack traces or path disclosure",
+    "Physical or social engineering attempts",
+    "Recently disclosed 0-day vulnerabilities",
+    "Exploiting a generic Android or iOS vulnerability",
+    "Presence of autocomplete attribute on web forms",
+    "Information requiring physical access to user device",
+    "Vulnerabilities affecting outdated browsers or platforms",
+    "Lack of encryption on internal databases/preference files",
+    "Exploits that are only possible on a rooted/jailbroken device",
+    "Vulnerabilities that are already reported on INRIA Gitlab issues",
+    "Exploits that are only possible on IOS version 11.3 and below",
+    "Exploits that are only possible on Android version 4.4 and below",
+    "Issues that require physical access to a victim’s computer/device",
+    "Vulnerable version of libraries without demonstrable attack vector",
+    "Logout and other instances of low-severity Cross-Site Request Forgery",
+    "Missing security-related HTTP headers which do not lead directly to a vulnerability",
+    "Reports from automated web vulnerability scanners (Acunetix, Vega, etc.) that have not been validated",
+    "Lack of SSL Pining/ binary protection/ code obfuscation / jailbreak and root detection / anti-debugging controls/ etc",
+    "Invalid or missing SPF (Sender Policy Framework) records (Incomplete or missing SPF/DKIM/DMARC)"
+  ],
+  "bounty": true,
+  "gift": false,
+  "bounty_reward_min": 0,
+  "reward_grid_default": {
+    "bounty_low": 0,
+    "bounty_medium": 0,
+    "bounty_high": 750,
+    "bounty_critical": 2000
+  },
+  "reward_grid_low": {
+    "bounty_low": null,
+    "bounty_medium": null,
+    "bounty_high": null,
+    "bounty_critical": null
+  },
+  "reward_grid_medium": {
+    "bounty_low": null,
+    "bounty_medium": null,
+    "bounty_high": null,
+    "bounty_critical": null
+  },
+  "reward_grid_high": {
+    "bounty_low": null,
+    "bounty_medium": null,
+    "bounty_high": null,
+    "bounty_critical": null
+  },
+  "business_unit": {
+    "currency": "EUR",
+    "already_activate_license": true,
+    "name": "StopCovid",
+    "slug": "stopcovid",
+    "logo": {
+      "name": "ffd32bc8c40830fee525ead2de5e7665",
+      "original_name": "STOP_COVID_AVATAR_300x300.png",
+      "mime_type": "image/png",
+      "size": 13907,
+      "url": "https://cdn-yeswehack.com/business-unit/logo/ffd32bc8c40830fee525ead2de5e7665"
+    },
+    "description": "The StopCovid project-team and the ecosystem of contributors are working together to develop a mobile contact tracing app for France"
+  },
+  "vpn_active": false,
+  "report_collaboration_active": true,
+  "account_access": null,
+  "account_access_html": null,
+  "user_agent": null,
+  "stats": {
+    "average_reward": null,
+    "max_reward": null,
+    "average_first_time_response": 1,
+    "total_reports": 26,
+    "total_reports_last24_hours": 0,
+    "total_reports_last7_days": 1,
+    "total_reports_current_month": 1,
+    "total_hunter_thanked": 1
+  },
+  "event": null,
+  "supported_languages": [
+    "FR",
+    "GB"
+  ],
+  "demo": false,
+  "secured": false,
+  "rights": [
+    "view"
+  ]
+}
