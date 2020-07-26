@@ -2,8 +2,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"fbc6b5c5dc","applicationID":"143379461","transactionName":"dg1fFUtXCFxSSkpbC0AMRRhmSBZfUEoEVBcaEVkOTg==","queueTime":0,"applicationTime":143,"agent":""}</script>
-<script>window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"fbc6b5c5dc","applicationID":"143379461","transactionName":"dg1fFUtXCFxSSkpbC0AMRRhmSBZfUEoEVBcaEVkOTg==","queueTime":0,"applicationTime":405,"agent":""}</script>
+<script>(window.NREUM||(NREUM={})).loader_config={licenseKey:"fbc6b5c5dc",applicationID:"143379461"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
 <title>Bug Bounty Program For Hacken | HackenProof</title>
 <meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport'>
 <meta content='True' name='HandheldFriendly'>
@@ -12,7 +12,7 @@
 <meta content='telephone=no' name='format-detection'>
 <meta content='address=no' name='format-detection'>
 <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="zDJXdhnyQUS1T44FT+mwjtD8A4/pu3SBjlkJfigAUE0b2nRkdZ+AoBRynOG5auHDb82WgPhDWeC3WOW1XHUhLg==" />
+<meta name="csrf-token" content="lHdQy6h0iPVlQIpAIoqjqPt6qlL/wu5yTPI1kAt59wEUloILHqzdLJwD6mkVhbAYB0fDXde2H6s1EeA15FCwxA==" />
 <link rel="apple-touch-icon" type="image/x-icon" href="/assets/home/favicons/apple-touch-icon-877e3ab6812d47bab88fb6d481acdbea7fa6995a95c89743bb18e5a0a4012892.png" sizes="180x180" />
 <link rel="icon" type="image/png" href="/assets/home/favicons/favicon-32x32-63afb31b2b98fafbbdb12c5cbcba1231e3a7ba8d669ea7680370c90bdc4e1ad7.png" sizes="32x32" />
 <link rel="icon" type="image/png" href="/assets/home/favicons/favicon-16x16-b7aeb056379d4392ef3764ec45581ccf88771f6a999d9b39f6d8639529f60bc4.png" sizes="16x16" />
@@ -55,7 +55,7 @@
 </noscript>
 
 
-<link rel="stylesheet" media="screen" href="/assets/new_application-2d4e5b9d66ab4dad74f1222ed831add2e00ddce2308cff30bd89df7fb9e42ff4.css" />
+<link rel="stylesheet" media="screen" href="/assets/new_application-608883b1d48ca700ffd6e3ed5a0c05620886ce626128ae5cecf3acb439ab17c3.css" />
 </head>
 <body class='new-layout dashboard-panel application-layout' data-action='show' data-controller='bounty_programs'>
 <div class='flash-msgs--fixed flash-msg--js flash-msg--version' id='flash-msgs'>
@@ -96,59 +96,73 @@
 <div class='menu-mob'>
 <ul class='list-menu'>
 <li class='toggle-dropdown--flat'>
-<a href="/programs">Bug Bounty Programs
+<a href="/programs">For Business
 </a><div class='dropdown dropdown__visible-sm'>
 <ul>
 <li>
-<a href="/programs">Programs list</a>
+<a class='hidden-link notranslate' data-link='/companies/new'>Start Program</a>
 </li>
 <li>
-<a href="/reports?sort=created_at-desc">Overall activity</a>
+<a class="nowrap" href="/bug-bounty-solutions">Bug Bounty Solutions</a>
 </li>
 <li>
-<a class="nowrap" href="/public-bug-bounty-list">Bug Bounty Tracker</a>
+<a class="nowrap" href="/penetration-testing-services">Penetration Testing</a>
 </li>
 <li>
-<a href="/vulnerabilities">Vulnerability DB</a>
+<a href="/cup">Live Hacking</a>
+</li>
+<li>
+<a href="https://faq.hackenproof.com/knowledge/for-business">Business FAQ</a>
 </li>
 </ul>
 </div>
+</li>
+<li class='toggle-dropdown--flat'>
+<a href="/reports?sort=created_on-desc">For Hackers
+</a><div class='dropdown dropdown__visible-sm'>
+<ul>
+<li>
+<a class='hidden-link notranslate' data-link='/users/new'>Start Hacking</a>
+</li>
+<li>
+<a href="/programs">Programs list</a>
 </li>
 <li>
 <a href="/leaderboard?sort=rank-asc">Leaderboard</a>
 </li>
 <li>
-<a href="/cup">Hacken Cup</a>
+<a href="/reports?sort=created_on-desc">Overall activity</a>
+</li>
+<li>
+<a class="nowrap" href="/public-bug-bounty-list">Bug Bounty Tracker</a>
+</li>
+<li>
+<a href="https://faq.hackenproof.com/knowledge/for-hackers">Hacker FAQ</a>
+</li>
+</ul>
+</div>
 </li>
 <li class='toggle-dropdown--flat'>
 <a href="/about">Company
 </a><div class='dropdown dropdown__visible-sm'>
 <ul>
 <li>
-<a href="/about">About us</a>
+<a href="/about">About</a>
 </li>
 <li>
 <a href="https://blog.hackenproof.com/">Blog</a>
 </li>
 <li>
-<a href="/roadmap">Roadmap</a>
+<a class="nowrap" href="/partners">Partners</a>
 </li>
 <li>
-<a href="/contacts">Contact us</a>
+<a href="/contacts">Contact</a>
 </li>
 </ul>
 </div>
 </li>
 </ul>
-<div class='hkn'><svg viewbox='413 562 830 207.6' xmlns='http://www.w3.org/2000/svg'>
-<g id='hacken_proof_blue' transform='translate(414 563)'>
-<path class='cls-1' d='M497.7,0H433.5V70.3H340.3V0H156.4V70.3H64.7V0H0V205.5H64.7v-74h91.7v74H221V61.1h54.6V205.6h64.7V131.5h93.2l64.2-61.2Z' data-name='Path 1' id='Path_1'></path>
-<rect class='cls-1' data-name='Rectangle 1' height='74' id='Rectangle_1' transform='translate(433.5 131.5)' width='64.7'></rect>
-<path class='cls-1' d='M773.5,0H709V91.9L616.8,0H552.3V205.5h64.5V112.2l92.9,93.3h63.8V61.1H828V0Z' data-name='Path 2' id='Path_2'></path>
-<rect class='cls-2' data-name='Rectangle 2' height='2' id='Rectangle_2' transform='translate(222 -0.5) rotate(90)' width='62'></rect>
-</g>
-</svg><p>0.19$</p></div>
-<a class='btn-sign hidden-link' data-link='/login'>Sign in</a>
+<a class='btn-sign hidden-link notranslate' data-link='/login'>Sign in</a>
 </div>
 </div>
 </div><div class='btn-menu'>
@@ -166,7 +180,7 @@
 <header class='header-meta header-tabs margin-b-0'>
 <div class='flex margin-b-medium'>
 <div class='avatar-wrapper'>
-<span style='background-image: url(//upload.hackenproof.com/uploads/bounty_program/logo/5a560100b6fa1e6b183644a3/profile_logo.png?1548862486);'></span>
+<span style='background-image: url(//upload.hackenproof.com/uploads/bounty_program/logo/5a560100b6fa1e6b183644a3/profile_logo.png?1570603153);'></span>
 </div>
 <div class='title flex-sm justify-between align-items-center'>
 <div>
@@ -184,9 +198,8 @@ HackenProof
 <a class="trivial inline-block truncate" href="/hacken">Hacken</a>
 </div>
 <div class='text-right'>
-<p class='trivial margin-b-small'>323 days left</p>
 <div class='btn-group text-right'>
-<a class='btn-submit btn-dashboard btn-common small hidden-link' data-link='/login'>Submit report</a>
+<a class="btn-submit btn-dashboard btn-common small" href="/user/programs/hackenproof/reports/new">Submit report</a>
 </div>
 </div>
 </div>
@@ -318,9 +331,8 @@ Rewards
 <span>Critical</span>
 </td>
 <td>
-<span title='1500$'>
-7917
-HKN
+<span>
+1500$
 </span>
 </td>
 </tr>
@@ -329,9 +341,8 @@ HKN
 <span>High</span>
 </td>
 <td>
-<span title='900$'>
-4750
-HKN
+<span>
+900$
 </span>
 </td>
 </tr>
@@ -340,9 +351,8 @@ HKN
 <span>Medium</span>
 </td>
 <td>
-<span title='300$'>
-1583
-HKN
+<span>
+300$
 </span>
 </td>
 </tr>
@@ -351,9 +361,8 @@ HKN
 <span>Low</span>
 </td>
 <td>
-<span title='100$'>
-527
-HKN
+<span>
+100$
 </span>
 </td>
 </tr>
@@ -401,6 +410,7 @@ Focus Area
 <p>In general, the following vulnerabilities do not correspond to the severity threshold:</p>
 
 <ul>
+<li>Known problems: 2FA session issues</li>
 <li>UI and UX bugs and spelling or localization mistakes.</li>
 <li>Descriptive error messages (e.g. Stack Traces, application or server errors)</li>
 <li>Open redirects. 99% of open redirects have low security impact. For the rare cases where the impact is higher, e.g., stealing auth tokens, we do still want to hear about them</li>
@@ -506,23 +516,23 @@ Program Rules
 <div class='panel-flat'>
 <h2 class='graphic common common'>Range of bounty</h2>
 <p class='count'>
-<span title='263.91 HKN'>
+<span>
 $50.0
 </span>
 -
-<span title='7917.24 HKN'>
+<span>
 $1500.0
 </span>
 </p>
 </div>
 <div class='panel-flat'>
 <h2 class='heading-dashboard graphic'>Stats</h2>
-<div class='flex panel'><div class='col-sm-6 inline-block nowrap'><span class='icon icon-balance' title='Total rewards'></span><span title='8534.99 HKN'>
+<div class='flex panel'><div class='col-sm-6 inline-block nowrap'><span class='icon-stats icon-usd' title='Total rewards'></span><span>
 <span class='count count--large'>
-$1617.04
+$7296.57
 </span>
 </span>
-</div><div class='inline-block nowrap'><span class='icon icon-bugs-found' title='Bugs found'></span><span class='count count--large'>56</span>
+</div><div class='inline-block nowrap'><span class='icon-stats icon-bugs-found' title='Bugs found'></span><span class='count count--large'>99</span>
 </div></div>
 </div>
 <div class='panel-flat'>
@@ -536,7 +546,7 @@ Types
 </div>
 <div class='panel-flat table-minified'>
 <div class='header flex-wrap justify-between align-items-center margin-b-medium'>
-<h2 class='graphic common common margin-b-0'>Influencers (73)</h2>
+<h2 class='graphic common common margin-b-0'>Influencers (135)</h2>
 <a class="link classic" href="/hacken/hackenproof/influencers">View all
 </a></div>
 <div class='thead-minified flex-wrap justify-between align-items-center trivial'>
@@ -550,10 +560,10 @@ Rank
 <div class='tr flex-wrap justify-between align-items-center'>
 <p class='user-name col-sm-5 flex align-items-center'>
 <span class='avatar-mini border-radial'>
-<span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/user_profile/avatar/5b09bef4b6fa1e46379d9f63/small_avatar.png?1548670084);'></span>
+<span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/user_profile/avatar/5b09bef4b6fa1e46379d9f63/small_avatar.png?1594045754);'></span>
 
 </span>
-<a href="/jarvis">Jarvis AI
+<a href="/jarvis">Jarvis                    🙂
 </a></p>
 <div class='prize'>
 <i class='icon-prize-1'></i>
@@ -565,7 +575,7 @@ Rank
 <div class='tr flex-wrap justify-between align-items-center'>
 <p class='user-name col-sm-5 flex align-items-center'>
 <span class='avatar-mini border-radial'>
-<span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/user_profile/avatar/5b005c8eb6fa1e529ebbe042/small_avatar.png?1547045721);'></span>
+<span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/user_profile/avatar/5b005c8eb6fa1e529ebbe042/small_avatar.png?1578140735);'></span>
 
 </span>
 <a href="/arbin">Arbin
@@ -580,7 +590,7 @@ Rank
 <div class='tr flex-wrap justify-between align-items-center'>
 <p class='user-name col-sm-5 flex align-items-center'>
 <span class='avatar-mini border-radial'>
-<span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/user_profile/avatar/5b7e9e80b6fa1e415a624f2d/small_avatar.png?1535038520);'></span>
+<span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/user_profile/avatar/5b7e9e80b6fa1e415a624f2d/small_avatar.png?1553180719);'></span>
 
 </span>
 <a href="/almroot">Fredrik Nordberg Almroth
@@ -595,7 +605,7 @@ Rank
 <div class='tr flex-wrap justify-between align-items-center'>
 <p class='user-name col-sm-5 flex align-items-center'>
 <span class='avatar-mini border-radial'>
-<span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/user_profile/avatar/5a616b25b6fa1e53dea8d23c/small_avatar.png?1547039025);'></span>
+<span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/user_profile/avatar/5a616b25b6fa1e53dea8d23c/small_avatar.png?1553180711);'></span>
 
 </span>
 <a href="/parth">Parth Malhotra
@@ -646,6 +656,519 @@ d
 </p>
 </div>
 </div>
+<div class='panel-flat'>
+<h2 class='graphic common common'>
+Followers
+(39)
+</h2>
+<div class='tooltip-wrapper inline-block margin-r-xs'>
+<i class='tooltip-toggle link regular' tabindex='1'>
+<div class='avatar-mini avatar-circle-wrapper'>
+<span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/user_profile/avatar/5b84041eb6fa1e29383a0f03/small_avatar.png?1567666708);'></span>
+
+</div>
+</i>
+<div class='tooltip tooltip--meta top center with-arrow'>
+<div class='tooltip-content'>
+<a href="/pumbaa"><span class="inline-block truncate small-md">@pumbaa</span></a>
+</div>
+</div>
+</div>
+<div class='tooltip-wrapper inline-block margin-r-xs'>
+<i class='tooltip-toggle link regular' tabindex='1'>
+<div class='avatar-mini avatar-circle-wrapper'>
+<span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/user_profile/avatar/5c8b3f64b6fa1e659625fe2b/small_avatar.png?1560591776);'></span>
+
+</div>
+</i>
+<div class='tooltip tooltip--meta top center with-arrow'>
+<div class='tooltip-content'>
+<a href="/pranshu"><span class="inline-block truncate small-md">@Pranshu</span><i class="icon-check-circled" title="Verified"></i></a>
+</div>
+</div>
+</div>
+<div class='tooltip-wrapper inline-block margin-r-xs'>
+<i class='tooltip-toggle link regular' tabindex='1'>
+<div class='avatar-mini avatar-circle-wrapper'>
+<span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/user_profile/avatar/5c8fe40bb6fa1e0a0b96fd0a/small_avatar.png?1553180736);'></span>
+
+</div>
+</i>
+<div class='tooltip tooltip--meta top center with-arrow'>
+<div class='tooltip-content'>
+<a href="/nihilo"><span class="inline-block truncate small-md">@nihilo</span></a>
+</div>
+</div>
+</div>
+<div class='tooltip-wrapper inline-block margin-r-xs'>
+<i class='tooltip-toggle link regular' tabindex='1'>
+<div class='avatar-mini avatar-circle-wrapper'>
+<span class='avatar-placeholder'>Sk</span>
+
+</div>
+</i>
+<div class='tooltip tooltip--meta top center with-arrow'>
+<div class='tooltip-content'>
+<a href="/tomanjerry1"><span class="inline-block truncate small-md">@TomAnjerry1</span></a>
+</div>
+</div>
+</div>
+<div class='tooltip-wrapper inline-block margin-r-xs'>
+<i class='tooltip-toggle link regular' tabindex='1'>
+<div class='avatar-mini avatar-circle-wrapper'>
+<span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/user_profile/avatar/5ccd3589b6fa1e5d1fbcbd24/small_avatar.png?1556953976);'></span>
+
+</div>
+</i>
+<div class='tooltip tooltip--meta top center with-arrow'>
+<div class='tooltip-content'>
+<a href="/fk"><span class="inline-block truncate small-md">@Fk</span></a>
+</div>
+</div>
+</div>
+<div class='tooltip-wrapper inline-block margin-r-xs'>
+<i class='tooltip-toggle link regular' tabindex='1'>
+<div class='avatar-mini avatar-circle-wrapper'>
+<span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/user_profile/avatar/5c4f43d1b6fa1e75e70885a1/small_avatar.png?1563354600);'></span>
+
+</div>
+</i>
+<div class='tooltip tooltip--meta top center with-arrow'>
+<div class='tooltip-content'>
+<a href="/sameerphad72"><span class="inline-block truncate small-md">@sameerphad72</span></a>
+</div>
+</div>
+</div>
+<div class='tooltip-wrapper inline-block margin-r-xs'>
+<i class='tooltip-toggle link regular' tabindex='1'>
+<div class='avatar-mini avatar-circle-wrapper'>
+<span class='avatar-placeholder'>JC</span>
+
+</div>
+</i>
+<div class='tooltip tooltip--meta top center with-arrow'>
+<div class='tooltip-content'>
+<a href="/jackcrow"><span class="inline-block truncate small-md">@JackCrow</span></a>
+</div>
+</div>
+</div>
+<div class='tooltip-wrapper inline-block margin-r-xs'>
+<i class='tooltip-toggle link regular' tabindex='1'>
+<div class='avatar-mini avatar-circle-wrapper'>
+<span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/user_profile/avatar/5cf1a593b6fa1e5902cbf61a/small_avatar.png?1561388413);'></span>
+
+</div>
+</i>
+<div class='tooltip tooltip--meta top center with-arrow'>
+<div class='tooltip-content'>
+<a href="/brdoors3"><span class="inline-block truncate small-md">@brdoors3</span></a>
+</div>
+</div>
+</div>
+<div class='tooltip-wrapper inline-block margin-r-xs'>
+<i class='tooltip-toggle link regular' tabindex='1'>
+<div class='avatar-mini avatar-circle-wrapper'>
+<span class='avatar-placeholder'>0x</span>
+
+</div>
+</i>
+<div class='tooltip tooltip--meta top center with-arrow'>
+<div class='tooltip-content'>
+<a href="/0x0x1337"><span class="inline-block truncate small-md">@0x0x1337</span></a>
+</div>
+</div>
+</div>
+<div class='tooltip-wrapper inline-block margin-r-xs'>
+<i class='tooltip-toggle link regular' tabindex='1'>
+<div class='avatar-mini avatar-circle-wrapper'>
+<span class='avatar-image' style='background-image: url(/assets/deleted-account-2fe360eeefa85b55bfcfa78e8c79fc8e2011b4e32a2e8bccdb43c084a49374bf.png);'></span>
+
+</div>
+</i>
+<div class='tooltip tooltip--meta top center with-arrow'>
+<div class='tooltip-content'>
+<a href="/users/deleted">@deleted</a>
+</div>
+</div>
+</div>
+<div class='tooltip-wrapper inline-block margin-r-xs'>
+<i class='tooltip-toggle link regular' tabindex='1'>
+<div class='avatar-mini avatar-circle-wrapper'>
+<span class='avatar-placeholder'>ra</span>
+
+</div>
+</i>
+<div class='tooltip tooltip--meta top center with-arrow'>
+<div class='tooltip-content'>
+<a href="/rajatsharma1111"><span class="inline-block truncate small-md">@rajatsharma1111</span></a>
+</div>
+</div>
+</div>
+<div class='tooltip-wrapper inline-block margin-r-xs'>
+<i class='tooltip-toggle link regular' tabindex='1'>
+<div class='avatar-mini avatar-circle-wrapper'>
+<span class='avatar-image' style='background-image: url(/assets/deleted-account-2fe360eeefa85b55bfcfa78e8c79fc8e2011b4e32a2e8bccdb43c084a49374bf.png);'></span>
+
+</div>
+</i>
+<div class='tooltip tooltip--meta top center with-arrow'>
+<div class='tooltip-content'>
+<a href="/users/deleted">@deleted</a>
+</div>
+</div>
+</div>
+<div class='tooltip-wrapper inline-block margin-r-xs'>
+<i class='tooltip-toggle link regular' tabindex='1'>
+<div class='avatar-mini avatar-circle-wrapper'>
+<span class='avatar-image' style='background-image: url(/assets/deleted-account-2fe360eeefa85b55bfcfa78e8c79fc8e2011b4e32a2e8bccdb43c084a49374bf.png);'></span>
+
+</div>
+</i>
+<div class='tooltip tooltip--meta top center with-arrow'>
+<div class='tooltip-content'>
+<a href="/users/deleted">@deleted</a>
+</div>
+</div>
+</div>
+<div class='tooltip-wrapper inline-block margin-r-xs'>
+<i class='tooltip-toggle link regular' tabindex='1'>
+<div class='avatar-mini avatar-circle-wrapper'>
+<span class='avatar-image' style='background-image: url(/assets/deleted-account-2fe360eeefa85b55bfcfa78e8c79fc8e2011b4e32a2e8bccdb43c084a49374bf.png);'></span>
+
+</div>
+</i>
+<div class='tooltip tooltip--meta top center with-arrow'>
+<div class='tooltip-content'>
+<a href="/users/deleted">@deleted</a>
+</div>
+</div>
+</div>
+<div class='tooltip-wrapper inline-block margin-r-xs'>
+<i class='tooltip-toggle link regular' tabindex='1'>
+<div class='avatar-mini avatar-circle-wrapper'>
+<span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/user_profile/avatar/5d3c72e6b6fa1e112166161c/small_avatar.png?1564267243);'></span>
+
+</div>
+</i>
+<div class='tooltip tooltip--meta top center with-arrow'>
+<div class='tooltip-content'>
+<a href="/thebishop"><span class="inline-block truncate small-md">@thebishop</span></a>
+</div>
+</div>
+</div>
+<div class='tooltip-wrapper inline-block margin-r-xs'>
+<i class='tooltip-toggle link regular' tabindex='1'>
+<div class='avatar-mini avatar-circle-wrapper'>
+<span class='avatar-placeholder'>se</span>
+
+</div>
+</i>
+<div class='tooltip tooltip--meta top center with-arrow'>
+<div class='tooltip-content'>
+<a href="/secureall"><span class="inline-block truncate small-md">@secureall</span></a>
+</div>
+</div>
+</div>
+<div class='tooltip-wrapper inline-block margin-r-xs'>
+<i class='tooltip-toggle link regular' tabindex='1'>
+<div class='avatar-mini avatar-circle-wrapper'>
+<span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/user_profile/avatar/5b609a9eb6fa1e3906539c44/small_avatar.png?1582628957);'></span>
+
+</div>
+</i>
+<div class='tooltip tooltip--meta top center with-arrow'>
+<div class='tooltip-content'>
+<a href="/w2w"><span class="inline-block truncate small-md">@w2w</span></a>
+</div>
+</div>
+</div>
+<div class='tooltip-wrapper inline-block margin-r-xs'>
+<i class='tooltip-toggle link regular' tabindex='1'>
+<div class='avatar-mini avatar-circle-wrapper'>
+<span class='avatar-placeholder'>Da</span>
+
+</div>
+</i>
+<div class='tooltip tooltip--meta top center with-arrow'>
+<div class='tooltip-content'>
+<a href="/damianpellejero"><span class="inline-block truncate small-md">@DamianPellejero</span></a>
+</div>
+</div>
+</div>
+<div class='tooltip-wrapper inline-block margin-r-xs'>
+<i class='tooltip-toggle link regular' tabindex='1'>
+<div class='avatar-mini avatar-circle-wrapper'>
+<span class='avatar-placeholder'>is</span>
+
+</div>
+</i>
+<div class='tooltip tooltip--meta top center with-arrow'>
+<div class='tooltip-content'>
+<a href="/isara"><span class="inline-block truncate small-md">@isara</span></a>
+</div>
+</div>
+</div>
+<div class='tooltip-wrapper inline-block margin-r-xs'>
+<i class='tooltip-toggle link regular' tabindex='1'>
+<div class='avatar-mini avatar-circle-wrapper'>
+<span class='avatar-placeholder'>sw</span>
+
+</div>
+</i>
+<div class='tooltip tooltip--meta top center with-arrow'>
+<div class='tooltip-content'>
+<a href="/sw231wg"><span class="inline-block truncate small-md">@sw231wg</span></a>
+</div>
+</div>
+</div>
+<div class='tooltip-wrapper inline-block margin-r-xs'>
+<i class='tooltip-toggle link regular' tabindex='1'>
+<div class='avatar-mini avatar-circle-wrapper'>
+<span class='avatar-placeholder'>Ka</span>
+
+</div>
+</i>
+<div class='tooltip tooltip--meta top center with-arrow'>
+<div class='tooltip-content'>
+<a href="/kaimee"><span class="inline-block truncate small-md">@Kaimee</span></a>
+</div>
+</div>
+</div>
+<div class='tooltip-wrapper inline-block margin-r-xs'>
+<i class='tooltip-toggle link regular' tabindex='1'>
+<div class='avatar-mini avatar-circle-wrapper'>
+<span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/user_profile/avatar/5c28e9d7b6fa1e2c6835117c/small_avatar.png?1580377767);'></span>
+
+</div>
+</i>
+<div class='tooltip tooltip--meta top center with-arrow'>
+<div class='tooltip-content'>
+<a href="/lgmisop"><span class="inline-block truncate small-md">@lgmisop</span><i class="icon-check-circled" title="Verified"></i></a>
+</div>
+</div>
+</div>
+<div class='tooltip-wrapper inline-block margin-r-xs'>
+<i class='tooltip-toggle link regular' tabindex='1'>
+<div class='avatar-mini avatar-circle-wrapper'>
+<span class='avatar-placeholder'>Gu</span>
+
+</div>
+</i>
+<div class='tooltip tooltip--meta top center with-arrow'>
+<div class='tooltip-content'>
+<a href="/guyv3r"><span class="inline-block truncate small-md">@Guyv3r</span></a>
+</div>
+</div>
+</div>
+<div class='tooltip-wrapper inline-block margin-r-xs'>
+<i class='tooltip-toggle link regular' tabindex='1'>
+<div class='avatar-mini avatar-circle-wrapper'>
+<span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/user_profile/avatar/5ca3acbeb6fa1e51d068628f/small_avatar.png?1574541197);'></span>
+
+</div>
+</i>
+<div class='tooltip tooltip--meta top center with-arrow'>
+<div class='tooltip-content'>
+<a href="/tjz"><span class="inline-block truncate small-md">@Tjz</span><i class="icon-check-circled" title="Verified"></i></a>
+</div>
+</div>
+</div>
+<div class='tooltip-wrapper inline-block margin-r-xs'>
+<i class='tooltip-toggle link regular' tabindex='1'>
+<div class='avatar-mini avatar-circle-wrapper'>
+<span class='avatar-placeholder'>Nu</span>
+
+</div>
+</i>
+<div class='tooltip tooltip--meta top center with-arrow'>
+<div class='tooltip-content'>
+<a href="/nu23ro"><span class="inline-block truncate small-md">@Nu23ro</span></a>
+</div>
+</div>
+</div>
+<div class='tooltip-wrapper inline-block margin-r-xs'>
+<i class='tooltip-toggle link regular' tabindex='1'>
+<div class='avatar-mini avatar-circle-wrapper'>
+<span class='avatar-placeholder'>Le</span>
+
+</div>
+</i>
+<div class='tooltip tooltip--meta top center with-arrow'>
+<div class='tooltip-content'>
+<a href="/lefty"><span class="inline-block truncate small-md">@Lefty</span></a>
+</div>
+</div>
+</div>
+<div class='tooltip-wrapper inline-block margin-r-xs'>
+<i class='tooltip-toggle link regular' tabindex='1'>
+<div class='avatar-mini avatar-circle-wrapper'>
+<span class='avatar-placeholder'>SG</span>
+
+</div>
+</i>
+<div class='tooltip tooltip--meta top center with-arrow'>
+<div class='tooltip-content'>
+<a href="/sufyan84"><span class="inline-block truncate small-md">@Sufyan84</span></a>
+</div>
+</div>
+</div>
+<div class='tooltip-wrapper inline-block margin-r-xs'>
+<i class='tooltip-toggle link regular' tabindex='1'>
+<div class='avatar-mini avatar-circle-wrapper'>
+<span class='avatar-placeholder'>bu</span>
+
+</div>
+</i>
+<div class='tooltip tooltip--meta top center with-arrow'>
+<div class='tooltip-content'>
+<a href="/bu93unter"><span class="inline-block truncate small-md">@bu93unter</span></a>
+</div>
+</div>
+</div>
+<div class='tooltip-wrapper inline-block margin-r-xs'>
+<i class='tooltip-toggle link regular' tabindex='1'>
+<div class='avatar-mini avatar-circle-wrapper'>
+<span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/user_profile/avatar/5e1d9b6cb6fa1e3db6614d79/small_avatar.png?1579001007);'></span>
+
+</div>
+</i>
+<div class='tooltip tooltip--meta top center with-arrow'>
+<div class='tooltip-content'>
+<a href="/cyberkid37"><span class="inline-block truncate small-md">@cyberkid37</span></a>
+</div>
+</div>
+</div>
+<div class='tooltip-wrapper inline-block margin-r-xs'>
+<i class='tooltip-toggle link regular' tabindex='1'>
+<div class='avatar-mini avatar-circle-wrapper'>
+<span class='avatar-placeholder'>Su</span>
+
+</div>
+</i>
+<div class='tooltip tooltip--meta top center with-arrow'>
+<div class='tooltip-content'>
+<a href="/sureshitsec"><span class="inline-block truncate small-md">@Sureshitsec</span></a>
+</div>
+</div>
+</div>
+<div class='tooltip-wrapper inline-block margin-r-xs'>
+<i class='tooltip-toggle link regular' tabindex='1'>
+<div class='avatar-mini avatar-circle-wrapper'>
+<span class='avatar-placeholder'>YK</span>
+
+</div>
+</i>
+<div class='tooltip tooltip--meta top center with-arrow'>
+<div class='tooltip-content'>
+<a href="/escobar"><span class="inline-block truncate small-md">@Escobar</span></a>
+</div>
+</div>
+</div>
+<div class='tooltip-wrapper inline-block margin-r-xs'>
+<i class='tooltip-toggle link regular' tabindex='1'>
+<div class='avatar-mini avatar-circle-wrapper'>
+<span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/user_profile/avatar/5e7e62b0b6fa1e076d0c407b/small_avatar.png?1585341634);'></span>
+
+</div>
+</i>
+<div class='tooltip tooltip--meta top center with-arrow'>
+<div class='tooltip-content'>
+<a href="/mrhacker"><span class="inline-block truncate small-md">@MrHacker</span><i class="icon-check-circled" title="Verified"></i></a>
+</div>
+</div>
+</div>
+<div class='tooltip-wrapper inline-block margin-r-xs'>
+<i class='tooltip-toggle link regular' tabindex='1'>
+<div class='avatar-mini avatar-circle-wrapper'>
+<span class='avatar-placeholder'>AJ</span>
+
+</div>
+</i>
+<div class='tooltip tooltip--meta top center with-arrow'>
+<div class='tooltip-content'>
+<a href="/task3d"><span class="inline-block truncate small-md">@Task3d</span></a>
+</div>
+</div>
+</div>
+<div class='tooltip-wrapper inline-block margin-r-xs'>
+<i class='tooltip-toggle link regular' tabindex='1'>
+<div class='avatar-mini avatar-circle-wrapper'>
+<span class='avatar-placeholder'>sh</span>
+
+</div>
+</i>
+<div class='tooltip tooltip--meta top center with-arrow'>
+<div class='tooltip-content'>
+<a href="/shellexploit"><span class="inline-block truncate small-md">@shellexploit</span></a>
+</div>
+</div>
+</div>
+<div class='tooltip-wrapper inline-block margin-r-xs'>
+<i class='tooltip-toggle link regular' tabindex='1'>
+<div class='avatar-mini avatar-circle-wrapper'>
+<span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/user_profile/avatar/5ea5d31db6fa1e0a21b3e57c/small_avatar.png?1587927193);'></span>
+
+</div>
+</i>
+<div class='tooltip tooltip--meta top center with-arrow'>
+<div class='tooltip-content'>
+<a href="/hammodms"><span class="inline-block truncate small-md">@HammodMS</span></a>
+</div>
+</div>
+</div>
+<div class='tooltip-wrapper inline-block margin-r-xs'>
+<i class='tooltip-toggle link regular' tabindex='1'>
+<div class='avatar-mini avatar-circle-wrapper'>
+<span class='avatar-placeholder'>ly</span>
+
+</div>
+</i>
+<div class='tooltip tooltip--meta top center with-arrow'>
+<div class='tooltip-content'>
+<a href="/lyza"><span class="inline-block truncate small-md">@lyza</span></a>
+</div>
+</div>
+</div>
+<div class='tooltip-wrapper inline-block margin-r-xs'>
+<i class='tooltip-toggle link regular' tabindex='1'>
+<div class='avatar-mini avatar-circle-wrapper'>
+<span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/user_profile/avatar/5ed1234db6fa1e0767afc9ad/small_avatar.png?1590764967);'></span>
+
+</div>
+</i>
+<div class='tooltip tooltip--meta top center with-arrow'>
+<div class='tooltip-content'>
+<a href="/stephen"><span class="inline-block truncate small-md">@Stephen</span></a>
+</div>
+</div>
+</div>
+<div class='tooltip-wrapper inline-block margin-r-xs'>
+<i class='tooltip-toggle link regular' tabindex='1'>
+<div class='avatar-mini avatar-circle-wrapper'>
+<span class='avatar-placeholder'>AS</span>
+
+</div>
+</i>
+<div class='tooltip tooltip--meta top center with-arrow'>
+<div class='tooltip-content'>
+<a href="/luckyster895"><span class="inline-block truncate small-md">@Luckyster895</span></a>
+</div>
+</div>
+</div>
+<div class='tooltip-wrapper inline-block margin-r-xs'>
+<i class='tooltip-toggle link regular' tabindex='1'>
+<div class='avatar-mini avatar-circle-wrapper'>
+<span class='avatar-placeholder'>NG</span>
+
+</div>
+</i>
+<div class='tooltip tooltip--meta top center with-arrow'>
+<div class='tooltip-content'>
+<a href="/nitinhacker"><span class="inline-block truncate small-md">@Nitinhacker</span></a>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -654,12 +1177,21 @@ d
 </div>
 <footer class='main-footer'>
 <div class='cup-footer dark'>
-<div class='container-large'>
+<div class='container--center'>
 <div class='row'>
-<div class='col-md-3 col-sm-6 menu-container'>
+<div class='col-md-3 col-sm-4 menu-container'>
 <div class='logo-cup medium'>
 <a href="/"><img src="/assets/logo-6a400c3a9db463f3dd15a58dcf79e6c126072c7d06ffc07c7a63cab658d350d5.svg" alt="Logo" />
 </a></div>
+<div>
+<ul>
+<li class='xsmall'>
+<a href="/pages/policy">Privacy policy</a>
+</li>
+<li class='xsmall'>
+<a href="/pages/terms">Terms and Conditions</a>
+</li>
+</ul>
 <ul>
 <li>
 <ul class='list-inline social'>
@@ -689,22 +1221,25 @@ d
 </li>
 </ul>
 </div>
-<div class='col-md-3 col-sm-6 menu-container'>
+</div>
+<div class='col-md-9 col-sm-8'>
+<div class='row'>
+<div class='col-md-4 col-sm-6 menu-container'>
 <ul>
 <li class='title'>For Business</li>
 <li>
-<a class='hidden-link' data-link='/companies/new'>Request a demo</a>
+<a class='hidden-link notranslate' data-link='/companies/new'>Request a demo</a>
 </li>
 <li>
 <a href="/#how-it">How it works</a>
 </li>
 </ul>
 </div>
-<div class='col-md-3 col-sm-6 menu-container'>
-<ul>
+<div class='col-md-8 col-sm-6 menu-container'>
+<ul class='list--two-columned'>
 <li class='title'>For Bug Hunters</li>
 <li>
-<a class='hidden-link' data-link='/login'>Start hacking</a>
+<a class='hidden-link notranslate' data-link='/login'>Start hacking</a>
 </li>
 <li>
 <a href="/programs">Bug bounty programs</a>
@@ -713,47 +1248,37 @@ d
 <a href="/reports">Overall activity</a>
 </li>
 <li>
-<a href="/cup">Hacken Cup</a>
+<a href="/cup">Live Hacking</a>
 </li>
 </ul>
 </div>
-<div class='col-md-3 col-sm-6 menu-container'>
-<ul>
-<li class='title'>Company</li>
+
+</div>
+<div class='row'>
+<div class='col-sm-12'>
+<ul class='list-inline list--stretched'>
+<li class='title'>
+<a href="https://hacken.io">Company</a>
+</li>
 <li>
-<a href="/about">About us</a>
+<a href="/about">About</a>
 </li>
 <li>
 <a href="https://blog.hackenproof.com">Blog</a>
 </li>
 <li>
-<a href="/roadmap">Roadmap</a>
-</li>
-<li>
-<a href="/contacts">Contact us</a>
-</li>
-<li>
-<a href="https://hackit.ua/">HackIT</a>
+<a href="/contacts">Contact</a>
 </li>
 </ul>
 </div>
-
-<div class='col-sm-6'>
-<ul class='list-inline'>
-<li class='xsmall'>
-<a href="/pages/policy">Privacy policy</a>
-</li>
-<li class='xsmall'>
-<a href="/pages/terms">Terms and Conditions</a>
-</li>
-</ul>
+</div>
 </div>
 </div>
 </div>
 </div>
 
 </footer>
-<script src="/assets/new_application-6dea760c43dc283fd91e7cc098357e8b3181b2939f5c0bf1b79ec28c101523fd.js"></script>
+<script src="/assets/new_application-f145b4a1509da277d41f1bd976feca6b49a540cf362e6e8c0fb8ebe1624f3d4c.js"></script>
 <noscript>
 <iframe height='0' src='https://www.googletagmanager.com/ns.html?id=GTM-PV9J5G7' style='display:none;visibility:hidden' width='0'></iframe>
 </noscript>
