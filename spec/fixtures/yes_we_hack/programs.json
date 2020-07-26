@@ -1,0 +1,47 @@
+{
+  "items": [
+    {
+      "disabled": false,
+      "managed": false,
+      "bounty_reward_max": 2000,
+      "reports_count": 26,
+      "title": "StopCovid France Bug Bounty program",
+      "slug": "stopcovid-bugbounty-program",
+      "thumbnail": {
+        "name": "4733102a9d8d3fe548f22c5d060b46ec",
+        "original_name": "thumb_pgm.png",
+        "mime_type": "image/png",
+        "size": 42713,
+        "url": "https://cdn-yeswehack.com/program/thumbnail/4733102a9d8d3fe548f22c5d060b46ec"
+      },
+      "public": true,
+      "hall_of_fame": true,
+      "bounty": true,
+      "gift": false,
+      "bounty_reward_min": 0,
+      "business_unit": {
+        "currency": "EUR",
+        "already_activate_license": true,
+        "name": "StopCovid",
+        "slug": "stopcovid",
+        "logo": {
+          "name": "ffd32bc8c40830fee525ead2de5e7665",
+          "original_name": "STOP_COVID_AVATAR_300x300.png",
+          "mime_type": "image/png",
+          "size": 13907,
+          "url": "https://cdn-yeswehack.com/business-unit/logo/ffd32bc8c40830fee525ead2de5e7665"
+        },
+        "description": "The StopCovid project-team and the ecosystem of contributors are working together to develop a mobile contact tracing app for France"
+      },
+      "report_collaboration_active": true,
+      "event": null,
+      "demo": false,
+      "secured": false
+    }
+  ],
+  "pagination": {
+    "page": 1,
+    "nb_pages": 1,
+    "results_per_page": 50
+  }
+}
