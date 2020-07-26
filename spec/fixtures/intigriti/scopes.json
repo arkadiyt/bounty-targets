@@ -1,0 +1,592 @@
+{
+  "programId": "12d99ae0-7d24-49d0-a185-6292a922be10",
+  "status": 4,
+  "confidentialityLevel": 4,
+  "companyHandle": "vasco",
+  "companyName": "OneSpan",
+  "handle": "vascomobileproducts",
+  "name": "OneSpan Mobile",
+  "description": "OneSpan (formerly known as VASCO Data Security) is a global leader in digital security with two-factor authentication, transaction data signing, document e-signature and identity management solutions designed for financial institutions, enterprises, healthcare institutions as well as government agencies.\n\nIn this project, we request researchers to validate the security of two mobile authentication products (soft tokens), namely DIGIPASS for Mobile and the DIGIPASS App.",
+  "domains": [
+    {
+      "content": [
+        {
+          "id": "f9357f79-3eb4-402c-827f-15abc094423a",
+          "type": 3,
+          "endpoint": "k",
+          "businessImpact": 3,
+          "description": "DIGIPASS FOR MOBILE (DP4MOBILE)"
+        },
+        {
+          "id": "40217af8-8ba5-4939-8b79-74e667bfca1b",
+          "type": 2,
+          "endpoint": "com.DPMOBESA",
+          "businessImpact": 3,
+          "description": "DIGIPASS FOR MOBILE (DP4MOBILE)"
+        },
+        {
+          "id": "74e22393-f82a-4d31-be49-4cbc406fe131",
+          "type": 2,
+          "endpoint": "com.vasco.digipass.es",
+          "businessImpact": 3,
+          "description": "DIGIPASS"
+        },
+        {
+          "id": "b49e935b-f8c2-4d4f-a012-51090b6279d0",
+          "type": 3,
+          "endpoint": "the-digipass-app/id1172835583",
+          "businessImpact": 3,
+          "description": "DIGIPASS"
+        }
+      ],
+      "createdAt": 1572992453
+    },
+    {
+      "content": [
+        {
+          "id": "f9357f79-3eb4-402c-827f-15abc094423a",
+          "type": 3,
+          "endpoint": "541882261",
+          "businessImpact": 3,
+          "description": "DIGIPASS FOR MOBILE (DP4MOBILE)"
+        },
+        {
+          "id": "40217af8-8ba5-4939-8b79-74e667bfca1b",
+          "type": 2,
+          "endpoint": "com.DPMOBESA",
+          "businessImpact": 3,
+          "description": "DIGIPASS FOR MOBILE (DP4MOBILE)"
+        },
+        {
+          "id": "74e22393-f82a-4d31-be49-4cbc406fe131",
+          "type": 2,
+          "endpoint": "com.vasco.digipass.es",
+          "businessImpact": 3,
+          "description": "DIGIPASS"
+        },
+        {
+          "id": "b49e935b-f8c2-4d4f-a012-51090b6279d0",
+          "type": 3,
+          "endpoint": "the-digipass-app/id1172835583",
+          "businessImpact": 3,
+          "description": "DIGIPASS"
+        }
+      ],
+      "createdAt": 1573072191
+    },
+    {
+      "content": [
+        {
+          "id": "f9357f79-3eb4-402c-827f-15abc094423a",
+          "type": 3,
+          "endpoint": "541882261",
+          "businessImpact": 3,
+          "description": "DIGIPASS FOR MOBILE (DP4MOBILE)"
+        },
+        {
+          "id": "40217af8-8ba5-4939-8b79-74e667bfca1b",
+          "type": 2,
+          "endpoint": "com.DIGIPASS_DEMO_ANDROID",
+          "businessImpact": 3,
+          "description": "DIGIPASS FOR MOBILE (DP4MOBILE)"
+        },
+        {
+          "id": "74e22393-f82a-4d31-be49-4cbc406fe131",
+          "type": 2,
+          "endpoint": "com.vasco.digipass.es",
+          "businessImpact": 3,
+          "description": "DIGIPASS"
+        },
+        {
+          "id": "b49e935b-f8c2-4d4f-a012-51090b6279d0",
+          "type": 3,
+          "endpoint": "the-digipass-app/id1172835583",
+          "businessImpact": 3,
+          "description": "DIGIPASS"
+        }
+      ],
+      "createdAt": 1580823447
+    },
+    {
+      "content": [
+        {
+          "id": "f9357f79-3eb4-402c-827f-15abc094423a",
+          "type": 3,
+          "endpoint": "541882261",
+          "businessImpact": 3,
+          "description": "DIGIPASS FOR MOBILE (DP4MOBILE)"
+        },
+        {
+          "id": "40217af8-8ba5-4939-8b79-74e667bfca1b",
+          "type": 2,
+          "endpoint": "com.DIGIPASS_DEMO_ANDROID",
+          "businessImpact": 3,
+          "description": "DIGIPASS for Mobile app"
+        },
+        {
+          "id": "74e22393-f82a-4d31-be49-4cbc406fe131",
+          "type": 2,
+          "endpoint": "com.vasco.digipass.es",
+          "businessImpact": 3,
+          "description": "DIGIPASS"
+        },
+        {
+          "id": "b49e935b-f8c2-4d4f-a012-51090b6279d0",
+          "type": 3,
+          "endpoint": "the-digipass-app/id1172835583",
+          "businessImpact": 3,
+          "description": "DIGIPASS"
+        }
+      ],
+      "createdAt": 1580823469
+    },
+    {
+      "content": [
+        {
+          "id": "f9357f79-3eb4-402c-827f-15abc094423a",
+          "type": 3,
+          "endpoint": "541882261",
+          "businessImpact": 3,
+          "description": "DIGIPASS FOR MOBILE (DP4MOBILE)"
+        },
+        {
+          "id": "40217af8-8ba5-4939-8b79-74e667bfca1b",
+          "type": 2,
+          "endpoint": "com.DIGIPASS_DEMO_ANDROID",
+          "businessImpact": 3,
+          "description": "DIGIPASS for Mobile app"
+        },
+        {
+          "id": "74e22393-f82a-4d31-be49-4cbc406fe131",
+          "type": 2,
+          "endpoint": "com.vasco.digipass.es",
+          "businessImpact": 3,
+          "description": "The DIGIPASS App"
+        },
+        {
+          "id": "b49e935b-f8c2-4d4f-a012-51090b6279d0",
+          "type": 3,
+          "endpoint": "the-digipass-app/id1172835583",
+          "businessImpact": 3,
+          "description": "DIGIPASS"
+        }
+      ],
+      "createdAt": 1580823485
+    },
+    {
+      "content": [
+        {
+          "id": "f9357f79-3eb4-402c-827f-15abc094423a",
+          "type": 3,
+          "endpoint": "541882261",
+          "businessImpact": 3,
+          "description": "DIGIPASS FOR MOBILE (DP4MOBILE)"
+        },
+        {
+          "id": "40217af8-8ba5-4939-8b79-74e667bfca1b",
+          "type": 2,
+          "endpoint": "com.DIGIPASS_DEMO_ANDROID",
+          "businessImpact": 3,
+          "description": "DIGIPASS for Mobile app"
+        },
+        {
+          "id": "74e22393-f82a-4d31-be49-4cbc406fe131",
+          "type": 2,
+          "endpoint": "com.vasco.digipass.es",
+          "businessImpact": 3,
+          "description": "The DIGIPASS App"
+        },
+        {
+          "id": "b49e935b-f8c2-4d4f-a012-51090b6279d0",
+          "type": 3,
+          "endpoint": "the-digipass-app/id1172835583",
+          "businessImpact": 3,
+          "description": "The DIGIPASS App"
+        }
+      ],
+      "createdAt": 1580823505
+    },
+    {
+      "content": [
+        {
+          "id": "f9357f79-3eb4-402c-827f-15abc094423a",
+          "type": 3,
+          "endpoint": "541882261",
+          "businessImpact": 3,
+          "description": "DIGIPASS for Mobile app"
+        },
+        {
+          "id": "40217af8-8ba5-4939-8b79-74e667bfca1b",
+          "type": 2,
+          "endpoint": "com.DIGIPASS_DEMO_ANDROID",
+          "businessImpact": 3,
+          "description": "DIGIPASS for Mobile app"
+        },
+        {
+          "id": "74e22393-f82a-4d31-be49-4cbc406fe131",
+          "type": 2,
+          "endpoint": "com.vasco.digipass.es",
+          "businessImpact": 3,
+          "description": "The DIGIPASS App"
+        },
+        {
+          "id": "b49e935b-f8c2-4d4f-a012-51090b6279d0",
+          "type": 3,
+          "endpoint": "the-digipass-app/id1172835583",
+          "businessImpact": 3,
+          "description": "The DIGIPASS App"
+        }
+      ],
+      "createdAt": 1580823516
+    },
+    {
+      "content": [
+        {
+          "id": "f9357f79-3eb4-402c-827f-15abc094423a",
+          "type": 3,
+          "endpoint": "559799930",
+          "businessImpact": 3,
+          "description": "DIGIPASS for Mobile app"
+        },
+        {
+          "id": "40217af8-8ba5-4939-8b79-74e667bfca1b",
+          "type": 2,
+          "endpoint": "com.DIGIPASS_DEMO_ANDROID",
+          "businessImpact": 3,
+          "description": "DIGIPASS for Mobile app"
+        },
+        {
+          "id": "74e22393-f82a-4d31-be49-4cbc406fe131",
+          "type": 2,
+          "endpoint": "com.vasco.digipass.es",
+          "businessImpact": 3,
+          "description": "The DIGIPASS App"
+        },
+        {
+          "id": "b49e935b-f8c2-4d4f-a012-51090b6279d0",
+          "type": 3,
+          "endpoint": "the-digipass-app/id1172835583",
+          "businessImpact": 3,
+          "description": "The DIGIPASS App"
+        }
+      ],
+      "createdAt": 1580823694
+    }
+  ],
+  "inScopes": [
+    {
+      "content": "The scope of this project is limited to following mobile apps:\n# \tDIGIPASS for Mobile app\n**Application entry points: the apps are available at:**\n* iOS: see [Apple app store](https://itunes.apple.com/us/app/onboard/id559799930)\n*\tAndroid: see [Google Play store](https://play.google.com/store/apps/details?id=com.DIGIPASS_DEMO_ANDROID)\n\n**Accounts: researchers can activate these apps as follows:**\n1.\t(On a mobile device) Install the app\n2.\t(On a PC) Go to http://dp4mobile.demo.vasco.com/dp4mobile/index.jsp\n3.\t(On a PC) Enter email address and click \"Sign up\"\n4.\t(In the app) Click \"Activate your DIGIPASS\"\n5.\t(In the app) Scan the color QR Code displayed on the screen\n6.\t(On a PC) Click \"Start using your DIGIPASS for Mobile\"\n\n**Using the app:**\n\nResearchers can test the functionality of the app at http://dp4mobile.demo.vasco.com/dp4mobile.\n\n# The DIGIPASS App\n**Application entry points: the apps are available at:**\n* iOS: see [Apple app store](https://itunes.apple.com/fr/app/the-digipass-app/id1172835583) \n* Android: see [Google Play Store](https://play.google.com/store/apps/details?id=com.vasco.digipass.es)  \n\n**Accounts: researchers can activate these apps as follows:**\n1.\t(On a mobile device) Install the app\n2.\t(On a PC) Visit the Self-Managed website of IDENTIKEY Authentication Server (IAS) at https://ias.scc.labs.vasco.com:9443/selfmgmt/ and select the menu Activate, and then the menu item Activation Using Color QR Code.\n3.\t(On a PC) Provide the username and static password provided through the Intigriti platform, and click OK.\n4.\t(In the app) Scan the color QR code\n5.\t(In the app) Protect the app with a fingerprint or PIN\n6.\t(On a PC) Enter the device code\n7.\t(In the app) Scan the second color QR code\n8.\t(On a PC) Enter the signature\n9.\t(In the app) Confirm the successful activation\n\n**Using the app: researchers can test the functionality of the app as follows:**\n1.\t(On a PC) Visit the Self-Managed website of IDENTIKEY Authentication Server (IAS) at https://ias.scc.labs.vasco.com:9443/selfmgmt/ and select the menu Manage, and then the menu item Login Test.\n2.\t(On a mobile device) Launch the DIGIPASS App\n3.\t(On a PC) Provide the username as well as the one-time password generated by the DIGIPASS App\n",
+      "createdAt": 1506588503
+    },
+    {
+      "content": "The scope of this project is limited to following mobile apps:\n# \tDIGIPASS for Mobile app\n**Application entry points: the apps are available at:**\n* iOS: see [Apple app store](https://itunes.apple.com/us/app/onboard/id559799930)\n*\tAndroid: see [Google Play store](https://play.google.com/store/apps/details?id=com.DIGIPASS_DEMO_ANDROID)\n\n**Accounts: researchers can activate these apps as follows:**\n1.\t(On a mobile device) Install the app\n2.\t(On a PC) Go to http://dp4mobile.demo.vasco.com/dp4mobile/index.jsp. **This website is out of scope**!\n3.\t(On a PC) Enter email address and click \"Sign up\"\n4.\t(In the app) Click \"Activate your DIGIPASS\"\n5.\t(In the app) Scan the color QR Code displayed on the screen\n6.\t(On a PC) Click \"Start using your DIGIPASS for Mobile\"\n\n**Using the app:**\n\nResearchers can test the functionality of the app at http://dp4mobile.demo.vasco.com/dp4mobile. **This website is out of scope**!\n\n# The DIGIPASS App\n**Application entry points: the apps are available at:**\n* iOS: see [Apple app store](https://itunes.apple.com/fr/app/the-digipass-app/id1172835583) \n* Android: see [Google Play Store](https://play.google.com/store/apps/details?id=com.vasco.digipass.es)  \n\n**Accounts: researchers can activate these apps as follows:**\n1.\t(On a mobile device) Install the app\n2.\t(On a PC) Visit the Self-Managed website of IDENTIKEY Authentication Server (IAS) at https://ias.scc.labs.vasco.com:9443/selfmgmt/ and select the menu Activate, and then the menu item Activation Using Color QR Code. **This website is out of scope**!\n3.\t(On a PC) Provide the username and static password provided through the Intigriti platform, and click OK.\n4.\t(In the app) Scan the color QR code\n5.\t(In the app) Protect the app with a fingerprint or PIN\n6.\t(On a PC) Enter the device code\n7.\t(In the app) Scan the second color QR code\n8.\t(On a PC) Enter the signature\n9.\t(In the app) Confirm the successful activation\n\n**Using the app: researchers can test the functionality of the app as follows:**\n1.\t(On a PC) Visit the Self-Managed website of IDENTIKEY Authentication Server (IAS) at https://ias.scc.labs.vasco.com:9443/selfmgmt/ and select the menu Manage, and then the menu item Login Test. **This website is out of scope**!\n2.\t(On a mobile device) Launch the DIGIPASS App\n3.\t(On a PC) Provide the username as well as the one-time password generated by the DIGIPASS App\n",
+      "createdAt": 1506948102
+    }
+  ],
+  "outScopes": [
+    {
+      "content": "**Please note that all products, websites, IT systems of VASCO Data Security are out of scope except the ones mentioned in the “in scope” section.**\n\n**The scope of this project is limited to the mobile apps themselves. The back-end systems which the apps communicate with are NOT in scope.**\n\nYou will not receive a reward and your submission will be rejected if they are out of scope or if they are one of the following:\n\n# General\n*\tViolations against best practices that only have a theoretical chance of exploitation\n*\tHighly speculative reports about theoretical damage. Be concrete.\n*\tReports that state that software is out of date/vulnerable without proven exploitable risks\n*\tVulnerabilities as reported by automated tools without additional analysis as to how they're an issue\n*\tPhysical or social engineering attempts (this includes phishing attacks against employees)\n\n# Application\n*\tDebug information\n*\tiOS automated screen snapshot creation\n*\tbeing able to execute any of the known “weaknesses of mobile apps”, for example:\n   * being able to take screenshots (unless the app has active screenshot prevention)\n   * being able to reverse engineer the app\n   * being able to run the app on a rooted/jailbroken device (unless the app is protected with root/jailbreak detection features)\n\n# Application business logic\n*\tFindings related to SSL/TLS configurations and certificates used by the app.\n* Findings related to weak passwords\n*\tFor apps not protected with RASP: cloning or replicating the app from one device to another\n*\tUsage of outdated libraries in the apps\n",
+      "createdAt": 1506588503
+    },
+    {
+      "content": "**Please note that all products, websites, IT systems of OneSpan are out of scope except the ones mentioned in the “in scope” section.**\n\n**The scope of this project is limited to the mobile apps themselves. The back-end systems which the apps communicate with are NOT in scope.**\n\nYou will not receive a reward and your submission will be rejected if they are out of scope or if they are one of the following:\n\n# General\n*\tViolations against best practices that only have a theoretical chance of exploitation\n*\tHighly speculative reports about theoretical damage. Be concrete.\n*\tReports that state that software is out of date/vulnerable without proven exploitable risks\n*\tVulnerabilities as reported by automated tools without additional analysis as to how they're an issue\n*\tPhysical or social engineering attempts (this includes phishing attacks against employees)\n\n# Application\n*\tDebug information\n*\tiOS automated screen snapshot creation\n*\tbeing able to execute any of the known “weaknesses of mobile apps”, for example:\n   * being able to take screenshots (unless the app has active screenshot prevention)\n   * being able to reverse engineer the app\n   * being able to run the app on a rooted/jailbroken device (unless the app is protected with root/jailbreak detection features)\n\n# Application business logic\n*\tFindings related to SSL/TLS configurations and certificates used by the app.\n* Findings related to weak passwords\n*\tFor apps not protected with RASP: cloning or replicating the app from one device to another\n*\tUsage of outdated libraries in the apps\n",
+      "createdAt": 1528104138
+    }
+  ],
+  "faqs": [
+    {
+      "content": "** Can we receive test accounts?**\n\nPlease review the above information regarding the activation of the apps. Intigriti will provide you with the credentials required to activate the DIGIPASS App.\n",
+      "createdAt": 1506588503
+    },
+    {
+      "content": "#### Can we receive test accounts?\n\nPlease review the above information regarding the activation of the apps. Intigriti will provide you with the credentials required to activate the DIGIPASS App.\n",
+      "createdAt": 1573072812
+    }
+  ],
+  "severityAssessments": [
+    {
+      "content": "It will be the responsibility of Intigriti to pay ethical hackers in a timely and legal way. Payouts will only take place after agreement with VASCO on the severity of the impact and only if the submission was the first of its kind and agreed to be valid.\n\nDuplicates policy: When two identical issues are reported, with different endpoints being the only difference between submissions, only the first submission will have the severity below assigned.\nIf similar reports by the same user are reported within 14 days after accepting the previous (only differentiating in endpoint), the reports will be accepted but in a lower severity, hence affecting the bounty.\nVASCO provides following monetary rewards in addition, researchers will be listed in VASCO’s Hall of Fame, if they agree so.\n\n**Exceptional: € 4.000 **- examples:\n*\tFor apps protected using RASP (DIGIPASS for Mobile):\n  * Recovering cleartext DIGIPASS secrets used to generate one-time passwords.\n  * Bypassing the app’s user authentication mechanism (e.g. PIN, fingerprint). This means being able to generate an authentication token that is accepted by the backend without providing the user credentials (e.g. PIN, fingerprint).\n\n**Critical: € 1.500** - examples:\n\n*\tFor apps protected using RASP (DIGIPASS for Mobile): \n  *\tBypassing the repackaging detection feature of RASP\n\n**High: € 750** - examples:\n\n*\tFor apps protected using RASP (DIGIPASS for Mobile): bypassing following RASP security features:\n    * Screenshot and screenreader prevention\n    * Debugger prevention\n    *\tDetection of library injection\n    * Emulator detection\n    * Native code hook detection\n\n*\tFor apps not protected using RASP (DIGIPASS App):\n  *\tRecovering the cryptographic key used to encrypt DIGIPASS secrets\n  *\tRecovering cleartext DIGIPASS secrets used to generate one-time passwords.\n  *\tBypassing the app’s user authentication mechanism (e.g. PIN, fingerprint). This means being able to generate an authentication token that is accepted by the backend without providing the user credentials (e.g. PIN, fingerprint).\n\n**Medium: € 500 **– examples:\n*\tFor apps protected using RASP (DIGIPASS for Mobile) detection: \n    * Bypassing the root or jailbreak detection capabilities of the app\n    *\tBypassing the hooking framework detection\n    *\tApp cloning: copying the app from one device to another, and using the app on the latter device to generate a valid one-time password\n*\tFor apps not protected using RASP (DIGIPASS App)\n  *\tInsecure usage of Android keystore or iOS keychain\n  *\tInsecure usage of TouchID or other fingerprint scanners\n  *\tInsecure random number generation\n\n**Low **– examples:\n* Leakage of sensitive information from the binary of the app\n\n\n",
+      "createdAt": 1506588503
+    },
+    {
+      "content": "It will be the responsibility of Intigriti to pay ethical hackers in a timely and legal way. Payouts will only take place after agreement with OneSpan on the severity of the impact and only if the submission was the first of its kind and agreed to be valid.\n\nDuplicates policy: When two identical issues are reported, with different endpoints being the only difference between submissions, only the first submission will have the severity below assigned.\nIf similar reports by the same user are reported within 14 days after accepting the previous (only differentiating in endpoint), the reports will be accepted but in a lower severity, hence affecting the bounty.\nOneSpan provides following monetary rewards in addition, researchers will be listed in VASCO’s Hall of Fame, if they agree so.\n\n**Exceptional: € 4.000 **- examples:\n*\tFor apps protected using RASP (DIGIPASS for Mobile):\n  * Recovering cleartext DIGIPASS secrets used to generate one-time passwords.\n  * Bypassing the app’s user authentication mechanism (e.g. PIN, fingerprint). This means being able to generate an authentication token that is accepted by the backend without providing the user credentials (e.g. PIN, fingerprint).\n\n**Critical: € 1.500** - examples:\n\n*\tFor apps protected using RASP (DIGIPASS for Mobile): \n  *\tBypassing the repackaging detection feature of RASP\n\n**High: € 750** - examples:\n\n*\tFor apps protected using RASP (DIGIPASS for Mobile): bypassing following RASP security features:\n    * Screenshot and screenreader prevention\n    * Debugger prevention\n    *\tDetection of library injection\n    * Emulator detection\n    * Native code hook detection\n\n*\tFor apps not protected using RASP (DIGIPASS App):\n  *\tRecovering the cryptographic key used to encrypt DIGIPASS secrets\n  *\tRecovering cleartext DIGIPASS secrets used to generate one-time passwords.\n  *\tBypassing the app’s user authentication mechanism (e.g. PIN, fingerprint). This means being able to generate an authentication token that is accepted by the backend without providing the user credentials (e.g. PIN, fingerprint).\n\n**Medium: € 500 **– examples:\n*\tFor apps protected using RASP (DIGIPASS for Mobile) detection: \n    * Bypassing the root or jailbreak detection capabilities of the app\n    *\tBypassing the hooking framework detection\n    *\tApp cloning: copying the app from one device to another, and using the app on the latter device to generate a valid one-time password\n*\tFor apps not protected using RASP (DIGIPASS App)\n  *\tInsecure usage of Android keystore or iOS keychain\n  *\tInsecure usage of TouchID or other fingerprint scanners\n  *\tInsecure random number generation\n\n**Low **– examples:\n* Leakage of sensitive information from the binary of the app\n\n\n",
+      "createdAt": 1528104163
+    },
+    {
+      "content": "It will be the responsibility of Intigriti to pay ethical hackers in a timely and legal way. Payouts will only take place after agreement with OneSpan on the severity of the impact and only if the submission was the first of its kind and agreed to be valid.\n\nDuplicates policy: When two identical issues are reported, with different endpoints being the only difference between submissions, only the first submission will have the severity below assigned.\nIf similar reports by the same user are reported within 14 days after accepting the previous (only differentiating in endpoint), the reports will be accepted but in a lower severity, hence affecting the bounty.\nOneSpan provides following monetary rewards in addition, researchers will be listed in VASCO’s Hall of Fame, if they agree so.\n\n**Exceptional: € 4.000**:\n*\tFor apps protected using RASP (DIGIPASS for Mobile):\n  * Recovering cleartext DIGIPASS secrets used to generate one-time passwords.\n  * Bypassing the app’s user authentication mechanism (e.g. PIN, fingerprint). This means being able to generate an authentication token that is accepted by the backend without providing the user credentials (e.g. PIN, fingerprint).\n\n**Critical: € 1.500** :\n\n*\tFor apps protected using RASP (DIGIPASS for Mobile): \n  *\tBypassing the repackaging detection feature of RASP\n\n**High: € 750**:\n\n*\tFor apps protected using RASP (DIGIPASS for Mobile): bypassing following RASP security features:\n    * Screenshot and screenreader prevention\n    * Debugger prevention\n    *\tDetection of library injection\n    * Emulator detection\n    * Native code hook detection\n\n*\tFor apps not protected using RASP (DIGIPASS App):\n  *\tRecovering the cryptographic key used to encrypt DIGIPASS secrets\n  *\tRecovering cleartext DIGIPASS secrets used to generate one-time passwords.\n  *\tBypassing the app’s user authentication mechanism (e.g. PIN, fingerprint). This means being able to generate an authentication token that is accepted by the backend without providing the user credentials (e.g. PIN, fingerprint).\n\n**Medium: € 500**:\n*\tFor apps protected using RASP (DIGIPASS for Mobile) detection: \n    * Bypassing the root or jailbreak detection capabilities of the app\n    *\tBypassing the hooking framework detection\n    *\tApp cloning: copying the app from one device to another, and using the app on the latter device to generate a valid one-time password\n*\tFor apps not protected using RASP (DIGIPASS App)\n  *\tInsecure usage of Android keystore or iOS keychain\n  *\tInsecure usage of TouchID or other fingerprint scanners\n  *\tInsecure random number generation\n\n**Low**:\n* Leakage of sensitive information from the binary of the app\n\n\n",
+      "createdAt": 1573072794
+    }
+  ],
+  "rulesOfEngagements": [
+    {
+      "description": "# Guidelines\n*\tProvide detailed but to-the point reproduction steps\n*\tInclude a clear attack scenario, a step by step guide in the PoC is highly appreciated\n*\tRemember: quality over quantity!\n*\tProvide details on the timestamp when you conducted the test and about the username that you used to conduct the test.\n\n# Response timeframe\n* We will respond to reports within 5 days.\n\n# Application availability\n* The IAS server will automatically reboot each day at 0:00 CET.\n* The IAS server might automatically reboot after the installation of updates (typically around 3:00 CET)\n",
+      "safeHarbour": true,
+      "createdAt": 1506588503
+    },
+    {
+      "description": "# Guidelines\n*\tProvide detailed but to-the point reproduction steps\n*\tInclude a clear attack scenario, a step by step guide in the PoC is highly appreciated\n*\tRemember: quality over quantity!\n*\tProvide details on the timestamp when you conducted the test and about the username that you used to conduct the test.\n\n# Application availability\n* The IAS server will automatically reboot each day at 0:00 CET.\n* The IAS server might automatically reboot after the installation of updates (typically around 3:00 CET)\n",
+      "safeHarbour": true,
+      "createdAt": 1559901437
+    }
+  ],
+  "bounties": [
+    {
+      "maxBounty": 4500,
+      "criticalityExponent": 1,
+      "bountyRows": [
+        {
+          "multiplier": 1,
+          "low": 0,
+          "medium": 500,
+          "high": 750,
+          "critical": 1500,
+          "exceptional": 4500,
+          "businessImpact": 3
+        }
+      ],
+      "createdAt": 1505294991
+    },
+    {
+      "maxBounty": 4000,
+      "criticalityExponent": 1,
+      "bountyRows": [
+        {
+          "multiplier": 1,
+          "low": 0,
+          "medium": 500,
+          "high": 750,
+          "critical": 1500,
+          "exceptional": 4000,
+          "businessImpact": 3
+        }
+      ],
+      "createdAt": 1506411069
+    },
+    {
+      "maxBounty": 4000,
+      "criticalityExponent": 1,
+      "bountyRows": [
+        {
+          "multiplier": 1,
+          "low": 0,
+          "medium": 500,
+          "high": 750,
+          "critical": 1500,
+          "exceptional": 4000,
+          "businessImpact": 3
+        }
+      ],
+      "createdAt": 1506588503
+    },
+    {
+      "maxBounty": 4000,
+      "criticalityExponent": 1,
+      "bountyRows": [
+        {
+          "multiplier": 1,
+          "low": 0,
+          "medium": 500,
+          "high": 750,
+          "critical": 1500,
+          "exceptional": 4000,
+          "businessImpact": 3
+        }
+      ],
+      "createdAt": 1573072191
+    },
+    {
+      "maxBounty": 4000,
+      "criticalityExponent": 1,
+      "bountyRows": [
+        {
+          "multiplier": 1,
+          "low": 0,
+          "medium": 500,
+          "high": 750,
+          "critical": 1500,
+          "exceptional": 4000,
+          "businessImpact": 3
+        }
+      ],
+      "createdAt": 1580823447
+    },
+    {
+      "maxBounty": 4000,
+      "criticalityExponent": 1,
+      "bountyRows": [
+        {
+          "multiplier": 1,
+          "low": 0,
+          "medium": 500,
+          "high": 750,
+          "critical": 1500,
+          "exceptional": 4000,
+          "businessImpact": 3
+        }
+      ],
+      "createdAt": 1580823469
+    },
+    {
+      "maxBounty": 4000,
+      "criticalityExponent": 1,
+      "bountyRows": [
+        {
+          "multiplier": 1,
+          "low": 0,
+          "medium": 500,
+          "high": 750,
+          "critical": 1500,
+          "exceptional": 4000,
+          "businessImpact": 3
+        }
+      ],
+      "createdAt": 1580823485
+    },
+    {
+      "maxBounty": 4000,
+      "criticalityExponent": 1,
+      "bountyRows": [
+        {
+          "multiplier": 1,
+          "low": 0,
+          "medium": 500,
+          "high": 750,
+          "critical": 1500,
+          "exceptional": 4000,
+          "businessImpact": 3
+        }
+      ],
+      "createdAt": 1580823505
+    },
+    {
+      "maxBounty": 4000,
+      "criticalityExponent": 1,
+      "bountyRows": [
+        {
+          "multiplier": 1,
+          "low": 0,
+          "medium": 500,
+          "high": 750,
+          "critical": 1500,
+          "exceptional": 4000,
+          "businessImpact": 3
+        }
+      ],
+      "createdAt": 1580823516
+    },
+    {
+      "maxBounty": 4000,
+      "criticalityExponent": 1,
+      "bountyRows": [
+        {
+          "multiplier": 1,
+          "low": 0,
+          "medium": 500,
+          "high": 750,
+          "critical": 1500,
+          "exceptional": 4000,
+          "businessImpact": 3
+        }
+      ],
+      "createdAt": 1580823694
+    }
+  ],
+  "lastContributors": [
+    {
+      "avatarId": "public_bucket_0ba15b5f-9e34-4295-bdc2-94f246a52da7-97afabd3-25aa-4f4b-a295-c4c0c4ce74ee",
+      "userName": "kingamir"
+    },
+    {
+      "avatarId": "public_bucket_a90600d3-05e6-4834-9df8-40fb394e1bfa-2ab2f48b-a6aa-4f76-8f2e-c1e8c4a59b91",
+      "userName": "d_roanze"
+    },
+    {
+      "avatarId": null,
+      "userName": "meimoon"
+    },
+    {
+      "avatarId": "public_bucket_cdf7ff24-7c61-437b-a7a9-69fe517e0f71-e4128a29-2586-45c3-86e7-e5bce852a581",
+      "userName": "dauntless"
+    },
+    {
+      "avatarId": "public_bucket_7b839c5c-a9d2-4ccf-a575-c2a834ec7ebc-83a35152-fc01-40d2-aa6d-23761930f22d",
+      "userName": "pieter"
+    }
+  ],
+  "lastActivity": [
+    {
+      "timestamp": 1580947775,
+      "type": 11,
+      "name": "OneSpan",
+      "logoId": "public_bucket_90f7e40c-0048-454b-9a0b-4db89fbe06dc-7d4c6164-4a29-4e95-8996-d6a80998d5a6"
+    },
+    {
+      "timestamp": 1580918150,
+      "type": 11,
+      "name": "OneSpan",
+      "logoId": "public_bucket_90f7e40c-0048-454b-9a0b-4db89fbe06dc-7d4c6164-4a29-4e95-8996-d6a80998d5a6"
+    },
+    {
+      "timestamp": 1580907626,
+      "type": 9,
+      "name": "kingamir",
+      "logoId": "public_bucket_0ba15b5f-9e34-4295-bdc2-94f246a52da7-97afabd3-25aa-4f4b-a295-c4c0c4ce74ee"
+    },
+    {
+      "timestamp": 1580907626,
+      "type": 13,
+      "name": "OneSpan",
+      "logoId": "public_bucket_90f7e40c-0048-454b-9a0b-4db89fbe06dc-7d4c6164-4a29-4e95-8996-d6a80998d5a6"
+    },
+    {
+      "timestamp": 1580823694,
+      "type": 4,
+      "name": "OneSpan",
+      "logoId": "public_bucket_90f7e40c-0048-454b-9a0b-4db89fbe06dc-7d4c6164-4a29-4e95-8996-d6a80998d5a6"
+    },
+    {
+      "timestamp": 1580823694,
+      "type": 5,
+      "name": "OneSpan",
+      "logoId": "public_bucket_90f7e40c-0048-454b-9a0b-4db89fbe06dc-7d4c6164-4a29-4e95-8996-d6a80998d5a6"
+    },
+    {
+      "timestamp": 1580823516,
+      "type": 4,
+      "name": "OneSpan",
+      "logoId": "public_bucket_90f7e40c-0048-454b-9a0b-4db89fbe06dc-7d4c6164-4a29-4e95-8996-d6a80998d5a6"
+    },
+    {
+      "timestamp": 1580823516,
+      "type": 5,
+      "name": "OneSpan",
+      "logoId": "public_bucket_90f7e40c-0048-454b-9a0b-4db89fbe06dc-7d4c6164-4a29-4e95-8996-d6a80998d5a6"
+    },
+    {
+      "timestamp": 1580823505,
+      "type": 4,
+      "name": "OneSpan",
+      "logoId": "public_bucket_90f7e40c-0048-454b-9a0b-4db89fbe06dc-7d4c6164-4a29-4e95-8996-d6a80998d5a6"
+    },
+    {
+      "timestamp": 1580823505,
+      "type": 5,
+      "name": "OneSpan",
+      "logoId": "public_bucket_90f7e40c-0048-454b-9a0b-4db89fbe06dc-7d4c6164-4a29-4e95-8996-d6a80998d5a6"
+    }
+  ],
+  "averagePayout": 0,
+  "submissionCount": 0,
+  "acceptedSubmissionCount": 0,
+  "totalPayout": 0,
+  "identityCheckedRequired": false,
+  "awardRep": true,
+  "skipTriage": false,
+  "lastUpdatedAt": 1580907626,
+  "lastSubmissionAt": 1594106016,
+  "logoId": "public_bucket_6870a0a8-6fdd-49fb-8b4c-a0f75521863b-bedd0a24-80bb-4a3c-8065-c197c6dc51f8",
+  "external": {
+    "enabled": false,
+    "email": null
+  }
+}

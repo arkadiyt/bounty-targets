@@ -34,6 +34,9 @@ Layout/MultilineOperationIndentation:
 Layout/SpaceInsideHashLiteralBraces:
   EnforcedStyle: no_space
 
+Lint/UriEscapeUnescape:
+  Enabled: false
+
 Style/Documentation:
   Enabled: false
 

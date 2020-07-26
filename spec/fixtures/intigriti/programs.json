@@ -1,0 +1,36 @@
+[
+  {
+    "programId": "0d0034de-b53e-47b8-9a9d-41c302c49b5a",
+    "status": 3,
+    "confidentialityLevel": 4,
+    "companyHandle": "torfs",
+    "companyName": "Torfs",
+    "companySustainable": false,
+    "handle": "torfs",
+    "name": "Torfs",
+    "description": "Torfs - the well-known shoe retailer in Belgium - is still a 100% family business today. This family character guarantees a number of important values within the company where employees are central. A head office in Sint-Niklaas and a spectacular distribution center in Temse offer support to the points of sale and customers of the E-Commerce website. With more than 80 stores in Flanders, 2 shops in the French part of Belgium and a growing online shop in Belgium, The Netherlands and several marketplaces, Torfs wants to be and remain the most customer-friendly optichannel shoe store chain.",
+    "minBounty": 0,
+    "maxBounty": 5000,
+    "lastUpdatedAt": 1592386899,
+    "lastSubmissionAt": 1595707171,
+    "logoId": "public_bucket_d4aeeaf1-2da5-468f-8a6f-aad1c2cc118c-d392363b-2601-4396-961f-1397c6a92c4a",
+    "tacRequired": false
+  },
+  {
+    "programId": "0d6d1230-beb5-489c-b306-cf9c2e06730f",
+    "status": 4,
+    "confidentialityLevel": 4,
+    "companyHandle": "depersgroep",
+    "companyName": "DPG Media",
+    "companySustainable": false,
+    "handle": "devolkskrant",
+    "name": "De Volkskrant",
+    "description": "De Volkskrant is a Dutch daily morning newspaper. Founded in 1919, it has a nationwide circulation of about 250,000 papers per day.",
+    "minBounty": 0,
+    "maxBounty": 2000,
+    "lastUpdatedAt": 1595768763,
+    "lastSubmissionAt": 1595768761,
+    "logoId": "public_bucket_3af586cd-c27b-4732-8f58-b335e49985c3-31b5959b-3df0-44cd-ba3f-00a68ad16aaa",
+    "tacRequired": false
+  }
+]
