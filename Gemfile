@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 ruby '2.5.0'
 
 gem 'graphql-client', '~> 0.16.0'
-gem 'kramdown', '~> 2.1.0'
+gem 'kramdown', '~> 2.3.0'
 gem 'nokogiri', '~> 1.10.8'
 gem 'sentry-raven', '~> 2.11.0'
 gem 'ssrf_filter', '~> 1.0.6'
