@@ -2,18 +2,18 @@
 
 ### What's it for
 
-This project crawls all the Hackerone, Bugcrowd & other bug bounty platform scopes hourly and dumps them into the bounty-targets-data repository:
+This project crawls all the Hackerone, Bugcrowd, & other bug bounty platform scopes hourly and dumps them into the bounty-targets-data repository:
 
 https://github.com/arkadiyt/bounty-targets-data
 
-Crawled platforms:
+Supported platforms:
 
-- Bugcrowd
 - Hackerone
-- Federacy
-- Hackenproof
+- Bugcrowd
 - Intigriti
+- Hackenproof
 - YesWeHack
+- Federacy
 
 ### Installation
 
