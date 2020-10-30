@@ -59,7 +59,7 @@ module BountyTargets
 
       {
         targets: {
-          in_scope: scopes_to_hashes(response['domains']),
+          in_scope: response['domains'].nil? ? [] : scopes_to_hashes(response['domains']),
           out_of_scope: []
         }
       }
