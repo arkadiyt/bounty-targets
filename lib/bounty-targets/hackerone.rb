@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'base64'
 require 'graphql/client'
 require 'graphql/client/http'
 require 'json'
@@ -9,10 +10,12 @@ require 'twingly/url/utilities'
 
 module BountyTargets
   class Hackerone
+    def initialize
+      schema
+    end
+
     def scan
       return @scan_results if instance_variable_defined?(:@scan_results)
-
-      schema # initialize graphql client
 
       @scan_results = directory_index.map do |program|
         in_scope, out_of_scope = program_targets(program)
@@ -26,35 +29,38 @@ module BountyTargets
     end
 
     def directory_index
-      # Hackerone has ~5000 programs with ~200 signed up directly and the rest being
-      # community curated pages. The graphql fields that specify this information about a program
-      # are declared `!` (non-null), but hackerone returns them as null for some teams, causing
-      # graphql errors. Hackerone itself does not run into this error because they don't use the graphql
-      # endpoint to fetch the team directory, they use a different REST endpoint. We
-      # do the same here
-
-      uri = URI('https://hackerone.com/programs/search')
-      page = 1
+      after = nil
       programs = []
-      ::Kernel.loop do
-        uri.query = ::URI.encode_www_form(query: 'type:hackerone', sort: 'published_at:ascending', page: page)
-        result = ::JSON.parse(SsrfFilter.get(uri).body)
-        page += 1
 
-        programs.concat(result['results'].map do |program|
-          {
-            id: program['id'],
-            name: program['name'],
-            handle: program['handle'],
-            url: "https://hackerone.com#{program['url']}",
-            offers_bounties: program['meta']['offers_bounties'] || false,
-            quick_to_bounty: program['meta']['quick_to_bounty'] || false,
-            quick_to_first_response: program['meta']['quick_to_first_response'] || false,
-            submission_state: program['meta']['submission_state']
-          }
-        end)
+      Kernel.loop do
+        page = nil
+        retryable do
+          page = @graphql_client.query(@directory_query, variables: {after: after})
+          raise StandardError, page.errors.details.to_s unless page.errors.details.empty?
 
-        break if programs.size == result['total']
+          after = page.data.teams.page_info.end_cursor
+          programs.concat(page.data.teams.nodes.map do |node|
+            id = Base64.decode64(node.id).gsub(%r{^gid://hackerone/Team/}, '').to_i
+            {
+              allows_bounty_splitting: node.allows_bounty_splitting || false,
+              average_time_to_bounty_awarded: node.most_recent_sla_snapshot.average_time_to_bounty_awarded,
+              average_time_to_first_program_response:
+                node.most_recent_sla_snapshot.average_time_to_first_program_response,
+              average_time_to_report_resolved: node.most_recent_sla_snapshot.average_time_to_report_resolved,
+              handle: node.handle,
+              id: id,
+              managed_program: node.triage_active || false,
+              name: node.name,
+              offers_bounties: node.offers_bounties || false,
+              offers_swag: node.offers_swag || false,
+              response_efficiency_percentage: node.response_efficiency_percentage,
+              submission_state: node.submission_state,
+              url: node.url
+            }
+          end)
+        end
+
+        break unless page.data.teams.page_info.has_next_page
       end
 
       programs.sort_by do |program|
@@ -70,18 +76,16 @@ module BountyTargets
         page = nil
         page_scopes = nil
         retryable do
-          page = @graphql_client.query(@query, variables: {handle: program[:handle], after: after})
+          page = @graphql_client.query(@program_query, variables: {handle: program[:handle], after: after})
+          raise StandardError, page.errors.details.to_s unless page.errors.details.empty?
+
+          page_scopes = page.data.team.structured_scopes.nodes
+          raise StandardError, 'Some scopes timed out' if page_scopes.any?(&:nil?)
 
           after = page.data.team.structured_scopes.page_info.end_cursor
-          page_scopes = page.data.team.structured_scopes.edges
-
-          raise StandardError, page.errors.details.to_s unless page.errors.details.empty?
-          raise StandardError, 'Some scopes timed out' if page_scopes.any?(&:nil?)
         end
 
-        scopes.concat(page_scopes.map do |edge|
-          edge.node.to_h
-        end)
+        scopes.concat(page_scopes.map(&:to_h))
 
         break unless page.data.team.structured_scopes.page_info.has_next_page
       end
@@ -107,30 +111,64 @@ module BountyTargets
       @graphql_client = ::GraphQL::Client.new(schema: @schema, execute: @http)
       @graphql_client.allow_dynamic_queries = true
 
-      @query = @graphql_client.parse <<~GRAPHQL
+      @directory_query = @graphql_client.parse <<~GRAPHQL
+        query($after: String) {
+          teams(first: 100, after: $after, secure_order_by: {started_accepting_at: {_direction: DESC}}, where: {
+            _not: {
+              _or: [
+                {external_program: {}},
+                {
+                  _or: [
+                    {state: {_eq: sandboxed}},
+                    {state: {_eq: soft_launched}}
+                  ]
+                }
+              ]
+            }
+          }) {
+            pageInfo {
+              endCursor
+              hasNextPage
+            },
+            nodes {
+              allows_bounty_splitting,
+              handle,
+              id,
+              most_recent_sla_snapshot {
+                average_time_to_bounty_awarded,
+                average_time_to_first_program_response,
+                average_time_to_report_resolved
+              }
+              name,
+              offers_bounties,
+              offers_swag,
+              response_efficiency_percentage,
+              submission_state,
+              triage_active,
+              url
+            }
+          }
+        }
+      GRAPHQL
+
+      @program_query = @graphql_client.parse <<~GRAPHQL
         query($handle: String!, $after: String) {
           team(handle: $handle) {
             structured_scopes(first: 100, after: $after, archived: false) {
               pageInfo {
                 endCursor,
-                hasNextPage,
-                hasPreviousPage,
-                startCursor
+                hasNextPage
               },
-              total_count,
-              edges {
-                cursor,
-                node {
-                  asset_identifier,
-                  asset_type,
-                  availability_requirement,
-                  confidentiality_requirement,
-                  eligible_for_bounty,
-                  eligible_for_submission,
-                  instruction,
-                  integrity_requirement,
-                  max_severity
-                }
+              nodes {
+                asset_identifier,
+                asset_type,
+                availability_requirement,
+                confidentiality_requirement,
+                eligible_for_bounty,
+                eligible_for_submission,
+                instruction,
+                integrity_requirement,
+                max_severity
               }
             }
           }
