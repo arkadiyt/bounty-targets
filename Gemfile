@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-ruby '2.5.0'
+ruby '2.6.6'
 
 gem 'graphql-client', '~> 0.16.0'
 gem 'kramdown', '~> 2.3.0'
