@@ -17,7 +17,7 @@ module BountyTargets
       scan.flat_map do |program|
         program[:targets][:in_scope]
       end.select do |scope|
-        ['api testing', 'other', 'website testing'].include?(scope[:type])
+        %w[api other website].include?(scope[:type])
       end.map do |scope|
         scope[:target]
       end
@@ -86,6 +86,8 @@ module BountyTargets
         max_payout_amount[1].gsub(',', '').to_i
       end
 
+      value = document.css('div[data-react-class=ResearcherTargetGroups]').first.attributes['data-react-props'].value
+      content = JSON.parse(value)
       {
         name: name,
         url: program_link,
@@ -94,20 +96,19 @@ module BountyTargets
         safe_harbor: safe_harbor_value,
         max_payout: max_payout_amount,
         targets: {
-          in_scope: scopes_to_hashes(document.css('#user-guides__bounty-brief__in-scope + div > table')),
-          out_of_scope: scopes_to_hashes(document.css('#user-guides__bounty-brief__out-of-scope + div > table'))
+          in_scope: scopes_to_hashes(content['groups'].find { |group| group['in_scope'] == true }),
+          out_of_scope: scopes_to_hashes(content['groups'].find { |group| group['in_scope'] == false })
         }
       }
     end
 
-    def scopes_to_hashes(nodes)
-      nodes.css('tbody > tr').map do |node|
-        target, type = node.css('td').map { |td| td.inner_text.strip }
-        raise StandardError, 'Error parsing bugcrowd target' if target.nil? || target.empty?
+    def scopes_to_hashes(group)
+      return [] if group.nil?
 
+      group['targets'].map do |target|
         {
-          type: (type || '').downcase,
-          target: target
+          type: (target['category'] || '').downcase,
+          target: target['name']
         }
       end.sort_by do |scope|
         scope[:target]
