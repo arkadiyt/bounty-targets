@@ -96,20 +96,20 @@ module BountyTargets
         safe_harbor: safe_harbor_value,
         max_payout: max_payout_amount,
         targets: {
-          in_scope: scopes_to_hashes(content['groups'].find { |group| group['in_scope'] == true }),
-          out_of_scope: scopes_to_hashes(content['groups'].find { |group| group['in_scope'] == false })
+          in_scope: scopes_to_hashes(content['groups'].select { |group| group['in_scope'] == true }),
+          out_of_scope: scopes_to_hashes(content['groups'].select { |group| group['in_scope'] == false })
         }
       }
     end
 
-    def scopes_to_hashes(group)
-      return [] if group.nil?
-
-      group['targets'].map do |target|
-        {
-          type: (target['category'] || '').downcase,
-          target: target['name']
-        }
+    def scopes_to_hashes(groups)
+      groups.flat_map do |group|
+        group['targets'].map do |target|
+          {
+            type: (target['category'] || '').downcase,
+            target: target['name']
+          }
+        end
       end.sort_by do |scope|
         scope[:target]
       end
