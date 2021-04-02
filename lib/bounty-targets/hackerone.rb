@@ -55,7 +55,8 @@ module BountyTargets
               offers_swag: node.offers_swag || false,
               response_efficiency_percentage: node.response_efficiency_percentage,
               submission_state: node.submission_state,
-              url: node.url
+              url: node.url,
+              website: node.website
             }
           end)
         end
@@ -145,7 +146,8 @@ module BountyTargets
               response_efficiency_percentage,
               submission_state,
               triage_active,
-              url
+              url,
+              website
             }
           }
         }
