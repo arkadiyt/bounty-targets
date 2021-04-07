@@ -37,16 +37,14 @@ module BountyTargets
         retryable do
           page = @graphql_client.query(@directory_query, variables: {after: after})
           raise StandardError, page.errors.details.to_s unless page.errors.details.empty?
-
-          after = page.data.teams.page_info.end_cursor
           programs.concat(page.data.teams.nodes.map do |node|
             id = Base64.decode64(node.id).gsub(%r{^gid://hackerone/Team/}, '').to_i
             {
               allows_bounty_splitting: node.allows_bounty_splitting || false,
-              average_time_to_bounty_awarded: node.most_recent_sla_snapshot.average_time_to_bounty_awarded,
+              average_time_to_bounty_awarded: node.most_recent_sla_snapshot&.average_time_to_bounty_awarded,
               average_time_to_first_program_response:
-                node.most_recent_sla_snapshot.average_time_to_first_program_response,
-              average_time_to_report_resolved: node.most_recent_sla_snapshot.average_time_to_report_resolved,
+                node.most_recent_sla_snapshot&.average_time_to_first_program_response,
+              average_time_to_report_resolved: node.most_recent_sla_snapshot&.average_time_to_report_resolved,
               handle: node.handle,
               id: id,
               managed_program: node.triage_active || false,
@@ -61,6 +59,7 @@ module BountyTargets
           end)
         end
 
+        after = page.data.teams.page_info.end_cursor
         break unless page.data.teams.page_info.has_next_page
       end
 
@@ -115,17 +114,22 @@ module BountyTargets
       @directory_query = @graphql_client.parse <<~GRAPHQL
         query($after: String) {
           teams(first: 100, after: $after, secure_order_by: {started_accepting_at: {_direction: DESC}}, where: {
-            _not: {
-              _or: [
-                {external_program: {}},
-                {
-                  _or: [
-                    {state: {_eq: sandboxed}},
-                    {state: {_eq: soft_launched}}
-                  ]
-                }
-              ]
-            }
+            _and:[
+              {
+                _or: [
+                  {submission_state:{_eq:open}},
+                  {submission_state:{_eq:api_only}},
+                  {external_program:{}}
+                ]},
+                {_not:{external_program:{}}},
+                {_or:[
+                  {_and:[
+                    {state:{_neq:sandboxed}},
+                    {state:{_neq:soft_launched}}
+                  ]},
+                {external_program:{}}
+              ]}
+            ]
           }) {
             pageInfo {
               endCursor
