@@ -37,8 +37,9 @@ module BountyTargets
         retryable do
           page = @graphql_client.query(@directory_query, variables: {after: after})
           raise StandardError, page.errors.details.to_s unless page.errors.details.empty?
+
           programs.concat(page.data.teams.nodes.map do |node|
-            id = Base64.decode64(node.id).gsub(%r{^gid://hackerone/Team/}, '').to_i
+            id = Base64.decode64(node.id).gsub(%r{^gid://hackerone/Engagements::Legacy/}, '').to_i
             {
               allows_bounty_splitting: node.allows_bounty_splitting || false,
               average_time_to_bounty_awarded: node.most_recent_sla_snapshot&.average_time_to_bounty_awarded,
