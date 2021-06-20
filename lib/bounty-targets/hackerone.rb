@@ -36,7 +36,7 @@ module BountyTargets
         page = nil
         retryable do
           page = @graphql_client.query(@directory_query, variables: {after: after})
-          raise StandardError, page.errors.details.to_s unless page.errors.details.empty?
+          raise StandardError, page.errors.details.inspect unless page.errors.details.empty?
 
           programs.concat(page.data.teams.nodes.map do |node|
             id = Base64.decode64(node.id).gsub(%r{^gid://hackerone/Engagements::Legacy/}, '').to_i
