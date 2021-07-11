@@ -9,7 +9,7 @@ gem 'kramdown', '~> 2.3.1'
 gem 'nokogiri', '~> 1.11.1'
 gem 'sentry-raven', '~> 2.11.0'
 gem 'ssrf_filter', '~> 1.0.6'
-gem 'twingly-url', '~> 6.0.1'
+gem 'twingly-url', '~> 6.0.2'
 
 group :development, :test do
   gem 'bundler-audit', '~> 0.6.1'
