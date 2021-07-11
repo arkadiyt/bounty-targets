@@ -211,7 +211,7 @@ module BountyTargets
       uris + extra_uris
     end
 
-    def retryable(tries = 5)
+    def retryable(tries = 10)
       yield
     rescue StandardError
       tries -= 1
