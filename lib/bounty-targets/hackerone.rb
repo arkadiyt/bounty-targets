@@ -114,7 +114,7 @@ module BountyTargets
 
       @directory_query = @graphql_client.parse <<~GRAPHQL
         query($after: String) {
-          teams(first: 100, after: $after, secure_order_by: {started_accepting_at: {_direction: DESC}}, where: {
+          teams(first: 50, after: $after, secure_order_by: {started_accepting_at: {_direction: DESC}}, where: {
             _and:[
               {
                 _or: [
