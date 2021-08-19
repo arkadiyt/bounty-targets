@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'bounty-targets/hackenproof'
-
 describe BountyTargets::Hackenproof do
   before :all do
     BountyTargets::Hackenproof.make_all_methods_public!

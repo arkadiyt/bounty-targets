@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'bounty-targets/intigriti'
-
 describe BountyTargets::Intigriti do
   before :all do
     BountyTargets::Intigriti.make_all_methods_public!
