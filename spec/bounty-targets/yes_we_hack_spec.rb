@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'bounty-targets/yes_we_hack'
-
 describe BountyTargets::YesWeHack do
   before :all do
     BountyTargets::YesWeHack.make_all_methods_public!

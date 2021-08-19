@@ -5,11 +5,15 @@ require 'ssrf_filter'
 
 module BountyTargets
   class Bugcrowd
+    include Retryable
+
     def scan
       return @scan_results if instance_variable_defined?(:@scan_results)
 
       @scan_results = directory_index.sort.map do |program_link|
-        parse_program(program_link)
+        retryable do
+          parse_program(program_link)
+        end
       end
     end
 

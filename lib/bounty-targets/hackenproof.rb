@@ -6,6 +6,8 @@ require 'uri'
 
 module BountyTargets
   class Hackenproof
+    include Retryable
+
     def scan
       return @scan_results if instance_variable_defined?(:@scan_results)
 
@@ -27,13 +29,6 @@ module BountyTargets
     end
 
     private
-
-    def retryable(tries = 5)
-      yield
-    rescue StandardError
-      tries -= 1
-      tries <= 0 ? raise : sleep(2) && retry
-    end
 
     def http_get(url)
       uri = ::URI.parse(url)

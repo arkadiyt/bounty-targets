@@ -10,6 +10,8 @@ require 'twingly/url/utilities'
 
 module BountyTargets
   class Hackerone
+    include Retryable
+
     def initialize
       schema
     end
@@ -209,13 +211,6 @@ module BountyTargets
       end
 
       uris + extra_uris
-    end
-
-    def retryable(tries = 10)
-      yield
-    rescue StandardError
-      tries -= 1
-      tries <= 0 ? raise : sleep(2) && retry
     end
   end
 end

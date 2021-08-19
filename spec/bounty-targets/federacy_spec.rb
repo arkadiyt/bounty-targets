@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'bounty-targets/federacy'
-
 describe BountyTargets::Federacy do
   before :all do
     BountyTargets::Federacy.make_all_methods_public!
