@@ -56,7 +56,8 @@ module BountyTargets
     end
 
     def parse_program(program_link)
-      response = ::SsrfFilter.get(URI(program_link)).body
+      uri = URI(program_link)
+      response = ::SsrfFilter.get(uri).body
       document = ::Nokogiri::HTML(response)
 
       name = document.css('h1.bc-panel__title').inner_text.strip
@@ -66,9 +67,7 @@ module BountyTargets
         node.inner_text !~ /This program does not allow disclosure/
       end
 
-      managed_by_bugcrowd = document.css('.bc-stat').any? do |node|
-        node.inner_text =~ /Managed by Bugcrowd/
-      end
+      managed_by_bugcrowd = !document.css('#user-guides__bounty-brief__managed').empty?
 
       safe_harbor = document.css('.bc-stat').find do |node|
         node.inner_text =~ /safe harbor/i
@@ -90,8 +89,8 @@ module BountyTargets
         max_payout_amount[1].gsub(',', '').to_i
       end
 
-      value = document.css('div[data-react-class=ResearcherTargetGroups]').first.attributes['data-react-props'].value
-      content = JSON.parse(value)
+      uri.path += '/target_groups'
+      groups = ::JSON.parse(::SsrfFilter.get(uri).body)['groups']
       {
         name: name,
         url: program_link,
@@ -100,15 +99,17 @@ module BountyTargets
         safe_harbor: safe_harbor_value,
         max_payout: max_payout_amount,
         targets: {
-          in_scope: scopes_to_hashes(content['groups'].select { |group| group['in_scope'] == true }),
-          out_of_scope: scopes_to_hashes(content['groups'].select { |group| group['in_scope'] == false })
+          in_scope: scopes_to_hashes(uri, groups.select { |group| group['in_scope'] == true }),
+          out_of_scope: scopes_to_hashes(uri, groups.select { |group| group['in_scope'] == false })
         }
       }
     end
 
-    def scopes_to_hashes(groups)
+    def scopes_to_hashes(uri, groups)
       groups.flat_map do |group|
-        group['targets'].map do |target|
+        targets_uri = uri.clone
+        targets_uri.path = group['targets_url']
+        ::JSON.parse(::SsrfFilter.get(targets_uri).body)['targets'].map do |target|
           {
             type: (target['category'] || '').downcase,
             target: target['name']
