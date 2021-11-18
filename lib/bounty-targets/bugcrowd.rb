@@ -67,8 +67,6 @@ module BountyTargets
         node.inner_text !~ /This program does not allow disclosure/
       end
 
-      managed_by_bugcrowd = !document.css('#user-guides__bounty-brief__managed').empty?
-
       safe_harbor = document.css('.bc-stat').find do |node|
         node.inner_text =~ /safe harbor/i
       end
@@ -95,7 +93,7 @@ module BountyTargets
         name: name,
         url: program_link,
         allows_disclosure: allows_disclosure,
-        managed_by_bugcrowd: managed_by_bugcrowd,
+        managed_by_bugcrowd: true, # Bugcrowd seems to have removed the flag for this / all programs are managed
         safe_harbor: safe_harbor_value,
         max_payout: max_payout_amount,
         targets: {
