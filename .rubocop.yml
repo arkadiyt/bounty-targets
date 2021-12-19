@@ -1,5 +1,6 @@
 AllCops:
   TargetRubyVersion: 2.6
+  NewCops: enable
 
 inherit_from:
   - .rubocop_todo.yml
@@ -14,19 +15,26 @@ Metrics/ClassLength:
   Enabled: false
 
 Metrics/CyclomaticComplexity:
-  Max: 7
-
-Metrics/LineLength:
-  Max: 120
+  Enabled: false
 
 Metrics/MethodLength:
   Enabled: false
+
+Metrics/PerceivedComplexity:
+  Enabled: false
+
+Layout/ArgumentAlignment:
+  EnforcedStyle: with_fixed_indentation
+  IndentationWidth: 2
 
 Layout/CaseIndentation:
   EnforcedStyle: end
 
 Layout/EndAlignment:
   EnforcedStyleAlignWith: variable
+
+Layout/LineLength:
+  Max: 120
 
 Layout/MultilineMethodCallIndentation:
   EnforcedStyle: indented
@@ -47,4 +55,7 @@ Style/MultilineBlockChain:
   Enabled: false
 
 Style/FormatStringToken:
+  Enabled: false
+
+Style/StringConcatenation:
   Enabled: false

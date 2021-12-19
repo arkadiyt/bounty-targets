@@ -8,7 +8,7 @@ describe BountyTargets::Federacy do
   let(:subject) { BountyTargets::Federacy.new }
 
   it 'should fetch a list of programs' do
-    programs = IO.read('spec/fixtures/federacy/programs.json')
+    programs = File.read('spec/fixtures/federacy/programs.json')
     stub_request(:get, %r{/api/public_programs}).with(headers: {host: 'www.federacy.com'})
       .to_return(status: 200, body: programs)
     expect(subject.directory_index).to eq(
@@ -28,7 +28,7 @@ describe BountyTargets::Federacy do
   end
 
   it 'should fetch program scopes' do
-    scopes = IO.read('spec/fixtures/federacy/scopes.json')
+    scopes = File.read('spec/fixtures/federacy/scopes.json')
     stub_request(:get, %r{/api/public_programs/50cea250-a08a-4581-93a5-5d973a261f45/program_scopes})
       .with(headers: {host: 'www.federacy.com'})
       .to_return(status: 200, body: scopes)

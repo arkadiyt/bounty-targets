@@ -8,7 +8,7 @@ describe BountyTargets::YesWeHack do
   let(:subject) { BountyTargets::YesWeHack.new }
 
   it 'should fetch a list of programs' do
-    programs = IO.read('spec/fixtures/yes_we_hack/programs.json')
+    programs = File.read('spec/fixtures/yes_we_hack/programs.json')
     stub_request(:get, %r{/programs}).with(headers: {host: 'api.yeswehack.com'})
       .to_return(status: 200, body: programs)
     expect(subject.directory_index).to eq(
@@ -27,7 +27,7 @@ describe BountyTargets::YesWeHack do
   end
 
   it 'should fetch program scopes' do
-    scopes = IO.read('spec/fixtures/yes_we_hack/scopes.json')
+    scopes = File.read('spec/fixtures/yes_we_hack/scopes.json')
     stub_request(:get, %r{/programs/stopcovid-bugbounty-program})
       .with(headers: {host: 'api.yeswehack.com'}).to_return(status: 200, body: scopes)
     expect(subject.program_scopes(id: 'stopcovid-bugbounty-program')).to eq(

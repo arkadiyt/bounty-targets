@@ -30,35 +30,33 @@ module BountyTargets
 
     private
 
-    def http_get(url)
-      uri = ::URI.parse(url)
-      retryable do
-        # Can't use ssrf_filter here due to webmock bug handling ipv6 addresses
-        response = Net::HTTP.start(uri.host, uri.port, use_ssl: uri.scheme == 'https') do |http|
-          http.get(uri)
-        end
-        raise StandardError, "Got #{response.code} response from Hackenproof" if response.code != '200'
-
-        response.body
-      end
-    end
-
     def directory_index
-      document = ::Nokogiri::HTML(http_get('https://hackenproof.com/programs'))
+      page = 1
+      programs = []
 
-      document.css('div.bounty-programs-list--item').map do |node|
-        link = node.css('h2 a').first
-        {
-          id: link.attributes['href'].value,
-          name: link.inner_text.strip,
-          url: URI.join('https://hackenproof.com', link.attributes['href'].value).to_s,
-          archived: node.classes.include?('archived-program')
-        }
+      ::Kernel.loop do
+        document = ::Nokogiri::HTML(::SsrfFilter.get("https://hackenproof.com/programs?page=#{page}").body)
+
+        programs.concat(document.css('div.bounty-programs-list--item').map do |node|
+          link = node.css('h2 a').first
+          {
+            id: link.attributes['href'].value,
+            name: link.inner_text.strip,
+            url: URI.join('https://hackenproof.com', link.attributes['href'].value).to_s,
+            archived: node.classes.include?('archived-program')
+          }
+        end)
+
+        break if document.css('.last').empty?
+
+        page += 1
       end
+
+      programs
     end
 
     def program_scopes(program)
-      document = ::Nokogiri::HTML(http_get(program[:url]))
+      document = ::Nokogiri::HTML(::SsrfFilter.get(program[:url]).body)
       h4s = document.css('div#in_scope h4')
       {
         targets: {

@@ -5,7 +5,6 @@ require 'graphql/client'
 require 'graphql/client/http'
 require 'json'
 require 'kramdown'
-require 'ssrf_filter'
 require 'twingly/url/utilities'
 
 module BountyTargets
@@ -97,11 +96,11 @@ module BountyTargets
 
       scopes = scopes.group_by do |scope|
         scope['eligible_for_submission']
-      end.map do |key, targets|
-        [key, targets.sort_by do |scope|
+      end.transform_values do |targets|
+        targets.sort_by do |scope|
           [scope['asset_identifier'], scope['asset_type']]
-        end]
-      end.to_h
+        end
+      end
 
       [scopes.fetch(true, []), scopes.fetch(false, [])]
     end
