@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"fbc6b5c5dc","applicationID":"143379461","transactionName":"dg1fFUtXCFxSSkpbC0AMRRhmSBZfUEoEVBcaC18FXEA=","queueTime":0,"applicationTime":807,"agent":""}</script>
-<script>window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
 <title>Bug bounty and security programs for defining and disclosing bugs - Hackenproof</title>
 <meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport'>
 <meta content='True' name='HandheldFriendly'>
@@ -11,7 +9,7 @@
 <meta content='telephone=no' name='format-detection'>
 <meta content='address=no' name='format-detection'>
 <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="cJGhO1VFm61LuWNdWwWfDLN7VgwT8cF/0jNja9ZgmlKneYIpOShaSeqEcbmths5BDErDAwIJ7B7rMo+gohXrMQ==" />
+<meta name="csrf-token" content="4wk2GxlplSjrWLkVzuWVYgkyJvrV5GccCdEwiWdpaUDxa4zECCHwrEgwtqvJaEp4tGsr/H89ttiVS5RKtDEyuQ==" />
 <link rel="apple-touch-icon" type="image/x-icon" href="/assets/home/favicons/apple-touch-icon-877e3ab6812d47bab88fb6d481acdbea7fa6995a95c89743bb18e5a0a4012892.png" sizes="180x180" />
 <link rel="icon" type="image/png" href="/assets/home/favicons/favicon-32x32-63afb31b2b98fafbbdb12c5cbcba1231e3a7ba8d669ea7680370c90bdc4e1ad7.png" sizes="32x32" />
 <link rel="icon" type="image/png" href="/assets/home/favicons/favicon-16x16-b7aeb056379d4392ef3764ec45581ccf88771f6a999d9b39f6d8639529f60bc4.png" sizes="16x16" />
@@ -35,7 +33,7 @@
     );var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-PV9J5G7');
+    })(window,document,'script','dataLayer','GTM-WPWK6VZ');
 </script>
 <script>
   !function(f,b,e,v,n,t,s)
@@ -54,7 +52,7 @@
 </noscript>
 
 
-<link rel="stylesheet" media="screen" href="/assets/new_application-2d4e5b9d66ab4dad74f1222ed831add2e00ddce2308cff30bd89df7fb9e42ff4.css" />
+<link rel="stylesheet" media="screen" href="/assets/new_application-587b7af8511f3086356d5cf45138d9abda1f11af54353c87aae413355783425f.css" />
 </head>
 <body class='new-layout dashboard-panel application-layout' data-action='index' data-controller='bounty_programs'>
 <div class='flash-msgs--fixed flash-msg--js flash-msg--version' id='flash-msgs'>
@@ -95,59 +93,78 @@
 <div class='menu-mob'>
 <ul class='list-menu'>
 <li class='toggle-dropdown--flat'>
-<a href="/programs">Bug Bounty Programs
+<a href="/programs">For Business
 </a><div class='dropdown dropdown__visible-sm'>
 <ul>
 <li>
-<a href="/programs">Programs list</a>
+<a class='hidden-link notranslate' data-link='/companies/new'>Start Program</a>
 </li>
 <li>
-<a href="/reports?sort=created_at-desc">Overall activity</a>
+<a class="nowrap" href="/bug-bounty-solutions">Bug Bounty Solutions</a>
 </li>
 <li>
-<a class="nowrap" href="/public-bug-bounty-list">Bug Bounty Tracker</a>
+<a class="nowrap" href="/penetration-testing-services">Penetration Testing</a>
 </li>
 <li>
-<a href="/vulnerabilities">Vulnerability DB</a>
+<a href="/cup">Live Hacking</a>
+</li>
+<li>
+<a href="https://faq.hackenproof.com/en/collections/2870832-faq-for-business">Business FAQ</a>
 </li>
 </ul>
 </div>
+</li>
+<li class='toggle-dropdown--flat'>
+<a href="/hackers">For Hackers
+</a><div class='dropdown dropdown__visible-sm'>
+<ul>
+<li>
+<a class='hidden-link notranslate' data-link='/users/new'>Start Hacking</a>
+</li>
+<li>
+<a href="/programs">Programs list</a>
 </li>
 <li>
 <a href="/leaderboard?sort=rank-asc">Leaderboard</a>
 </li>
 <li>
-<a href="/cup">Hacken Cup</a>
+<a href="/reports?sort=created_on-desc">Overall activity</a>
+</li>
+<li>
+<a class="nowrap" href="/public-bug-bounty-list">Bug Bounty Tracker</a>
+</li>
+<li>
+<a href="https://faq.hackenproof.com/en/collections/2870874-faq-for-hackers">Hacker FAQ</a>
+</li>
+</ul>
+</div>
 </li>
 <li class='toggle-dropdown--flat'>
 <a href="/about">Company
 </a><div class='dropdown dropdown__visible-sm'>
 <ul>
 <li>
-<a href="/about">About us</a>
+<a href="/about">About</a>
 </li>
 <li>
 <a href="https://blog.hackenproof.com/">Blog</a>
 </li>
 <li>
-<a href="/roadmap">Roadmap</a>
+<a class="nowrap" href="/partners">Partners</a>
 </li>
 <li>
-<a href="/contacts">Contact us</a>
+<a href="/contacts">Contact</a>
 </li>
 </ul>
 </div>
 </li>
+<li class='toggle-dropdown--flat'>
+<a href="/pricing">Pricing
+</a></li>
 </ul>
-<div class='hkn'><svg viewbox='413 562 830 207.6' xmlns='http://www.w3.org/2000/svg'>
-<g id='hacken_proof_blue' transform='translate(414 563)'>
-<path class='cls-1' d='M497.7,0H433.5V70.3H340.3V0H156.4V70.3H64.7V0H0V205.5H64.7v-74h91.7v74H221V61.1h54.6V205.6h64.7V131.5h93.2l64.2-61.2Z' data-name='Path 1' id='Path_1'></path>
-<rect class='cls-1' data-name='Rectangle 1' height='74' id='Rectangle_1' transform='translate(433.5 131.5)' width='64.7'></rect>
-<path class='cls-1' d='M773.5,0H709V91.9L616.8,0H552.3V205.5h64.5V112.2l92.9,93.3h63.8V61.1H828V0Z' data-name='Path 2' id='Path_2'></path>
-<rect class='cls-2' data-name='Rectangle 2' height='2' id='Rectangle_2' transform='translate(222 -0.5) rotate(90)' width='62'></rect>
-</g>
-</svg><p>0.19$</p></div>
-<a class='btn-sign hidden-link' data-link='/login'>Sign in</a>
+<a class="btn-sign-bounties hover-btn notranslate" href="/programs">Review bounties</a>
+<a class='btn-sign hidden-link notranslate sign-in' data-link='/login'>Sign in</a>
+
 </div>
 </div>
 </div><div class='btn-menu'>
@@ -158,7 +175,7 @@
 
 <div class='container--center'>
 <div class='breadcrumbs'>
-<ol class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList"><li itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a class="breadcrumb-link" itemprop="item" href="/"><span itemprop="name">Main</span></a><meta content="1" itemprop="name" /></li><li class="active">Programs</li></ol>
+<ol class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList"><li class="active">Programs</li></ol>
 </div>
 </div>
 <header class='common common--bg'>
@@ -194,129 +211,24 @@
 </span>
 <span class='select-option' id='smartcontract' style='border-color: #40fe00' value='smart contract'><span class='select-option--label'></span><span class='select-option--title'>smart contract</span>
 </span>
+<span class='select-option' id='desktop' style='border-color: #b5de2c' value='desktop'><span class='select-option--label'></span><span class='select-option--title'>desktop</span>
+</span>
 </div>
 
 </div>
 <div class='bounty-programs-list' id='programs'>
-<div class='archived-program bounty-programs-list--item flex-sm justify-between'>
+<div class='bounty-programs-list--item flex-sm justify-between'>
 <div class='flex-sm align-items-start'>
 <div class='avatar avatar-large border-radial margin-r-medium margin-b-small'>
-<a href="/crypviser/crypviser-network"><span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/bounty_program/logo/5bd329bdb6fa1e552bf78c10/profile_logo.png)'></span>
+<a href="/allbridge/allbridge"><span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/bounty_program/logo/614d8f4bb6fa1e6880483588/profile_logo.png)'></span>
 
 </a></div>
 <div>
 <h2 class='margin-b-small'>
-<a class="link inverted" href="/crypviser/crypviser-network">Crypviser Network
+<a class="link inverted" href="/allbridge/allbridge">Allbridge
 </a></h2>
 <p class='text trivial smaller'>
-The Crypviser Network is an all-in-one decentralized communications platform, featuring not only instant messaging, voice and video calls, but also a secure crypto wallet, local protection features and more. Users can access the network through user-friendly Crypviser Apps.
-
-</p>
-</div>
-</div>
-<div class='text-right'>
-<div class='flex-wrap-mobile-max justify-end justify-between-mobile-max'>
-<div class='inline-block skills-min-width'>
-<span class='skill' style='border-color: #f79a0e'><span class='skill-label'></span><span class='skill-title'>blockchain</span>
-</span>
-</div>
-<div class='inline-block margin-t-xs'>
-<i class='icon-public icon-huge' title='Public bug bounty'></i>
-</div>
-</div>
-<p class='margin-b-small'>
-</p>
-<div class='details--legend'>
-<div class='flex justify-between'>
-<span class='trivial'>Completion date:</span>
-<span>10/26/2019</span>
-</div>
-<div class='flex justify-between'>
-<span class='trivial'>Maximum reward:</span>
-<span title='26336.58 HKN'>
-$5000.0
-</span>
-</div>
-<div class='flex justify-between'>
-<span class='trivial'>Total views:</span>
-<span>
-931
-</span>
-</div>
-</div>
-</div>
-</div>
-<div class='archived-program bounty-programs-list--item flex-sm justify-between'>
-<div class='flex-sm align-items-start'>
-<div class='avatar avatar-large border-radial margin-r-medium margin-b-small'>
-<a href="/crypviser/crypviser-secure-messenger"><span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/bounty_program/logo/5bd02c0ab6fa1e552bf78949/profile_logo.png)'></span>
-
-</a></div>
-<div>
-<h2 class='margin-b-small'>
-<a class="link inverted" href="/crypviser/crypviser-secure-messenger">Crypviser Secure Messenger
-</a></h2>
-<p class='text trivial smaller'>
-Crypviser  is the most private messaging app, as it is based on Blockchain technology.
-The decentralized Crypviser Messenger lets you to enjoy private cam chat &amp; voice calls with automated blockchain encryption.
-
-</p>
-</div>
-</div>
-<div class='text-right'>
-<div class='flex-wrap-mobile-max justify-end justify-between-mobile-max'>
-<div class='inline-block skills-min-width'>
-<span class='skill' style='border-color: #169987'><span class='skill-label'></span><span class='skill-title'>mobile</span>
-</span>
-</div>
-<div class='inline-block margin-t-xs'>
-<i class='icon-public icon-huge' title='Public bug bounty'></i>
-</div>
-</div>
-<p class='margin-b-small'>
-<span>
-<i class='icon-list vertical-align-middle'></i>
-2
-</span>
-reports
-<span>
-<i class='icon-person'></i>
-2
-<span>members</span>
-</span>
-</p>
-<div class='details--legend'>
-<div class='flex justify-between'>
-<span class='trivial'>Start date:</span>
-<span>12/12/2018</span>
-</div>
-<div class='flex justify-between'>
-<span class='trivial'>Maximum reward:</span>
-<span title='15801.95 HKN'>
-$3000.0
-</span>
-</div>
-<div class='flex justify-between'>
-<span class='trivial'>Total views:</span>
-<span>
-642
-</span>
-</div>
-</div>
-</div>
-</div>
-<div class='archived-program bounty-programs-list--item flex-sm justify-between'>
-<div class='flex-sm align-items-start'>
-<div class='avatar avatar-large border-radial margin-r-medium margin-b-small'>
-<a href="/neverdie/dragon-king"><span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/bounty_program/logo/5b1e6c2fb6fa1e35e3ece998/profile_logo.png)'></span>
-
-</a></div>
-<div>
-<h2 class='margin-b-small'>
-<a class="link inverted" href="/neverdie/dragon-king">Dragon King
-</a></h2>
-<p class='text trivial smaller'>
-In 2018 NEVERDIE launched Dragon King the first blockchain strategy game to utilize NDC and TPT and the NEVERDIE crypto gaming wallet and API to support developers to integrate NDC and TPT into the next generation of online games.
+Allbridge is a simple, modern, and reliable way to transfer assets between networks. It&#39;s a decentralized, modular, and expanding token bridge with on-chain consensus. Transfer ERC20, SPL, and many more tokens in a few clicks.
 
 </p>
 </div>
@@ -326,6 +238,10 @@ In 2018 NEVERDIE launched Dragon King the first blockchain strategy game to util
 <div class='inline-block skills-min-width'>
 <span class='skill' style='border-color: #7beef4'><span class='skill-label'></span><span class='skill-title'>web</span>
 </span>
+<span class='skill' style='border-color: #40fe00'><span class='skill-label'></span><span class='skill-title'>smart contract</span>
+</span>
+<span class='skill' style='border-color: #f79a0e'><span class='skill-label'></span><span class='skill-title'>blockchain</span>
+</span>
 </div>
 <div class='inline-block margin-t-xs'>
 <i class='icon-public icon-huge' title='Public bug bounty'></i>
@@ -334,42 +250,52 @@ In 2018 NEVERDIE launched Dragon King the first blockchain strategy game to util
 <p class='margin-b-small'>
 <span>
 <i class='icon-list vertical-align-middle'></i>
-6
+1
 </span>
 reports
 <span>
 <i class='icon-person'></i>
-6
+1
 <span>members</span>
 </span>
 </p>
 <div class='details--legend'>
 <div class='flex justify-between'>
+<span class='trivial'>Start date:</span>
+<span>09/24/2021</span>
+</div>
+<div class='flex justify-between'>
+<span class='trivial'>Completion date:</span>
+<span>09/24/2022</span>
+</div>
+<div class='flex justify-between'>
 <span class='trivial'>Maximum reward:</span>
-<span title='7900.97 HKN'>
-$1500.0
+<span>
+$4000.0
 </span>
 </div>
 <div class='flex justify-between'>
 <span class='trivial'>Total views:</span>
 <span>
-1417
+10404
 </span>
 </div>
 </div>
 </div>
 </div>
-<div class='archived-program bounty-programs-list--item flex-sm justify-between'>
+<div class='bounty-programs-list--item flex-sm justify-between'>
 <div class='flex-sm align-items-start'>
 <div class='avatar avatar-large border-radial margin-r-medium margin-b-small'>
-<a href="/enecuum/enecuum"><span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/bounty_program/logo/5b4c6c7db6fa1e5bd7ea3181/profile_logo.png)'></span>
+<a href="/avalanche/avalanche-general"><span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/bounty_program/logo/605cb055b6fa1e70972a6810/profile_logo.png)'></span>
 
 </a></div>
 <div>
 <h2 class='margin-b-small'>
-<a class="link inverted" href="/enecuum/enecuum">Enecuum
+<a class="link inverted" href="/avalanche/avalanche-general">Avalanche General
 </a></h2>
 <p class='text trivial smaller'>
+Avalanche is an open-source platform for launching highly decentralized applications, new financial primitives, and new interoperable blockchains.
+Please note that OUT OF SCOPE targets take precedent over the IN SCOPE targets, so please check OUT OF SCOPE target list before testing.
 
 </p>
 </div>
@@ -377,6 +303,10 @@ $1500.0
 <div class='text-right'>
 <div class='flex-wrap-mobile-max justify-end justify-between-mobile-max'>
 <div class='inline-block skills-min-width'>
+<span class='skill' style='border-color: #7beef4'><span class='skill-label'></span><span class='skill-title'>web</span>
+</span>
+<span class='skill' style='border-color: #f79a0e'><span class='skill-label'></span><span class='skill-title'>blockchain</span>
+</span>
 <span class='skill' style='border-color: #40fe00'><span class='skill-label'></span><span class='skill-title'>smart contract</span>
 </span>
 </div>
@@ -385,540 +315,32 @@ $1500.0
 </div>
 </div>
 <p class='margin-b-small'>
-</p>
-<div class='details--legend'>
-<div class='flex justify-between'>
-<span class='trivial'>Total views:</span>
-<span>
-476
-</span>
-</div>
-</div>
-</div>
-</div>
-<div class='archived-program bounty-programs-list--item flex-sm justify-between'>
-<div class='flex-sm align-items-start'>
-<div class='avatar avatar-large border-radial margin-r-medium margin-b-small'>
-<a href="/hacken/hackit-4-dot-0"><span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/bounty_program/logo/5b56f66ab6fa1e5bd7ea3b11/profile_logo.png)'></span>
-
-</a></div>
-<div>
-<h2 class='margin-b-small'>
-<a class="link inverted" href="/hacken/hackit-4-dot-0">HackIT 4.0
-</a></h2>
-<p class='text trivial smaller'>
-HackIT – it’s an informational security forum that gathering community of experts. Forum website – it’s a place where people can sign up by sending their personal data, buy ticket and look at the content of event.
-
-</p>
-</div>
-</div>
-<div class='text-right'>
-<div class='flex-wrap-mobile-max justify-end justify-between-mobile-max'>
-<div class='inline-block skills-min-width'>
-<span class='skill' style='border-color: #7beef4'><span class='skill-label'></span><span class='skill-title'>web</span>
-</span>
-</div>
-<div class='inline-block margin-t-xs'>
-<i class='icon-public icon-huge' title='Public bug bounty'></i>
-</div>
-</div>
-<p class='margin-b-small'>
 <span>
 <i class='icon-list vertical-align-middle'></i>
-5
+32
 </span>
 reports
 <span>
 <i class='icon-person'></i>
-5
-<span>members</span>
-</span>
-</p>
-<div class='details--legend'>
-<div class='flex justify-between'>
-<span class='trivial'>Total views:</span>
-<span>
-1177
-</span>
-</div>
-</div>
-</div>
-</div>
-<div class='bounty-programs-list--item flex-sm justify-between'>
-<div class='flex-sm align-items-start'>
-<div class='avatar avatar-large border-radial margin-r-medium margin-b-small'>
-<a href="/hacken/hackenproof"><span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/bounty_program/logo/5a560100b6fa1e6b183644a3/profile_logo.png)'></span>
-
-</a></div>
-<div>
-<h2 class='margin-b-small'>
-<a class="link inverted" href="/hacken/hackenproof">HackenProof
-</a></h2>
-<p class='text trivial smaller'>
-HackenProof is a Bug Bounty and Vulnerability Coordination Platform. We connect our customers with the global hacker community to uncover security issues in their products. By running custom-tailored bug bounty programs we help our customers significantly reduce the risk of losing their data to cybercriminals.
-
-</p>
-</div>
-</div>
-<div class='text-right'>
-<div class='flex-wrap-mobile-max justify-end justify-between-mobile-max'>
-<div class='inline-block skills-min-width'>
-<span class='skill' style='border-color: #7beef4'><span class='skill-label'></span><span class='skill-title'>web</span>
-</span>
-</div>
-<div class='inline-block margin-t-xs'>
-<i class='icon-public icon-huge' title='Public bug bounty'></i>
-</div>
-</div>
-<p class='margin-b-small'>
-<span>
-<i class='icon-list vertical-align-middle'></i>
-56
-</span>
-reports
-<span>
-<i class='icon-person'></i>
-35
-<span>members</span>
-</span>
-</p>
-<div class='details--legend'>
-<div class='flex justify-between'>
-<span class='trivial'>Completion date:</span>
-<span>12/31/2019</span>
-</div>
-<div class='flex justify-between'>
-<span class='trivial'>Maximum reward:</span>
-<span title='7900.97 HKN'>
-$1500.0
-</span>
-</div>
-<div class='flex justify-between'>
-<span class='trivial'>Total views:</span>
-<span>
-2374
-</span>
-</div>
-</div>
-</div>
-</div>
-<div class='archived-program bounty-programs-list--item flex-sm justify-between'>
-<div class='flex-sm align-items-start'>
-<div class='avatar avatar-large border-radial margin-r-medium margin-b-small'>
-<a href="/interkassa/interkassa-ltd"><span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/bounty_program/logo/5aa85bc2b6fa1e45f69acf6a/profile_logo.png)'></span>
-
-</a></div>
-<div>
-<h2 class='margin-b-small'>
-<a class="link inverted" href="/interkassa/interkassa-ltd">Interkassa ltd
-</a></h2>
-<p class='text trivial smaller'>
-
-</p>
-</div>
-</div>
-<div class='text-right'>
-<div class='flex-wrap-mobile-max justify-end justify-between-mobile-max'>
-<div class='inline-block skills-min-width'>
-<span class='skill' style='border-color: #7beef4'><span class='skill-label'></span><span class='skill-title'>web</span>
-</span>
-</div>
-<div class='inline-block margin-t-xs'>
-<i class='icon-public icon-huge' title='Public bug bounty'></i>
-</div>
-</div>
-<p class='margin-b-small'>
-<span>
-<i class='icon-list vertical-align-middle'></i>
-29
-</span>
-reports
-<span>
-<i class='icon-person'></i>
-16
-<span>members</span>
-</span>
-</p>
-<div class='details--legend'>
-<div class='flex justify-between'>
-<span class='trivial'>Total views:</span>
-<span>
-1009
-</span>
-</div>
-</div>
-</div>
-</div>
-<div class='bounty-programs-list--item flex-sm justify-between'>
-<div class='flex-sm align-items-start'>
-<div class='avatar avatar-large border-radial margin-r-medium margin-b-small'>
-<a href="/kuna/kuna-crypto-exchange"><span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/bounty_program/logo/5a5e1001b6fa1e268be35401/profile_logo.png)'></span>
-
-</a></div>
-<div>
-<h2 class='margin-b-small'>
-<a class="link inverted" href="/kuna/kuna-crypto-exchange">Kuna crypto exchange
-</a></h2>
-<p class='text trivial smaller'>
-The first public crypto exchange, which launched the development of basic infrastructure for the innovative finteсh-projects both in Ukraine and in foreign markets. TOP cryptocurrencies and tokens, high level of security and reliability, user-friendly interface, advanced API and respectful customer support round the clock.
-
-</p>
-</div>
-</div>
-<div class='text-right'>
-<div class='flex-wrap-mobile-max justify-end justify-between-mobile-max'>
-<div class='inline-block skills-min-width'>
-<span class='skill' style='border-color: #7beef4'><span class='skill-label'></span><span class='skill-title'>web</span>
-</span>
-</div>
-<div class='inline-block margin-t-xs'>
-<i class='icon-public icon-huge' title='Public bug bounty'></i>
-</div>
-</div>
-<p class='margin-b-small'>
-<span>
-<i class='icon-list vertical-align-middle'></i>
-28
-</span>
-reports
-<span>
-<i class='icon-person'></i>
-25
+23
 <span>members</span>
 </span>
 </p>
 <div class='details--legend'>
 <div class='flex justify-between'>
 <span class='trivial'>Start date:</span>
-<span>01/21/2019</span>
+<span>03/30/2021</span>
 </div>
 <div class='flex justify-between'>
 <span class='trivial'>Maximum reward:</span>
-<span title='26336.58 HKN'>
-$5000.0
-</span>
-</div>
-<div class='flex justify-between'>
-<span class='trivial'>Total views:</span>
 <span>
-1989
-</span>
-</div>
-</div>
-</div>
-</div>
-<div class='archived-program bounty-programs-list--item flex-sm justify-between'>
-<div class='flex-sm align-items-start'>
-<div class='avatar avatar-large border-radial margin-r-medium margin-b-small'>
-<a href="/neverdie/neverdie-smart-contract"><span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/bounty_program/logo/5b1e7a10b6fa1e35e3ece9b2/profile_logo.png)'></span>
-
-</a></div>
-<div>
-<h2 class='margin-b-small'>
-<a class="link inverted" href="/neverdie/neverdie-smart-contract">Neverdie Smart Contract
-</a></h2>
-<p class='text trivial smaller'>
-NEVERDIE launched the NEVERDIE Coin (NDC) and the Teleport token (TPT) in 2017 to unite virtual worlds and online games on the blockchain with interoperable virtual goods.
-
-</p>
-</div>
-</div>
-<div class='text-right'>
-<div class='flex-wrap-mobile-max justify-end justify-between-mobile-max'>
-<div class='inline-block skills-min-width'>
-<span class='skill' style='border-color: #40fe00'><span class='skill-label'></span><span class='skill-title'>smart contract</span>
-</span>
-</div>
-<div class='inline-block margin-t-xs'>
-<i class='icon-public icon-huge' title='Public bug bounty'></i>
-</div>
-</div>
-<p class='margin-b-small'>
-</p>
-<div class='details--legend'>
-<div class='flex justify-between'>
-<span class='trivial'>Maximum reward:</span>
-<span title='15801.95 HKN'>
-$3000.0
-</span>
-</div>
-<div class='flex justify-between'>
-<span class='trivial'>Total views:</span>
-<span>
-755
-</span>
-</div>
-</div>
-</div>
-</div>
-<div class='archived-program bounty-programs-list--item flex-sm justify-between'>
-<div class='flex-sm align-items-start'>
-<div class='avatar avatar-large border-radial margin-r-medium margin-b-small'>
-<a href="/neverdie/neverdie-web"><span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/bounty_program/logo/5b1e6f2db6fa1e35e3ece9a3/profile_logo.png)'></span>
-
-</a></div>
-<div>
-<h2 class='margin-b-small'>
-<a class="link inverted" href="/neverdie/neverdie-web">Neverdie Web
-</a></h2>
-<p class='text trivial smaller'>
-NEVERDIE is a driving force in Virtual Pop Culture and the economics of the Virtual goods market, Setting and breaking numerous Guinness World Records since 2004 for the Most Valuable Virtual items.
-
-</p>
-</div>
-</div>
-<div class='text-right'>
-<div class='flex-wrap-mobile-max justify-end justify-between-mobile-max'>
-<div class='inline-block skills-min-width'>
-<span class='skill' style='border-color: #7beef4'><span class='skill-label'></span><span class='skill-title'>web</span>
-</span>
-</div>
-<div class='inline-block margin-t-xs'>
-<i class='icon-public icon-huge' title='Public bug bounty'></i>
-</div>
-</div>
-<p class='margin-b-small'>
-<span>
-<i class='icon-list vertical-align-middle'></i>
-20
-</span>
-reports
-<span>
-<i class='icon-person'></i>
-12
-<span>members</span>
-</span>
-</p>
-<div class='details--legend'>
-<div class='flex justify-between'>
-<span class='trivial'>Maximum reward:</span>
-<span title='7900.97 HKN'>
-$1500.0
-</span>
-</div>
-<div class='flex justify-between'>
-<span class='trivial'>Total views:</span>
-<span>
-1315
-</span>
-</div>
-</div>
-</div>
-</div>
-<div class='bounty-programs-list--item flex-sm justify-between'>
-<div class='flex-sm align-items-start'>
-<div class='avatar avatar-large border-radial margin-r-medium margin-b-small'>
-<a href="/ttc/ttc-mobile"><span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/bounty_program/logo/5c121728b6fa1e2b1fefcd90/profile_logo.png)'></span>
-
-</a></div>
-<div>
-<h2 class='margin-b-small'>
-<a class="link inverted" href="/ttc/ttc-mobile">TTC | Mobile
-</a></h2>
-<p class='text trivial smaller'>
-TTC Connect, a lightweight wallet designed specifically for TTC, it was used to receive and send TTC safely and easily!
-
-</p>
-</div>
-</div>
-<div class='text-right'>
-<div class='flex-wrap-mobile-max justify-end justify-between-mobile-max'>
-<div class='inline-block skills-min-width'>
-<span class='skill' style='border-color: #169987'><span class='skill-label'></span><span class='skill-title'>mobile</span>
-</span>
-</div>
-<div class='inline-block margin-t-xs'>
-<i class='icon-public icon-huge' title='Public bug bounty'></i>
-</div>
-</div>
-<p class='margin-b-small'>
-<span>
-<i class='icon-list vertical-align-middle'></i>
-2
-</span>
-reports
-<span>
-<i class='icon-person'></i>
-2
-<span>members</span>
-</span>
-</p>
-<div class='details--legend'>
-<div class='flex justify-between'>
-<span class='trivial'>Start date:</span>
-<span>12/13/2018</span>
-</div>
-<div class='flex justify-between'>
-<span class='trivial'>Maximum reward:</span>
-<span title='26336.58 HKN'>
-$5000.0
-</span>
-</div>
-<div class='flex justify-between'>
-<span class='trivial'>Total views:</span>
-<span>
-995
-</span>
-</div>
-</div>
-</div>
-</div>
-<div class='bounty-programs-list--item flex-sm justify-between'>
-<div class='flex-sm align-items-start'>
-<div class='avatar avatar-large border-radial margin-r-medium margin-b-small'>
-<a href="/ttc/ttc-protocol"><span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/bounty_program/logo/5b97a1d8b6fa1e025a34b21f/profile_logo.png)'></span>
-
-</a></div>
-<div>
-<h2 class='margin-b-small'>
-<a class="link inverted" href="/ttc/ttc-protocol">TTC | Protocol
-</a></h2>
-<p class='text trivial smaller'>
-The TTC Protocol is a decentralized and token incentivized social networking protocol that aims to provide a brand new social experience for users all over the world. The TTC Protocol connects every participant in the TTC ecosystem by establishing common guidelines for different DAPPs.
-
-</p>
-</div>
-</div>
-<div class='text-right'>
-<div class='flex-wrap-mobile-max justify-end justify-between-mobile-max'>
-<div class='inline-block skills-min-width'>
-<span class='skill' style='border-color: #f79a0e'><span class='skill-label'></span><span class='skill-title'>blockchain</span>
-</span>
-</div>
-<div class='inline-block margin-t-xs'>
-<i class='icon-public icon-huge' title='Public bug bounty'></i>
-</div>
-</div>
-<p class='margin-b-small'>
-<span>
-<i class='icon-list vertical-align-middle'></i>
-2
-</span>
-reports
-<span>
-<i class='icon-person'></i>
-2
-<span>members</span>
-</span>
-</p>
-<div class='details--legend'>
-<div class='flex justify-between'>
-<span class='trivial'>Completion date:</span>
-<span>08/02/2019</span>
-</div>
-<div class='flex justify-between'>
-<span class='trivial'>Maximum reward:</span>
-<span title='26336.58 HKN'>
-$5000.0
-</span>
-</div>
-<div class='flex justify-between'>
-<span class='trivial'>Total views:</span>
-<span>
-2016
-</span>
-</div>
-</div>
-</div>
-</div>
-<div class='bounty-programs-list--item flex-sm justify-between'>
-<div class='flex-sm align-items-start'>
-<div class='avatar avatar-large border-radial margin-r-medium margin-b-small'>
-<a href="/ttc/ttc-sdk"><span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/bounty_program/logo/5bc98d18b6fa1e480aed48bb/profile_logo.png)'></span>
-
-</a></div>
-<div>
-<h2 class='margin-b-small'>
-<a class="link inverted" href="/ttc/ttc-sdk">TTC | SDK
-</a></h2>
-<p class='text trivial smaller'>
-The SDK allows developers and communities to easily integrate TTC Protocol into their services which will grant access to the TTC Ecosystem. The release of TTC SDK lays the foundation for DAPPs in TTC Ecosystem and TReE (TTC Reward Engine.) Currently, TTC SDK is implemented into tataUFO and ALIVE, the first two DAPPs in the TTC Ecosystem.
-
-</p>
-</div>
-</div>
-<div class='text-right'>
-<div class='flex-wrap-mobile-max justify-end justify-between-mobile-max'>
-<div class='inline-block skills-min-width'>
-<span class='skill' style='border-color: #169987'><span class='skill-label'></span><span class='skill-title'>mobile</span>
-</span>
-<span class='skill' style='border-color: #f79a0e'><span class='skill-label'></span><span class='skill-title'>blockchain</span>
-</span>
-</div>
-<div class='inline-block margin-t-xs'>
-<i class='icon-public icon-huge' title='Public bug bounty'></i>
-</div>
-</div>
-<p class='margin-b-small'>
-</p>
-<div class='details--legend'>
-<div class='flex justify-between'>
-<span class='trivial'>Completion date:</span>
-<span>10/19/2019</span>
-</div>
-<div class='flex justify-between'>
-<span class='trivial'>Maximum reward:</span>
-<span title='26336.58 HKN'>
-$5000.0
-</span>
-</div>
-<div class='flex justify-between'>
-<span class='trivial'>Total views:</span>
-<span>
-596
-</span>
-</div>
-</div>
-</div>
-</div>
-<div class='bounty-programs-list--item flex-sm justify-between'>
-<div class='flex-sm align-items-start'>
-<div class='avatar avatar-large border-radial margin-r-medium margin-b-small'>
-<a href="/vechain/vechainthor"><span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/bounty_program/logo/5afc3602b6fa1e535fbdbb33/profile_logo.png)'></span>
-
-</a></div>
-<div>
-<h2 class='margin-b-small'>
-<a class="link inverted" href="/vechain/vechainthor">VeChainThor
-</a></h2>
-<p class='text trivial smaller'>
-
-</p>
-</div>
-</div>
-<div class='text-right'>
-<div class='flex-wrap-mobile-max justify-end justify-between-mobile-max'>
-<div class='inline-block skills-min-width'>
-<span class='skill' style='border-color: #f79a0e'><span class='skill-label'></span><span class='skill-title'>blockchain</span>
-</span>
-</div>
-<div class='inline-block margin-t-xs'>
-<i class='icon-public icon-huge' title='Public bug bounty'></i>
-</div>
-</div>
-<p class='margin-b-small'>
-<span>
-<i class='icon-list vertical-align-middle'></i>
-9
-</span>
-reports
-<span>
-<i class='icon-person'></i>
-5
-<span>members</span>
-</span>
-</p>
-<div class='details--legend'>
-<div class='flex justify-between'>
-<span class='trivial'>Maximum reward:</span>
-<span title='52673.16 HKN'>
 $10000.0
 </span>
 </div>
 <div class='flex justify-between'>
 <span class='trivial'>Total views:</span>
 <span>
-1132
+29820
 </span>
 </div>
 </div>
@@ -927,14 +349,15 @@ $10000.0
 <div class='bounty-programs-list--item flex-sm justify-between'>
 <div class='flex-sm align-items-start'>
 <div class='avatar avatar-large border-radial margin-r-medium margin-b-small'>
-<a href="/vechain/vechainthor-wallet"><span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/bounty_program/logo/5b51972ab6fa1e5bd7ea375b/profile_logo.png)'></span>
+<a href="/avalanche/avalanche-protocol"><span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/bounty_program/logo/605cb438b6fa1e70972a6877/profile_logo.png)'></span>
 
 </a></div>
 <div>
 <h2 class='margin-b-small'>
-<a class="link inverted" href="/vechain/vechainthor-wallet">VeChainThor Wallet
+<a class="link inverted" href="/avalanche/avalanche-protocol">Avalanche Protocol
 </a></h2>
 <p class='text trivial smaller'>
+Avalanche is an open-source platform for launching highly decentralized applications, new financial primitives, and new interoperable blockchains.
 
 </p>
 </div>
@@ -942,6 +365,238 @@ $10000.0
 <div class='text-right'>
 <div class='flex-wrap-mobile-max justify-end justify-between-mobile-max'>
 <div class='inline-block skills-min-width'>
+<span class='skill' style='border-color: #f79a0e'><span class='skill-label'></span><span class='skill-title'>blockchain</span>
+</span>
+<span class='skill' style='border-color: #40fe00'><span class='skill-label'></span><span class='skill-title'>smart contract</span>
+</span>
+</div>
+<div class='inline-block margin-t-xs'>
+<i class='icon-public icon-huge' title='Public bug bounty'></i>
+</div>
+</div>
+<p class='margin-b-small'>
+<span>
+<i class='icon-list vertical-align-middle'></i>
+4
+</span>
+reports
+<span>
+<i class='icon-person'></i>
+4
+<span>members</span>
+</span>
+</p>
+<div class='details--legend'>
+<div class='flex justify-between'>
+<span class='trivial'>Start date:</span>
+<span>03/30/2021</span>
+</div>
+<div class='flex justify-between'>
+<span class='trivial'>Maximum reward:</span>
+<span>
+$10000.0
+</span>
+</div>
+<div class='flex justify-between'>
+<span class='trivial'>Total views:</span>
+<span>
+27233
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class='bounty-programs-list--item flex-sm justify-between'>
+<div class='flex-sm align-items-start'>
+<div class='avatar avatar-large border-radial margin-r-medium margin-b-small'>
+<a href="/btse/btse-bug-bounty-program"><span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/bounty_program/logo/61270ab8b6fa1e7c41febdae/profile_logo.png)'></span>
+
+</a></div>
+<div>
+<h2 class='margin-b-small'>
+<a class="link inverted" href="/btse/btse-bug-bounty-program">BTSE Bug Bounty Program
+</a></h2>
+<p class='text trivial smaller'>
+The BTSE bug bounty program offers rewards to security researchers and enthusiasts who help us identify and resolve potential vulnerabilities within the BTSE system.
+
+</p>
+</div>
+</div>
+<div class='text-right'>
+<div class='flex-wrap-mobile-max justify-end justify-between-mobile-max'>
+<div class='inline-block skills-min-width'>
+</div>
+<div class='inline-block margin-t-xs'>
+<i class='icon-public icon-huge' title='Public bug bounty'></i>
+</div>
+</div>
+<p class='margin-b-small'>
+</p>
+<div class='details--legend'>
+<div class='flex justify-between'>
+<span class='trivial'>Start date:</span>
+<span>11/05/2021</span>
+</div>
+<div class='flex justify-between'>
+<span class='trivial'>Completion date:</span>
+<span>11/05/2022</span>
+</div>
+<div class='flex justify-between'>
+<span class='trivial'>Maximum reward:</span>
+<span>
+$1000.0
+</span>
+</div>
+<div class='flex justify-between'>
+<span class='trivial'>Total views:</span>
+<span>
+4552
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class='bounty-programs-list--item flex-sm justify-between'>
+<div class='flex-sm align-items-start'>
+<div class='avatar avatar-large border-radial margin-r-medium margin-b-small'>
+<a href="/bitkub/bitkub"><span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/bounty_program/logo/619224f5b6fa1e6869d67d49/profile_logo.png)'></span>
+
+</a></div>
+<div>
+<h2 class='margin-b-small'>
+<a class="link inverted" href="/bitkub/bitkub">Bitkub
+</a></h2>
+<p class='text trivial smaller'>
+Founded in February 2018, Bitkub is a new generation digital asset and cryptocurrency exchange platform that offers advanced cryptocurrency exchange services to individuals who intend to buy, sell, and store cryptocurrencies.
+
+</p>
+</div>
+</div>
+<div class='text-right'>
+<div class='flex-wrap-mobile-max justify-end justify-between-mobile-max'>
+<div class='inline-block skills-min-width'>
+<span class='skill' style='border-color: #7beef4'><span class='skill-label'></span><span class='skill-title'>web</span>
+</span>
+<span class='skill' style='border-color: #169987'><span class='skill-label'></span><span class='skill-title'>mobile</span>
+</span>
+</div>
+<div class='inline-block margin-t-xs'>
+<i class='icon-public icon-huge' title='Public bug bounty'></i>
+</div>
+</div>
+<p class='margin-b-small'>
+</p>
+<div class='details--legend'>
+<div class='flex justify-between'>
+<span class='trivial'>Start date:</span>
+<span>11/15/2021</span>
+</div>
+<div class='flex justify-between'>
+<span class='trivial'>Completion date:</span>
+<span>11/15/2022</span>
+</div>
+<div class='flex justify-between'>
+<span class='trivial'>Maximum reward:</span>
+<span>
+$3000.0
+</span>
+</div>
+<div class='flex justify-between'>
+<span class='trivial'>Total views:</span>
+<span>
+4321
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class='bounty-programs-list--item flex-sm justify-between'>
+<div class='flex-sm align-items-start'>
+<div class='avatar avatar-large border-radial margin-r-medium margin-b-small'>
+<a href="/bunicorn/bunicorn-1"><span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/bounty_program/logo/60cf9a73b6fa1e588e7913eb/profile_logo.png)'></span>
+
+</a></div>
+<div>
+<h2 class='margin-b-small'>
+<a class="link inverted" href="/bunicorn/bunicorn-1">Bunicorn
+</a></h2>
+<p class='text trivial smaller'>
+Bunicorn is an automated market-making (AMM) decentralized exchange (DEX). The program is focused on the prevention of loss of user funds.
+
+</p>
+</div>
+</div>
+<div class='text-right'>
+<div class='flex-wrap-mobile-max justify-end justify-between-mobile-max'>
+<div class='inline-block skills-min-width'>
+<span class='skill' style='border-color: #7beef4'><span class='skill-label'></span><span class='skill-title'>web</span>
+</span>
+<span class='skill' style='border-color: #f79a0e'><span class='skill-label'></span><span class='skill-title'>blockchain</span>
+</span>
+<span class='skill' style='border-color: #40fe00'><span class='skill-label'></span><span class='skill-title'>smart contract</span>
+</span>
+</div>
+<div class='inline-block margin-t-xs'>
+<i class='icon-public icon-huge' title='Public bug bounty'></i>
+</div>
+</div>
+<p class='margin-b-small'>
+<span>
+<i class='icon-list vertical-align-middle'></i>
+10
+</span>
+reports
+<span>
+<i class='icon-person'></i>
+7
+<span>members</span>
+</span>
+</p>
+<div class='details--legend'>
+<div class='flex justify-between'>
+<span class='trivial'>Start date:</span>
+<span>06/21/2021</span>
+</div>
+<div class='flex justify-between'>
+<span class='trivial'>Completion date:</span>
+<span>06/21/2022</span>
+</div>
+<div class='flex justify-between'>
+<span class='trivial'>Maximum reward:</span>
+<span>
+$50000.0
+</span>
+</div>
+<div class='flex justify-between'>
+<span class='trivial'>Total views:</span>
+<span>
+21145
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class='bounty-programs-list--item flex-sm justify-between'>
+<div class='flex-sm align-items-start'>
+<div class='avatar avatar-large border-radial margin-r-medium margin-b-small'>
+<a href="/coingecko/coingecko"><span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/bounty_program/logo/5f0edaecb6fa1e07943fb3f8/profile_logo.png)'></span>
+
+</a></div>
+<div>
+<h2 class='margin-b-small'>
+<a class="link inverted" href="/coingecko/coingecko">CoinGecko
+</a></h2>
+<p class='text trivial smaller'>
+CoinGecko provides a fundamental analysis of the crypto market. In addition to tracking price, volume and market capitalization, CoinGecko tracks community growth, open-source code development, major events and on-chain metrics.
+
+</p>
+</div>
+</div>
+<div class='text-right'>
+<div class='flex-wrap-mobile-max justify-end justify-between-mobile-max'>
+<div class='inline-block skills-min-width'>
+<span class='skill' style='border-color: #7beef4'><span class='skill-label'></span><span class='skill-title'>web</span>
+</span>
 <span class='skill' style='border-color: #169987'><span class='skill-label'></span><span class='skill-title'>mobile</span>
 </span>
 </div>
@@ -952,26 +607,30 @@ $10000.0
 <p class='margin-b-small'>
 <span>
 <i class='icon-list vertical-align-middle'></i>
-5
+22
 </span>
 reports
 <span>
 <i class='icon-person'></i>
-5
+17
 <span>members</span>
 </span>
 </p>
 <div class='details--legend'>
 <div class='flex justify-between'>
+<span class='trivial'>Start date:</span>
+<span>01/17/2021</span>
+</div>
+<div class='flex justify-between'>
 <span class='trivial'>Maximum reward:</span>
-<span title='15801.95 HKN'>
-$3000.0
+<span>
+$1500.0
 </span>
 </div>
 <div class='flex justify-between'>
 <span class='trivial'>Total views:</span>
 <span>
-802
+86185
 </span>
 </div>
 </div>
@@ -980,15 +639,15 @@ $3000.0
 <div class='bounty-programs-list--item flex-sm justify-between'>
 <div class='flex-sm align-items-start'>
 <div class='avatar avatar-large border-radial margin-r-medium margin-b-small'>
-<a href="/everitoken/everitoken-blockchain"><span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/bounty_program/logo/5b87ab28b6fa1e6141353959/profile_logo.png)'></span>
+<a href="/coinmetro/coinmetro-exchange"><span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/bounty_program/logo/607d8bbfb6fa1e0c5e006ce1/profile_logo.png)'></span>
 
 </a></div>
 <div>
 <h2 class='margin-b-small'>
-<a class="link inverted" href="/everitoken/everitoken-blockchain">everiToken | blockchain
+<a class="link inverted" href="/coinmetro/coinmetro-exchange">CoinMetro Exchange
 </a></h2>
 <p class='text trivial smaller'>
-everiToken is world&#39;s first token-customized public chain aiming to be the best infrastructure to tokenize everything and for token economy. After a successful mainnet launch on 2018/07/31, everiToken has achieved high TPS(5,000+), high security and high standardization
+CoinMetro is a fully-rounded EU-based FinTech ecosystem that is designed to simplify access to the digital asset economy.
 
 </p>
 </div>
@@ -996,6 +655,128 @@ everiToken is world&#39;s first token-customized public chain aiming to be the b
 <div class='text-right'>
 <div class='flex-wrap-mobile-max justify-end justify-between-mobile-max'>
 <div class='inline-block skills-min-width'>
+<span class='skill' style='border-color: #7beef4'><span class='skill-label'></span><span class='skill-title'>web</span>
+</span>
+</div>
+<div class='inline-block margin-t-xs'>
+<i class='icon-public icon-huge' title='Public bug bounty'></i>
+</div>
+</div>
+<p class='margin-b-small'>
+<span>
+<i class='icon-list vertical-align-middle'></i>
+32
+</span>
+reports
+<span>
+<i class='icon-person'></i>
+22
+<span>members</span>
+</span>
+</p>
+<div class='details--legend'>
+<div class='flex justify-between'>
+<span class='trivial'>Start date:</span>
+<span>04/28/2021</span>
+</div>
+<div class='flex justify-between'>
+<span class='trivial'>Maximum reward:</span>
+<span>
+$3000.0
+</span>
+</div>
+<div class='flex justify-between'>
+<span class='trivial'>Total views:</span>
+<span>
+36914
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class='bounty-programs-list--item flex-sm justify-between'>
+<div class='flex-sm align-items-start'>
+<div class='avatar avatar-large border-radial margin-r-medium margin-b-small'>
+<a href="/coinsbit/coinsbit"><span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/bounty_program/logo/5f994991b6fa1e4fe0fae7bb/profile_logo.png)'></span>
+
+</a></div>
+<div>
+<h2 class='margin-b-small'>
+<a class="link inverted" href="/coinsbit/coinsbit">Coinsbit
+</a></h2>
+<p class='text trivial smaller'>
+Launched in August 2018, Coinsbit is a centralized exchange based in Estonia. The team claims that the number of Coinsbit users is 2,000,000. Coinsbit supports cryptocurrency pairs, 6+ fiat gateways and OTC trading, as well as P2P-lending platform.
+
+</p>
+</div>
+</div>
+<div class='text-right'>
+<div class='flex-wrap-mobile-max justify-end justify-between-mobile-max'>
+<div class='inline-block skills-min-width'>
+<span class='skill' style='border-color: #7beef4'><span class='skill-label'></span><span class='skill-title'>web</span>
+</span>
+<span class='skill' style='border-color: #169987'><span class='skill-label'></span><span class='skill-title'>mobile</span>
+</span>
+</div>
+<div class='inline-block margin-t-xs'>
+<i class='icon-public icon-huge' title='Public bug bounty'></i>
+</div>
+</div>
+<p class='margin-b-small'>
+<span>
+<i class='icon-list vertical-align-middle'></i>
+4
+</span>
+reports
+<span>
+<i class='icon-person'></i>
+4
+<span>members</span>
+</span>
+</p>
+<div class='details--legend'>
+<div class='flex justify-between'>
+<span class='trivial'>Start date:</span>
+<span>10/28/2020</span>
+</div>
+<div class='flex justify-between'>
+<span class='trivial'>Maximum reward:</span>
+<span>
+$1200.0
+</span>
+</div>
+<div class='flex justify-between'>
+<span class='trivial'>Total views:</span>
+<span>
+38046
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class='bounty-programs-list--item flex-sm justify-between'>
+<div class='flex-sm align-items-start'>
+<div class='avatar avatar-large border-radial margin-r-medium margin-b-small'>
+<a href="/cryptology/cryptology"><span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/bounty_program/logo/617af5b1b6fa1e5ca5d404f2/profile_logo.png)'></span>
+
+</a></div>
+<div>
+<h2 class='margin-b-small'>
+<a class="link inverted" href="/cryptology/cryptology">Cryptology
+</a></h2>
+<p class='text trivial smaller'>
+Cryptology is a worldwide crypto exchange that offers access to a high liquidity order book for professional traders and simplified buying and selling of the assets for beginners.
+
+</p>
+</div>
+</div>
+<div class='text-right'>
+<div class='flex-wrap-mobile-max justify-end justify-between-mobile-max'>
+<div class='inline-block skills-min-width'>
+<span class='skill' style='border-color: #7beef4'><span class='skill-label'></span><span class='skill-title'>web</span>
+</span>
+<span class='skill' style='border-color: #169987'><span class='skill-label'></span><span class='skill-title'>mobile</span>
+</span>
 <span class='skill' style='border-color: #f79a0e'><span class='skill-label'></span><span class='skill-title'>blockchain</span>
 </span>
 </div>
@@ -1006,35 +787,76 @@ everiToken is world&#39;s first token-customized public chain aiming to be the b
 <p class='margin-b-small'>
 <span>
 <i class='icon-list vertical-align-middle'></i>
-2
+6
 </span>
 reports
 <span>
 <i class='icon-person'></i>
-2
+6
 <span>members</span>
 </span>
 </p>
 <div class='details--legend'>
 <div class='flex justify-between'>
+<span class='trivial'>Start date:</span>
+<span>10/28/2021</span>
+</div>
+<div class='flex justify-between'>
 <span class='trivial'>Completion date:</span>
-<span>11/01/2019</span>
+<span>10/28/2022</span>
 </div>
 <div class='flex justify-between'>
 <span class='trivial'>Maximum reward:</span>
-<span title='26336.58 HKN'>
+<span>
 $5000.0
 </span>
 </div>
 <div class='flex justify-between'>
 <span class='trivial'>Total views:</span>
 <span>
-1188
+4882
 </span>
 </div>
 </div>
 </div>
 </div>
+
+<nav class='pagination'>
+
+
+<span class='page current'>
+1
+</span>
+
+<span class='page'>
+<a rel="next" href="/programs?page=2">2</a>
+</span>
+
+<span class='page'>
+<a href="/programs?page=3">3</a>
+</span>
+
+<span class='page'>
+<a href="/programs?page=4">4</a>
+</span>
+
+<span class='page'>
+<a href="/programs?page=5">5</a>
+</span>
+
+<span class='page gap'>
+&hellip;
+</span>
+
+<span class='next'>
+<a rel="next" href="/programs?page=2">Next &rsaquo;</a>
+</span>
+
+<span class='last'>
+<a href="/programs?page=7">Last &raquo;</a>
+</span>
+
+</nav>
 
 </div>
 </div>
@@ -1043,12 +865,21 @@ $5000.0
 </div>
 <footer class='main-footer'>
 <div class='cup-footer dark'>
-<div class='container-large'>
+<div class='container--center'>
 <div class='row'>
-<div class='col-md-3 col-sm-6 menu-container'>
+<div class='col-md-3 col-sm-4 menu-container'>
 <div class='logo-cup medium'>
 <a href="/"><img src="/assets/logo-6a400c3a9db463f3dd15a58dcf79e6c126072c7d06ffc07c7a63cab658d350d5.svg" alt="Logo" />
 </a></div>
+<div>
+<ul>
+<li class='xsmall'>
+<a href="/pages/policy">Privacy policy</a>
+</li>
+<li class='xsmall'>
+<a href="/pages/terms">Terms and Conditions</a>
+</li>
+</ul>
 <ul>
 <li>
 <ul class='list-inline social'>
@@ -1078,22 +909,25 @@ $5000.0
 </li>
 </ul>
 </div>
-<div class='col-md-3 col-sm-6 menu-container'>
+</div>
+<div class='col-md-9 col-sm-8'>
+<div class='row'>
+<div class='col-md-4 col-sm-6 menu-container'>
 <ul>
 <li class='title'>For Business</li>
 <li>
-<a class='hidden-link' data-link='/companies/new'>Request a demo</a>
+<a class='hidden-link notranslate' data-link='/contacts'>Contact</a>
 </li>
 <li>
 <a href="/#how-it">How it works</a>
 </li>
 </ul>
 </div>
-<div class='col-md-3 col-sm-6 menu-container'>
-<ul>
+<div class='col-md-8 col-sm-6 menu-container'>
+<ul class='list--two-columned'>
 <li class='title'>For Bug Hunters</li>
 <li>
-<a class='hidden-link' data-link='/login'>Start hacking</a>
+<a class='hidden-link notranslate' data-link='/login'>Start hacking</a>
 </li>
 <li>
 <a href="/programs">Bug bounty programs</a>
@@ -1102,49 +936,39 @@ $5000.0
 <a href="/reports">Overall activity</a>
 </li>
 <li>
-<a href="/cup">Hacken Cup</a>
+<a href="/cup">Live Hacking</a>
 </li>
 </ul>
 </div>
-<div class='col-md-3 col-sm-6 menu-container'>
-<ul>
-<li class='title'>Company</li>
+
+</div>
+<div class='row'>
+<div class='col-sm-12'>
+<ul class='list-inline list--stretched'>
+<li class='title'>
+<a href="https://hacken.io">Company</a>
+</li>
 <li>
-<a href="/about">About us</a>
+<a href="/about">About</a>
 </li>
 <li>
 <a href="https://blog.hackenproof.com">Blog</a>
 </li>
 <li>
-<a href="/roadmap">Roadmap</a>
-</li>
-<li>
-<a href="/contacts">Contact us</a>
-</li>
-<li>
-<a href="https://hackit.ua/">HackIT</a>
+<a href="/contacts">Contact</a>
 </li>
 </ul>
 </div>
-
-<div class='col-sm-6'>
-<ul class='list-inline'>
-<li class='xsmall'>
-<a href="/pages/policy">Privacy policy</a>
-</li>
-<li class='xsmall'>
-<a href="/pages/terms">Terms and Conditions</a>
-</li>
-</ul>
+</div>
 </div>
 </div>
 </div>
 </div>
 
 </footer>
-<script src="/assets/new_application-6dea760c43dc283fd91e7cc098357e8b3181b2939f5c0bf1b79ec28c101523fd.js"></script>
+<script src="/assets/new_application-1f2fec2d05eb03e5303ac00f9bd69c509a5b8bf1de80779dc089514a236117a1.js"></script>
 <noscript>
-<iframe height='0' src='https://www.googletagmanager.com/ns.html?id=GTM-PV9J5G7' style='display:none;visibility:hidden' width='0'></iframe>
+<iframe height='0' src='https://www.googletagmanager.com/ns.html?id=GTM-WPWK6VZ' style='display:none;visibility:hidden' width='0'></iframe>
 </noscript>
 
 <!-- Twitter universal website tag code -->
@@ -1179,9 +1003,10 @@ twq('track','PageView');
 </script>
 <!-- End schema code for logo image -->
 
-<!-- Start of HubSpot Embed Code -->
-<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/4674924.js"></script>
-<!-- End of HubSpot Embed Code -->
-
+<script id="IntercomSettingsScriptTag">
+//<![CDATA[
+window.intercomSettings = {"app_id":"qb8tjs01"};(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/qb8tjs01';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}};})()
+//]]>
+</script>
 </body>
 </html>

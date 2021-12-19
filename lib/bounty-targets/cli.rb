@@ -28,12 +28,12 @@ module BountyTargets
             break if `git status --porcelain`.empty?
 
             # Generate README file
-            erb = ERB.new(IO.read(File.join(root, 'config', 'README.md.erb')))
+            erb = ERB.new(File.read(File.join(root, 'config', 'README.md.erb')))
             readme = erb.result_with_hash(timestamp: timestamp.strftime('%A %m/%d/%Y %R (UTC)'))
-            IO.write('README.md', readme)
+            File.write('README.md', readme)
 
             # Commit + push
-            commits = IO.readlines(File.join(root, 'config', 'commits.txt'))
+            commits = File.readlines(File.join(root, 'config', 'commits.txt'))
             commit_message = commits.sample(2).map(&:strip).map(&:capitalize).join(' ') +
               ' (' + timestamp.strftime('%m-%d-%Y %R') + ')'
             `git add .`
@@ -58,7 +58,7 @@ module BountyTargets
 
       uris = clients.map do |name, client|
         Thread.new do
-          IO.write(File.join(output_dir, "#{name}_data.json"), ::JSON.pretty_generate(client.scan))
+          File.write(File.join(output_dir, "#{name}_data.json"), ::JSON.pretty_generate(client.scan))
           # Sanity check for changes in page markup, network issues, etc
           uris = client.uris
           raise StandardError, "Missing uris for #{name}" if uris.all?(&:empty?)
@@ -66,11 +66,11 @@ module BountyTargets
           uris
         end
       end.flat_map(&:value)
-      IO.write(File.join(output_dir, 'hackerone_schema.graphql'), clients[:hackerone].schema.to_definition)
+      File.write(File.join(output_dir, 'hackerone_schema.graphql'), clients[:hackerone].schema.to_definition)
 
       domains, wildcards = parse_all_uris(uris)
-      IO.write(File.join(output_dir, 'domains.txt'), domains.join("\n"))
-      IO.write(File.join(output_dir, 'wildcards.txt'), wildcards.join("\n"))
+      File.write(File.join(output_dir, 'domains.txt'), domains.join("\n"))
+      File.write(File.join(output_dir, 'wildcards.txt'), wildcards.join("\n"))
     end
 
     private
@@ -122,8 +122,8 @@ module BountyTargets
         known_hosts_path = File.expand_path(File.join(__dir__, '..', '..', 'config', 'known_hosts'))
 
         privkey_path = File.join(tmpdir, 'id_rsa')
-        IO.write(privkey_path, ENV['SSH_PRIV_KEY'])
-        IO.write(File.join(tmpdir, 'id_rsa.pub'), ENV['SSH_PUB_KEY'])
+        File.write(privkey_path, ENV['SSH_PRIV_KEY'])
+        File.write(File.join(tmpdir, 'id_rsa.pub'), ENV['SSH_PUB_KEY'])
 
         git_ssh = "\"ssh -i '#{privkey_path}' -o UserKnownHostsFile='#{known_hosts_path}' -o HashKnownHosts='no'\""
 
