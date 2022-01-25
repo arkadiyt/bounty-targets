@@ -37,7 +37,7 @@ module BountyTargets
       ::Kernel.loop do
         document = ::Nokogiri::HTML(::SsrfFilter.get("https://hackenproof.com/programs?page=#{page}").body)
 
-        programs.concat(document.css('div.bounty-programs-list--item').map do |node|
+        programs.concat(document.css('div.bounty-programs-list--items').map do |node|
           link = node.css('h2 a').first
           {
             id: link.attributes['href'].value,
