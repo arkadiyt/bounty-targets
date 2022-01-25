@@ -47,7 +47,7 @@ module BountyTargets
           }
         end)
 
-        break if document.css('.last').empty?
+        break if document.css('.next').empty?
 
         page += 1
       end
