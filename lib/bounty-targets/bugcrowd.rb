@@ -67,10 +67,10 @@ module BountyTargets
         node.inner_text !~ /This program does not allow disclosure/
       end
 
-      safe_harbor = document.css('.bc-stat').find do |node|
+      safe_harbor = document.css('.bc-stat__title').find do |node|
         node.inner_text =~ /safe harbor/i
       end
-      safe_harbor_value = case safe_harbor.inner_text.strip
+      safe_harbor_value = case safe_harbor&.inner_text&.strip
       when 'Safe harbor'
         'full'
       when 'Partial safe harbor'
