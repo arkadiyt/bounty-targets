@@ -29,12 +29,10 @@ module BountyTargets
 
     private
 
-    PAGE_SIZE = 25
-
     def directory_index
       program_links = []
 
-      offset = 0
+      page = 1
       uri = URI('https://bugcrowd.com/programs.json')
       ::Kernel.loop do
         response = JSON.parse(SsrfFilter.get(uri).body)
@@ -42,12 +40,11 @@ module BountyTargets
         programs = response['programs'].map do |program|
           "https://bugcrowd.com#{program['program_url']}"
         end
+        break if programs.empty?
+
         program_links.concat(programs)
-
-        break if programs.length < PAGE_SIZE
-
-        offset += PAGE_SIZE
-        uri = URI("https://bugcrowd.com/programs.json?sort[]=promoted-desc&offset[]=#{offset}")
+        page += 1
+        uri = URI("https://bugcrowd.com/programs.json?page[]=#{page}")
       end
 
       program_links.reject do |link|
