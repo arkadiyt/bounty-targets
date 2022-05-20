@@ -6,7 +6,7 @@ ruby '2.6.6'
 
 gem 'graphql-client', '~> 0.16.0'
 gem 'kramdown', '~> 2.3.1'
-gem 'nokogiri', '~> 1.13.4'
+gem 'nokogiri', '~> 1.13.6'
 gem 'sentry-raven', '~> 2.11.0'
 gem 'ssrf_filter', '~> 1.0.6'
 gem 'twingly-url', '~> 6.0.1'
