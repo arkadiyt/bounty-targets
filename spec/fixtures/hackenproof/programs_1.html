@@ -1,7 +1,8 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-<title>Bug bounty and security programs for defining and disclosing bugs - Hackenproof</title>
+<title>Crypto Bug Bounty Programs 2022 | HackenProof</title>
 <meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport'>
 <meta content='True' name='HandheldFriendly'>
 <meta content='yes' name='apple-mobile-web-app-capable'>
@@ -9,7 +10,7 @@
 <meta content='telephone=no' name='format-detection'>
 <meta content='address=no' name='format-detection'>
 <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="4wk2GxlplSjrWLkVzuWVYgkyJvrV5GccCdEwiWdpaUDxa4zECCHwrEgwtqvJaEp4tGsr/H89ttiVS5RKtDEyuQ==" />
+<meta name="csrf-token" content="6E5+xZh3zNBeJNA5kDVaPERCdLTouuTXOG3POoU35hySLKcJCDBJQAXY3vBTB/pohHM++mn7OrAdpSbT5PXvAg==" />
 <link rel="apple-touch-icon" type="image/x-icon" href="/assets/home/favicons/apple-touch-icon-877e3ab6812d47bab88fb6d481acdbea7fa6995a95c89743bb18e5a0a4012892.png" sizes="180x180" />
 <link rel="icon" type="image/png" href="/assets/home/favicons/favicon-32x32-63afb31b2b98fafbbdb12c5cbcba1231e3a7ba8d669ea7680370c90bdc4e1ad7.png" sizes="32x32" />
 <link rel="icon" type="image/png" href="/assets/home/favicons/favicon-16x16-b7aeb056379d4392ef3764ec45581ccf88771f6a999d9b39f6d8639529f60bc4.png" sizes="16x16" />
@@ -23,9 +24,10 @@
 <meta content='HackenProof' property='og:title'>
 <meta content='website' property='og:type'>
 <meta content='http://hackenproof.com/' property='og:url'>
-<meta content='https://hackenproof.com/preview_hp_new.jpg' property='og:image'>
+<meta content='https://hackenproof.com/main.png' property='og:image'>
 <meta content='HackenProof is Vulnerability Disclosure &amp; Bug Bounty Platform. By working with the community of security researchers we help companies uncover security vulnerabilities.' property='og:description'>
-<meta content='HackenProof connects businesses to a community of cybersecurity researchers via the Vulnerability Coordination Platform. We help businesses run custom-tailored Bug Bounty Programs that significantly reduce the risk of security incidents of their digital assets.' name='description'>
+<meta content='HackenProof provides a list of web3 bug bounty programs 2022 for defining and disclosing bugs in crypto projects.' name='description'>
+<meta content='bug bounties list, open bug bounty, private bug bounty, largest  bug bounties,  bug bounty platform list, top bug bounties, millions rewards, web3’s leading platform, bug bounty programs 2022, bug bounties 2022, crypto bug bounties, DeFi bugs, crypto bugs, NFT' name='keywords'>
 
 <script>
   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push(
@@ -52,16 +54,131 @@
 </noscript>
 
 
-<link rel="stylesheet" media="screen" href="/assets/new_application-587b7af8511f3086356d5cf45138d9abda1f11af54353c87aae413355783425f.css" />
+<link rel="stylesheet" media="screen" href="/assets/new_application-d2f40733fdc0a7c0a8f32bbf1af424dae9bcf706cf8c4871638057e2725e08ea.css" />
 </head>
-<body class='new-layout dashboard-panel application-layout' data-action='index' data-controller='bounty_programs'>
+<body class='new-layout bug-programs-page bounty-bg inverted dashboard-panel application-layout' data-action='index' data-controller='bounty_programs'>
 <div class='flash-msgs--fixed flash-msg--js flash-msg--version' id='flash-msgs'>
 <div id='flash-msgs__container'>
 </div>
 </div>
 
+<div class='modal' id='solution-modal'>
+<div class='modal-content-sol'>
+<div class='form-call' id='form'>
+<div class='container--center flex align-items-center justify-center pop-up-width'>
+<form class='flex flex-direction-column' id='hsform'>
+<div class='thanks-modal'>
+<div class='flex align-items-center flex-direction-column'>
+<p>Thank you for submitting the form!</p>
+<p>We will contact you shortly</p>
+</div>
+</div>
+<div class='title'>Request a quote</div>
+<div class='desc'>Tell us about your company and we'll calculate the scope of work for you.</div>
+<div class='company-info-block flex justify-between'>
+<div class='flex flex-direction-column company-info'>
+<div class='contact-title'>Work email</div>
+<input class='input' id='email' name='email' placeholder='s.nakamoto@bitcoin.org' required type='email'>
+<i class='bx bx-envelope'></i>
+<div class='error-text'>This field is required</div>
+<div class='validate-error'>Please enter valid email address</div>
+</div>
+<div class='flex flex-direction-column company-info'>
+<div class='contact-title'>Your contact info</div>
+<div class='flex'>
+<div class='contact-address-type contact-address-type-js'>
+<div class='flex align-items-center' data-address-type='Telegram' id='contact_address_type'>
+<input class='hidden' id='address_type' name='contact_address_type' value='Telegram'>
+<i class='bx bx-chevron-down'></i>
+</div>
+<ul class='list-type'>
+<li value='Telegram'>
+<i class='bx bxl-telegram'></i>
+<span>Telegram</span>
+</li>
+<li value='Signal'>
+<i class='signal'></i>
+<span>Signal</span>
+</li>
+<li value='WhatsApp'>
+<i class='bx bxl-whatsapp'></i>
+<span>WhatsApp</span>
+</li>
+<li value='WeChat'>
+<i class='we-chat'></i>
+<span>WeChat</span>
+</li>
+</ul>
+</div>
+<input class='input' id='contact_address' name='contact_address' placeholder='+14087859933' required type='text'>
+</div>
+</div>
+</div>
+<div class='company-info-block flex justify-between'>
+<div class='flex flex-direction-column company-info'>
+<div class='contact-title'>Company name</div>
+<input class='input' id='company' name='company' placeholder='Bitcoin DAO' required type='text'>
+<div class='error-text'>This field is required</div>
+</div>
+<div class='flex flex-direction-column company-info'>
+<div class='contact-title'>Company website</div>
+<input class='input' id='company_website' name='company_website' placeholder='bitcoin.org' required type='text'>
+</div>
+</div>
+<div class='flex flex-direction-column'>
+<div class='contact-title'>Your goal</div>
+<div class='select-goal'>
+<div class='select-goal-type select-goal-type-js flex align-items-center' id='goal'>
+<div class='goal-text'></div>
+</div>
+<input class='hidden' id='goal-type' name='goal' value=''>
+<i class='bx bx-chevron-down select-goal-type-js'></i>
+<ul class='select-goal-list'>
+<li value='Run a bug bounty'>Run a bug bounty</li>
+<li value='Get a professional triage team for bug reports'>Get a professional triage team for bug reports</li>
+<li value='Promote my project on your channels'>Promote my project on your channels</li>
+<li value='Determine bounty range for researchers'>Determine bounty range for researchers</li>
+<li value='Improve a security score on CoinGecko'>Improve a security score on CoinGecko</li>
+<li value='Improve a security score on CER.live'>Improve a security score on CER.live</li>
+<li value='Build a strategic partnership'>Build a strategic partnership</li>
+<li class='other-goal' name='other_goal' value=''>
+<input id='other-goal' name='other-goal' placeholder='Other goal' type='text'>
+</li>
+</ul>
+</div>
+</div>
+<div class='form-group flex flex-direction-column checkbox-area'>
+<div class='checkbox-required'>
+<input type="checkbox" name="checkbox__privacy_policy" id="checkbox__privacy_policy" />
+<label for="checkbox__privacy_policy">I have read the </label>
+<a class="link" href="/pages/policy">Privacy Notice</a>
+</div>
+<div class='checkbox-required'>
+<input type="checkbox" name="checkbox__terms_conditions" id="checkbox__terms_conditions" />
+<label for="checkbox__terms_conditions">I agree to the </label>
+<a class="link" href="/pages/terms">Terms and Conditions</a>
+</div>
+<div>
+<input type="checkbox" name="checkbox__blog_subscription" id="checkbox__blog_subscription" />
+<label for="checkbox__blog_subscription">Subscribe to Hacken Blog</label>
+</div>
+</div>
+<input class='btn small' id='hssubmit' type='submit' value='Send request'>
+</form>
+<div id='solution-customers'>
+<span id='close-modal'></span>
+<div class='title'>Our customers have made the first step with this form too</div>
+<div class='logo-customers flex'>
+<img title="" loading="lazy" src="/assets/home/logos/logos-inactive-53fd5c2bcbd919dcfc8341d0128fd520b8309c8779921083caff8bdb3bba62ca.svg" alt="Logos inactive" />
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
 <div class='yield-height-minimum-new-layout'>
-<header class='animation-header main-header'>
+<header class='animation-header main-header is-fixed'>
 <div class='container--center'><div class='logo'>
 <a href='/'>
 <svg viewBox='0 0 186.07 53.53' xmlns='http://www.w3.org/2000/svg'>
@@ -90,70 +207,42 @@
 </a>
 </div><div class='menu'>
 <div class='inline-block'>
-<div class='menu-mob'>
+<div class='menu-mob' id='list-menu-mob'>
 <ul class='list-menu'>
 <li class='toggle-dropdown--flat'>
-<a href="/programs">For Business
-</a><div class='dropdown dropdown__visible-sm'>
+<a>For Business</a>
+<div class='dropdown dropdown__visible-sm'>
 <ul>
 <li>
-<a class='hidden-link notranslate' data-link='/companies/new'>Start Program</a>
+<a class="nowrap" href="/bug-bounty-solutions">Bug Bounty Services</a>
 </li>
 <li>
-<a class="nowrap" href="/bug-bounty-solutions">Bug Bounty Solutions</a>
+<a class="nowrap" href="/resources">Business Resources </a>
 </li>
 <li>
 <a class="nowrap" href="/penetration-testing-services">Penetration Testing</a>
 </li>
 <li>
-<a href="/cup">Live Hacking</a>
-</li>
-<li>
-<a href="https://faq.hackenproof.com/en/collections/2870832-faq-for-business">Business FAQ</a>
+<a href="https://cer.live/">Get CERtified</a>
 </li>
 </ul>
 </div>
 </li>
-<li class='toggle-dropdown--flat'>
-<a href="/hackers">For Hackers
-</a><div class='dropdown dropdown__visible-sm'>
+<li class='toggle-dropdown--flat last-list'>
+<a>For Hackers</a>
+<div class='dropdown dropdown__visible-sm'>
 <ul>
 <li>
-<a class='hidden-link notranslate' data-link='/users/new'>Start Hacking</a>
+<a class='hidden-link notranslate' data-link='/register'>Start Hacking</a>
 </li>
 <li>
-<a href="/programs">Programs list</a>
+<a class="nowrap" href="/programs?sort=created_at-desc">Bug Bounty Programs</a>
 </li>
 <li>
-<a href="/leaderboard?sort=rank-asc">Leaderboard</a>
+<a class="nowrap" href="/leaderboard?sort=rank-asc">Hackers Leaderboard</a>
 </li>
 <li>
-<a href="/reports?sort=created_on-desc">Overall activity</a>
-</li>
-<li>
-<a class="nowrap" href="/public-bug-bounty-list">Bug Bounty Tracker</a>
-</li>
-<li>
-<a href="https://faq.hackenproof.com/en/collections/2870874-faq-for-hackers">Hacker FAQ</a>
-</li>
-</ul>
-</div>
-</li>
-<li class='toggle-dropdown--flat'>
-<a href="/about">Company
-</a><div class='dropdown dropdown__visible-sm'>
-<ul>
-<li>
-<a href="/about">About</a>
-</li>
-<li>
-<a href="https://blog.hackenproof.com/">Blog</a>
-</li>
-<li>
-<a class="nowrap" href="/partners">Partners</a>
-</li>
-<li>
-<a href="/contacts">Contact</a>
+<a class="nowrap" href="/public-bug-bounty-list?sort=created-desc">External Bounties Tracker</a>
 </li>
 </ul>
 </div>
@@ -161,9 +250,15 @@
 <li class='toggle-dropdown--flat'>
 <a href="/pricing">Pricing
 </a></li>
+<li class='toggle-dropdown--flat'>
+<a href="/contacts">Contacts
+</a></li>
 </ul>
-<a class="btn-sign-bounties hover-btn notranslate" href="/programs">Review bounties</a>
-<a class='btn-sign hidden-link notranslate sign-in' data-link='/login'>Sign in</a>
+<div class='flex main-menu-mob'>
+<div class='btn-sign-bounties hover-btn notranslate' id='solutions-form-btn-js'>Request a Quote</div>
+<a class='btn-sign hidden-link notranslate pc sign-in' data-link='/login'>Sign in</a>
+<a class='btn-sign-mob hidden-link mob notranslate sign-in-mob' data-link='/login'>Sign in</a>
+</div>
 
 </div>
 </div>
@@ -175,31 +270,37 @@
 
 <div class='container--center'>
 <div class='breadcrumbs'>
-<ol class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList"><li class="active">Programs</li></ol>
+<ol class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList"><li itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a class="breadcrumb-link" itemprop="item" href="/"><span itemprop="name">Main</span></a><meta content="1" itemprop="name" /></li><li class="active">Programs</li></ol>
 </div>
 </div>
-<header class='common common--bg'>
-<div class='container-small'>
-<div class='row clearfix'>
-<div class='col-sm-4'>
-<h1>Bug Bounty Programs</h1>
+<header class='common'>
+<div class='container--center bug-programs-bg'>
+<div class='flex flex-direction-column margin-l-mines-3 program-header'>
+<h1 class='capitalize'>Bug Bounty Programs 2022</h1>
+<span>Explore all HackenProof’s programs below or filter the tech</br>stack you work best with: let the bug hunt begin!</span>
+</div>
+<div class='bounty-program-statistic flex'>
+<div class='bounty-program-statistic-item'>
+<div class='total-desc'>Total bug bounty</div>
+<div class='total-count'>37</div>
+</div>
+<div class='bounty-program-statistic-item'>
+<div class='total-desc'>Money for reward</div>
+<div class='total-count'>$ 553 660</div>
+</div>
+<div class='bounty-program-statistic-item'>
+<div class='total-desc'>Total received reports</div>
+<div class='total-count'>5730</div>
 </div>
 </div>
 </div>
 </header>
-<div class='bounty common'>
-<div class='container-small'>
-<div class='row clearfix'>
-<div class='col-sm-4 margin-b-medium'>
-<div class='search-multiple' id='search-multiple--programs'>
-<select name="search[term][]" id="search_term" class="js-search-multiple" multiple="multiple">[]</select>
-<a class="search-multiple__submit  js-search-multiple__submit" style="display:none" data-change-history="true" data-remote="true" href="/programs">Search</a>
-</div>
-
-</div>
-</div>
-<div class='select-types margin-b-0'>
-<h5 class='select-types--title'>Select types</h5>
+<div class='container--center'>
+<div class='common'>
+<div class='filter flex'>
+<div class='filter-el types filter-el-js select-types filter-js'>
+<i class='bx bx-selection filter-js'></i>
+<h5 class='select-types--title filter-js'>Select types</h5>
 <div class='skills'>
 <span class='select-option select-option-all' style='border-color: #000'><span class='select-option--label'></span><span class='select-option--title'>All</span>
 </span>
@@ -213,609 +314,1227 @@
 </span>
 <span class='select-option' id='desktop' style='border-color: #b5de2c' value='desktop'><span class='select-option--label'></span><span class='select-option--title'>desktop</span>
 </span>
+<span class='select-option' id='API' style='border-color: #0fd9bb' value='API'><span class='select-option--label'></span><span class='select-option--title'>API</span>
+</span>
+<span class='select-option' id='database' style='border-color: #bf6bbf' value='database'><span class='select-option--label'></span><span class='select-option--title'>database</span>
+</span>
+<span class='select-option' id='infrastructure' style='border-color: #26825c' value='infrastructure'><span class='select-option--label'></span><span class='select-option--title'>infrastructure</span>
+</span>
+</div>
+
+<i class='bx bx-chevron-down filter-js'></i>
+</div>
+<div class='filter-el categories-js select-categories'>
+<i class='bx bx-tag categories-js'></i>
+<h5 class='select-types--title categories-js'>Select categories</h5>
+<div class='categories'>
+<span class='select-categories select-all' style='border-color: #000'><span class='select-option--label'></span><span class='select-option--title'>All</span>
+</span>
+<span class='select-categories' id='Network' style='border-color: #2804c9' value='Network'><span class='select-option--label'></span><span class='select-option--title'>Network</span>
+</span>
+<span class='select-categories' id='Infrastructure' style='border-color: #590a59' value='Infrastructure'><span class='select-option--label'></span><span class='select-option--title'>Infrastructure</span>
+</span>
+<span class='select-categories' id='Tools' style='border-color: #8c1c8c' value='Tools'><span class='select-option--label'></span><span class='select-option--title'>Tools</span>
+</span>
+<span class='select-categories' id='DeFi' style='border-color: #bf35bf' value='DeFi'><span class='select-option--label'></span><span class='select-option--title'>DeFi</span>
+</span>
+<span class='select-categories' id='CEX' style='border-color: #25b814' value='CEX'><span class='select-option--label'></span><span class='select-option--title'>CEX</span>
+</span>
+<span class='select-categories' id='DEX' style='border-color: #b83bb8' value='DEX'><span class='select-option--label'></span><span class='select-option--title'>DEX</span>
+</span>
+<span class='select-categories' id='Protocol' style='border-color: #3da83e' value='Protocol'><span class='select-option--label'></span><span class='select-option--title'>Protocol</span>
+</span>
+<span class='select-categories' id='Platform' style='border-color: #2e31d1' value='Platform'><span class='select-option--label'></span><span class='select-option--title'>Platform</span>
+</span>
+<span class='select-categories' id='Wallet' style='border-color: #b52bb5' value='Wallet'><span class='select-option--label'></span><span class='select-option--title'>Wallet</span>
+</span>
+<span class='select-categories' id='NFT' style='border-color: #066324' value='NFT'><span class='select-option--label'></span><span class='select-option--title'>NFT</span>
+</span>
+<span class='select-categories' id='GameFi' style='border-color: #992999' value='GameFi'><span class='select-option--label'></span><span class='select-option--title'>GameFi</span>
+</span>
+</div>
+
+<i class='bx bx-chevron-down categories-js'></i>
+</div>
+<div class='filter-el sort-js sorting-js sort-by'>
+<i class='bx bx-sort-down sort-js'></i>
+<h5 class='select-types--title sort-js'>Sort by</h5>
+<div class='sort-el'>
+<div class='select-option--title'>
+<div class='bounties' data='created_at-asc'>
+Added: Oldest to Newest
+</div>
+</div>
+<div class='select-option--title'>
+<div class='bounties' data='created_at-desc'>
+Added: Newest to Oldest
+</div>
+</div>
+</div>
+<i class='bx bx-chevron-down sort-js'></i>
+</div>
+<div class='filter-el search search-js'>
+<i class='bx bx-search'></i>
+<div class='search-multiple' id='search-multiple--programs'>
+<select name="search[term][]" id="search_term" class="js-search-multiple" multiple="multiple">[]</select>
+<a class="search-multiple__submit  js-search-multiple__submit" style="display:none" data-change-history="true" data-remote="true" href="/programs">Search</a>
 </div>
 
 </div>
-<div class='bounty-programs-list' id='programs'>
+</div>
+<div class='bounty-programs-list list-row bounty-bg1' id='programs'>
 <div class='bounty-programs-list--items flex-sm justify-between'>
-<div class='flex-sm align-items-start'>
-<div class='avatar avatar-large border-radial margin-r-medium margin-b-small'>
-<a href="/allbridge/allbridge"><span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/bounty_program/logo/614d8f4bb6fa1e6880483588/profile_logo.png)'></span>
+<div class='flex-sm align-items-start margin-r-medium-xl width-100'>
+<div class='flex flex-direction-column header-program-list'>
+<div>
+<div class='avatar-bg'>
+<div class='avatar avatar-large margin-r-medium margin-b-small'>
+<a href="/hacken/hackenproof"><span class='avatar-image squared-6px' style='background-image: url(https://upload.hackenproof.com/uploads/bounty_program/logo/5a560100b6fa1e6b183644a3/profile_logo.png)'></span>
 
 </a></div>
-<div>
-<h2 class='margin-b-small'>
-<a class="link inverted" href="/allbridge/allbridge">Allbridge
-</a></h2>
-<p class='text trivial smaller'>
-Allbridge is a simple, modern, and reliable way to transfer assets between networks. It&#39;s a decentralized, modular, and expanding token bridge with on-chain consensus. Transfer ERC20, SPL, and many more tokens in a few clicks.
+</div>
+</div>
+<div class='flex justify-between mob'>
+<div class='margin-b-small flex title-mob program-title'>
+<a class="limit-1" href="/hacken/hackenproof">HackenProof</a>
+<span class='bounty-color margin-l-medium-xl'>
+<div class='count-top-mob'>
+$ 1,500
+</div>
+</span>
+<div class='align-items-center flex justify-center triaged-by'>
+<i class='bx bxs-star'></i>
+<span class='label'>Triaged by HackenProof</span>
+<div class='tooltip-el flex-direction-column'>
+<p>Triaged by HackenProof</p>
+<span>All bug reports are validated and managed by our professional team. We guarantee the program's SLA on time.</span>
+</div>
+</div>
+<a class="btn-explore" href="/hacken/hackenproof">Explore program</a>
+</div>
+</div>
+</div>
+<div class='width-100 program-description-mob'>
+<div class='flex justify-between pc'>
+<div class='margin-b-small flex title-mob program-title'>
+<a class="limit-1" href="/hacken/hackenproof">HackenProof</a>
+<span class='bounty-color margin-l-medium-xl'>
+<div class='count-top-mob'>
+$ 1,500
+</div>
+</span>
+<div class='align-items-center flex justify-center triaged-by'>
+<i class='bx bxs-star'></i>
+<span class='label'>Triaged by HackenProof</span>
+<div class='tooltip-el flex-direction-column'>
+<p>Triaged by HackenProof</p>
+<span>All bug reports are validated and managed by our professional team. We guarantee the program's SLA on time.</span>
+</div>
+</div>
+</div>
+</div>
+<div class='flex justify-between info-mob'>
+<p class='text trivial smaller' id='limit-2'>
+HackenProof is a Bug Bounty and Vulnerability Coordination Platform. We connect our customers with the global hacker community to uncover security issues in their products. By running custom-tailored bug bounty programs we help our customers significantly reduce the risk of losing their data to cybercriminals.
 
 </p>
+<div class='pc'>
+<a class="btn-explore" href="/hacken/hackenproof">Explore program</a>
 </div>
 </div>
-<div class='text-right'>
-<div class='flex-wrap-mobile-max justify-end justify-between-mobile-max'>
-<div class='inline-block skills-min-width'>
-<span class='skill' style='border-color: #7beef4'><span class='skill-label'></span><span class='skill-title'>web</span>
-</span>
-<span class='skill' style='border-color: #40fe00'><span class='skill-label'></span><span class='skill-title'>smart contract</span>
-</span>
-<span class='skill' style='border-color: #f79a0e'><span class='skill-label'></span><span class='skill-title'>blockchain</span>
+<div class='flex justify-between abilities-mob'>
+<div class='flex flex-direction-column max-width650'>
+<div class='flex categories-block'>
+<span class='title nowrap flex align-items-center'>Category</span>
+<div class='flex'>
+<div class='category-el'>
+<span class='el' style='background: #590a59'></span>
+Infrastructure
+</div>
+<div class='category-el'>
+<span class='el' style='background: #2e31d1'></span>
+Platform
+</div>
+</div>
+</div>
+<div class='flex skill-block'>
+<span class='title flex align-items-center nowrap'>Type</span>
+<div class='flex'>
+<span class='skill' style='border-color: #7beef4'>
+<span class='skill-title'>web</span>
 </span>
 </div>
-<div class='inline-block margin-t-xs'>
-<i class='icon-public icon-huge' title='Public bug bounty'></i>
 </div>
 </div>
-<p class='margin-b-small'>
-<span>
-<i class='icon-list vertical-align-middle'></i>
-1
+<div class='flex flex-direction-column desc-mob'>
+<div class='flex align-items-center justify-end margin-b-small margin-t-small'>
+<div class='dates nowrap'>
+<span class='dates-start'>Duration</span>
+<span>09 Oct 2019</span>
+<spam>-</spam>
+<i class='icon-infinite'></i>
+</div>
+</div>
+<p class='flex justify-end program-stat margin-b-small'>
+<span class='program-stat-title'>
+Submitted reports
+<span>583</span>
 </span>
-reports
-<span>
-<i class='icon-person'></i>
-1
-<span>members</span>
+<span class='margin-l-medium-xs program-stat-title'>
+Hackers
+<span>246</span>
 </span>
+<div class='program-stat text-right'>
+<span class='program-stat-title'>
+Total rewarded
+<span>$13496.57</span>
+</span>
+</div>
 </p>
-<div class='details--legend'>
-<div class='flex justify-between'>
-<span class='trivial'>Start date:</span>
-<span>09/24/2021</span>
-</div>
-<div class='flex justify-between'>
-<span class='trivial'>Completion date:</span>
-<span>09/24/2022</span>
-</div>
-<div class='flex justify-between'>
-<span class='trivial'>Maximum reward:</span>
-<span>
-$4000.0
-</span>
-</div>
-<div class='flex justify-between'>
-<span class='trivial'>Total views:</span>
-<span>
-10404
-</span>
 </div>
 </div>
 </div>
 </div>
+</div>
+
 <div class='bounty-programs-list--items flex-sm justify-between'>
-<div class='flex-sm align-items-start'>
-<div class='avatar avatar-large border-radial margin-r-medium margin-b-small'>
-<a href="/avalanche/avalanche-general"><span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/bounty_program/logo/605cb055b6fa1e70972a6810/profile_logo.png)'></span>
+<div class='flex-sm align-items-start margin-r-medium-xl width-100'>
+<div class='flex flex-direction-column header-program-list'>
+<div>
+<div class='avatar-bg'>
+<div class='avatar avatar-large margin-r-medium margin-b-small'>
+<a href="/kuna/kuna-crypto-exchange"><span class='avatar-image squared-6px' style='background-image: url(https://upload.hackenproof.com/uploads/bounty_program/logo/5a5e1001b6fa1e268be35401/profile_logo.png)'></span>
 
 </a></div>
-<div>
-<h2 class='margin-b-small'>
-<a class="link inverted" href="/avalanche/avalanche-general">Avalanche General
-</a></h2>
-<p class='text trivial smaller'>
-Avalanche is an open-source platform for launching highly decentralized applications, new financial primitives, and new interoperable blockchains.
-Please note that OUT OF SCOPE targets take precedent over the IN SCOPE targets, so please check OUT OF SCOPE target list before testing.
+</div>
+</div>
+<div class='flex justify-between mob'>
+<div class='margin-b-small flex title-mob program-title'>
+<a class="limit-1" href="/kuna/kuna-crypto-exchange">Kuna Crypto Exchange</a>
+<span class='bounty-color margin-l-medium-xl'>
+<div class='count-top-mob'>
+$ 5,000
+</div>
+</span>
+<div class='align-items-center flex justify-center triaged-by'>
+<i class='bx bxs-star'></i>
+<span class='label'>Triaged by HackenProof</span>
+<div class='tooltip-el flex-direction-column'>
+<p>Triaged by HackenProof</p>
+<span>All bug reports are validated and managed by our professional team. We guarantee the program's SLA on time.</span>
+</div>
+</div>
+<a class="btn-explore" href="/kuna/kuna-crypto-exchange">Explore program</a>
+</div>
+</div>
+</div>
+<div class='width-100 program-description-mob'>
+<div class='flex justify-between pc'>
+<div class='margin-b-small flex title-mob program-title'>
+<a class="limit-1" href="/kuna/kuna-crypto-exchange">Kuna Crypto Exchange</a>
+<span class='bounty-color margin-l-medium-xl'>
+<div class='count-top-mob'>
+$ 5,000
+</div>
+</span>
+<div class='align-items-center flex justify-center triaged-by'>
+<i class='bx bxs-star'></i>
+<span class='label'>Triaged by HackenProof</span>
+<div class='tooltip-el flex-direction-column'>
+<p>Triaged by HackenProof</p>
+<span>All bug reports are validated and managed by our professional team. We guarantee the program's SLA on time.</span>
+</div>
+</div>
+</div>
+</div>
+<div class='flex justify-between info-mob'>
+<p class='text trivial smaller' id='limit-2'>
+The first public crypto exchange, which launched the development of basic infrastructure for the innovative finteсh-projects both in Ukraine and in foreign markets. TOP cryptocurrencies and tokens, high level of security and reliability, user-friendly interface, advanced API and respectful customer support round the clock.
 
 </p>
+<div class='pc'>
+<a class="btn-explore" href="/kuna/kuna-crypto-exchange">Explore program</a>
 </div>
 </div>
-<div class='text-right'>
-<div class='flex-wrap-mobile-max justify-end justify-between-mobile-max'>
-<div class='inline-block skills-min-width'>
-<span class='skill' style='border-color: #7beef4'><span class='skill-label'></span><span class='skill-title'>web</span>
-</span>
-<span class='skill' style='border-color: #f79a0e'><span class='skill-label'></span><span class='skill-title'>blockchain</span>
-</span>
-<span class='skill' style='border-color: #40fe00'><span class='skill-label'></span><span class='skill-title'>smart contract</span>
+<div class='flex justify-between abilities-mob'>
+<div class='flex flex-direction-column max-width650'>
+<div class='rating-block inline-block'>
+<span class='title'>CyberSec rating</span>
+<div class='pc'>
+<a href="https://cer.live/"><span class='rating-svg'></span>
+</a></div>
+<div class='mob'>
+<span class='rating-svg'></span>
+</div>
+<span class='rating-title'>C</span>
+</div>
+<div class='flex categories-block'>
+<span class='title nowrap flex align-items-center'>Category</span>
+<div class='flex'>
+<div class='category-el'>
+<span class='el' style='background: #b83bb8'></span>
+DEX
+</div>
+<div class='category-el'>
+<span class='el' style='background: #25b814'></span>
+CEX
+</div>
+<div class='category-el'>
+<span class='el' style='background: #8c1c8c'></span>
+Tools
+</div>
+<div class='category-el'>
+<span class='el' style='background: #590a59'></span>
+Infrastructure
+</div>
+<div class='category-el'>
+<span class='el' style='background: #2e31d1'></span>
+Platform
+</div>
+</div>
+</div>
+<div class='flex skill-block'>
+<span class='title flex align-items-center nowrap'>Type</span>
+<div class='flex'>
+<span class='skill' style='border-color: #7beef4'>
+<span class='skill-title'>web</span>
 </span>
 </div>
-<div class='inline-block margin-t-xs'>
-<i class='icon-public icon-huge' title='Public bug bounty'></i>
 </div>
 </div>
-<p class='margin-b-small'>
-<span>
-<i class='icon-list vertical-align-middle'></i>
-32
+<div class='flex flex-direction-column desc-mob'>
+<div class='flex align-items-center justify-end margin-b-small margin-t-small'>
+<div class='dates nowrap'>
+<span class='dates-start'>Duration</span>
+<span>21 Jan 2020</span>
+<spam>-</spam>
+<i class='icon-infinite'></i>
+</div>
+</div>
+<p class='flex justify-end program-stat margin-b-small'>
+<span class='program-stat-title'>
+Submitted reports
+<span>388</span>
 </span>
-reports
-<span>
-<i class='icon-person'></i>
-23
-<span>members</span>
+<span class='margin-l-medium-xs program-stat-title'>
+Hackers
+<span>230</span>
 </span>
+<div class='program-stat text-right'>
+<span class='program-stat-title'>
+Total rewarded
+<span>$8898.3</span>
+</span>
+</div>
 </p>
-<div class='details--legend'>
-<div class='flex justify-between'>
-<span class='trivial'>Start date:</span>
-<span>03/30/2021</span>
-</div>
-<div class='flex justify-between'>
-<span class='trivial'>Maximum reward:</span>
-<span>
-$10000.0
-</span>
-</div>
-<div class='flex justify-between'>
-<span class='trivial'>Total views:</span>
-<span>
-29820
-</span>
 </div>
 </div>
 </div>
 </div>
+</div>
+
 <div class='bounty-programs-list--items flex-sm justify-between'>
-<div class='flex-sm align-items-start'>
-<div class='avatar avatar-large border-radial margin-r-medium margin-b-small'>
-<a href="/avalanche/avalanche-protocol"><span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/bounty_program/logo/605cb438b6fa1e70972a6877/profile_logo.png)'></span>
+<div class='flex-sm align-items-start margin-r-medium-xl width-100'>
+<div class='flex flex-direction-column header-program-list'>
+<div>
+<div class='avatar-bg'>
+<div class='avatar avatar-large margin-r-medium margin-b-small'>
+<a href="/vechain/vechainthor"><span class='avatar-image squared-6px' style='background-image: url(https://upload.hackenproof.com/uploads/bounty_program/logo/5afc3602b6fa1e535fbdbb33/profile_logo.png)'></span>
 
 </a></div>
-<div>
-<h2 class='margin-b-small'>
-<a class="link inverted" href="/avalanche/avalanche-protocol">Avalanche Protocol
-</a></h2>
-<p class='text trivial smaller'>
-Avalanche is an open-source platform for launching highly decentralized applications, new financial primitives, and new interoperable blockchains.
+</div>
+</div>
+<div class='flex justify-between mob'>
+<div class='margin-b-small flex title-mob program-title'>
+<a class="limit-1" href="/vechain/vechainthor">VeChainThor </a>
+<span class='bounty-color margin-l-medium-xl'>
+<div class='count-top-mob'>
+$ 10,000
+</div>
+</span>
+<div class='align-items-center flex justify-center triaged-by'>
+<i class='bx bxs-star'></i>
+<span class='label'>Triaged by HackenProof</span>
+<div class='tooltip-el flex-direction-column'>
+<p>Triaged by HackenProof</p>
+<span>All bug reports are validated and managed by our professional team. We guarantee the program's SLA on time.</span>
+</div>
+</div>
+<a class="btn-explore" href="/vechain/vechainthor">Explore program</a>
+</div>
+</div>
+</div>
+<div class='width-100 program-description-mob'>
+<div class='flex justify-between pc'>
+<div class='margin-b-small flex title-mob program-title'>
+<a class="limit-1" href="/vechain/vechainthor">VeChainThor </a>
+<span class='bounty-color margin-l-medium-xl'>
+<div class='count-top-mob'>
+$ 10,000
+</div>
+</span>
+<div class='align-items-center flex justify-center triaged-by'>
+<i class='bx bxs-star'></i>
+<span class='label'>Triaged by HackenProof</span>
+<div class='tooltip-el flex-direction-column'>
+<p>Triaged by HackenProof</p>
+<span>All bug reports are validated and managed by our professional team. We guarantee the program's SLA on time.</span>
+</div>
+</div>
+</div>
+</div>
+<div class='flex justify-between info-mob'>
+<p class='text trivial smaller' id='limit-2'>
+Cybersecurity of the company and the security of our users&#39; data is a top priority for
+us, therefore VeChain launched a bug bounty program to find vulnerabilities and pay
+rewards.
 
 </p>
+<div class='pc'>
+<a class="btn-explore" href="/vechain/vechainthor">Explore program</a>
 </div>
 </div>
-<div class='text-right'>
-<div class='flex-wrap-mobile-max justify-end justify-between-mobile-max'>
-<div class='inline-block skills-min-width'>
-<span class='skill' style='border-color: #f79a0e'><span class='skill-label'></span><span class='skill-title'>blockchain</span>
+<div class='flex justify-between abilities-mob'>
+<div class='flex flex-direction-column max-width650'>
+<div class='flex skill-block'>
+<span class='title flex align-items-center nowrap'>Type</span>
+<div class='flex'>
+<span class='skill' style='border-color: #f79a0e'>
+<span class='skill-title'>blockchain</span>
 </span>
-<span class='skill' style='border-color: #40fe00'><span class='skill-label'></span><span class='skill-title'>smart contract</span>
-</span>
-</div>
-<div class='inline-block margin-t-xs'>
-<i class='icon-public icon-huge' title='Public bug bounty'></i>
 </div>
 </div>
-<p class='margin-b-small'>
-<span>
-<i class='icon-list vertical-align-middle'></i>
-4
+</div>
+<div class='flex flex-direction-column desc-mob'>
+<div class='flex align-items-center justify-end margin-b-small margin-t-small'>
+<div class='dates nowrap'>
+<span class='dates-start'>Duration</span>
+<span>22 Aug 2019</span>
+<spam>-</spam>
+<i class='icon-infinite'></i>
+</div>
+</div>
+<p class='flex justify-end program-stat margin-b-small'>
+<span class='program-stat-title'>
+Submitted reports
+<span>36</span>
 </span>
-reports
-<span>
-<i class='icon-person'></i>
-4
-<span>members</span>
+<span class='margin-l-medium-xs program-stat-title'>
+Hackers
+<span>23</span>
 </span>
+<div class='program-stat text-right'>
+<span class='program-stat-title'>
+Total rewarded
+<span>$696.15</span>
+</span>
+</div>
 </p>
-<div class='details--legend'>
-<div class='flex justify-between'>
-<span class='trivial'>Start date:</span>
-<span>03/30/2021</span>
-</div>
-<div class='flex justify-between'>
-<span class='trivial'>Maximum reward:</span>
-<span>
-$10000.0
-</span>
-</div>
-<div class='flex justify-between'>
-<span class='trivial'>Total views:</span>
-<span>
-27233
-</span>
 </div>
 </div>
 </div>
 </div>
+</div>
+
 <div class='bounty-programs-list--items flex-sm justify-between'>
-<div class='flex-sm align-items-start'>
-<div class='avatar avatar-large border-radial margin-r-medium margin-b-small'>
-<a href="/btse/btse-bug-bounty-program"><span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/bounty_program/logo/61270ab8b6fa1e7c41febdae/profile_logo.png)'></span>
+<div class='flex-sm align-items-start margin-r-medium-xl width-100'>
+<div class='flex flex-direction-column header-program-list'>
+<div>
+<div class='avatar-bg'>
+<div class='avatar avatar-large margin-r-medium margin-b-small'>
+<a href="/vechain/vechainthor-wallet"><span class='avatar-image squared-6px' style='background-image: url(https://upload.hackenproof.com/uploads/bounty_program/logo/5b51972ab6fa1e5bd7ea375b/profile_logo.png)'></span>
 
 </a></div>
-<div>
-<h2 class='margin-b-small'>
-<a class="link inverted" href="/btse/btse-bug-bounty-program">BTSE Bug Bounty Program
-</a></h2>
-<p class='text trivial smaller'>
-The BTSE bug bounty program offers rewards to security researchers and enthusiasts who help us identify and resolve potential vulnerabilities within the BTSE system.
+</div>
+</div>
+<div class='flex justify-between mob'>
+<div class='margin-b-small flex title-mob program-title'>
+<a class="limit-1" href="/vechain/vechainthor-wallet">VeChainThor Wallet</a>
+<span class='bounty-color margin-l-medium-xl'>
+<div class='count-top-mob'>
+$ 3,000
+</div>
+</span>
+<div class='align-items-center flex justify-center triaged-by'>
+<i class='bx bxs-star'></i>
+<span class='label'>Triaged by HackenProof</span>
+<div class='tooltip-el flex-direction-column'>
+<p>Triaged by HackenProof</p>
+<span>All bug reports are validated and managed by our professional team. We guarantee the program's SLA on time.</span>
+</div>
+</div>
+<a class="btn-explore" href="/vechain/vechainthor-wallet">Explore program</a>
+</div>
+</div>
+</div>
+<div class='width-100 program-description-mob'>
+<div class='flex justify-between pc'>
+<div class='margin-b-small flex title-mob program-title'>
+<a class="limit-1" href="/vechain/vechainthor-wallet">VeChainThor Wallet</a>
+<span class='bounty-color margin-l-medium-xl'>
+<div class='count-top-mob'>
+$ 3,000
+</div>
+</span>
+<div class='align-items-center flex justify-center triaged-by'>
+<i class='bx bxs-star'></i>
+<span class='label'>Triaged by HackenProof</span>
+<div class='tooltip-el flex-direction-column'>
+<p>Triaged by HackenProof</p>
+<span>All bug reports are validated and managed by our professional team. We guarantee the program's SLA on time.</span>
+</div>
+</div>
+</div>
+</div>
+<div class='flex justify-between info-mob'>
+<p class='text trivial smaller' id='limit-2'>
+Cybersecurity of the company and the security of our users&#39; data is a top priority for
+us, therefore VeChain launched a bug bounty program to find vulnerabilities and pay
+rewards.
 
 </p>
+<div class='pc'>
+<a class="btn-explore" href="/vechain/vechainthor-wallet">Explore program</a>
 </div>
 </div>
-<div class='text-right'>
-<div class='flex-wrap-mobile-max justify-end justify-between-mobile-max'>
-<div class='inline-block skills-min-width'>
+<div class='flex justify-between abilities-mob'>
+<div class='flex flex-direction-column max-width650'>
+<div class='flex categories-block'>
+<span class='title nowrap flex align-items-center'>Category</span>
+<div class='flex'>
+<div class='category-el'>
+<span class='el' style='background: #b52bb5'></span>
+Wallet
 </div>
-<div class='inline-block margin-t-xs'>
-<i class='icon-public icon-huge' title='Public bug bounty'></i>
+<div class='category-el'>
+<span class='el' style='background: #590a59'></span>
+Infrastructure
 </div>
 </div>
-<p class='margin-b-small'>
+</div>
+<div class='flex skill-block'>
+<span class='title flex align-items-center nowrap'>Type</span>
+<div class='flex'>
+<span class='skill' style='border-color: #169987'>
+<span class='skill-title'>mobile</span>
+</span>
+</div>
+</div>
+</div>
+<div class='flex flex-direction-column desc-mob'>
+<div class='flex align-items-center justify-end margin-b-small margin-t-small'>
+<div class='dates nowrap'>
+<span class='dates-start'>Duration</span>
+<span>22 Aug 2019</span>
+<spam>-</spam>
+<i class='icon-infinite'></i>
+</div>
+</div>
+<p class='flex justify-end program-stat margin-b-small'>
+<span class='program-stat-title'>
+Submitted reports
+<span>34</span>
+</span>
+<span class='margin-l-medium-xs program-stat-title'>
+Hackers
+<span>24</span>
+</span>
+<div class='program-stat text-right'>
+<span class='program-stat-title'>
+Total rewarded
+<span>$300.0</span>
+</span>
+</div>
 </p>
-<div class='details--legend'>
-<div class='flex justify-between'>
-<span class='trivial'>Start date:</span>
-<span>11/05/2021</span>
-</div>
-<div class='flex justify-between'>
-<span class='trivial'>Completion date:</span>
-<span>11/05/2022</span>
-</div>
-<div class='flex justify-between'>
-<span class='trivial'>Maximum reward:</span>
-<span>
-$1000.0
-</span>
-</div>
-<div class='flex justify-between'>
-<span class='trivial'>Total views:</span>
-<span>
-4552
-</span>
 </div>
 </div>
 </div>
 </div>
+</div>
+
 <div class='bounty-programs-list--items flex-sm justify-between'>
-<div class='flex-sm align-items-start'>
-<div class='avatar avatar-large border-radial margin-r-medium margin-b-small'>
-<a href="/bitkub/bitkub"><span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/bounty_program/logo/619224f5b6fa1e6869d67d49/profile_logo.png)'></span>
+<div class='flex-sm align-items-start margin-r-medium-xl width-100'>
+<div class='flex flex-direction-column header-program-list'>
+<div>
+<div class='avatar-bg'>
+<div class='avatar avatar-large margin-r-medium margin-b-small'>
+<a href="/gate-dot-io/gate-dot-io-exchange"><span class='avatar-image squared-6px' style='background-image: url(https://upload.hackenproof.com/uploads/bounty_program/logo/5f0852a7b6fa1e07943fb234/profile_logo.png)'></span>
 
 </a></div>
-<div>
-<h2 class='margin-b-small'>
-<a class="link inverted" href="/bitkub/bitkub">Bitkub
-</a></h2>
-<p class='text trivial smaller'>
-Founded in February 2018, Bitkub is a new generation digital asset and cryptocurrency exchange platform that offers advanced cryptocurrency exchange services to individuals who intend to buy, sell, and store cryptocurrencies.
+</div>
+</div>
+<div class='flex justify-between mob'>
+<div class='margin-b-small flex title-mob program-title'>
+<a class="limit-1" href="/gate-dot-io/gate-dot-io-exchange">Gate.io Exchange</a>
+<span class='bounty-color margin-l-medium-xl'>
+<div class='count-top-mob'>
+$ 5,000
+</div>
+</span>
+<a class="btn-explore" href="/gate-dot-io/gate-dot-io-exchange">Explore program</a>
+</div>
+</div>
+</div>
+<div class='width-100 program-description-mob'>
+<div class='flex justify-between pc'>
+<div class='margin-b-small flex title-mob program-title'>
+<a class="limit-1" href="/gate-dot-io/gate-dot-io-exchange">Gate.io Exchange</a>
+<span class='bounty-color margin-l-medium-xl'>
+<div class='count-top-mob'>
+$ 5,000
+</div>
+</span>
+</div>
+</div>
+<div class='flex justify-between info-mob'>
+<p class='text trivial smaller' id='limit-2'>
+Gate.io is one of the oldest cryptocurrency exchanges from China operating since 2013.
 
 </p>
+<div class='pc'>
+<a class="btn-explore" href="/gate-dot-io/gate-dot-io-exchange">Explore program</a>
 </div>
 </div>
-<div class='text-right'>
-<div class='flex-wrap-mobile-max justify-end justify-between-mobile-max'>
-<div class='inline-block skills-min-width'>
-<span class='skill' style='border-color: #7beef4'><span class='skill-label'></span><span class='skill-title'>web</span>
+<div class='flex justify-between abilities-mob'>
+<div class='flex flex-direction-column max-width650'>
+<div class='rating-block inline-block'>
+<span class='title'>CyberSec rating</span>
+<div class='pc'>
+<a href="https://cer.live/"><span class='rating-svg'></span>
+</a></div>
+<div class='mob'>
+<span class='rating-svg'></span>
+</div>
+<span class='rating-title'>BBB</span>
+</div>
+<div class='flex categories-block'>
+<span class='title nowrap flex align-items-center'>Category</span>
+<div class='flex'>
+<div class='category-el'>
+<span class='el' style='background: #2e31d1'></span>
+Platform
+</div>
+<div class='category-el'>
+<span class='el' style='background: #b83bb8'></span>
+DEX
+</div>
+<div class='category-el'>
+<span class='el' style='background: #25b814'></span>
+CEX
+</div>
+</div>
+</div>
+<div class='flex skill-block'>
+<span class='title flex align-items-center nowrap'>Type</span>
+<div class='flex'>
+<span class='skill' style='border-color: #7beef4'>
+<span class='skill-title'>web</span>
 </span>
-<span class='skill' style='border-color: #169987'><span class='skill-label'></span><span class='skill-title'>mobile</span>
+<span class='skill' style='border-color: #169987'>
+<span class='skill-title'>mobile</span>
+</span>
+<span class='skill' style='border-color: #b5de2c'>
+<span class='skill-title'>desktop</span>
 </span>
 </div>
-<div class='inline-block margin-t-xs'>
-<i class='icon-public icon-huge' title='Public bug bounty'></i>
 </div>
 </div>
-<p class='margin-b-small'>
+<div class='flex flex-direction-column desc-mob'>
+<div class='flex align-items-center justify-end margin-b-small margin-t-small'>
+<div class='dates nowrap'>
+<span class='dates-start'>Duration</span>
+<span>19 Aug 2021</span>
+<spam>-</spam>
+<i class='icon-infinite'></i>
+</div>
+</div>
+<p class='flex justify-end program-stat margin-b-small'>
+<span class='program-stat-title'>
+Submitted reports
+<span>178</span>
+</span>
+<span class='margin-l-medium-xs program-stat-title'>
+Hackers
+<span>99</span>
+</span>
+<div class='program-stat text-right'>
+<span class='program-stat-title'>
+Total rewarded
+<span>$2650.0</span>
+</span>
+</div>
 </p>
-<div class='details--legend'>
-<div class='flex justify-between'>
-<span class='trivial'>Start date:</span>
-<span>11/15/2021</span>
-</div>
-<div class='flex justify-between'>
-<span class='trivial'>Completion date:</span>
-<span>11/15/2022</span>
-</div>
-<div class='flex justify-between'>
-<span class='trivial'>Maximum reward:</span>
-<span>
-$3000.0
-</span>
-</div>
-<div class='flex justify-between'>
-<span class='trivial'>Total views:</span>
-<span>
-4321
-</span>
 </div>
 </div>
 </div>
 </div>
+</div>
+
 <div class='bounty-programs-list--items flex-sm justify-between'>
-<div class='flex-sm align-items-start'>
-<div class='avatar avatar-large border-radial margin-r-medium margin-b-small'>
-<a href="/bunicorn/bunicorn-1"><span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/bounty_program/logo/60cf9a73b6fa1e588e7913eb/profile_logo.png)'></span>
+<div class='flex-sm align-items-start margin-r-medium-xl width-100'>
+<div class='flex flex-direction-column header-program-list'>
+<div>
+<div class='avatar-bg'>
+<div class='avatar avatar-large margin-r-medium margin-b-small'>
+<a href="/coingecko/coingecko"><span class='avatar-image squared-6px' style='background-image: url(https://upload.hackenproof.com/uploads/bounty_program/logo/5f0edaecb6fa1e07943fb3f8/profile_logo.png)'></span>
 
 </a></div>
-<div>
-<h2 class='margin-b-small'>
-<a class="link inverted" href="/bunicorn/bunicorn-1">Bunicorn
-</a></h2>
-<p class='text trivial smaller'>
-Bunicorn is an automated market-making (AMM) decentralized exchange (DEX). The program is focused on the prevention of loss of user funds.
-
-</p>
 </div>
 </div>
-<div class='text-right'>
-<div class='flex-wrap-mobile-max justify-end justify-between-mobile-max'>
-<div class='inline-block skills-min-width'>
-<span class='skill' style='border-color: #7beef4'><span class='skill-label'></span><span class='skill-title'>web</span>
+<div class='flex justify-between mob'>
+<div class='margin-b-small flex title-mob program-title'>
+<a class="limit-1" href="/coingecko/coingecko">CoinGecko</a>
+<span class='bounty-color margin-l-medium-xl'>
+<div class='count-top-mob'>
+$ 1,500
+</div>
 </span>
-<span class='skill' style='border-color: #f79a0e'><span class='skill-label'></span><span class='skill-title'>blockchain</span>
+<div class='align-items-center flex justify-center triaged-by'>
+<i class='bx bxs-star'></i>
+<span class='label'>Triaged by HackenProof</span>
+<div class='tooltip-el flex-direction-column'>
+<p>Triaged by HackenProof</p>
+<span>All bug reports are validated and managed by our professional team. We guarantee the program's SLA on time.</span>
+</div>
+</div>
+<a class="btn-explore" href="/coingecko/coingecko">Explore program</a>
+</div>
+</div>
+</div>
+<div class='width-100 program-description-mob'>
+<div class='flex justify-between pc'>
+<div class='margin-b-small flex title-mob program-title'>
+<a class="limit-1" href="/coingecko/coingecko">CoinGecko</a>
+<span class='bounty-color margin-l-medium-xl'>
+<div class='count-top-mob'>
+$ 1,500
+</div>
 </span>
-<span class='skill' style='border-color: #40fe00'><span class='skill-label'></span><span class='skill-title'>smart contract</span>
-</span>
-</div>
-<div class='inline-block margin-t-xs'>
-<i class='icon-public icon-huge' title='Public bug bounty'></i>
-</div>
-</div>
-<p class='margin-b-small'>
-<span>
-<i class='icon-list vertical-align-middle'></i>
-10
-</span>
-reports
-<span>
-<i class='icon-person'></i>
-7
-<span>members</span>
-</span>
-</p>
-<div class='details--legend'>
-<div class='flex justify-between'>
-<span class='trivial'>Start date:</span>
-<span>06/21/2021</span>
-</div>
-<div class='flex justify-between'>
-<span class='trivial'>Completion date:</span>
-<span>06/21/2022</span>
-</div>
-<div class='flex justify-between'>
-<span class='trivial'>Maximum reward:</span>
-<span>
-$50000.0
-</span>
-</div>
-<div class='flex justify-between'>
-<span class='trivial'>Total views:</span>
-<span>
-21145
-</span>
+<div class='align-items-center flex justify-center triaged-by'>
+<i class='bx bxs-star'></i>
+<span class='label'>Triaged by HackenProof</span>
+<div class='tooltip-el flex-direction-column'>
+<p>Triaged by HackenProof</p>
+<span>All bug reports are validated and managed by our professional team. We guarantee the program's SLA on time.</span>
 </div>
 </div>
 </div>
 </div>
-<div class='bounty-programs-list--items flex-sm justify-between'>
-<div class='flex-sm align-items-start'>
-<div class='avatar avatar-large border-radial margin-r-medium margin-b-small'>
-<a href="/coingecko/coingecko"><span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/bounty_program/logo/5f0edaecb6fa1e07943fb3f8/profile_logo.png)'></span>
-
-</a></div>
-<div>
-<h2 class='margin-b-small'>
-<a class="link inverted" href="/coingecko/coingecko">CoinGecko
-</a></h2>
-<p class='text trivial smaller'>
+<div class='flex justify-between info-mob'>
+<p class='text trivial smaller' id='limit-2'>
 CoinGecko provides a fundamental analysis of the crypto market. In addition to tracking price, volume and market capitalization, CoinGecko tracks community growth, open-source code development, major events and on-chain metrics.
 
 </p>
+<div class='pc'>
+<a class="btn-explore" href="/coingecko/coingecko">Explore program</a>
 </div>
 </div>
-<div class='text-right'>
-<div class='flex-wrap-mobile-max justify-end justify-between-mobile-max'>
-<div class='inline-block skills-min-width'>
-<span class='skill' style='border-color: #7beef4'><span class='skill-label'></span><span class='skill-title'>web</span>
+<div class='flex justify-between abilities-mob'>
+<div class='flex flex-direction-column max-width650'>
+<div class='flex categories-block'>
+<span class='title nowrap flex align-items-center'>Category</span>
+<div class='flex'>
+<div class='category-el'>
+<span class='el' style='background: #590a59'></span>
+Infrastructure
+</div>
+<div class='category-el'>
+<span class='el' style='background: #2e31d1'></span>
+Platform
+</div>
+<div class='category-el'>
+<span class='el' style='background: #066324'></span>
+NFT
+</div>
+<div class='category-el'>
+<span class='el' style='background: #8c1c8c'></span>
+Tools
+</div>
+</div>
+</div>
+<div class='flex skill-block'>
+<span class='title flex align-items-center nowrap'>Type</span>
+<div class='flex'>
+<span class='skill' style='border-color: #7beef4'>
+<span class='skill-title'>web</span>
 </span>
-<span class='skill' style='border-color: #169987'><span class='skill-label'></span><span class='skill-title'>mobile</span>
+<span class='skill' style='border-color: #169987'>
+<span class='skill-title'>mobile</span>
 </span>
 </div>
-<div class='inline-block margin-t-xs'>
-<i class='icon-public icon-huge' title='Public bug bounty'></i>
 </div>
 </div>
-<p class='margin-b-small'>
-<span>
-<i class='icon-list vertical-align-middle'></i>
-22
+<div class='flex flex-direction-column desc-mob'>
+<div class='flex align-items-center justify-end margin-b-small margin-t-small'>
+<div class='dates nowrap'>
+<span class='dates-start'>Duration</span>
+<span>17 Jan 2021</span>
+<spam>-</spam>
+<i class='icon-infinite'></i>
+</div>
+</div>
+<p class='flex justify-end program-stat margin-b-small'>
+<span class='program-stat-title'>
+Submitted reports
+<span>184</span>
 </span>
-reports
-<span>
-<i class='icon-person'></i>
-17
-<span>members</span>
+<span class='margin-l-medium-xs program-stat-title'>
+Hackers
+<span>112</span>
 </span>
+<div class='program-stat text-right'>
+<span class='program-stat-title'>
+Total rewarded
+<span>$1700.0</span>
+</span>
+</div>
 </p>
-<div class='details--legend'>
-<div class='flex justify-between'>
-<span class='trivial'>Start date:</span>
-<span>01/17/2021</span>
-</div>
-<div class='flex justify-between'>
-<span class='trivial'>Maximum reward:</span>
-<span>
-$1500.0
-</span>
-</div>
-<div class='flex justify-between'>
-<span class='trivial'>Total views:</span>
-<span>
-86185
-</span>
 </div>
 </div>
 </div>
 </div>
+</div>
+
 <div class='bounty-programs-list--items flex-sm justify-between'>
-<div class='flex-sm align-items-start'>
-<div class='avatar avatar-large border-radial margin-r-medium margin-b-small'>
-<a href="/coinmetro/coinmetro-exchange"><span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/bounty_program/logo/607d8bbfb6fa1e0c5e006ce1/profile_logo.png)'></span>
+<div class='flex-sm align-items-start margin-r-medium-xl width-100'>
+<div class='flex flex-direction-column header-program-list'>
+<div>
+<div class='avatar-bg'>
+<div class='avatar avatar-large margin-r-medium margin-b-small'>
+<a href="/p2pb2b/p2pb2b"><span class='avatar-image squared-6px' style='background-image: url(https://upload.hackenproof.com/uploads/bounty_program/logo/5f4e57afb6fa1e11c1387061/profile_logo.png)'></span>
 
 </a></div>
-<div>
-<h2 class='margin-b-small'>
-<a class="link inverted" href="/coinmetro/coinmetro-exchange">CoinMetro Exchange
-</a></h2>
-<p class='text trivial smaller'>
-CoinMetro is a fully-rounded EU-based FinTech ecosystem that is designed to simplify access to the digital asset economy.
+</div>
+</div>
+<div class='flex justify-between mob'>
+<div class='margin-b-small flex title-mob program-title'>
+<a class="limit-1" href="/p2pb2b/p2pb2b">P2PB2B</a>
+<span class='bounty-color margin-l-medium-xl'>
+<div class='count-top-mob'>
+$ 1,000
+</div>
+</span>
+<a class="btn-explore" href="/p2pb2b/p2pb2b">Explore program</a>
+</div>
+</div>
+</div>
+<div class='width-100 program-description-mob'>
+<div class='flex justify-between pc'>
+<div class='margin-b-small flex title-mob program-title'>
+<a class="limit-1" href="/p2pb2b/p2pb2b">P2PB2B</a>
+<span class='bounty-color margin-l-medium-xl'>
+<div class='count-top-mob'>
+$ 1,000
+</div>
+</span>
+</div>
+</div>
+<div class='flex justify-between info-mob'>
+<p class='text trivial smaller' id='limit-2'>
+P2PB2B is an advanced cryptocurrency exchange that works for the benefit of its users. In order to make your trading even more convenient and safe, the platform has all the necessary features and tools.
 
 </p>
+<div class='pc'>
+<a class="btn-explore" href="/p2pb2b/p2pb2b">Explore program</a>
 </div>
 </div>
-<div class='text-right'>
-<div class='flex-wrap-mobile-max justify-end justify-between-mobile-max'>
-<div class='inline-block skills-min-width'>
-<span class='skill' style='border-color: #7beef4'><span class='skill-label'></span><span class='skill-title'>web</span>
+<div class='flex justify-between abilities-mob'>
+<div class='flex flex-direction-column max-width650'>
+<div class='flex categories-block'>
+<span class='title nowrap flex align-items-center'>Category</span>
+<div class='flex'>
+<div class='category-el'>
+<span class='el' style='background: #2e31d1'></span>
+Platform
+</div>
+<div class='category-el'>
+<span class='el' style='background: #8c1c8c'></span>
+Tools
+</div>
+</div>
+</div>
+<div class='flex skill-block'>
+<span class='title flex align-items-center nowrap'>Type</span>
+<div class='flex'>
+<span class='skill' style='border-color: #7beef4'>
+<span class='skill-title'>web</span>
 </span>
 </div>
-<div class='inline-block margin-t-xs'>
-<i class='icon-public icon-huge' title='Public bug bounty'></i>
 </div>
 </div>
-<p class='margin-b-small'>
-<span>
-<i class='icon-list vertical-align-middle'></i>
-32
+<div class='flex flex-direction-column desc-mob'>
+<div class='flex align-items-center justify-end margin-b-small margin-t-small'>
+<div class='dates nowrap'>
+<span class='dates-start'>Duration</span>
+<span>11 Mar 2021</span>
+<spam>-</spam>
+<i class='icon-infinite'></i>
+</div>
+</div>
+<p class='flex justify-end program-stat margin-b-small'>
+<span class='program-stat-title'>
+Submitted reports
+<span>69</span>
 </span>
-reports
-<span>
-<i class='icon-person'></i>
-22
-<span>members</span>
+<span class='margin-l-medium-xs program-stat-title'>
+Hackers
+<span>41</span>
 </span>
+<div class='program-stat text-right'>
+<span class='program-stat-title'>
+Total rewarded
+<span>$1800.0</span>
+</span>
+</div>
 </p>
-<div class='details--legend'>
-<div class='flex justify-between'>
-<span class='trivial'>Start date:</span>
-<span>04/28/2021</span>
-</div>
-<div class='flex justify-between'>
-<span class='trivial'>Maximum reward:</span>
-<span>
-$3000.0
-</span>
-</div>
-<div class='flex justify-between'>
-<span class='trivial'>Total views:</span>
-<span>
-36914
-</span>
 </div>
 </div>
 </div>
 </div>
+</div>
+
 <div class='bounty-programs-list--items flex-sm justify-between'>
-<div class='flex-sm align-items-start'>
-<div class='avatar avatar-large border-radial margin-r-medium margin-b-small'>
-<a href="/coinsbit/coinsbit"><span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/bounty_program/logo/5f994991b6fa1e4fe0fae7bb/profile_logo.png)'></span>
+<div class='flex-sm align-items-start margin-r-medium-xl width-100'>
+<div class='flex flex-direction-column header-program-list'>
+<div>
+<div class='avatar-bg'>
+<div class='avatar avatar-large margin-r-medium margin-b-small'>
+<a href="/coinsbit/coinsbit"><span class='avatar-image squared-6px' style='background-image: url(https://upload.hackenproof.com/uploads/bounty_program/logo/5f994991b6fa1e4fe0fae7bb/profile_logo.png)'></span>
 
 </a></div>
-<div>
-<h2 class='margin-b-small'>
-<a class="link inverted" href="/coinsbit/coinsbit">Coinsbit
-</a></h2>
-<p class='text trivial smaller'>
+</div>
+</div>
+<div class='flex justify-between mob'>
+<div class='margin-b-small flex title-mob program-title'>
+<a class="limit-1" href="/coinsbit/coinsbit">Coinsbit</a>
+<span class='bounty-color margin-l-medium-xl'>
+<div class='count-top-mob'>
+$ 1,200
+</div>
+</span>
+<a class="btn-explore" href="/coinsbit/coinsbit">Explore program</a>
+</div>
+</div>
+</div>
+<div class='width-100 program-description-mob'>
+<div class='flex justify-between pc'>
+<div class='margin-b-small flex title-mob program-title'>
+<a class="limit-1" href="/coinsbit/coinsbit">Coinsbit</a>
+<span class='bounty-color margin-l-medium-xl'>
+<div class='count-top-mob'>
+$ 1,200
+</div>
+</span>
+</div>
+</div>
+<div class='flex justify-between info-mob'>
+<p class='text trivial smaller' id='limit-2'>
 Launched in August 2018, Coinsbit is a centralized exchange based in Estonia. The team claims that the number of Coinsbit users is 2,000,000. Coinsbit supports cryptocurrency pairs, 6+ fiat gateways and OTC trading, as well as P2P-lending platform.
 
 </p>
+<div class='pc'>
+<a class="btn-explore" href="/coinsbit/coinsbit">Explore program</a>
 </div>
 </div>
-<div class='text-right'>
-<div class='flex-wrap-mobile-max justify-end justify-between-mobile-max'>
-<div class='inline-block skills-min-width'>
-<span class='skill' style='border-color: #7beef4'><span class='skill-label'></span><span class='skill-title'>web</span>
+<div class='flex justify-between abilities-mob'>
+<div class='flex flex-direction-column max-width650'>
+<div class='rating-block inline-block'>
+<span class='title'>CyberSec rating</span>
+<div class='pc'>
+<a href="https://cer.live/"><span class='rating-svg'></span>
+</a></div>
+<div class='mob'>
+<span class='rating-svg'></span>
+</div>
+<span class='rating-title'>BB</span>
+</div>
+<div class='flex categories-block'>
+<span class='title nowrap flex align-items-center'>Category</span>
+<div class='flex'>
+<div class='category-el'>
+<span class='el' style='background: #8c1c8c'></span>
+Tools
+</div>
+<div class='category-el'>
+<span class='el' style='background: #b83bb8'></span>
+DEX
+</div>
+<div class='category-el'>
+<span class='el' style='background: #2e31d1'></span>
+Platform
+</div>
+</div>
+</div>
+<div class='flex skill-block'>
+<span class='title flex align-items-center nowrap'>Type</span>
+<div class='flex'>
+<span class='skill' style='border-color: #7beef4'>
+<span class='skill-title'>web</span>
 </span>
-<span class='skill' style='border-color: #169987'><span class='skill-label'></span><span class='skill-title'>mobile</span>
+<span class='skill' style='border-color: #169987'>
+<span class='skill-title'>mobile</span>
 </span>
 </div>
-<div class='inline-block margin-t-xs'>
-<i class='icon-public icon-huge' title='Public bug bounty'></i>
 </div>
 </div>
-<p class='margin-b-small'>
-<span>
-<i class='icon-list vertical-align-middle'></i>
-4
+<div class='flex flex-direction-column desc-mob'>
+<div class='flex align-items-center justify-end margin-b-small margin-t-small'>
+<div class='dates nowrap'>
+<span class='dates-start'>Duration</span>
+<span>28 Oct 2020</span>
+<spam>-</spam>
+<i class='icon-infinite'></i>
+</div>
+</div>
+<p class='flex justify-end program-stat margin-b-small'>
+<span class='program-stat-title'>
+Submitted reports
+<span>164</span>
 </span>
-reports
-<span>
-<i class='icon-person'></i>
-4
-<span>members</span>
+<span class='margin-l-medium-xs program-stat-title'>
+Hackers
+<span>96</span>
 </span>
+<div class='program-stat text-right'>
+<span class='program-stat-title'>
+Total rewarded
+<span>$300.0</span>
+</span>
+</div>
 </p>
-<div class='details--legend'>
-<div class='flex justify-between'>
-<span class='trivial'>Start date:</span>
-<span>10/28/2020</span>
-</div>
-<div class='flex justify-between'>
-<span class='trivial'>Maximum reward:</span>
-<span>
-$1200.0
-</span>
-</div>
-<div class='flex justify-between'>
-<span class='trivial'>Total views:</span>
-<span>
-38046
-</span>
 </div>
 </div>
 </div>
 </div>
+</div>
+
 <div class='bounty-programs-list--items flex-sm justify-between'>
-<div class='flex-sm align-items-start'>
-<div class='avatar avatar-large border-radial margin-r-medium margin-b-small'>
-<a href="/cryptology/cryptology"><span class='avatar-image' style='background-image: url(//upload.hackenproof.com/uploads/bounty_program/logo/617af5b1b6fa1e5ca5d404f2/profile_logo.png)'></span>
+<div class='flex-sm align-items-start margin-r-medium-xl width-100'>
+<div class='flex flex-direction-column header-program-list'>
+<div>
+<div class='avatar-bg'>
+<div class='avatar avatar-large margin-r-medium margin-b-small'>
+<a href="/hotbit/hotbit"><span class='avatar-image squared-6px' style='background-image: url(https://upload.hackenproof.com/uploads/bounty_program/logo/5fbfd818b6fa1e3a0b284b49/profile_logo.png)'></span>
 
 </a></div>
-<div>
-<h2 class='margin-b-small'>
-<a class="link inverted" href="/cryptology/cryptology">Cryptology
-</a></h2>
-<p class='text trivial smaller'>
-Cryptology is a worldwide crypto exchange that offers access to a high liquidity order book for professional traders and simplified buying and selling of the assets for beginners.
+</div>
+</div>
+<div class='flex justify-between mob'>
+<div class='margin-b-small flex title-mob program-title'>
+<a class="limit-1" href="/hotbit/hotbit">Hotbit</a>
+<span class='bounty-color margin-l-medium-xl'>
+<div class='count-top-mob'>
+$ 1,500
+</div>
+</span>
+<div class='align-items-center flex justify-center triaged-by'>
+<i class='bx bxs-star'></i>
+<span class='label'>Triaged by HackenProof</span>
+<div class='tooltip-el flex-direction-column'>
+<p>Triaged by HackenProof</p>
+<span>All bug reports are validated and managed by our professional team. We guarantee the program's SLA on time.</span>
+</div>
+</div>
+<a class="btn-explore" href="/hotbit/hotbit">Explore program</a>
+</div>
+</div>
+</div>
+<div class='width-100 program-description-mob'>
+<div class='flex justify-between pc'>
+<div class='margin-b-small flex title-mob program-title'>
+<a class="limit-1" href="/hotbit/hotbit">Hotbit</a>
+<span class='bounty-color margin-l-medium-xl'>
+<div class='count-top-mob'>
+$ 1,500
+</div>
+</span>
+<div class='align-items-center flex justify-center triaged-by'>
+<i class='bx bxs-star'></i>
+<span class='label'>Triaged by HackenProof</span>
+<div class='tooltip-el flex-direction-column'>
+<p>Triaged by HackenProof</p>
+<span>All bug reports are validated and managed by our professional team. We guarantee the program's SLA on time.</span>
+</div>
+</div>
+</div>
+</div>
+<div class='flex justify-between info-mob'>
+<p class='text trivial smaller' id='limit-2'>
+The World&#39;s Leading Cryptocurrency Trading Platform
 
 </p>
+<div class='pc'>
+<a class="btn-explore" href="/hotbit/hotbit">Explore program</a>
 </div>
 </div>
-<div class='text-right'>
-<div class='flex-wrap-mobile-max justify-end justify-between-mobile-max'>
-<div class='inline-block skills-min-width'>
-<span class='skill' style='border-color: #7beef4'><span class='skill-label'></span><span class='skill-title'>web</span>
+<div class='flex justify-between abilities-mob'>
+<div class='flex flex-direction-column max-width650'>
+<div class='rating-block inline-block'>
+<span class='title'>CyberSec rating</span>
+<div class='pc'>
+<a href="https://cer.live/"><span class='rating-svg'></span>
+</a></div>
+<div class='mob'>
+<span class='rating-svg'></span>
+</div>
+<span class='rating-title'>BBB</span>
+</div>
+<div class='flex categories-block'>
+<span class='title nowrap flex align-items-center'>Category</span>
+<div class='flex'>
+<div class='category-el'>
+<span class='el' style='background: #2804c9'></span>
+Network
+</div>
+<div class='category-el'>
+<span class='el' style='background: #2e31d1'></span>
+Platform
+</div>
+<div class='category-el'>
+<span class='el' style='background: #b83bb8'></span>
+DEX
+</div>
+</div>
+</div>
+<div class='flex skill-block'>
+<span class='title flex align-items-center nowrap'>Type</span>
+<div class='flex'>
+<span class='skill' style='border-color: #7beef4'>
+<span class='skill-title'>web</span>
 </span>
-<span class='skill' style='border-color: #169987'><span class='skill-label'></span><span class='skill-title'>mobile</span>
-</span>
-<span class='skill' style='border-color: #f79a0e'><span class='skill-label'></span><span class='skill-title'>blockchain</span>
+<span class='skill' style='border-color: #169987'>
+<span class='skill-title'>mobile</span>
 </span>
 </div>
-<div class='inline-block margin-t-xs'>
-<i class='icon-public icon-huge' title='Public bug bounty'></i>
 </div>
 </div>
-<p class='margin-b-small'>
-<span>
-<i class='icon-list vertical-align-middle'></i>
-6
+<div class='flex flex-direction-column desc-mob'>
+<div class='flex align-items-center justify-end margin-b-small margin-t-small'>
+<div class='dates nowrap'>
+<span class='dates-start'>Duration</span>
+<span>26 Nov 2020</span>
+<spam>-</spam>
+<i class='icon-infinite'></i>
+</div>
+</div>
+<p class='flex justify-end program-stat margin-b-small'>
+<span class='program-stat-title'>
+Submitted reports
+<span>118</span>
 </span>
-reports
-<span>
-<i class='icon-person'></i>
-6
-<span>members</span>
+<span class='margin-l-medium-xs program-stat-title'>
+Hackers
+<span>69</span>
 </span>
+<div class='program-stat text-right'>
+<span class='program-stat-title'>
+Total rewarded
+<span>$12200.0</span>
+</span>
+</div>
 </p>
-<div class='details--legend'>
-<div class='flex justify-between'>
-<span class='trivial'>Start date:</span>
-<span>10/28/2021</span>
 </div>
-<div class='flex justify-between'>
-<span class='trivial'>Completion date:</span>
-<span>10/28/2022</span>
 </div>
-<div class='flex justify-between'>
-<span class='trivial'>Maximum reward:</span>
-<span>
-$5000.0
+</div>
+</div>
+</div>
+
+<div class='bounty-programs-list--items flex-sm justify-between'>
+<div class='flex-sm align-items-start margin-r-medium-xl width-100'>
+<div class='flex flex-direction-column header-program-list'>
+<div>
+<div class='avatar-bg'>
+<div class='avatar avatar-large margin-r-medium margin-b-small'>
+<a href="/whitebit/whitebit"><span class='avatar-image squared-6px' style='background-image: url(https://upload.hackenproof.com/uploads/bounty_program/logo/5fbfde6eb6fa1e39e5284e43/profile_logo.png)'></span>
+
+</a></div>
+</div>
+</div>
+<div class='flex justify-between mob'>
+<div class='margin-b-small flex title-mob program-title'>
+<a class="limit-1" href="/whitebit/whitebit">WhiteBIT</a>
+<span class='bounty-color margin-l-medium-xl'>
+<div class='count-top-mob'>
+$ 5,000
+</div>
+</span>
+<a class="btn-explore" href="/whitebit/whitebit">Explore program</a>
+</div>
+</div>
+</div>
+<div class='width-100 program-description-mob'>
+<div class='flex justify-between pc'>
+<div class='margin-b-small flex title-mob program-title'>
+<a class="limit-1" href="/whitebit/whitebit">WhiteBIT</a>
+<span class='bounty-color margin-l-medium-xl'>
+<div class='count-top-mob'>
+$ 5,000
+</div>
 </span>
 </div>
-<div class='flex justify-between'>
-<span class='trivial'>Total views:</span>
-<span>
-4882
+</div>
+<div class='flex justify-between info-mob'>
+<p class='text trivial smaller' id='limit-2'>
+Launched in 2018, WhiteBIT is a cryptocurrency exchange with 300K+ users in Europe, Asia, and the CIS countries. Built on cutting-edge technology WhiteBIT provides an institutional-grade experience for professional and novice customers alike.
+
+</p>
+<div class='pc'>
+<a class="btn-explore" href="/whitebit/whitebit">Explore program</a>
+</div>
+</div>
+<div class='flex justify-between abilities-mob'>
+<div class='flex flex-direction-column max-width650'>
+<div class='flex categories-block'>
+<span class='title nowrap flex align-items-center'>Category</span>
+<div class='flex'>
+<div class='category-el'>
+<span class='el' style='background: #8c1c8c'></span>
+Tools
+</div>
+<div class='category-el'>
+<span class='el' style='background: #590a59'></span>
+Infrastructure
+</div>
+</div>
+</div>
+<div class='flex skill-block'>
+<span class='title flex align-items-center nowrap'>Type</span>
+<div class='flex'>
+<span class='skill' style='border-color: #7beef4'>
+<span class='skill-title'>web</span>
 </span>
+<span class='skill' style='border-color: #169987'>
+<span class='skill-title'>mobile</span>
+</span>
+</div>
+</div>
+</div>
+<div class='flex flex-direction-column desc-mob'>
+<div class='flex align-items-center justify-end margin-b-small margin-t-small'>
+<div class='dates nowrap'>
+<span class='dates-start'>Duration</span>
+<span>20 Nov 2020</span>
+<spam>-</spam>
+<i class='icon-infinite'></i>
+</div>
+</div>
+<p class='flex justify-end program-stat margin-b-small'>
+<span class='program-stat-title'>
+Submitted reports
+<span>48</span>
+</span>
+<span class='margin-l-medium-xs program-stat-title'>
+Hackers
+<span>28</span>
+</span>
+<div class='program-stat text-right'>
+<span class='program-stat-title'>
+Total rewarded
+<span>$3751.0</span>
+</span>
+</div>
+</p>
+</div>
 </div>
 </div>
 </div>
@@ -823,37 +1542,32 @@ $5000.0
 
 <nav class='pagination'>
 
-
 <span class='page current'>
 1
 </span>
 
 <span class='page'>
-<a rel="next" href="/programs?page=2">2</a>
+<a rel="next" href="/programs?page=2&amp;title=">2</a>
 </span>
 
 <span class='page'>
-<a href="/programs?page=3">3</a>
+<a href="/programs?page=3&amp;title=">3</a>
 </span>
 
 <span class='page'>
-<a href="/programs?page=4">4</a>
+<a href="/programs?page=4&amp;title=">4</a>
 </span>
 
 <span class='page'>
-<a href="/programs?page=5">5</a>
+<a href="/programs?page=5&amp;title=">5</a>
 </span>
 
-<span class='page gap'>
-&hellip;
+<span class='page'>
+<a href="/programs?page=6&amp;title=">6</a>
 </span>
 
 <span class='next'>
-<a rel="next" href="/programs?page=2">Next &rsaquo;</a>
-</span>
-
-<span class='next'>
-<a href="/programs?page=7">Last &raquo;</a>
+<a rel="next" href="/programs?page=2&amp;title=">&gt;</a>
 </span>
 
 </nav>
@@ -866,40 +1580,36 @@ $5000.0
 <footer class='main-footer'>
 <div class='cup-footer dark'>
 <div class='container--center'>
-<div class='row'>
-<div class='col-md-3 col-sm-4 menu-container'>
-<div class='logo-cup medium'>
+<div class='footer-menu'>
+<div class='logo-cup small'>
 <a href="/"><img src="/assets/logo-6a400c3a9db463f3dd15a58dcf79e6c126072c7d06ffc07c7a63cab658d350d5.svg" alt="Logo" />
 </a></div>
-<div>
-<ul>
-<li class='xsmall'>
-<a href="/pages/policy">Privacy policy</a>
-</li>
-<li class='xsmall'>
-<a href="/pages/terms">Terms and Conditions</a>
-</li>
-</ul>
+<div class='social-mobile'>
 <ul>
 <li>
 <ul class='list-inline social'>
 <li>
-<a rel="noopener noreferrer" href="https://www.facebook.com/hackenproof/"><svg aria-hidden='true' class='svg-inline--fa fa-facebook-f fa-w-9 fa-7x' data-icon='facebook-f' data-prefix='fab' role='img' viewbox='0 0 264 512' xmlns='http://www.w3.org/2000/svg'>
+<a href="https://hackenproof.com/redirect?url=https://www.facebook.com/hackenproof/"><svg aria-hidden='true' class='svg-inline--fa fa-facebook-f fa-w-9 fa-7x' data-icon='facebook-f' data-prefix='fab' role='img' viewbox='0 0 264 512' xmlns='http://www.w3.org/2000/svg'>
 <path d='M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229' fill='currentColor'></path>
 </svg>
 </a></li>
 <li>
-<a rel="noopener noreferrer" href="https://twitter.com/hackenproof"><svg aria-hidden='true' class='svg-inline--fa fa-twitter fa-w-16 fa-7x' data-icon='twitter' data-prefix='fab' role='img' viewbox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'>
+<a href="https://hackenproof.com/redirect?url=https://twitter.com/hackenproof"><svg aria-hidden='true' class='svg-inline--fa fa-twitter fa-w-16 fa-7x' data-icon='twitter' data-prefix='fab' role='img' viewbox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'>
 <path d='M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z' fill='currentColor'></path>
 </svg>
 </a></li>
 <li>
-<a rel="noopener noreferrer" href="https://t.me/hackenproof"><svg aria-hidden='true' class='svg-inline--fa fa-telegram-plane fa-w-14 fa-7x' data-icon='telegram-plane' data-prefix='fab' role='img' viewbox='0 0 448 512' xmlns='http://www.w3.org/2000/svg'>
+<a href="https://hackenproof.com/redirect?url=https://t.me/hackenproof"><svg aria-hidden='true' class='svg-inline--fa fa-telegram-plane fa-w-14 fa-7x' data-icon='telegram-plane' data-prefix='fab' role='img' viewbox='0 0 448 512' xmlns='http://www.w3.org/2000/svg'>
 <path d='M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z' fill='currentColor'></path>
 </svg>
 </a></li>
 <li>
-<a rel="noopener noreferrer" href="https://www.instagram.com/hackenproof/"><svg aria-hidden='true' data-icon='instagram' viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'>
+<a href="https://hackenproof.com/redirect?url=https://www.linkedin.com/company/hackenproof/"><svg fill='none' height='16' viewbox='0 0 16 16' width='16' xmlns='http://www.w3.org/2000/svg'>
+<path d='M15.1111 0H0.888889C0.653141 0 0.427049 0.0936505 0.260349 0.260349C0.0936505 0.427049 0 0.653141 0 0.888889V15.1111C0 15.3469 0.0936505 15.573 0.260349 15.7397C0.427049 15.9064 0.653141 16 0.888889 16H15.1111C15.3469 16 15.573 15.9064 15.7397 15.7397C15.9064 15.573 16 15.3469 16 15.1111V0.888889C16 0.653141 15.9064 0.427049 15.7397 0.260349C15.573 0.0936505 15.3469 0 15.1111 0ZM4.74578 13.6329H2.37067V5.99733H4.74578V13.6329ZM3.55822 4.95467C3.19328 4.95467 2.84329 4.8097 2.58524 4.55165C2.32719 4.2936 2.18222 3.9436 2.18222 3.57867C2.18222 3.21373 2.32719 2.86374 2.58524 2.60569C2.84329 2.34764 3.19328 2.20267 3.55822 2.20267C3.92316 2.20267 4.27315 2.34764 4.5312 2.60569C4.78925 2.86374 4.93422 3.21373 4.93422 3.57867C4.93422 3.9436 4.78925 4.2936 4.5312 4.55165C4.27315 4.8097 3.92316 4.95467 3.55822 4.95467ZM13.6338 13.6329H11.2613V9.92C11.2613 9.03467 11.2453 7.896 10.0276 7.896C8.792 7.896 8.60444 8.86133 8.60444 9.85778V13.6338H6.23378V5.99822H8.50933V7.04178H8.54222C8.85778 6.44178 9.63289 5.80889 10.7858 5.80889C13.1893 5.80889 13.6329 7.38933 13.6329 9.44622L13.6338 13.6329Z' fill='white'></path>
+</svg>
+</a></li>
+<li>
+<a href="https://hackenproof.com/redirect?url=https://www.instagram.com/hackenproof/"><svg aria-hidden='true' data-icon='instagram' viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'>
 <path d='M256,49.471c67.266,0,75.233.257,101.8,1.469,24.562,1.121,37.9,5.224,46.778,8.674a78.052,78.052,0,0,1,28.966,18.845,78.052,78.052,0,0,1,18.845,28.966c3.45,8.877,7.554,22.216,8.674,46.778,1.212,26.565,1.469,34.532,1.469,101.8s-0.257,75.233-1.469,101.8c-1.121,24.562-5.225,37.9-8.674,46.778a83.427,83.427,0,0,1-47.811,47.811c-8.877,3.45-22.216,7.554-46.778,8.674-26.56,1.212-34.527,1.469-101.8,1.469s-75.237-.257-101.8-1.469c-24.562-1.121-37.9-5.225-46.778-8.674a78.051,78.051,0,0,1-28.966-18.845,78.053,78.053,0,0,1-18.845-28.966c-3.45-8.877-7.554-22.216-8.674-46.778-1.212-26.564-1.469-34.532-1.469-101.8s0.257-75.233,1.469-101.8c1.121-24.562,5.224-37.9,8.674-46.778A78.052,78.052,0,0,1,78.458,78.458a78.053,78.053,0,0,1,28.966-18.845c8.877-3.45,22.216-7.554,46.778-8.674,26.565-1.212,34.532-1.469,101.8-1.469m0-45.391c-68.418,0-77,.29-103.866,1.516-26.815,1.224-45.127,5.482-61.151,11.71a123.488,123.488,0,0,0-44.62,29.057A123.488,123.488,0,0,0,17.3,90.982C11.077,107.007,6.819,125.319,5.6,152.134,4.369,179,4.079,187.582,4.079,256S4.369,333,5.6,359.866c1.224,26.815,5.482,45.127,11.71,61.151a123.489,123.489,0,0,0,29.057,44.62,123.486,123.486,0,0,0,44.62,29.057c16.025,6.228,34.337,10.486,61.151,11.71,26.87,1.226,35.449,1.516,103.866,1.516s77-.29,103.866-1.516c26.815-1.224,45.127-5.482,61.151-11.71a128.817,128.817,0,0,0,73.677-73.677c6.228-16.025,10.486-34.337,11.71-61.151,1.226-26.87,1.516-35.449,1.516-103.866s-0.29-77-1.516-103.866c-1.224-26.815-5.482-45.127-11.71-61.151a123.486,123.486,0,0,0-29.057-44.62A123.487,123.487,0,0,0,421.018,17.3C404.993,11.077,386.681,6.819,359.866,5.6,333,4.369,324.418,4.079,256,4.079h0Z'></path>
 <path d='M256,126.635A129.365,129.365,0,1,0,385.365,256,129.365,129.365,0,0,0,256,126.635Zm0,213.338A83.973,83.973,0,1,1,339.974,256,83.974,83.974,0,0,1,256,339.973Z'></path>
 <circle cx='390.476' cy='121.524' r='30.23'></circle>
@@ -908,57 +1618,122 @@ $5000.0
 </ul>
 </li>
 </ul>
+
 </div>
-</div>
-<div class='col-md-9 col-sm-8'>
-<div class='row'>
-<div class='col-md-4 col-sm-6 menu-container'>
+<div class='menu-container'>
 <ul>
 <li class='title'>For Business</li>
 <li>
-<a class='hidden-link notranslate' data-link='/contacts'>Contact</a>
+<a class="nowrap" href="/bug-bounty-solutions">Bug Bounty Services</a>
 </li>
 <li>
-<a href="/#how-it">How it works</a>
+<a class="nowrap" href="/penetration-testing-services">Penetration Testing</a>
+</li>
+<li>
+<a href="https://cer.live/">Get CERtified</a>
 </li>
 </ul>
 </div>
-<div class='col-md-8 col-sm-6 menu-container'>
-<ul class='list--two-columned'>
-<li class='title'>For Bug Hunters</li>
+<div class='menu-container'>
+<ul>
+<li class='title'>For Hackers</li>
 <li>
-<a class='hidden-link notranslate' data-link='/login'>Start hacking</a>
+<a class="nowrap" href="/programs?sort=created_at-desc">Bug Bounty Programs</a>
 </li>
 <li>
-<a href="/programs">Bug bounty programs</a>
+<a class="nowrap" href="/leaderboard?sort=rank-asc">Hackers Leaderboard</a>
 </li>
 <li>
-<a href="/reports">Overall activity</a>
-</li>
-<li>
-<a href="/cup">Live Hacking</a>
+<a class="nowrap" href="/public-bug-bounty-list?sort=created-desc">External Bounties Tracker</a>
 </li>
 </ul>
 </div>
-
-</div>
-<div class='row'>
-<div class='col-sm-12'>
-<ul class='list-inline list--stretched'>
-<li class='title'>
-<a href="https://hacken.io">Company</a>
+<div>
+<div class='footer-list'>
+<div class='menu-container first-column'>
+<ul>
+<li class='line-height'></li>
+<li>
+<a href="/pricing">Pricing</a>
 </li>
 <li>
-<a href="/about">About</a>
+<a href="/contacts">Partners</a>
+</li>
+<li>
+<a href="/">About</a>
+</li>
+</ul>
+</div>
+<div class='menu-container second-column'>
+<ul>
+<li class='line-height'></li>
+<li>
+<a href="/contacts">Contacts</a>
+</li>
+<li>
+<a href="/leaderboard?sort=rank-asc">Overall activity</a>
 </li>
 <li>
 <a href="https://blog.hackenproof.com">Blog</a>
 </li>
-<li>
-<a href="/contacts">Contact</a>
-</li>
 </ul>
 </div>
+</div>
+
+</div>
+<div class='social-desktop'>
+<ul>
+<li>
+<ul class='list-inline social'>
+<li>
+<a href="https://hackenproof.com/redirect?url=https://www.facebook.com/hackenproof/"><svg aria-hidden='true' class='svg-inline--fa fa-facebook-f fa-w-9 fa-7x' data-icon='facebook-f' data-prefix='fab' role='img' viewbox='0 0 264 512' xmlns='http://www.w3.org/2000/svg'>
+<path d='M76.7 512V283H0v-91h76.7v-71.7C76.7 42.4 124.3 0 193.8 0c33.3 0 61.9 2.5 70.2 3.6V85h-48.2c-37.8 0-45.1 18-45.1 44.3V192H256l-11.7 91h-73.6v229' fill='currentColor'></path>
+</svg>
+</a></li>
+<li>
+<a href="https://hackenproof.com/redirect?url=https://twitter.com/hackenproof"><svg aria-hidden='true' class='svg-inline--fa fa-twitter fa-w-16 fa-7x' data-icon='twitter' data-prefix='fab' role='img' viewbox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'>
+<path d='M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z' fill='currentColor'></path>
+</svg>
+</a></li>
+<li>
+<a href="https://hackenproof.com/redirect?url=https://t.me/hackenproof"><svg aria-hidden='true' class='svg-inline--fa fa-telegram-plane fa-w-14 fa-7x' data-icon='telegram-plane' data-prefix='fab' role='img' viewbox='0 0 448 512' xmlns='http://www.w3.org/2000/svg'>
+<path d='M446.7 98.6l-67.6 318.8c-5.1 22.5-18.4 28.1-37.3 17.5l-103-75.9-49.7 47.8c-5.5 5.5-10.1 10.1-20.7 10.1l7.4-104.9 190.9-172.5c8.3-7.4-1.8-11.5-12.9-4.1L117.8 284 16.2 252.2c-22.1-6.9-22.5-22.1 4.6-32.7L418.2 66.4c18.4-6.9 34.5 4.1 28.5 32.2z' fill='currentColor'></path>
+</svg>
+</a></li>
+<li>
+<a href="https://hackenproof.com/redirect?url=https://www.linkedin.com/company/hackenproof/"><svg fill='none' height='16' viewbox='0 0 16 16' width='16' xmlns='http://www.w3.org/2000/svg'>
+<path d='M15.1111 0H0.888889C0.653141 0 0.427049 0.0936505 0.260349 0.260349C0.0936505 0.427049 0 0.653141 0 0.888889V15.1111C0 15.3469 0.0936505 15.573 0.260349 15.7397C0.427049 15.9064 0.653141 16 0.888889 16H15.1111C15.3469 16 15.573 15.9064 15.7397 15.7397C15.9064 15.573 16 15.3469 16 15.1111V0.888889C16 0.653141 15.9064 0.427049 15.7397 0.260349C15.573 0.0936505 15.3469 0 15.1111 0ZM4.74578 13.6329H2.37067V5.99733H4.74578V13.6329ZM3.55822 4.95467C3.19328 4.95467 2.84329 4.8097 2.58524 4.55165C2.32719 4.2936 2.18222 3.9436 2.18222 3.57867C2.18222 3.21373 2.32719 2.86374 2.58524 2.60569C2.84329 2.34764 3.19328 2.20267 3.55822 2.20267C3.92316 2.20267 4.27315 2.34764 4.5312 2.60569C4.78925 2.86374 4.93422 3.21373 4.93422 3.57867C4.93422 3.9436 4.78925 4.2936 4.5312 4.55165C4.27315 4.8097 3.92316 4.95467 3.55822 4.95467ZM13.6338 13.6329H11.2613V9.92C11.2613 9.03467 11.2453 7.896 10.0276 7.896C8.792 7.896 8.60444 8.86133 8.60444 9.85778V13.6338H6.23378V5.99822H8.50933V7.04178H8.54222C8.85778 6.44178 9.63289 5.80889 10.7858 5.80889C13.1893 5.80889 13.6329 7.38933 13.6329 9.44622L13.6338 13.6329Z' fill='white'></path>
+</svg>
+</a></li>
+<li>
+<a href="https://hackenproof.com/redirect?url=https://www.instagram.com/hackenproof/"><svg aria-hidden='true' data-icon='instagram' viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'>
+<path d='M256,49.471c67.266,0,75.233.257,101.8,1.469,24.562,1.121,37.9,5.224,46.778,8.674a78.052,78.052,0,0,1,28.966,18.845,78.052,78.052,0,0,1,18.845,28.966c3.45,8.877,7.554,22.216,8.674,46.778,1.212,26.565,1.469,34.532,1.469,101.8s-0.257,75.233-1.469,101.8c-1.121,24.562-5.225,37.9-8.674,46.778a83.427,83.427,0,0,1-47.811,47.811c-8.877,3.45-22.216,7.554-46.778,8.674-26.56,1.212-34.527,1.469-101.8,1.469s-75.237-.257-101.8-1.469c-24.562-1.121-37.9-5.225-46.778-8.674a78.051,78.051,0,0,1-28.966-18.845,78.053,78.053,0,0,1-18.845-28.966c-3.45-8.877-7.554-22.216-8.674-46.778-1.212-26.564-1.469-34.532-1.469-101.8s0.257-75.233,1.469-101.8c1.121-24.562,5.224-37.9,8.674-46.778A78.052,78.052,0,0,1,78.458,78.458a78.053,78.053,0,0,1,28.966-18.845c8.877-3.45,22.216-7.554,46.778-8.674,26.565-1.212,34.532-1.469,101.8-1.469m0-45.391c-68.418,0-77,.29-103.866,1.516-26.815,1.224-45.127,5.482-61.151,11.71a123.488,123.488,0,0,0-44.62,29.057A123.488,123.488,0,0,0,17.3,90.982C11.077,107.007,6.819,125.319,5.6,152.134,4.369,179,4.079,187.582,4.079,256S4.369,333,5.6,359.866c1.224,26.815,5.482,45.127,11.71,61.151a123.489,123.489,0,0,0,29.057,44.62,123.486,123.486,0,0,0,44.62,29.057c16.025,6.228,34.337,10.486,61.151,11.71,26.87,1.226,35.449,1.516,103.866,1.516s77-.29,103.866-1.516c26.815-1.224,45.127-5.482,61.151-11.71a128.817,128.817,0,0,0,73.677-73.677c6.228-16.025,10.486-34.337,11.71-61.151,1.226-26.87,1.516-35.449,1.516-103.866s-0.29-77-1.516-103.866c-1.224-26.815-5.482-45.127-11.71-61.151a123.486,123.486,0,0,0-29.057-44.62A123.487,123.487,0,0,0,421.018,17.3C404.993,11.077,386.681,6.819,359.866,5.6,333,4.369,324.418,4.079,256,4.079h0Z'></path>
+<path d='M256,126.635A129.365,129.365,0,1,0,385.365,256,129.365,129.365,0,0,0,256,126.635Zm0,213.338A83.973,83.973,0,1,1,339.974,256,83.974,83.974,0,0,1,256,339.973Z'></path>
+<circle cx='390.476' cy='121.524' r='30.23'></circle>
+</svg>
+</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+<div class='bottom-footer'>
+<div class='container--center'>
+<div class='link-container'>
+<div class='nowrap'>
+2022
+<small>&#9400;</small>
+<a class="trivial" href="https://hackenproof.com/">HackenProof, Inc. All rights reserved.</a>
+</div>
+<div class='privacy-terms'>
+<div class='xsmall'>
+<a href="/pages/policy">Privacy</a>
+</div>
+<div class='xsmall'>
+<a href="/pages/terms">Terms</a>
 </div>
 </div>
 </div>
@@ -966,7 +1741,7 @@ $5000.0
 </div>
 
 </footer>
-<script src="/assets/new_application-1f2fec2d05eb03e5303ac00f9bd69c509a5b8bf1de80779dc089514a236117a1.js"></script>
+<script src="/assets/new_application-4afc68a4d657b345e343da10e504ad4c3b1417ce2f188c11e37890e506082327.js"></script>
 <noscript>
 <iframe height='0' src='https://www.googletagmanager.com/ns.html?id=GTM-WPWK6VZ' style='display:none;visibility:hidden' width='0'></iframe>
 </noscript>

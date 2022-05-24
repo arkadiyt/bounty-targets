@@ -80,7 +80,7 @@ module BountyTargets
           type: row.css('td')[1].inner_text.strip,
           instruction: scopes_target.inner_text.strip,
           severity: row.css('td')[2].inner_text.strip,
-          reward: row.css('td')[3].inner_text.strip
+          reward: row.css('td')[3]&.inner_text&.strip
         }
       end
     end
