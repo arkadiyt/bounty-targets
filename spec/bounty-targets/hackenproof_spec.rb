@@ -1,19 +1,19 @@
 # frozen_string_literal: true
 
 describe BountyTargets::Hackenproof do
+  subject(:client) { described_class.new }
+
   before :all do
-    BountyTargets::Hackenproof.make_all_methods_public!
+    described_class.make_all_methods_public!
   end
 
-  let(:subject) { BountyTargets::Hackenproof.new }
-
-  it 'should fetch a list of programs' do
+  it 'fetches a list of programs' do
     stub_request(:get, %r{/programs\?page=1}).with(headers: {host: 'hackenproof.com'}).to_return(status: 200,
       body: File.read('spec/fixtures/hackenproof/programs_1.html'))
     stub_request(:get, %r{/programs\?page=2}).with(headers: {host: 'hackenproof.com'}).to_return(status: 200,
       body: File.read('spec/fixtures/hackenproof/programs_2.html'))
 
-    expect(subject.directory_index).to eq(
+    expect(client.directory_index).to eq(
       [{id: '/hacken/hackenproof', name: 'HackenProof', url: 'https://hackenproof.com/hacken/hackenproof',
         archived: false},
        {id: '/kuna/kuna-crypto-exchange', name: 'Kuna Crypto Exchange',
@@ -39,11 +39,11 @@ describe BountyTargets::Hackenproof do
     )
   end
 
-  it 'should fetch program scopes' do
+  it 'fetches program scopes' do
     scopes = File.read('spec/fixtures/hackenproof/scopes.html')
     stub_request(:get, %r{/hacken/hackenproof}).with(headers: {host: 'hackenproof.com'})
       .to_return(status: 200, body: scopes)
-    expect(subject.program_scopes(url: 'https://hackenproof.com/hacken/hackenproof')).to eq(
+    expect(client.program_scopes(url: 'https://hackenproof.com/hacken/hackenproof')).to eq(
       targets: {
         in_scope: [
           {

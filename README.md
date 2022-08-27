@@ -1,4 +1,4 @@
-# bounty-targets [![TravisCI](https://travis-ci.com/arkadiyt/bounty-targets.svg?branch=master)](https://travis-ci.com/arkadiyt/bounty-targets/) [![License](https://img.shields.io/github/license/arkadiyt/bounty-targets-data.svg)](https://github.com/arkadiyt/bounty-targets/blob/master/LICENSE.md)
+# bounty-targets [![Tests](https://github.com/arkadiyt/bounty-targets/actions/workflows/build-test.yml/badge.svg)](https://github.com/arkadiyt/bounty-targets/actions/workflows/build-test.yml/badge.svg) [![License](https://img.shields.io/github/license/arkadiyt/bounty-targets-data.svg)](https://github.com/arkadiyt/bounty-targets/blob/master/LICENSE.md)
 
 ### What's it for
 

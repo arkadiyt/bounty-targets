@@ -1,17 +1,17 @@
 # frozen_string_literal: true
 
 describe BountyTargets::YesWeHack do
+  subject(:client) { described_class.new }
+
   before :all do
-    BountyTargets::YesWeHack.make_all_methods_public!
+    described_class.make_all_methods_public!
   end
 
-  let(:subject) { BountyTargets::YesWeHack.new }
-
-  it 'should fetch a list of programs' do
+  it 'fetches a list of programs' do
     programs = File.read('spec/fixtures/yes_we_hack/programs.json')
     stub_request(:get, %r{/programs}).with(headers: {host: 'api.yeswehack.com'})
       .to_return(status: 200, body: programs)
-    expect(subject.directory_index).to eq(
+    expect(client.directory_index).to eq(
       [
         {
           disabled: false,
@@ -26,11 +26,11 @@ describe BountyTargets::YesWeHack do
     )
   end
 
-  it 'should fetch program scopes' do
+  it 'fetches program scopes' do
     scopes = File.read('spec/fixtures/yes_we_hack/scopes.json')
     stub_request(:get, %r{/programs/stopcovid-bugbounty-program})
       .with(headers: {host: 'api.yeswehack.com'}).to_return(status: 200, body: scopes)
-    expect(subject.program_scopes(id: 'stopcovid-bugbounty-program')).to eq(
+    expect(client.program_scopes(id: 'stopcovid-bugbounty-program')).to eq(
       targets: {
         in_scope: [
           {

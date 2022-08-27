@@ -17,7 +17,7 @@ module BountyTargets
         Dir.mktmpdir do |tmpdir|
           Dir.chdir(tmpdir) do
             # Clone + setup
-            `GIT_SSH_COMMAND=#{git_ssh_cmd} git clone #{ENV['GIT_HOST']} .`
+            `GIT_SSH_COMMAND=#{git_ssh_cmd} git clone #{ENV.fetch('GIT_HOST')} .`
             `git config user.name 'bounty-targets'`
             `git config user.email '<>'`
 
@@ -117,13 +117,13 @@ module BountyTargets
       true
     end
 
-    def with_ssh_keys(&_block)
+    def with_ssh_keys(&)
       Dir.mktmpdir do |tmpdir|
         known_hosts_path = File.expand_path(File.join(__dir__, '..', '..', 'config', 'known_hosts'))
 
         privkey_path = File.join(tmpdir, 'id_rsa')
-        File.write(privkey_path, ENV['SSH_PRIV_KEY'])
-        File.write(File.join(tmpdir, 'id_rsa.pub'), ENV['SSH_PUB_KEY'])
+        File.write(privkey_path, ENV.fetch('SSH_PRIV_KEY'))
+        File.write(File.join(tmpdir, 'id_rsa.pub'), ENV.fetch('SSH_PUB_KEY'))
 
         git_ssh = "\"ssh -i '#{privkey_path}' -o UserKnownHostsFile='#{known_hosts_path}' -o HashKnownHosts='no'\""
 

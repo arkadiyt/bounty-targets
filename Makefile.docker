@@ -1,0 +1,15 @@
+test:
+	bundle exec rspec
+
+lint:
+	bundle exec rubocop
+	bundle exec bundler-audit
+
+bundle:
+	bundle install
+
+bash:
+	bash
+
+console:
+	irb -I 'lib' -r 'bundler/setup' -r 'bounty-targets'

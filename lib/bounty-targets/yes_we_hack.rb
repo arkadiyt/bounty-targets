@@ -56,7 +56,7 @@ module BountyTargets
     end
 
     def program_scopes(program)
-      uri = ::URI.parse('https://api.yeswehack.com/programs/' + ::URI.encode(program[:id]))
+      uri = ::URI.parse('https://api.yeswehack.com/programs/' + ::URI.encode_www_form_component(program[:id]))
       response = ::JSON.parse(SsrfFilter.get(uri).body)
 
       {

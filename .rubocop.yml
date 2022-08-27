@@ -1,6 +1,9 @@
 AllCops:
-  TargetRubyVersion: 2.6
+  TargetRubyVersion: 3.1
   NewCops: enable
+
+require:
+  - rubocop-rspec
 
 inherit_from:
   - .rubocop_todo.yml
@@ -48,8 +51,20 @@ Layout/SpaceInsideHashLiteralBraces:
 Lint/UriEscapeUnescape:
   Enabled: false
 
+RSpec/BeforeAfterAll:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Max: 30
+
+RSpec/FilePath:
+  SpecSuffixOnly: true
+
 Style/Documentation:
   Enabled: false
+
+Style/HashSyntax:
+  EnforcedShorthandSyntax: never
 
 Style/MultilineBlockChain:
   Enabled: false
