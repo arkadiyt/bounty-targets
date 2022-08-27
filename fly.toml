@@ -1,0 +1,11 @@
+# fly.toml file generated for holy-glitter-8902 on 2021-05-01T12:40:50-07:00
+
+app = "holy-glitter-8902"
+
+kill_signal = "SIGINT"
+kill_timeout = 5
+
+[env]
+
+[experimental]
+  auto_rollback = true

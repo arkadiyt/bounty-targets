@@ -1,17 +1,17 @@
 # frozen_string_literal: true
 
 describe BountyTargets::Intigriti do
+  subject(:client) { described_class.new }
+
   before :all do
-    BountyTargets::Intigriti.make_all_methods_public!
+    described_class.make_all_methods_public!
   end
 
-  let(:subject) { BountyTargets::Intigriti.new }
-
-  it 'should fetch a list of programs' do
+  it 'fetches a list of programs' do
     programs = File.read('spec/fixtures/intigriti/programs.json')
     stub_request(:get, %r{/core/program}).with(headers: {host: 'api.intigriti.com'})
       .to_return(status: 200, body: programs)
-    expect(subject.directory_index).to eq(
+    expect(client.directory_index).to eq(
       [
         {
           id: '0d0034de-b53e-47b8-9a9d-41c302c49b5a',
@@ -39,11 +39,11 @@ describe BountyTargets::Intigriti do
     )
   end
 
-  it 'should fetch program scopes' do
+  it 'fetches program scopes' do
     scopes = File.read('spec/fixtures/intigriti/scopes.json')
     stub_request(:get, %r{/core/program/vasco/vascomobileproducts})
       .with(headers: {host: 'api.intigriti.com'}).to_return(status: 200, body: scopes)
-    expect(subject.program_scopes(company_handle: 'vasco', handle: 'vascomobileproducts')).to eq(
+    expect(client.program_scopes(company_handle: 'vasco', handle: 'vascomobileproducts')).to eq(
       targets: {
         in_scope: [
           {

@@ -42,8 +42,8 @@ module BountyTargets
           name: program['name'],
           company_handle: program['companyHandle'],
           handle: program['handle'],
-          url: 'https://www.intigriti.com/programs/' + ::URI.encode(program['companyHandle']) + '/' +
-            ::URI.encode(program['handle']) + '/detail',
+          url: 'https://www.intigriti.com/programs/' + ::URI.encode_www_form_component(program['companyHandle']) + '/' +
+            ::URI.encode_www_form_component(program['handle']) + '/detail',
           status: STATUSES[program['status']],
           confidentiality_level: CONFIDENTIALITY_LEVELS[program['confidentialityLevel']],
           min_bounty: program['minBounty'],
@@ -53,8 +53,9 @@ module BountyTargets
     end
 
     def program_scopes(program)
-      uri = ::URI.parse('https://api.intigriti.com/core/program/' + ::URI.encode(program[:company_handle]) + '/' +
-        ::URI.encode(program[:handle]))
+      uri = ::URI.parse('https://api.intigriti.com/core/program/' +
+        ::URI.encode_www_form_component(program[:company_handle]) + '/' +
+        ::URI.encode_www_form_component(program[:handle]))
       response = ::JSON.parse(SsrfFilter.get(uri).body)
 
       {
