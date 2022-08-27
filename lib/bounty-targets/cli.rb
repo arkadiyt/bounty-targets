@@ -38,7 +38,7 @@ module BountyTargets
               ' (' + timestamp.strftime('%m-%d-%Y %R') + ')'
             `git add .`
             `git commit -m '#{commit_message}'`
-            `GIT_SSH_COMMAND=#{git_ssh_cmd} git push origin master`
+            `GIT_SSH_COMMAND=#{git_ssh_cmd} git push origin main`
           end
         end
       end
