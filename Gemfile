@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 
 ruby '2.6.6'
 
-gem 'graphql-client', '~> 0.16.0'
+gem 'graphql-client', '~> 0.18.0'
 gem 'kramdown', '~> 2.3.1'
 gem 'nokogiri', '~> 1.13.6'
 gem 'sentry-raven', '~> 2.11.0'
