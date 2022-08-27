@@ -108,24 +108,25 @@ module BountyTargets
     def schema
       return @schema if instance_variable_defined?(:@schema)
 
-      # These are all terrible hacks until Hackerone fixes their api
       @http = ::GraphQL::Client::HTTP.new('https://hackerone.com/graphql') do
-        uri = URI('https://hackerone.com/directory/programs')
-        response = Net::HTTP.start(uri.host, uri.port, use_ssl: true) do |http|
-          http.request(Net::HTTP::Get.new(uri))
-        end
-        @@cookie = response['Set-Cookie']
-        @@csrf_token = response.body.match(/name="csrf-token"\s+content="([^"]+)"/)[1]
+        def headers(_context) # rubocop:disable Lint/NestedMethodDefinition
+          @headers ||= begin
+            uri = URI('https://hackerone.com/directory/programs')
+            response = Net::HTTP.start(uri.host, uri.port, use_ssl: true) do |http|
+              http.request(Net::HTTP::Get.new(uri))
+            end
 
-        def headers(context)
-          {
-            'cookie': @@cookie,
-            'x-csrf-token': @@csrf_token
-          }
+            cookie = response['Set-Cookie']
+            csrf_token = response.body.match(/name="csrf-token"\s+content="([^"]+)"/)[1]
+
+            {
+              cookie: cookie,
+              'x-csrf-token': csrf_token
+            }
+          end
         end
       end
-      definition = ::Net::HTTP.get(URI('https://raw.githubusercontent.com/arkadiyt/bounty-targets-data/master/data/hackerone_schema.graphql')).gsub(/\s+null: Boolean$/, '')
-      @schema = ::GraphQL::Schema.from_definition(definition)
+      @schema = ::GraphQL::Client.load_schema(@http)
       @graphql_client = ::GraphQL::Client.new(schema: @schema, execute: @http)
       @graphql_client.allow_dynamic_queries = true
 
