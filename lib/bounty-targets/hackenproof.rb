@@ -55,14 +55,19 @@ module BountyTargets
     end
 
     def program_scopes(program)
-      document = ::Nokogiri::HTML(::SsrfFilter.get(program[:url]).body)
-      h4s = document.css('div#in_scope h4')
-      {
-        targets: {
-          in_scope: scopes_to_hashes(h4s[0]),
-          out_of_scope: scopes_to_hashes(h4s[1])
+      retryable do
+        response = ::SsrfFilter.get(program[:url])
+        raise StandardError, "#{response.code} response from Hackenproof" unless response.code == '200'
+
+        document = ::Nokogiri::HTML(response.body)
+        h4s = document.css('div#in_scope h4')
+        {
+          targets: {
+            in_scope: scopes_to_hashes(h4s[0]),
+            out_of_scope: scopes_to_hashes(h4s[1])
+          }
         }
-      }
+      end
     end
 
     def scopes_to_hashes(tag)
