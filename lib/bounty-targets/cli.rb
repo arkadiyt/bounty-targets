@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'bounty-targets'
+require 'English'
 require 'erb'
 require 'fileutils'
 require 'net/https' # temporary workaround
@@ -38,7 +39,8 @@ module BountyTargets
               ' (' + timestamp.strftime('%m-%d-%Y %R') + ')'
             `git add .`
             `git commit -m '#{commit_message}'`
-            `GIT_SSH_COMMAND=#{git_ssh_cmd} git push origin main`
+            `GIT_SSH_COMMAND=#{git_ssh_cmd} git push origin HEAD:main`
+            raise StandardError, "Got exit code #{$CHILD_STATUS.exitstatus}" unless $CHILD_STATUS.success?
           end
         end
       end

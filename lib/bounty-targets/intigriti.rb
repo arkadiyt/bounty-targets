@@ -34,6 +34,11 @@ module BountyTargets
 
     private
 
+    def encode(component)
+      # Ruby dropped URI.encode, and CGI.escape converts spaces to `+` instead of `%20`
+      URI.encode_www_form_component(component).gsub('+', '%20')
+    end
+
     def directory_index
       programs = ::JSON.parse(SsrfFilter.get(::URI.parse('https://api.intigriti.com/core/program')).body)
       programs.map do |program|
@@ -42,8 +47,8 @@ module BountyTargets
           name: program['name'],
           company_handle: program['companyHandle'],
           handle: program['handle'],
-          url: 'https://www.intigriti.com/programs/' + ::URI.encode_www_form_component(program['companyHandle']) + '/' +
-            ::URI.encode_www_form_component(program['handle']) + '/detail',
+          url: 'https://www.intigriti.com/programs/' + encode(program['companyHandle']) + '/' +
+            encode(program['handle']) + '/detail',
           status: STATUSES[program['status']],
           confidentiality_level: CONFIDENTIALITY_LEVELS[program['confidentialityLevel']],
           min_bounty: program['minBounty'],
@@ -53,9 +58,8 @@ module BountyTargets
     end
 
     def program_scopes(program)
-      uri = ::URI.parse('https://api.intigriti.com/core/program/' +
-        ::URI.encode_www_form_component(program[:company_handle]) + '/' +
-        ::URI.encode_www_form_component(program[:handle]))
+      uri = ::URI.parse('https://api.intigriti.com/core/program/' + encode(program[:company_handle]) + '/' +
+        encode(program[:handle]))
       response = ::JSON.parse(SsrfFilter.get(uri).body)
 
       {
