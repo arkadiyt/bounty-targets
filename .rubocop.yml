@@ -55,7 +55,7 @@ RSpec/BeforeAfterAll:
   Enabled: false
 
 RSpec/ExampleLength:
-  Max: 30
+  Enabled: false
 
 RSpec/FilePath:
   SpecSuffixOnly: true

@@ -54,7 +54,12 @@ describe BountyTargets::YesWeHack do
             type: 'api'
           }
         ],
-        out_of_scope: []
+        out_of_scope: [
+          {
+            target: 'Everything that is not part of the scope',
+            type: 'other'
+          }
+        ]
       }
     )
   end
