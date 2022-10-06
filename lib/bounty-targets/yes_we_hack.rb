@@ -58,7 +58,6 @@ module BountyTargets
     def program_scopes(program)
       uri = ::URI.parse('https://api.yeswehack.com/programs/' + ::URI.encode_www_form_component(program[:id]))
       response = ::JSON.parse(SsrfFilter.get(uri).body)
-
       {
         targets: {
           in_scope: response['scopes'].map do |scope|
@@ -67,7 +66,12 @@ module BountyTargets
               type: scope['scope_type']
             }
           end,
-          out_of_scope: []
+          out_of_scope: response['out_of_scope'].map do |scope|
+            {
+              target: scope,
+              type: 'other'
+            }
+          end
         }
       }
     end

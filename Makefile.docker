@@ -12,4 +12,4 @@ bash:
 	bash
 
 console:
-	irb -I 'lib' -r 'bundler/setup' -r 'bounty-targets'
+	irb -I 'lib' -r 'bundler/setup' -r 'pry-byebug' -r 'bounty-targets'
