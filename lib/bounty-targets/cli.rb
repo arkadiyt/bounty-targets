@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'base64'
 require 'bounty-targets'
 require 'English'
 require 'erb'
@@ -124,7 +125,7 @@ module BountyTargets
         known_hosts_path = File.expand_path(File.join(__dir__, '..', '..', 'config', 'known_hosts'))
 
         privkey_path = File.join(tmpdir, 'id_rsa')
-        File.write(privkey_path, ENV.fetch('SSH_PRIV_KEY'))
+        File.write(privkey_path, Base64.strict_decode64(ENV.fetch('SSH_PRIV_KEY')), perm: 0o700)
         File.write(File.join(tmpdir, 'id_rsa.pub'), ENV.fetch('SSH_PUB_KEY'))
 
         git_ssh = "\"ssh -i '#{privkey_path}' -o UserKnownHostsFile='#{known_hosts_path}' -o HashKnownHosts='no'\""
