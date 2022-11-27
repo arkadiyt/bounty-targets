@@ -1,4 +1,10 @@
-# fly.toml file generated for still-grass-8713 on 2022-08-26T23:00:41-07:00
+app = "bitter-sunset-340"
+kill_signal = "SIGINT"
+kill_timeout = 5
 
-app = "still-grass-8713"
+[processes]
+  cron = "cron -f"
 
+[env]
+  BUNDLE_WITHOUT = "development:test"
+  GIT_HOST = "git@github.com:arkadiyt/bounty-targets-data.git"
