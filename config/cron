@@ -1,1 +1,1 @@
-*/30 * * * * /app/bin/bounty-targets
+*/30 * * * * root /bin/bash -c '/app/bin/bounty-targets'
