@@ -47,7 +47,7 @@ module BountyTargets
           name: program['name'],
           company_handle: program['companyHandle'],
           handle: program['handle'],
-          url: 'https://www.intigriti.com/programs/' + encode(program['companyHandle']) + '/' +
+          url: 'https://app.intigriti.com/programs/' + encode(program['companyHandle']) + '/' +
             encode(program['handle']) + '/detail',
           status: STATUSES[program['status']],
           confidentiality_level: CONFIDENTIALITY_LEVELS[program['confidentialityLevel']],
