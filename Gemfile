@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 
 gem 'graphql-client', '~> 0.18.0'
 gem 'kramdown', '~> 2.4.0'
-gem 'nokogiri', '~> 1.13.9'
+gem 'nokogiri', '~> 1.13.10'
 gem 'sentry-raven', '~> 3.1.2'
 gem 'ssrf_filter', '~> 1.0.8'
 gem 'twingly-url', '~> 6.0.4'
