@@ -3,7 +3,7 @@ kill_signal = "SIGINT"
 kill_timeout = 5
 
 [processes]
-  cron = "cron -f"
+  cron = "bash -c 'env > /etc/environment && cron -f'"
 
 [env]
   BUNDLE_WITHOUT = "development:test"
