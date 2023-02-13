@@ -108,6 +108,8 @@ module BountyTargets
     def valid_uri?(uri)
       return false unless uri&.host
 
+      return false if uri.host.count('()').positive?
+
       # iOS/Android/FireOS mobile app links
       return false if %w[itunes.apple.com play.google.com www.amazon.com].include?(uri.host)
 
