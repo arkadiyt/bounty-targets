@@ -107,7 +107,7 @@ module BountyTargets
         ::JSON.parse(::SsrfFilter.get(targets_uri).body)['targets'].map do |target|
           {
             type: (target['category'] || '').downcase,
-            target: target['name']
+            target: target['uri'] || target['name']
           }
         end
       end.sort_by do |scope|
