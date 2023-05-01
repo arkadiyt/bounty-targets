@@ -40,7 +40,7 @@ module BountyTargets
     end
 
     def directory_index
-      programs = ::JSON.parse(SsrfFilter.get(::URI.parse('https://api.intigriti.com/core/program')).body)
+      programs = ::JSON.parse(SsrfFilter.get(::URI.parse('https://api.intigriti.com/core/public/programs')).body)
       programs.map do |program|
         {
           id: program['programId'],
@@ -58,7 +58,7 @@ module BountyTargets
     end
 
     def program_scopes(program)
-      uri = ::URI.parse('https://api.intigriti.com/core/program/' + encode(program[:company_handle]) + '/' +
+      uri = ::URI.parse('https://api.intigriti.com/core/public/programs/' + encode(program[:company_handle]) + '/' +
         encode(program[:handle]))
       response = ::JSON.parse(SsrfFilter.get(uri).body)
 
