@@ -16,11 +16,13 @@ describe BountyTargets::Federacy do
         {
           id: '955a3f33-3ca7-42b1-acf5-84da28d4c08c',
           name: 'Federacy',
+          offers_awards: true,
           url: 'https://www.federacy.com/federacy'
         },
         {
           id: '50cea250-a08a-4581-93a5-5d973a261f45',
           name: 'CoinTracker',
+          offers_awards: false,
           url: 'https://www.federacy.com/cointracker'
         }
       ]
