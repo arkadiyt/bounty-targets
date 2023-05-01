@@ -9,7 +9,7 @@ describe BountyTargets::Intigriti do
 
   it 'fetches a list of programs' do
     programs = File.read('spec/fixtures/intigriti/programs.json')
-    stub_request(:get, %r{/core/program}).with(headers: {host: 'api.intigriti.com'})
+    stub_request(:get, %r{/core/public/program}).with(headers: {host: 'api.intigriti.com'})
       .to_return(status: 200, body: programs)
     expect(client.directory_index).to eq(
       [
@@ -41,7 +41,7 @@ describe BountyTargets::Intigriti do
 
   it 'fetches program scopes' do
     scopes = File.read('spec/fixtures/intigriti/scopes.json')
-    stub_request(:get, %r{/core/program/vasco/vascomobileproducts})
+    stub_request(:get, %r{/core/public/programs/vasco/vascomobileproducts})
       .with(headers: {host: 'api.intigriti.com'}).to_return(status: 200, body: scopes)
     expect(client.program_scopes(company_handle: 'vasco', handle: 'vascomobileproducts')).to eq(
       targets: {

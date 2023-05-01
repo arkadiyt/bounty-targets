@@ -222,6 +222,8 @@ module BountyTargets
         %w[verizonmedia spotify].include?(program[:handle])
       end.flat_map do |program|
         program['targets']['in_scope'].flat_map do |scope|
+          next [] if scope[:instruction].nil?
+
           markdown = Kramdown::Document.new(scope['instruction']).to_html
           URI.extract(scope['instruction'] + "\n" + scope['instruction'].scan(/\(([^)]*)\)/).flatten.join(' ')) +
             Twingly::URL::Utilities.extract_valid_urls(markdown).map(&:to_s)

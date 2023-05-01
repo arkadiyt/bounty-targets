@@ -1,10 +1,16 @@
-app = "bitter-sunset-340"
-kill_signal = "SIGINT"
-kill_timeout = 5
+# fly.toml app configuration file generated for bitter-sunset-340 on 2023-04-30T20:09:39-07:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
 
-[processes]
-  cron = "bash -c 'env > /etc/environment && cron -f'"
+app = "bitter-sunset-340"
+primary_region = "sjc"
+kill_signal = "SIGINT"
+kill_timeout = "5s"
 
 [env]
   BUNDLE_WITHOUT = "development:test"
   GIT_HOST = "git@github.com:arkadiyt/bounty-targets-data.git"
+
+[processes]
+  cron = "bash -c 'env > /etc/environment && cron -f'"
