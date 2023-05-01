@@ -34,6 +34,7 @@ module BountyTargets
         {
           id: program['id'],
           name: program['program_name'],
+          offers_awards: program['offers_awards'],
           url: "https://www.federacy.com/#{program['slug']}"
         }
       end
