@@ -176,12 +176,10 @@ module BountyTargets
         }
       GRAPHQL
 
-      # Using pagination here seems to return duplicates. Hackerone's own program pages do not paginate over the scopes,
-      # they simply fetch the first 650 scopes
       @program_query = @graphql_client.parse <<~GRAPHQL
         query($handle: String!, $after: String) {
           team(handle: $handle) {
-            structured_scopes(first: 650, after: $after, archived: false) {
+            structured_scopes(first: 100, after: $after, archived: false) {
               pageInfo {
                 endCursor,
                 hasNextPage
