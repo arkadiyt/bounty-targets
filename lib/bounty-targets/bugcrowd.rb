@@ -104,11 +104,24 @@ module BountyTargets
       groups.flat_map do |group|
         targets_uri = uri.clone
         targets_uri.path = group['targets_url']
-        ::JSON.parse(::SsrfFilter.get(targets_uri).body)['targets'].map do |target|
-          {
-            type: (target['category'] || '').downcase,
-            target: target['name']
-          }
+        ::JSON.parse(::SsrfFilter.get(targets_uri).body)['targets'].flat_map do |target|
+          # Some programs put the uri into target['name'] and some put it into target['uri']
+          # No matter which way you parse it (or try to find the url with heuristics), people complain
+          # so just include both of them
+          result = []
+          unless target['name'].nil? || target['name'] == ''
+            result << {
+              type: (target['category'] || '').downcase,
+              target: target['name']
+            }
+          end
+          unless target['uri'].nil? || target['uri'] == ''
+            result << {
+              type: (target['category'] || '').downcase,
+              target: target['uri']
+            }
+          end
+          result.uniq
         end
       end.sort_by do |scope|
         scope[:target]
