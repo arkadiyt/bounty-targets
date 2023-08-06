@@ -42,7 +42,8 @@ module BountyTargets
             id: link.attributes['href'].value,
             name: link.inner_text.strip,
             url: URI.join('https://hackenproof.com', link.attributes['href'].value).to_s,
-            archived: node.classes.include?('archived-program')
+            archived: node.classes.include?('archived-program'),
+            triaged_by_hackenproof: !node.css('.triaged-by').empty?
           }
         end)
 
@@ -82,10 +83,10 @@ module BountyTargets
         scopes_target = row.css('.scopes-target-inner')
         {
           target: scopes_target.css('h5').remove.inner_text.strip,
-          type: row.css('td')[1].inner_text.strip,
+          type: row.css('.type-cell').inner_text.strip,
           instruction: scopes_target.inner_text.strip,
-          severity: row.css('td')[2].inner_text.strip,
-          reward: row.css('td')[3]&.inner_text&.strip
+          severity: row.css('.severity-cell').inner_text.strip,
+          reward: row.css('.reward-cell').inner_text.strip
         }
       end
     end

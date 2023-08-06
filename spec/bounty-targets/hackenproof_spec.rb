@@ -15,27 +15,27 @@ describe BountyTargets::Hackenproof do
 
     expect(client.directory_index).to eq(
       [{id: '/hacken/hackenproof', name: 'HackenProof', url: 'https://hackenproof.com/hacken/hackenproof',
-        archived: false},
+        archived: false, triaged_by_hackenproof: true},
        {id: '/kuna/kuna-crypto-exchange', name: 'Kuna Crypto Exchange',
-        url: 'https://hackenproof.com/kuna/kuna-crypto-exchange', archived: false},
+        url: 'https://hackenproof.com/kuna/kuna-crypto-exchange', archived: false, triaged_by_hackenproof: true},
        {id: '/vechain/vechainthor', name: 'VeChainThor', url: 'https://hackenproof.com/vechain/vechainthor',
-        archived: false},
+        archived: false, triaged_by_hackenproof: true},
        {id: '/vechain/vechainthor-wallet', name: 'VeChainThor Wallet',
-        url: 'https://hackenproof.com/vechain/vechainthor-wallet', archived: false},
-       {id: '/gate-dot-io/gate-dot-io-exchange', name: 'Gate.io Exchange',
-        url: 'https://hackenproof.com/gate-dot-io/gate-dot-io-exchange', archived: false},
+        url: 'https://hackenproof.com/vechain/vechainthor-wallet', archived: false, triaged_by_hackenproof: true},
+       {id: '/gate-dot-io/gate-dot-io-exchange', name: 'Gate.io Exchange', url:
+        'https://hackenproof.com/gate-dot-io/gate-dot-io-exchange', archived: false, triaged_by_hackenproof: false},
        {id: '/coingecko/coingecko', name: 'CoinGecko', url: 'https://hackenproof.com/coingecko/coingecko',
-        archived: false},
+        archived: false, triaged_by_hackenproof: true},
        {id: '/p2pb2b/p2pb2b', name: 'P2PB2B', url: 'https://hackenproof.com/p2pb2b/p2pb2b',
-        archived: false},
+        archived: false, triaged_by_hackenproof: false},
        {id: '/coinsbit/coinsbit', name: 'Coinsbit', url: 'https://hackenproof.com/coinsbit/coinsbit',
-        archived: false},
+        archived: false, triaged_by_hackenproof: false},
        {id: '/hotbit/hotbit', name: 'Hotbit', url: 'https://hackenproof.com/hotbit/hotbit',
-        archived: false},
+        archived: false, triaged_by_hackenproof: true},
        {id: '/whitebit/whitebit', name: 'WhiteBIT', url: 'https://hackenproof.com/whitebit/whitebit',
-        archived: false},
+        archived: false, triaged_by_hackenproof: false},
        {id: '/vechain/vechainthor-vip191', name: 'VeChainThor VIP191',
-        url: 'https://hackenproof.com/vechain/vechainthor-vip191', archived: true}]
+        url: 'https://hackenproof.com/vechain/vechainthor-vip191', archived: true, triaged_by_hackenproof: false}]
     )
   end
 
@@ -49,7 +49,7 @@ describe BountyTargets::Hackenproof do
           {
             instruction: 'HackenProof main site',
             reward: 'Bounty',
-            type: 'WEB',
+            type: 'Web',
             target: 'hackenproof.com',
             severity: 'Critical'
           }
@@ -57,10 +57,10 @@ describe BountyTargets::Hackenproof do
         out_of_scope: [
           {
             target: 'blog.hackenproof.com',
-            type: 'WEB',
+            type: 'Web',
             instruction: 'Our Blog',
             severity: 'None',
-            reward: '--'
+            reward: ''
           }
         ]
       }
