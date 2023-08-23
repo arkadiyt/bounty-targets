@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (7.0.4.3)
+    activesupport (7.0.7.2)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
@@ -34,13 +34,13 @@ GEM
       activesupport (>= 3.0)
       graphql
     hashdiff (1.0.1)
-    i18n (1.13.0)
+    i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     json (2.6.3)
     kramdown (2.4.0)
       rexml
     method_source (1.0.0)
-    minitest (5.18.0)
+    minitest (5.19.0)
     nokogiri (1.14.3-aarch64-linux)
       racc (~> 1.4)
     nokogiri (1.14.3-arm64-darwin)
