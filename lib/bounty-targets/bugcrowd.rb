@@ -84,8 +84,8 @@ module BountyTargets
         max_payout_amount[1].gsub(',', '').to_i
       end
 
-      uri.path += '/target_groups'
-      groups = ::JSON.parse(::SsrfFilter.get(uri).body)['groups']
+      uri.path += '/target_groups.json'
+      groups = ::JSON.parse(::SsrfFilter.get(uri).body)['groups'] || {}
       {
         name: name,
         url: program_link,
