@@ -40,8 +40,10 @@ module BountyTargets
     end
 
     def directory_index
-      programs = ::JSON.parse(SsrfFilter.get(::URI.parse('https://api.intigriti.com/core/public/programs')).body)
-      programs.map do |program|
+      page = SsrfFilter.get(::URI.parse('https://www.intigriti.com/programs')).body
+      tag = page.match(%r{/_next/static/([^/]+)/_buildManifest.js})[1]
+      programs = ::JSON.parse(SsrfFilter.get(::URI.parse("https://www.intigriti.com/_next/data/#{tag}/en/programs.json")).body)
+      programs['pageProps']['programs'].map do |program|
         {
           id: program['programId'],
           name: program['name'],
@@ -58,30 +60,22 @@ module BountyTargets
     end
 
     def program_scopes(program)
-      uri = ::URI.parse('https://api.intigriti.com/core/public/programs/' + encode(program[:company_handle]) + '/' +
-        encode(program[:handle]))
-      response = ::JSON.parse(SsrfFilter.get(uri).body)
+      document = ::Nokogiri::HTML(SsrfFilter.get(program[:url]).body)
+      in_scope = document.css('div.domain-container').map do |div|
+        {
+          type: div.css('.domainType').inner_text.strip.downcase,
+          endpoint: div.css('.reference').inner_text.strip,
+          description: div.css('.domain-description p').inner_text.strip,
+          impact: div.css('.impact').inner_text.strip
+        }
+      end
 
       {
         targets: {
-          in_scope: response['domains'].nil? ? [] : scopes_to_hashes(response['domains']),
+          in_scope: in_scope,
           out_of_scope: []
         }
       }
-    end
-
-    def scopes_to_hashes(scopes)
-      latest_scope = scopes.max_by do |scope|
-        scope['createdAt']
-      end
-
-      latest_scope['content'].map do |content|
-        {
-          type: TYPES[content['type']],
-          endpoint: content['endpoint'],
-          description: content['description']
-        }
-      end
     end
   end
 end

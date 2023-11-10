@@ -1,36 +1,65 @@
-[
-  {
-    "programId": "0d0034de-b53e-47b8-9a9d-41c302c49b5a",
-    "status": 3,
-    "confidentialityLevel": 4,
-    "companyHandle": "torfs",
-    "companyName": "Torfs",
-    "companySustainable": false,
-    "handle": "torfs",
-    "name": "Torfs",
-    "description": "Torfs - the well-known shoe retailer in Belgium - is still a 100% family business today. This family character guarantees a number of important values within the company where employees are central. A head office in Sint-Niklaas and a spectacular distribution center in Temse offer support to the points of sale and customers of the E-Commerce website. With more than 80 stores in Flanders, 2 shops in the French part of Belgium and a growing online shop in Belgium, The Netherlands and several marketplaces, Torfs wants to be and remain the most customer-friendly optichannel shoe store chain.",
-    "minBounty": 0,
-    "maxBounty": 5000,
-    "lastUpdatedAt": 1592386899,
-    "lastSubmissionAt": 1595707171,
-    "logoId": "public_bucket_d4aeeaf1-2da5-468f-8a6f-aad1c2cc118c-d392363b-2601-4396-961f-1397c6a92c4a",
-    "tacRequired": false
+{
+  "pageProps": {
+    "seoTags": [
+    ],
+    "title": [
+    ],
+    "programs": [
+      {
+        "programId": "12715f4b-d10e-415f-a309-6ab042f6158a",
+        "status": 3,
+        "confidentialityLevel": 2,
+        "companyHandle": "doccle",
+        "companyName": "Doccle",
+        "tacRequired": false,
+        "companySustainable": true,
+        "handle": "doccle",
+        "name": "Doccle",
+        "description": "Doccle, founded in 2014, is a Belgian company that hosts an online platform where you can receive, pay, share and store your administration in one place. You can add several suppliers to your Doccle account in a few mouse clicks. This way, you will receive all documents in one place. You can also pay, sign or share them via Doccle. All your documents are securely stored in your digital archive. The more companies you add, the more documents you will receive.",
+        "minBounty": {
+          "value": 0,
+          "currency": "EUR"
+        },
+        "maxBounty": {
+          "value": 2500,
+          "currency": "EUR"
+        },
+        "lastUpdatedAt": 1696411233,
+        "lastSubmissionAt": 1698666466,
+        "logoId": "public_bucket_a4befc61-5a0f-4ce1-b384-b9e34162fe51-e0f59d31-cc85-4c48-9415-0fcba05d5df1"
+      },
+      {
+        "programId": "a09e497e-fd75-4b56-afa0-7a6689389b76",
+        "status": 3,
+        "confidentialityLevel": 2,
+        "companyHandle": "bpost",
+        "companyName": "bpost",
+        "tacRequired": false,
+        "companySustainable": false,
+        "handle": "e-tracker",
+        "name": "e-tracker",
+        "description": "This is an application which is accessed by bpost contractual customers like Amazon, zalando who can login and track the parcels history which was announced by them to bpost for handling.\nOnly the specific logged in senders can view thier own parcel status, not cross sender accounts.",
+        "minBounty": {
+          "value": 0,
+          "currency": "EUR"
+        },
+        "maxBounty": {
+          "value": 0,
+          "currency": "EUR"
+        },
+        "lastUpdatedAt": 1698408862,
+        "lastSubmissionAt": 1698569947,
+        "logoId": "public_bucket_e4f07036-ac87-4d12-b2fa-1b9aedbcfdef-60f29988-357a-4343-a7ac-462b167d3a5d"
+      }
+    ],
+    "dehydratedState": {
+      "mutations": [
+
+      ],
+      "queries": [
+
+      ]
+    }
   },
-  {
-    "programId": "0d6d1230-beb5-489c-b306-cf9c2e06730f",
-    "status": 4,
-    "confidentialityLevel": 4,
-    "companyHandle": "depersgroep",
-    "companyName": "DPG Media",
-    "companySustainable": false,
-    "handle": "devolkskrant",
-    "name": "De Volkskrant",
-    "description": "De Volkskrant is a Dutch daily morning newspaper. Founded in 1919, it has a nationwide circulation of about 250,000 papers per day.",
-    "minBounty": 0,
-    "maxBounty": 2000,
-    "lastUpdatedAt": 1595768763,
-    "lastSubmissionAt": 1595768761,
-    "logoId": "public_bucket_3af586cd-c27b-4732-8f58-b335e49985c3-31b5959b-3df0-44cd-ba3f-00a68ad16aaa",
-    "tacRequired": false
-  }
-]
+  "__N_SSG": true
+}
