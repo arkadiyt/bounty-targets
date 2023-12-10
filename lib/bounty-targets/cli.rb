@@ -15,6 +15,7 @@ module BountyTargets
       timestamp = Time.now
       root = File.expand_path(File.join(__dir__, '..', '..'))
 
+      FileUtils.rm_rf(Dir.glob('/tmp/*'))
       with_ssh_keys do |git_ssh_cmd|
         Dir.mktmpdir do |tmpdir|
           Dir.chdir(tmpdir) do
