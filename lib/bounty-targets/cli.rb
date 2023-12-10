@@ -16,6 +16,7 @@ module BountyTargets
       root = File.expand_path(File.join(__dir__, '..', '..'))
 
       with_ssh_keys do |git_ssh_cmd|
+        FileUtils.rm_rf(Dir.glob('/tmp/*'))
         Dir.mktmpdir do |tmpdir|
           Dir.chdir(tmpdir) do
             # Clone + setup
