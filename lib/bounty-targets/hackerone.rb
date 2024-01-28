@@ -209,7 +209,7 @@ module BountyTargets
 
         program['targets']['in_scope']
       end.select do |scope|
-        scope['asset_type'] == 'URL'
+        %w[URL WILDCARD].include?(scope['asset_type'])
       end.map do |scope|
         scope['asset_identifier']
       end
