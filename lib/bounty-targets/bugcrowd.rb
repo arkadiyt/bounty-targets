@@ -33,18 +33,17 @@ module BountyTargets
       program_links = []
 
       page = 1
-      uri = URI('https://bugcrowd.com/programs.json')
       ::Kernel.loop do
+        uri = URI("https://bugcrowd.com/engagements.json?category=bug_bounty&sort_by=promoted&sort_direction=desc&page=#{page}")
         response = JSON.parse(SsrfFilter.get(uri).body)
 
-        programs = response['programs'].map do |program|
-          "https://bugcrowd.com#{program['program_url']}"
+        programs = response['engagements'].map do |program|
+          "https://bugcrowd.com#{program['briefUrl']}"
         end
         break if programs.empty?
 
         program_links.concat(programs)
         page += 1
-        uri = URI("https://bugcrowd.com/programs.json?page[]=#{page}")
       end
 
       program_links.reject do |link|
