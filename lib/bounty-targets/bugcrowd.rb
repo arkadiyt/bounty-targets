@@ -47,7 +47,7 @@ module BountyTargets
       end
 
       program_links.reject do |link|
-        link.start_with?('https://bugcrowd.com/programs/teasers/')
+        link.start_with?('https://bugcrowd.com/engagements/')
       end
     end
 
