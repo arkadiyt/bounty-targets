@@ -20,7 +20,7 @@ module BountyTargets
         Dir.mktmpdir do |tmpdir|
           Dir.chdir(tmpdir) do
             # Clone + setup
-            `GIT_SSH_COMMAND=#{git_ssh_cmd} git clone #{ENV.fetch('GIT_HOST')} .`
+            `GIT_SSH_COMMAND=#{git_ssh_cmd} git clone #{ENV.fetch('GIT_HOST')} --depth 1 .`
             `git config user.name 'bounty-targets'`
             `git config user.email '<>'`
 
