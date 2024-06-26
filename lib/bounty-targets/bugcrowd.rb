@@ -46,12 +46,12 @@ module BountyTargets
         page += 1
       end
 
-      program_links.reject do |link|
-        link.start_with?('https://bugcrowd.com/engagements/')
-      end
+      program_links
     end
 
     def parse_program(program_link)
+      return parse_engagement(program_link) if program_link.start_with?('https://bugcrowd.com/engagements/')
+
       uri = URI(program_link)
       response = ::SsrfFilter.get(uri).body
       document = ::Nokogiri::HTML(response)
@@ -99,6 +99,38 @@ module BountyTargets
       }
     end
 
+    def parse_engagement(program_link)
+      uri = URI(program_link)
+      response = ::SsrfFilter.get(uri).body
+      document = ::Nokogiri::HTML(response)
+
+      brief_url = ::JSON.parse(document.css('div[data-react-class="ResearcherEngagementBrief"]')
+        .attr('data-api-endpoints').value)['engagementBriefApi']['getBriefVersionDocument']
+      brief = ::JSON.parse(::SsrfFilter.get(URI("https://bugcrowd.com/#{brief_url}.json")).body)
+      data = brief['data']['brief']
+      brief_scope = brief['data']['scope']
+      {
+        name: data['name'],
+        url: program_link,
+        allows_disclosure: !brief['coordinatedDisclosure'],
+        managed_by_bugcrowd: true, # Bugcrowd seems to have removed the flag for this / all programs are managed
+        safe_harbor: data.dig('safeHarborStatus', 'status'),
+        max_payout: brief_scope.select do |scope|
+          scope['inScope'] == true
+        end.map do |scope|
+          scope.dig('rewardRangeData', '1', 'max')
+        end.max,
+        targets: {
+          in_scope: scopes_to_hashes_engagement(brief_scope.select do |scope|
+            scope['inScope'] == true
+          end.flatten),
+          out_of_scope: scopes_to_hashes_engagement(brief_scope.select do |scope|
+            scope['inScope'] == false
+          end.flatten)
+        }
+      }
+    end
+
     def scopes_to_hashes(uri, groups)
       groups.flat_map do |group|
         targets_uri = uri.clone
@@ -124,6 +156,19 @@ module BountyTargets
         end
       end.sort_by do |scope|
         scope[:target]
+      end
+    end
+
+    def scopes_to_hashes_engagement(scopes)
+      scopes.flat_map do |targets|
+        targets['targets'].map do |scope|
+          {
+            type: scope['category'],
+            target: [scope['uri'], scope['name'], scope['ipAddress']].find do |target|
+              !target.nil? && !target.empty?
+            end
+          }
+        end
       end
     end
   end
