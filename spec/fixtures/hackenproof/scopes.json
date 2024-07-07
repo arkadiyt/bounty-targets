@@ -1,0 +1,64 @@
+{
+  "audit_program": false,
+  "categories": [
+    "Network",
+    "Protocol",
+    "Solidity"
+  ],
+  "company_name": "Polygon Technology",
+  "company_slug": "polygon-technology",
+  "company_url": "/api/v1/polygon-technology",
+  "deposit": true,
+  "disclosure_guidelines": "* Do not discuss this program or any vulnerabilities (even resolved ones) outside of the program without written consent from the organization\r\n* No vulnerability disclosure, including partial is allowed for the moment.\r\n* Please do NOT publish/discuss bugs ",
+  "eligibility_and_coordinate_disclosure": "We are happy to thank everyone who submits valid reports which help us improve the security. However, only those that meet the following eligibility requirements may receive a monetary reward:\r\n\r\n* You must be the first reporter of a vulnerability.\r\n* The vulnerability must be a qualifying vulnerability\r\n* All reports should include a runnable Proof of Concept (PoC) in order to prove impact\r\n* Any vulnerability found must be reported no later than 24 hours after discovery and exclusively through hackenproof.com\r\n* You must send a clear textual description of the report along with steps to reproduce the issue, include attachments such as screenshots or proof of concept code as necessary.\r\n* Current employees, vendors (auditors), partners and contractors are not eligible to participate in the bug bounty program;\r\n* Payouts only apply to assets in active use by the project like contracts on mainnet or web/app assets used in production.\r\n* Any impact that applies to assets not in active use, like test or mock files, are out-of-scope of the bug bounty program unless explicitly mentioned as in-scope.\r\n* For GitHub repositories please ensure you are reviewing the latest published releases\r\n* ONLY USE YOUR HackerProof ADDRESS (in case of violation, no bounty can be awarded)",
+  "end_date": "05 Mar 2025",
+  "focus_area": "For GitHub repositories please ensure you are reviewing the latest published releases, and code is deployed in production",
+  "id": "652d3658fd18041e205e8a95",
+  "last_update": "06 Jul 2024",
+  "managed_by_company_name": "HackenProof",
+  "max_bounty": "1000000.0",
+  "min_bounty": "1000.0",
+  "private": false,
+  "program_description": "Polygon Labs develops Ethereum scaling solutions for Polygon protocols. Polygon Labs engages with other ecosystem developers to help make available scalable, affordable, secure and sustainable blockchain infrastructure for Web3. ",
+  "program_logo": "https://dashboard.hackenproof.com/uploads/bounty_program/logo/652d3658fd18041e205e8a95/logo.png?1720297372",
+  "program_name": "Polygon POS",
+  "program_of_the_week": false,
+  "program_rules": "## Rewards and Recognition\r\n\r\n### Severity Clasification\r\n\r\nPolygon classifies vulnerabilities using the Common Vulnerability Scoring System (CVSS). In case of discrepancy, final determination is done by Polygon.\r\n\r\n### Payouts and Payout Requirements\r\n* Payouts are handled by the Polygon Labs team directly and are denominated in USD. Payouts are done in USDC or MATIC at the Polygon Labs teams' discretion. Polygon Labs commits to honoring payouts according to the terms set out in this program at the time of report submission, and to treat this program as the agreement and source of truth concerning bug reports and responsible disclosures.\r\n* This bug bounty program is only open to individuals who reside outside of the countries that are restricted by OFAC and by UNSC resolutions. If the individual is a US person, tax information may be required in order to properly issue a 1099.\r\n\r\n### KYC Requirements\r\n\r\n- Polygon Labs does have a Know Your Customer (KYC) requirement for bug bounty payouts.\r\n- KYC information is only required on confirmation of the validity of a bug report which Polygon Labs determines in its sole discretion.\r\n\r\n## Out of Scope - General\r\n\r\n- Attacks that the reporter has already exploited themselves, leading to damage\r\n- Attacks requiring access to leaked keys/credentials\r\n- Attacks requiring access to privileged addresses (governance, strategist), except in such cases where the contracts are intended to have no privileged access to functions that make the attack possible\r\n- Broken link hijacking is out of scope\r\n- Loss of funds held by third parties\r\n- Attacks related to vulnerable, old or deprecated libraries, that are not exploitable\r\n\r\n## Out of Scope - Smart Contracts and Blockchain/DLT\r\n\r\n- Previously known vulnerabilities (resolved or not) on the Ethereum network (and any other fork of these).\r\n- Previously known vulnerabilities in Tendermint and or/any other fork of these.\r\n- Previously known vulnerabilities in cosmos-sdk and or/any other fork of these.\r\n- Basic economic governance attacks (e.g. 51% attack)\r\n- Lack of liquidity\r\n- Best practice critiques\r\n- Sybil attacks\r\n- Centralization risks\r\n\r\n## Prohibited Activities\r\n\r\nThe following activities are prohibited by this bug bounty program. Violation of these rules may result in zero payout.\r\n\r\n* Any testing with mainnet or public testnet deployed code; all testing should be done on private testnets\r\n* Attempting phishing or other social engineering attacks against our employees and/or customers\r\n* Any testing with third party systems and applications (e.g. browser extensions) as well as websites (e.g. SSO providers, advertising networks)\r\n* Any denial of service attacks\r\n* Automated testing of services that generates significant amounts of traffic\r\n* Public disclosure of an unpatched vulnerability in an embargoed bounty\r\n* Avoid using web application scanners for automatic vulnerability searching which generates massive traffic  \r\n* Make every effort not to damage or restrict the availability of products, services, or infrastructure  \r\n* Avoid compromising any personal data, interruption, or degradation of any service  \r\n* Don’t access or modify other user data, localize all tests to your accounts  \r\n* Perform testing only within the scope  \r\n* Don’t exploit any DoS/DDoS vulnerabilities, social engineering attacks, or spam  \r\n* Don’t spam forms or account creation flows using automated scanners  \r\n* In case you find chain vulnerabilities we’ll pay only for vulnerability with the highest severity.  \r\n* Don’t break any law and stay in the defined scope  \r\n* Any details of found vulnerabilities must not be communicated to anyone who is not a HackenProof Team or an authorized employee of this Company without appropriate permission  ",
+  "rewards": {
+    "max_critical": 1000000,
+    "max_high": 20000,
+    "max_low": 1000,
+    "max_medium": 5000,
+    "min_critical": 50000,
+    "min_high": 20000,
+    "min_low": 1000,
+    "min_medium": 5000
+  },
+  "scopes": [
+    {
+      "out_of_scope": false,
+      "reward_type": "Bounty",
+      "severity": "Critical",
+      "target": "https://github.com/maticnetwork/heimdall/",
+      "target_description": "Polygon POS - Heimdall",
+      "type": "Other"
+    }
+  ],
+  "skills": [
+    "blockchain",
+    "smart contract"
+  ],
+  "sla": {
+    "first_response": 3,
+    "resolution_time": 14,
+    "reward_time": 10,
+    "triage_time": 3
+  },
+  "slug": "polygon-pos",
+  "start_date": "29 Feb 2024",
+  "status": "published",
+  "submit_report_url": "https://dashboard.hackenproof.com/user/programs/polygon-pos/reports/new",
+  "submitted_reports": 26,
+  "total_rewards": 0,
+  "url": "/api/v1/programs/polygon-pos"
+}
