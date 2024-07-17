@@ -119,7 +119,7 @@ module BountyTargets
           scope['inScope'] == true
         end.map do |scope|
           scope.dig('rewardRangeData', '1', 'max')
-        end.max,
+        end.compact.max,
         targets: {
           in_scope: scopes_to_hashes_engagement(brief_scope.select do |scope|
             scope['inScope'] == true
