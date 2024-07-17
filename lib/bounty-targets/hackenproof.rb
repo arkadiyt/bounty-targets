@@ -33,9 +33,12 @@ module BountyTargets
     def directory_index
       page = 1
       programs = []
+      document = nil
 
       ::Kernel.loop do
-        document = ::JSON.parse(::SsrfFilter.get("https://hackenproof.com/bug-bounty-programs-list?page=#{page}").body)
+        retryable do
+          document = ::JSON.parse(::SsrfFilter.get("https://hackenproof.com/bug-bounty-programs-list?page=#{page}").body)
+        end
         programs.concat(document['programs'].map do |program|
           {
             id: program['id'],
