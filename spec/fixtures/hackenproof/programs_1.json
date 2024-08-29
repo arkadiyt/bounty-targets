@@ -4,7 +4,7 @@
       "id": "63517622fd18045e8d9b72bc",
       "slug": "virtuswap-dex-app-1",
       "url": "/api/v1/programs/virtuswap-dex-app-1",
-      "program_name": "VirtuSwap DEX APP",
+      "title": "VirtuSwap DEX APP",
       "program_logo": "https://dashboard.hackenproof.com/uploads/bounty_program/logo/63517622fd18045e8d9b72bc/logo.png?1720297251",
       "program_description": "VirtuSwap uses a novel pool architecture, based on reserve-powered virtual liquidity pools, which solve the problem of triangular trading by making every trade direct — even in the absence of a corresponding pool, and generates up to 50% savings.",
       "start_date": "21 Dec 2022",

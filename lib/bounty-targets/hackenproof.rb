@@ -42,7 +42,7 @@ module BountyTargets
         programs.concat(document['programs'].map do |program|
           {
             id: program['id'],
-            name: program['program_name'].strip,
+            name: program['title'].strip,
             slug: program['slug'],
             url: "https://hackenproof.com/programs/#{program['slug']}",
             archived: program['status'] == 'archived',
