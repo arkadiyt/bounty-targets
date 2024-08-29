@@ -45,7 +45,7 @@ module BountyTargets
             name: program['title'].strip,
             slug: program['slug'],
             url: "https://hackenproof.com/programs/#{program['slug']}",
-            archived: program['status'] == 'archived',
+            archived: program['state'] == 'archived',
             triaged_by_hackenproof: program['managed_by_company_name'] == 'HackenProof'
           }
         end)
@@ -80,9 +80,9 @@ module BountyTargets
     def normalize_scope(scope)
       {
         target: scope['target'],
-        type: scope['type'],
+        type: scope['title'],
         instruction: (scope['target_description'] || '').strip,
-        severity: scope['severity'],
+        severity: scope['criticality'],
         reward: scope['reward_type']
       }
     end

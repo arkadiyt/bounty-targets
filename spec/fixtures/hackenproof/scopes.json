@@ -38,10 +38,10 @@
     {
       "out_of_scope": false,
       "reward_type": "Bounty",
-      "severity": "Critical",
+      "criticality": "Critical",
       "target": "https://github.com/maticnetwork/heimdall/",
       "target_description": "Polygon POS - Heimdall",
-      "type": "Other"
+      "title": "Other"
     }
   ],
   "skills": [

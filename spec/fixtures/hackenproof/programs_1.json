@@ -13,7 +13,7 @@
       "submitted_reports": 21,
       "min_bounty": "50.0",
       "max_bounty": "5000.0",
-      "status": "archived",
+      "state": "archived",
       "audit_program": false,
       "private": false,
       "managed_by_company_name": "HackenProof",
