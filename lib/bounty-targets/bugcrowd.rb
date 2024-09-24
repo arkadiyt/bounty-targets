@@ -166,7 +166,10 @@ module BountyTargets
             type: scope['category'],
             target: [scope['uri'], scope['name'], scope['ipAddress']].find do |target|
               !target.nil? && !target.empty?
-            end
+            end,
+            uri: scope['uri'],
+            name: scope['name'],
+            ipAddress: scope['ipAddress']
           }
         end
       end
