@@ -22,6 +22,7 @@ describe BountyTargets::Intigriti do
           handle: 'doccle',
           id: '12715f4b-d10e-415f-a309-6ab042f6158a',
           status: 'open',
+          tacRequired: true,
           url: 'https://www.intigriti.com/programs/doccle/doccle/detail',
           max_bounty: {'currency' => 'EUR', 'value' => 2500},
           min_bounty: {'currency' => 'EUR', 'value' => 0},
@@ -32,6 +33,7 @@ describe BountyTargets::Intigriti do
           confidentiality_level: 'application',
           handle: 'e-tracker',
           id: 'a09e497e-fd75-4b56-afa0-7a6689389b76',
+          tacRequired: false,
           max_bounty: {'currency' => 'EUR', 'value' => 0},
           min_bounty: {'currency' => 'EUR', 'value' => 0},
           name: 'e-tracker',
@@ -43,65 +45,17 @@ describe BountyTargets::Intigriti do
   end
 
   it 'fetches program scopes' do
-    scopes = File.read('spec/fixtures/intigriti/scopes.html')
-    stub_request(:get, %r{/programs/Uphold/upholdcom/detail})
+    scopes = File.read('spec/fixtures/intigriti/scopes.json')
+    stub_request(:get, %r{/api/core/public/programs/intel/intel})
       .with(headers: {host: 'app.intigriti.com'}).to_return(status: 200, body: scopes)
-    expect(client.program_scopes(url: 'https://app.intigriti.com/programs/Uphold/upholdcom/detail')).to eq(
+    expect(client.program_scopes(company_handle: 'intel', handle: 'intel')).to eq(
     targets: {
       in_scope: [
         {
-          description: 'iOS application. This is currently installable on Jailbroken devices, ' \
-                       'please read the out-of-scope findings.',
-          endpoint: '1101145849',
+          description: nil,
+          endpoint: "(Hardware)\tProcessor (inclusive of micro-code ROM + updates)",
           impact: 'Tier 1',
-          type: 'ios'
-        },
-        {
-          description: 'Production WebWallet Application. Do not test service degradation attacks ' \
-                       'or horizontal privilege here.On the business app side, we allow you to create ' \
-                       "apps in sandbox, but you shouldn't be able to create them in Production.",
-          endpoint: 'api.uphold.com',
-          impact: 'Tier 1',
-          type: 'url'
-        },
-        {
-          description: 'Android application. This is currently installable on Jailbroken devices, please ' \
-                       'read the out-of-scope findings.',
-          endpoint: 'com.uphold.wallet',
-          impact: 'Tier 1',
-          type: 'android'
-        },
-        {
-          description: 'Production WebWallet Application. Do not test service degradation ' \
-                       'attacks or horizontal privilege here.',
-          endpoint: 'uphold.com/dashboard',
-          impact: 'Tier 1',
-          type: 'url'
-        },
-        {
-          description: 'Use this environment for financial transaction testing, degradation attacks, ' \
-                       'or horizontal privilege attacks. Fund with Crypto Testnet Faucet (e.g. ' \
-                       'https://coinfaucet.eu/en/btc-testnet/ for Bitcoin).On the business app side, we ' \
-                       "allow you to create apps in sandbox, but you shouldn't be able to create them in Production.",
-          endpoint: 'api-sandbox.uphold.com',
-          impact: 'Tier 2',
-          type: 'url'
-        },
-        {
-          description: 'Use this environment for financial transaction testing, degradation attacks, ' \
-                       'or horizontal privilege attacks. Fund with Crypto Testnet Faucet (e.g. ' \
-                       'https://coinfaucet.eu/en/btc-testnet/ for Bitcoin)',
-          endpoint: 'sandbox.uphold.com/dashboard',
-          impact: 'Tier 2',
-          type: 'url'
-        },
-        {
-          description: 'We are willing to give bonuses on anything you find and we agree is impactful, ' \
-                       'in the rest of our domain. Please note that third party services are out of scope ' \
-                       'unless the issue is caused due to a misconfiguration by Uphold',
-          endpoint: '*.uphold.com',
-          impact: 'Tier 3',
-          type: 'url'
+          type: 'other'
         }
       ],
       out_of_scope: []

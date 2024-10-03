@@ -8,13 +8,21 @@ module BountyTargets
   class Intigriti
     STATUSES = %w[_ wizard draft open suspended closing closed archived].freeze
     CONFIDENTIALITY_LEVELS = %w[_ inviteonly application registered public].freeze
-    TYPES = %w[_ url android ios iprange device other].freeze
+    TYPES = %w[_ url android ios iprange device other wildcard].freeze
+    TIERS = [
+      '',
+      'No Bounty',
+      'Tier 3',
+      'Tier 2',
+      'Tier 1',
+      'Out of scope'
+    ].freeze
 
     def scan
       return @scan_results if instance_variable_defined?(:@scan_results)
 
       @scan_results = directory_index.select do |program|
-        program[:confidentiality_level] == 'public' && program[:status] == 'open'
+        program[:confidentiality_level] == 'public' && program[:status] == 'open' && program[:tacRequired] != true
       end.map do |program|
         program.merge(program_scopes(program))
       end.sort_by do |program|
@@ -26,7 +34,7 @@ module BountyTargets
       scan.flat_map do |program|
         program[:targets][:in_scope]
       end.select do |scope|
-        scope[:type] == 'url'
+        %w[url wildcard].include?(scope[:type])
       end.map do |scope|
         scope[:endpoint]
       end
@@ -53,6 +61,7 @@ module BountyTargets
             encode(program['handle']) + '/detail',
           status: STATUSES[program['status']],
           confidentiality_level: CONFIDENTIALITY_LEVELS[program['confidentialityLevel']],
+          tacRequired: program['tacRequired'],
           min_bounty: program['minBounty'],
           max_bounty: program['maxBounty']
         }
@@ -60,20 +69,24 @@ module BountyTargets
     end
 
     def program_scopes(program)
-      document = ::Nokogiri::HTML(SsrfFilter.get(program[:url]).body)
-      in_scope = document.css('div.domain-container').map do |div|
-        {
-          type: div.css('.domainType').inner_text.strip.downcase,
-          endpoint: div.css('.reference').inner_text.strip,
-          description: div.css('.domain-description p').inner_text.strip,
-          impact: div.css('.impact').inner_text.strip
-        }
+      url = "https://app.intigriti.com/api/core/public/programs/#{encode(program[:company_handle])}/#{encode(program[:handle])}"
+      targets = JSON.parse(SsrfFilter.get(url).body)['domains'].flat_map do |domains|
+        domains['content'].map do |content|
+          {
+            type: TYPES[content['type']],
+            endpoint: content['endpoint'],
+            description: content['description'],
+            impact: TIERS[content['bountyTierId']]
+          }
+        end
+      end.group_by do |scope|
+        scope[:impact] != 'Out of scope'
       end
 
       {
         targets: {
-          in_scope: in_scope,
-          out_of_scope: []
+          in_scope: targets[true] || [],
+          out_of_scope: targets[false] || []
         }
       }
     end
