@@ -1,0 +1,1060 @@
+{
+  "programId": "10eb5e95-08e2-4f4e-8d22-f8c600a7acff",
+  "status": 3,
+  "confidentialityLevel": 4,
+  "companyHandle": "intel",
+  "companyName": "Intel",
+  "handle": "intel",
+  "name": "Intel®",
+  "description": "Intel® Bug Bounty Program\nIntel Corporation believes that forging relationships with security researchers and fostering security research is a crucial part of our Security First Pledge. We encourage security researchers to work with us to mitigate and coordinate the disclosure of potential security vulnerabilities. By submitting your report, you agree to the terms of the Intel® Bug Bounty Program. Intel reserves the right to alter the terms and conditions of this program at its sole discretion.\n",
+  "domains": [
+      {
+          "content": [
+              {
+                  "id": "dd6d5718-737b-44f3-a833-fa74d0462f1f",
+                  "type": 6,
+                  "endpoint": "(Hardware)\tProcessor (inclusive of micro-code ROM + updates)",
+                  "bountyTierId": 4,
+                  "description": null
+              }
+          ],
+          "createdAt": 1638481238
+      }
+  ],
+  "inScopes": [
+      {
+          "content": {
+              "content": "**Eligible Intel branded products and technologies that are maintained and distributed by Intel:**\n\n* Microprocessors (inclusive of micro-code ROM + updates)\n* Chipsets\n* Field Programmable Gate Array (FPGA) components\n* Networking / communication components\n* Memory\n* Motherboards / systems (e.g., Intel Compute Stick, NUC)\n* Solid State Drives (SSD)\n* UEFI BIOS (Tiano core components for which Intel is the only named maintainer)\n* Intel® Management Engine\n* Baseboard Management Controller (BMC)\n* Device drivers\n* Applications\n* Development tools\n\n**Intel encourages the reporting of all potential vulnerabilities. For vulnerabilities that are out of scope for the Bug Bounty Program please refer to our [Vulnerability Handling Guidelines](https://www.intel.com/content/www/us/en/security-center/vulnerability-handling-guidelines.html)**\n\n**Bug Bounty Bonus: Pentium®, Celeron®, and Intel Atom® Processors**\nEligible Intel branded products and technologies that are maintained and distributed by Intel, that are eligible for the Intel Bug Bounty Bonus incentive:\n\n{837560}\n\n**Intel, at its sole discretion, may reject any submission that we determine does not meet these criteria above or that are deemed as ineligible as set forth below.**",
+              "attachments": [
+                  {
+                      "id": "private_bucket_5d988c82-b676-498a-ab1b-674191d3d293-ecec6bb9-70f7-4fc9-ad54-fefb10e86932",
+                      "linkId": "file/private_bucket_5d988c82-b676-498a-ab1b-674191d3d293-ecec6bb9-70f7-4fc9-ad54-fefb10e86932?signature=AWSAccessKeyId%3Dintigriti%26Expires%3D1727941618%26Signature%3DFqRoJmcZm8ps03uWSf7G7W%252FTfEs%253D",
+                      "name": "Screenshot 2021-11-18 at 10.40.33.png",
+                      "type": "image/png",
+                      "isSafe": true,
+                      "size": 27664,
+                      "createdAt": 1638295794,
+                      "code": 837560,
+                      "attachmentType": 3
+                  }
+              ]
+          },
+          "createdAt": 1638350874
+      },
+      {
+          "content": {
+              "content": "**Eligible Intel branded products and technologies that are maintained and distributed by Intel:**\n\n* Microprocessors (inclusive of micro-code ROM + updates)\n* Chipsets\n* Field Programmable Gate Array (FPGA) components\n* Networking / communication components\n* Memory\n* Motherboards / systems (e.g., Intel Compute Stick, NUC)\n* Solid State Drives (SSD)\n* UEFI BIOS (Tiano core components for which Intel is the only named maintainer)\n* Intel® Management Engine\n* Baseboard Management Controller (BMC)\n* Device drivers\n* Applications\n* Development tools\n\n**Intel encourages the reporting of all potential vulnerabilities. For vulnerabilities that are out of scope for the Bug Bounty Program please refer to our [Vulnerability Handling Guidelines](https://www.intel.com/content/www/us/en/security-center/vulnerability-handling-guidelines.html)**\n\n**Intel, at its sole discretion, may reject any submission that we determine does not meet these criteria above or that are deemed as ineligible as set forth below.**",
+              "attachments": []
+          },
+          "createdAt": 1652193470
+      },
+      {
+          "content": {
+              "content": "See \"**Product Eligibility Criteria**\" and \"**Report Eligibility Criteria**\" sections.",
+              "attachments": []
+          },
+          "createdAt": 1680299815
+      }
+  ],
+  "outOfScopes": [
+      {
+          "content": {
+              "content": "**Sensitive and Personal Information**\nNever attempt to access anyone else's data or personal information including by exploiting a vulnerability. Such activity is unauthorized. If during your testing you interacted with or obtained access to data or personal information of others, you must:\n\n* Stop your testing immediately and cease any activity that involves the data or personal information or the vulnerability.\n* Do not save, copy, store, transfer, disclose, or otherwise retain the data or personal information.\n* Alert Intel immediately and support our investigation and mitigation efforts.\n\n**Failure to comply with any of the above will immediately disqualify any report from bounty award eligibility.**\n\n**Third-Party Products**\nThird-party products that do or do not contain Intel-branded products or technology fall out of Scope. However, if the issue is root-caused to an Intel-branded product or technology, please submit your report under the appropriate Scope type above. \n\n**Intel-Maintained Open Source Projects**\nIntel-Maintained open source software projects fall out of Scope. Please contact the open source project maintainer directly.\n\n**Intel Open/Prototyping Platforms**\nIntel products intended for prototyping use or that are “open” in order to provide customers with debugging capability are out of Scope.\n\n**Intel Freeware Applications**\nIntel freeware applications are out of Scope. However, if you have a security vulnerability in an Intel freeware application, please send your report to the Intel Product Security Response Team (PSIRT) at secure@intel.com. Please remember to encrypt your report using the Intel PSIRT public key, which can be found at https://security-center.intel.com\n\n**McAfee Products**\nProducts of former Intel subsidiary McAfee fall out of Scope. Please send vulnerability reports against McAfee products to the McAfee product security team. For more information, visit https://www.mcafee.com/us/threat-center/product-security-bulletins.aspx\n\n**Recent Acquisitions**\nRecent acquisitions by Intel are out of Scope for the Bug Bounty program for a minimum period of 6 months after the acquisition is complete. If you have a security vulnerability in a product recently acquired by Intel, please send your report to the Intel Product Security Response Team (PSIRT) at secure@intel.com. Please remember to encrypt your report using the Intel PSIRT public key, which can be found at https://security-center.intel.com\n\n**Intel's Web Infrastructure, i.e.*.intel.com**\nIntel’s web infrastructure, i.e., website domains owned and/or operated by Intel, fall out of Scope. Please send security vulnerability reports against intel.com and/or related web presence to external.security.research@intel.com\n\n**Open Chassis Physical Attacks**\nSubmissions that require an attacker to physically open the case, including removing screws or breaking plastic casing (open chassis) to gain access to the internal hardware of a device are out of scope.\n\n**The following are general categories of vulnerabilities that are considered ineligible for a bounty award:**\n* Submissions that require an attacker to physically open the case, including removing screws or breaking plastic casing (open chassis) to gain access to the internal hardware of a device.\n* Vulnerabilities in pre-release product versions (e.g., Beta, Release Candidate).\n* Vulnerabilities in product versions no longer under active support.\n* Vulnerabilities already known to Intel. However, if you are the first external security researcher to identify and report a previously known vulnerability, you may still be eligible for a bounty award.\n* Vulnerabilities present in any component of an Intel product where the root-cause vulnerability in the component has already been identified for another Intel product.\n* Vulnerabilities in products and technologies that are not listed as “Eligible Intel branded products and technologies”, including vulnerabilities considered out of scope as defined below.\n\nAny conduct by a security researcher or reporter that appears to be unlawful, malicious, or criminal in nature will immediately disqualify any submission from the program. Do not engage in extortion.\n\n**Specific Examples of Out of Scope Findings**\n* Intel’s web infrastructure, i.e., website domains owned and/or operated by Intel, are out of scope. Please send security vulnerability reports against intel.com and/or related web presence to external.security.research@intel.com.\n* Intel products intended for prototyping use or that are “open” in order to provide customers with debugging capability are out of scope.\n* Intel freeware applications are out of scope.\n* Intel-Maintained open source software projects fall out of scope. Please see www.01.org/security for information on reporting security vulnerabilities in Intel-maintained open source projects.\n* Products of former Intel subsidiaries, such as McAfee and Wind River, are out of scope.\n\nIn Scope eligible products and technologies are listed above, if you are unsure whether a product or technology is eligible, contact Intel PSIRT at secure@intel.com. Intel encourages the reporting of all potential vulnerabilities. For vulnerabilities that are out of scope for the Bug Bounty Program please refer to our [Vulnerability Handling Guidelines](https://www.intel.com/content/www/us/en/security-center/vulnerability-handling-guidelines.html).\n\nIntel reserves the right to alter the terms and conditions of this program at its sole discretion.\n\n",
+              "attachments": []
+          },
+          "createdAt": 1638481679
+      },
+      {
+          "content": {
+              "content": "**Sensitive and Personal Information**\nNever attempt to access anyone else's data or personal information including by exploiting a vulnerability. Such activity is unauthorized. If during your testing you interacted with or obtained access to data or personal information of others, you must:\n\n* Stop your testing immediately and cease any activity that involves the data or personal information or the vulnerability.\n* Do not save, copy, store, transfer, disclose, or otherwise retain the data or personal information.\n* Alert Intel immediately and support our investigation and mitigation efforts.\n\n**Failure to comply with any of the above will immediately disqualify any report from bounty award eligibility.**\n\n**Third-Party Products**\nThird-party products that do or do not contain Intel-branded products or technology fall out of Scope. However, if the issue is root-caused to an Intel-branded product or technology, please submit your report under the appropriate Scope type above. \n\n**Intel-Maintained Open Source Projects**\nIntel-Maintained open source software projects fall out of Scope. Please contact the open source project maintainer directly.\n\n**Intel Open/Prototyping Platforms**\nIntel products intended for prototyping use or that are “open” in order to provide customers with debugging capability are out of Scope.\n\n**Intel Freeware Applications**\nIntel freeware applications are out of Scope. However, if you have a security vulnerability in an Intel freeware application, please send your report to the Intel Product Security Response Team (PSIRT) at secure@intel.com. Please remember to encrypt your report using the Intel PSIRT public key, which can be found at https://security-center.intel.com\n\n**McAfee Products**\nProducts of former Intel subsidiary McAfee fall out of Scope. Please send vulnerability reports against McAfee products to the McAfee product security team. For more information, visit https://www.mcafee.com/us/threat-center/product-security-bulletins.aspx\n\n**Recent Acquisitions**\nRecent acquisitions by Intel are out of Scope for the Bug Bounty program for a minimum period of 6 months after the acquisition is complete. If you have a security vulnerability in a product recently acquired by Intel, please send your report to the Intel Product Security Response Team (PSIRT) at secure@intel.com. Please remember to encrypt your report using the Intel PSIRT public key, which can be found at https://security-center.intel.com\n\n**Intel's Web Infrastructure, i.e.*.intel.com**\nIntel’s web infrastructure, i.e., website domains owned and/or operated by Intel, fall out of Scope. Please send security vulnerability reports against intel.com and/or related web presence to external.security.research@intel.com\n\n**Open Chassis Physical Attacks**\nSubmissions that require an attacker to physically open the case, including removing screws or breaking plastic casing (open chassis) to gain access to the internal hardware of a device are out of scope.\n\n**The following are general categories of vulnerabilities that are considered ineligible for a bounty award:**\n* Submissions that require an attacker to physically open the case, including removing screws or breaking plastic casing (open chassis) to gain access to the internal hardware of a device.\n* Vulnerabilities in pre-release product versions (e.g., Beta, Release Candidate).\n* Vulnerabilities in product versions no longer under active support.\n* Vulnerabilities already known to Intel. However, if you are the first external security researcher to identify and report a previously known vulnerability, you may still be eligible for a bounty award.\n* Vulnerabilities present in any component of an Intel product where the root-cause vulnerability in the component has already been identified for another Intel product.\n* Vulnerabilities in products and technologies that are not listed as “Eligible Intel branded products and technologies”, including vulnerabilities considered out of scope as defined below.\n\nAny conduct by a security researcher or reporter that appears to be unlawful, malicious, or criminal in nature will immediately disqualify any submission from the program. Do not engage in extortion.\n\n**Specific Examples of Out of Scope Findings**\n* Intel’s web infrastructure, i.e., website domains owned and/or operated by Intel, are out of scope. Please send security vulnerability reports against intel.com and/or related web presence to external.security.research@intel.com.\n* Intel products intended for prototyping use or that are “open” in order to provide customers with debugging capability are out of scope.\n* Intel freeware applications are out of scope.\n* Intel-Maintained open source software projects fall out of scope. Please contact the open source project maintainer directly.\n* Products of former Intel subsidiaries, such as McAfee and Wind River, are out of scope.\n\nIn Scope eligible products and technologies are listed above, if you are unsure whether a product or technology is eligible, contact Intel PSIRT at secure@intel.com. Intel encourages the reporting of all potential vulnerabilities. For vulnerabilities that are out of scope for the Bug Bounty Program please refer to our [Vulnerability Handling Guidelines](https://www.intel.com/content/www/us/en/security-center/vulnerability-handling-guidelines.html).\n\nIntel reserves the right to alter the terms and conditions of this program at its sole discretion.\n\n",
+              "attachments": []
+          },
+          "createdAt": 1638811177
+      },
+      {
+          "content": {
+              "content": "# Common Scope Edge Cases\nSome products may use the Intel® Bug Bounty Program to process external security research submissions through the Intel PSIRT program. These examples are intended as a guideline but may not be complete. Reports in these categories are not eligible for monetary rewards by default. \n\n\n\n| Product Category| Bounty Eligibility| Bonus Eligibility | Reputation Eligibility |\n| First Party Products | Yes | Yes | Yes |\n| Third-Party Products | No | No | No |\n\n| -------- | -------- | -------- | -------- |\n| -------- | -------- | -------- | -------- |\n| -------- | -------- | -------- | -------- |\n| -------- | -------- | -------- | -------- |\n| -------- | -------- | -------- | -------- |\n| -------- | -------- | -------- | -------- |\n| -------- | -------- | -------- | -------- |\n| -------- | -------- | -------- | -------- |\n| -------- | -------- | -------- | -------- |\n\n\n\n\n**Sensitive and Personal Information**\nNever attempt to access anyone else's data or personal information including by exploiting a vulnerability. Such activity is unauthorized. If during your testing you interacted with or obtained access to data or personal information of others, you must:\n\n* Stop your testing immediately and cease any activity that involves the data or personal information or the vulnerability.\n* Do not save, copy, store, transfer, disclose, or otherwise retain the data or personal information.\n* Alert Intel immediately and support our investigation and mitigation efforts.\n\n**Failure to comply with any of the above will immediately disqualify any report from bounty award eligibility.**\n\n**Third-Party Products**\nThird-party products that do or do not contain Intel-branded products or technology fall out of Scope. However, if the issue is root-caused to an Intel-branded product or technology, please submit your report under the appropriate Scope type above. \n\n**Intel-Maintained Open Source Projects**\nIntel-Maintained open source software projects fall out of Scope. Please contact the open source project maintainer directly.\n\n**Intel Open/Prototyping Platforms**\nIntel products intended for prototyping use or that are “open” in order to provide customers with debugging capability are out of Scope.\n\n**Intel Freeware Applications**\nIntel freeware applications are out of Scope. However, if you have a security vulnerability in an Intel freeware application, please send your report to the Intel Product Security Response Team (PSIRT) at secure@intel.com. Please remember to encrypt your report using the Intel PSIRT public key, which can be found at https://security-center.intel.com\n\n**McAfee Products**\nProducts of former Intel subsidiary McAfee fall out of Scope. Please send vulnerability reports against McAfee products to the McAfee product security team. For more information, visit https://www.mcafee.com/us/threat-center/product-security-bulletins.aspx\n\n**Recent Acquisitions**\nRecent acquisitions by Intel are out of Scope for the Bug Bounty program for a minimum period of 6 months after the acquisition is complete. If you have a security vulnerability in a product recently acquired by Intel, please send your report to the Intel Product Security Response Team (PSIRT) at secure@intel.com. Please remember to encrypt your report using the Intel PSIRT public key, which can be found at https://security-center.intel.com\n\n**Intel's Web Infrastructure, i.e.*.intel.com**\nIntel’s web infrastructure, i.e., website domains owned and/or operated by Intel, fall out of Scope. Please send security vulnerability reports against intel.com and/or related web presence to external.security.research@intel.com\n\n**Open Chassis Physical Attacks**\nSubmissions that require an attacker to physically open the case, including removing screws or breaking plastic casing (open chassis) to gain access to the internal hardware of a device are out of scope.\n\n**The following are general categories of vulnerabilities that are considered ineligible for a bounty award:**\n* Submissions that require an attacker to physically open the case, including removing screws or breaking plastic casing (open chassis) to gain access to the internal hardware of a device.\n* Vulnerabilities in pre-release product versions (e.g., Beta, Release Candidate).\n* Vulnerabilities in product versions no longer under active support.\n* Vulnerabilities already known to Intel. However, if you are the first external security researcher to identify and report a previously known vulnerability, you may still be eligible for a bounty award.\n* Vulnerabilities present in any component of an Intel product where the root-cause vulnerability in the component has already been identified for another Intel product.\n* Vulnerabilities in products and technologies that are not listed as “Eligible Intel branded products and technologies”, including vulnerabilities considered out of scope as defined below.\n\nAny conduct by a security researcher or reporter that appears to be unlawful, malicious, or criminal in nature will immediately disqualify any submission from the program. Do not engage in extortion.\n\n**Specific Examples of Out of Scope Findings**\n* Intel’s web infrastructure, i.e., website domains owned and/or operated by Intel, are out of scope. Please send security vulnerability reports against intel.com and/or related web presence to external.security.research@intel.com.\n* Intel products intended for prototyping use or that are “open” in order to provide customers with debugging capability are out of scope.\n* Intel freeware applications are out of scope.\n* Intel-Maintained open source software projects fall out of scope. Please contact the open source project maintainer directly.\n* Products of former Intel subsidiaries, such as McAfee and Wind River, are out of scope.\n\nIn Scope eligible products and technologies are listed above, if you are unsure whether a product or technology is eligible, contact Intel PSIRT at secure@intel.com. Intel encourages the reporting of all potential vulnerabilities. For vulnerabilities that are out of scope for the Bug Bounty Program please refer to our [Vulnerability Handling Guidelines](https://www.intel.com/content/www/us/en/security-center/vulnerability-handling-guidelines.html).\n\nIntel reserves the right to alter the terms and conditions of this program at its sole discretion.\n\n",
+              "attachments": []
+          },
+          "createdAt": 1680299942
+      },
+      {
+          "content": {
+              "content": "# Common Scope Edge Cases\nSome products may use the Intel® Bug Bounty Program to process external security research submissions through the Intel PSIRT program. These examples are intended as a guideline but may not be complete. Reports in these categories are not eligible for monetary rewards by default. \n\n\n\n| Product Category| Bounty Eligibility| Bonus Eligibility | Reputation Eligibility |\n| -------- | -------- | -------- | -------- |\n| First Party Products | Yes | Yes | Yes |\n| Third-Party Products | No | No | No |\n| Pre-release Products | No | No | No |\n| End of Life Products | No | No | Yes |\n| Recent Acquisitions | No | Maybe | Yes |\n| Divestitures | No | No | No |\n\n\n\n\n\n**Sensitive and Personal Information**\nNever attempt to access anyone else's data or personal information including by exploiting a vulnerability. Such activity is unauthorized. If during your testing you interacted with or obtained access to data or personal information of others, you must:\n\n* Stop your testing immediately and cease any activity that involves the data or personal information or the vulnerability.\n* Do not save, copy, store, transfer, disclose, or otherwise retain the data or personal information.\n* Alert Intel immediately and support our investigation and mitigation efforts.\n\n**Failure to comply with any of the above will immediately disqualify any report from bounty award eligibility.**\n\n**Third-Party Products**\nThird-party products that do or do not contain Intel-branded products or technology fall out of Scope. However, if the issue is root-caused to an Intel-branded product or technology, please submit your report under the appropriate Scope type above. \n\n**Intel-Maintained Open Source Projects**\nIntel-Maintained open source software projects fall out of Scope. Please contact the open source project maintainer directly.\n\n**Intel Open/Prototyping Platforms**\nIntel products intended for prototyping use or that are “open” in order to provide customers with debugging capability are out of Scope.\n\n**Intel Freeware Applications**\nIntel freeware applications are out of Scope. However, if you have a security vulnerability in an Intel freeware application, please send your report to the Intel Product Security Response Team (PSIRT) at secure@intel.com. Please remember to encrypt your report using the Intel PSIRT public key, which can be found at https://security-center.intel.com\n\n**McAfee Products**\nProducts of former Intel subsidiary McAfee fall out of Scope. Please send vulnerability reports against McAfee products to the McAfee product security team. For more information, visit https://www.mcafee.com/us/threat-center/product-security-bulletins.aspx\n\n**Recent Acquisitions**\nRecent acquisitions by Intel are out of Scope for the Bug Bounty program for a minimum period of 6 months after the acquisition is complete. If you have a security vulnerability in a product recently acquired by Intel, please send your report to the Intel Product Security Response Team (PSIRT) at secure@intel.com. Please remember to encrypt your report using the Intel PSIRT public key, which can be found at https://security-center.intel.com\n\n**Intel's Web Infrastructure, i.e.*.intel.com**\nIntel’s web infrastructure, i.e., website domains owned and/or operated by Intel, fall out of Scope. Please send security vulnerability reports against intel.com and/or related web presence to external.security.research@intel.com\n\n**Open Chassis Physical Attacks**\nSubmissions that require an attacker to physically open the case, including removing screws or breaking plastic casing (open chassis) to gain access to the internal hardware of a device are out of scope.\n\n**The following are general categories of vulnerabilities that are considered ineligible for a bounty award:**\n* Submissions that require an attacker to physically open the case, including removing screws or breaking plastic casing (open chassis) to gain access to the internal hardware of a device.\n* Vulnerabilities in pre-release product versions (e.g., Beta, Release Candidate).\n* Vulnerabilities in product versions no longer under active support.\n* Vulnerabilities already known to Intel. However, if you are the first external security researcher to identify and report a previously known vulnerability, you may still be eligible for a bounty award.\n* Vulnerabilities present in any component of an Intel product where the root-cause vulnerability in the component has already been identified for another Intel product.\n* Vulnerabilities in products and technologies that are not listed as “Eligible Intel branded products and technologies”, including vulnerabilities considered out of scope as defined below.\n\nAny conduct by a security researcher or reporter that appears to be unlawful, malicious, or criminal in nature will immediately disqualify any submission from the program. Do not engage in extortion.\n\n**Specific Examples of Out of Scope Findings**\n* Intel’s web infrastructure, i.e., website domains owned and/or operated by Intel, are out of scope. Please send security vulnerability reports against intel.com and/or related web presence to external.security.research@intel.com.\n* Intel products intended for prototyping use or that are “open” in order to provide customers with debugging capability are out of scope.\n* Intel freeware applications are out of scope.\n* Intel-Maintained open source software projects fall out of scope. Please contact the open source project maintainer directly.\n* Products of former Intel subsidiaries, such as McAfee and Wind River, are out of scope.\n\nIn Scope eligible products and technologies are listed above, if you are unsure whether a product or technology is eligible, contact Intel PSIRT at secure@intel.com. Intel encourages the reporting of all potential vulnerabilities. For vulnerabilities that are out of scope for the Bug Bounty Program please refer to our [Vulnerability Handling Guidelines](https://www.intel.com/content/www/us/en/security-center/vulnerability-handling-guidelines.html).\n\nIntel reserves the right to alter the terms and conditions of this program at its sole discretion.\n\n",
+              "attachments": []
+          },
+          "createdAt": 1680300021
+      },
+      {
+          "content": {
+              "content": "# Common Scope Edge Cases\nSome products may use the Intel® Bug Bounty Program to process external security research submissions through the Intel PSIRT program. These examples are intended as a guideline but may not be complete. Reports in these categories are not eligible for monetary rewards by default. \n\n\n\n| Product Category| Bounty Eligibility| Bonus Eligibility | Reputation Eligibility |\n| -------- | -------- | -------- | -------- |\n| First Party Products | Yes | Yes | Yes |\n| Third-Party Products | No | No | No |\n| Pre-release Products | No | No | No |\n| End of Life Products | No | No | Yes |\n| Recent Acquisitions | No | Maybe | Yes |\n| Divestitures | No | No | No |\n| Open-Source Software | No | No | Yes |\n| Open/Prototyping Platforms | No | No | No |\n| Web Infrastructure | No | No | No |\n\n\n\n\n**Sensitive and Personal Information**\nNever attempt to access anyone else's data or personal information including by exploiting a vulnerability. Such activity is unauthorized. If during your testing you interacted with or obtained access to data or personal information of others, you must:\n\n* Stop your testing immediately and cease any activity that involves the data or personal information or the vulnerability.\n* Do not save, copy, store, transfer, disclose, or otherwise retain the data or personal information.\n* Alert Intel immediately and support our investigation and mitigation efforts.\n\n**Failure to comply with any of the above will immediately disqualify any report from bounty award eligibility.**\n\n**Third-Party Products**\nThird-party products that do or do not contain Intel-branded products or technology fall out of Scope. However, if the issue is root-caused to an Intel-branded product or technology, please submit your report under the appropriate Scope type above. \n\n**Intel-Maintained Open Source Projects**\nIntel-Maintained open source software projects fall out of Scope. Please contact the open source project maintainer directly.\n\n**Intel Open/Prototyping Platforms**\nIntel products intended for prototyping use or that are “open” in order to provide customers with debugging capability are out of Scope.\n\n**Intel Freeware Applications**\nIntel freeware applications are out of Scope. However, if you have a security vulnerability in an Intel freeware application, please send your report to the Intel Product Security Response Team (PSIRT) at secure@intel.com. Please remember to encrypt your report using the Intel PSIRT public key, which can be found at https://security-center.intel.com\n\n**McAfee Products**\nProducts of former Intel subsidiary McAfee fall out of Scope. Please send vulnerability reports against McAfee products to the McAfee product security team. For more information, visit https://www.mcafee.com/us/threat-center/product-security-bulletins.aspx\n\n**Recent Acquisitions**\nRecent acquisitions by Intel are out of Scope for the Bug Bounty program for a minimum period of 6 months after the acquisition is complete. If you have a security vulnerability in a product recently acquired by Intel, please send your report to the Intel Product Security Response Team (PSIRT) at secure@intel.com. Please remember to encrypt your report using the Intel PSIRT public key, which can be found at https://security-center.intel.com\n\n**Intel's Web Infrastructure, i.e.*.intel.com**\nIntel’s web infrastructure, i.e., website domains owned and/or operated by Intel, fall out of Scope. Please send security vulnerability reports against intel.com and/or related web presence to external.security.research@intel.com\n\n**Open Chassis Physical Attacks**\nSubmissions that require an attacker to physically open the case, including removing screws or breaking plastic casing (open chassis) to gain access to the internal hardware of a device are out of scope.\n\n**The following are general categories of vulnerabilities that are considered ineligible for a bounty award:**\n* Submissions that require an attacker to physically open the case, including removing screws or breaking plastic casing (open chassis) to gain access to the internal hardware of a device.\n* Vulnerabilities in pre-release product versions (e.g., Beta, Release Candidate).\n* Vulnerabilities in product versions no longer under active support.\n* Vulnerabilities already known to Intel. However, if you are the first external security researcher to identify and report a previously known vulnerability, you may still be eligible for a bounty award.\n* Vulnerabilities present in any component of an Intel product where the root-cause vulnerability in the component has already been identified for another Intel product.\n* Vulnerabilities in products and technologies that are not listed as “Eligible Intel branded products and technologies”, including vulnerabilities considered out of scope as defined below.\n\nAny conduct by a security researcher or reporter that appears to be unlawful, malicious, or criminal in nature will immediately disqualify any submission from the program. Do not engage in extortion.\n\n**Specific Examples of Out of Scope Findings**\n* Intel’s web infrastructure, i.e., website domains owned and/or operated by Intel, are out of scope. Please send security vulnerability reports against intel.com and/or related web presence to external.security.research@intel.com.\n* Intel products intended for prototyping use or that are “open” in order to provide customers with debugging capability are out of scope.\n* Intel freeware applications are out of scope.\n* Intel-Maintained open source software projects fall out of scope. Please contact the open source project maintainer directly.\n* Products of former Intel subsidiaries, such as McAfee and Wind River, are out of scope.\n\nIn Scope eligible products and technologies are listed above, if you are unsure whether a product or technology is eligible, contact Intel PSIRT at secure@intel.com. Intel encourages the reporting of all potential vulnerabilities. For vulnerabilities that are out of scope for the Bug Bounty Program please refer to our [Vulnerability Handling Guidelines](https://www.intel.com/content/www/us/en/security-center/vulnerability-handling-guidelines.html).\n\nIntel reserves the right to alter the terms and conditions of this program at its sole discretion.\n\n",
+              "attachments": []
+          },
+          "createdAt": 1680300077
+      },
+      {
+          "content": {
+              "content": "# Common Scope Edge Cases\nSome products may use the Intel® Bug Bounty Program to process external security research submissions through the Intel PSIRT program. These examples are intended as a guideline but may not be complete. Reports in these categories are not eligible for monetary rewards by default. \n\n\n\n| Product Category| Bounty Eligibility| Bonus Eligibility | Reputation Eligibility |\n| -------- | -------- | -------- | -------- |\n| First Party Products | Yes | Yes | Yes |\n| Third-Party Products | No | No | No |\n| Pre-release Products | No | No | No |\n| End of Life Products | No | No | Yes |\n| Recent Acquisitions | No | Maybe | Yes |\n| Divestitures | No | No | No |\n| Open-Source Software | No | No | Yes |\n| Open/Prototyping Platforms | No | No | No |\n| Web Infrastructure | No | No | No |\n| Credentials | No | No | No |\n| Credentials | No | No | No |\n| Credentials | No | No | No |\n\n\n\n\n**Sensitive and Personal Information**\nNever attempt to access anyone else's data or personal information including by exploiting a vulnerability. Such activity is unauthorized. If during your testing you interacted with or obtained access to data or personal information of others, you must:\n\n* Stop your testing immediately and cease any activity that involves the data or personal information or the vulnerability.\n* Do not save, copy, store, transfer, disclose, or otherwise retain the data or personal information.\n* Alert Intel immediately and support our investigation and mitigation efforts.\n\n**Failure to comply with any of the above will immediately disqualify any report from bounty award eligibility.**\n\n**Third-Party Products**\nThird-party products that do or do not contain Intel-branded products or technology fall out of Scope. However, if the issue is root-caused to an Intel-branded product or technology, please submit your report under the appropriate Scope type above. \n\n**Intel-Maintained Open Source Projects**\nIntel-Maintained open source software projects fall out of Scope. Please contact the open source project maintainer directly.\n\n**Intel Open/Prototyping Platforms**\nIntel products intended for prototyping use or that are “open” in order to provide customers with debugging capability are out of Scope.\n\n**Intel Freeware Applications**\nIntel freeware applications are out of Scope. However, if you have a security vulnerability in an Intel freeware application, please send your report to the Intel Product Security Response Team (PSIRT) at secure@intel.com. Please remember to encrypt your report using the Intel PSIRT public key, which can be found at https://security-center.intel.com\n\n**McAfee Products**\nProducts of former Intel subsidiary McAfee fall out of Scope. Please send vulnerability reports against McAfee products to the McAfee product security team. For more information, visit https://www.mcafee.com/us/threat-center/product-security-bulletins.aspx\n\n**Recent Acquisitions**\nRecent acquisitions by Intel are out of Scope for the Bug Bounty program for a minimum period of 6 months after the acquisition is complete. If you have a security vulnerability in a product recently acquired by Intel, please send your report to the Intel Product Security Response Team (PSIRT) at secure@intel.com. Please remember to encrypt your report using the Intel PSIRT public key, which can be found at https://security-center.intel.com\n\n**Intel's Web Infrastructure, i.e.*.intel.com**\nIntel’s web infrastructure, i.e., website domains owned and/or operated by Intel, fall out of Scope. Please send security vulnerability reports against intel.com and/or related web presence to external.security.research@intel.com\n\n**Open Chassis Physical Attacks**\nSubmissions that require an attacker to physically open the case, including removing screws or breaking plastic casing (open chassis) to gain access to the internal hardware of a device are out of scope.\n\n**The following are general categories of vulnerabilities that are considered ineligible for a bounty award:**\n* Submissions that require an attacker to physically open the case, including removing screws or breaking plastic casing (open chassis) to gain access to the internal hardware of a device.\n* Vulnerabilities in pre-release product versions (e.g., Beta, Release Candidate).\n* Vulnerabilities in product versions no longer under active support.\n* Vulnerabilities already known to Intel. However, if you are the first external security researcher to identify and report a previously known vulnerability, you may still be eligible for a bounty award.\n* Vulnerabilities present in any component of an Intel product where the root-cause vulnerability in the component has already been identified for another Intel product.\n* Vulnerabilities in products and technologies that are not listed as “Eligible Intel branded products and technologies”, including vulnerabilities considered out of scope as defined below.\n\nAny conduct by a security researcher or reporter that appears to be unlawful, malicious, or criminal in nature will immediately disqualify any submission from the program. Do not engage in extortion.\n\n**Specific Examples of Out of Scope Findings**\n* Intel’s web infrastructure, i.e., website domains owned and/or operated by Intel, are out of scope. Please send security vulnerability reports against intel.com and/or related web presence to external.security.research@intel.com.\n* Intel products intended for prototyping use or that are “open” in order to provide customers with debugging capability are out of scope.\n* Intel freeware applications are out of scope.\n* Intel-Maintained open source software projects fall out of scope. Please contact the open source project maintainer directly.\n* Products of former Intel subsidiaries, such as McAfee and Wind River, are out of scope.\n\nIn Scope eligible products and technologies are listed above, if you are unsure whether a product or technology is eligible, contact Intel PSIRT at secure@intel.com. Intel encourages the reporting of all potential vulnerabilities. For vulnerabilities that are out of scope for the Bug Bounty Program please refer to our [Vulnerability Handling Guidelines](https://www.intel.com/content/www/us/en/security-center/vulnerability-handling-guidelines.html).\n\nIntel reserves the right to alter the terms and conditions of this program at its sole discretion.\n\n",
+              "attachments": []
+          },
+          "createdAt": 1680300109
+      },
+      {
+          "content": {
+              "content": "| Product Category| Bounty Eligibility| Bonus Eligibility | Reputation Eligibility |\n| -------- | -------- | -------- | -------- |\n| First Party Products | Yes | Yes | Yes |\n| Third-Party Products | No | No | No |\n| Pre-release Products | No | No | No |\n| End of Life Products | No | No | Yes |\n| Recent Acquisitions | No | Maybe | Yes |\n| Divestitures | No | No | No |\n| Open-Source Software | No | No | Yes |\n| Open/Prototyping Platforms | No | No | No |\n| Web Infrastructure | No | No | No |\n| Credentials | No | No | No |\n| Duplicate Reports | No | No | No |\n| Open Chassis Physical Attacks | No | No | No |\n| Owner-Attacker & Physical Access Attacks | No | No | No |\n\n# Common Scope Edge Cases\nSome products may use the Intel® Bug Bounty Program to process external security research submissions through the Intel PSIRT program. These examples are intended as a guideline but may not be complete. Reports in these categories are not eligible for monetary rewards by default. \n\n## End of Life Products\nProducts which have reached an End of Life (EOL), or End of Service (EOS) status fall out of Scope for bounty rewards, however we request that you report any vulnerabilities to PSIRT for disposition.\n\n## Open-Source Projects\nOpen-source projects fall out of Scope for bounty rewards. Please contact the open-source project maintainer directly. \nSome open-source projects maintained by Intel request vulnerabilities be submitted to Intel PSIRT. For these projects you may submit a report through the Intel® Bug Bounty Program; these reports will not be eligible for rewards. See the project-specific Security.md file for details.\nOpen-source projects that are solely maintained by Intel are in Scope and vulnerabilities should be submitted to the Intel® Bug Bounty Program. See the project-specific Security.md file for details.\n\n## Intel’s Web Infrastructure, i.e.*.intel.com\nIntel’s web infrastructure, i.e., website domains owned and/or operated by Intel, fall out of Scope for bounty rewards. For issues related to Intel's external web presence (Intel.com and related subdomains), please contact Intel's External Security Research team. \nAny submissions to the Intel® Bug Bounty Program in this category will be forwarded internally to the appropriate team. \n\n## Recent Acquisitions\nRecent acquisitions by Intel are out of Scope for the Bug Bounty program for at least 6 months after the acquisition is complete. Products may only be eligible for inclusion if Intel PSIRT supports that product. Other products and companies acquired by Intel which have not yet been branded with Intel trademarks may not be eligible for bounty rewards. If you have a security vulnerability in a product or company acquired by Intel, please send your report to the Intel PSIRT team. \n\n## Third-Party Products\nThird-party products that do or do not contain Intel® branded products or technology fall out of Scope for bounty rewards. However, if the issue is root-caused to an Intel® branded product or technology, please submit your report under the appropriate Product type above.\n\n# Out of Scope (Ineligible Reports)\n[Intel encourages the reporting of all potential vulnerabilities. For vulnerabilities out of scope for the Bug Bounty Program please refer to our Vulnerability Handling Guidelines](https://www.intel.com/content/www/us/en/security-center/vulnerability-handling-guidelines.html). \n\n## General\nAny conduct by a security researcher or reporter that appears to be unlawful, malicious, or criminal in nature will immediately disqualify any submission from the program. Do not engage in extortion. Vulnerabilities in products and technologies that do not meet “**Product Eligibility Criteria**,” are considered out of Scope.\n\n## Credentials\nUsername, password, account identifier, keys, certificates, or other credentials that have been published, leaked, or exposed in some way should be reported to this program to ensure they can be properly investigated, cleaned up, and secured. Credentials are out of Scope for rewards.\n\n## Divestitures\nProducts of former Intel subsidiaries fall out of Scope. Please send vulnerability reports against those products to their respective product security team. This list is not complete but may be used as a guide:\n* McAfee - https://www.mcafee.com/us/threat-center/product-security-bulletins.aspx\n* Wind River - https://www.windriver.com/psirt-policy\n\n## Duplicate Reports\nVulnerabilities already known to Intel fall out of Scope and are not eligible for rewards. This includes both internally identified and externally reported vulnerabilities.\n\n## Intel Open/Prototyping Platforms\nIntel products intended for prototyping use or that are “open” to provide customers with debugging capability are out of Scope for bounty rewards.\n\n## Open Chassis Physical Attacks\nSubmissions that require an attacker to physically open the case, including removing screws or breaking plastic casing (open chassis) to gain access to the internal hardware of a device are out of scope for bounty rewards.\n\n## Owner-Attacker & Physical Access Attacks\nValid submissions against firmware weaknesses requiring physical access or UEFI shell, are out of scope for bounty rewards. \nOperating System access attacks such as Malicious Kernel are generally considered in scope. Weaknesses found in out-of-band management solutions such as BMC, CSME or similar are generally in scope for bounty rewards. \n\n## Pre-Release Products\nVulnerabilities in pre-release product versions (e.g., Beta, Release Candidate) fall out of Scope for bounty rewards.\n\n",
+              "attachments": []
+          },
+          "createdAt": 1680300327
+      },
+      {
+          "content": {
+              "content": "| Product Category| Bounty Eligibility| Bonus Eligibility | Reputation Eligibility |\n| -------- | -------- | -------- | -------- |\n| First Party Products | Yes | Yes | Yes |\n| Third-Party Products | No | No | No |\n| Pre-release Products | No | No | No |\n| End of Life Products | No | No | Yes |\n| Recent Acquisitions | No | Maybe | Yes |\n| Divestitures | No | No | No |\n| Open-Source Software | No | No | Yes |\n| Open/Prototyping Platforms | No | No | No |\n| Web Infrastructure | No | No | No |\n| Credentials | No | No | No |\n| Duplicate Reports | No | No | No |\n| Open Chassis Physical Attacks | No | No | No |\n| Owner-Attacker & Physical Access Attacks | No | No | No |\n\n# Common Scope Edge Cases\nSome products may use the Intel® Bug Bounty Program to process external security research submissions through the Intel PSIRT program. These examples are intended as a guideline but may not be complete. Reports in these categories are not eligible for monetary rewards by default. \n\n## End of Life Products\nProducts which have reached an End of Life (EOL), or End of Service (EOS) status fall out of Scope for bounty rewards, however we request that you report any vulnerabilities to PSIRT for disposition.\n\n## Open-Source Projects\nOpen-source projects fall out of Scope for bounty rewards. Please contact the open-source project maintainer directly. \nSome open-source projects maintained by Intel request vulnerabilities be submitted to Intel PSIRT. For these projects you may submit a report through the Intel® Bug Bounty Program; these reports will not be eligible for rewards. See the project-specific Security.md file for details.\nOpen-source projects that are solely maintained by Intel are in Scope and vulnerabilities should be submitted to the Intel® Bug Bounty Program. See the project-specific Security.md file for details.\n\n## Intel’s Web Infrastructure, i.e.*.intel.com\nIntel’s web infrastructure, i.e., website domains owned and/or operated by Intel, fall out of Scope for bounty rewards. For issues related to Intel's external web presence (Intel.com and related subdomains), please contact Intel's External Security Research team. \nAny submissions to the Intel® Bug Bounty Program in this category will be forwarded internally to the appropriate team. \n\n## Recent Acquisitions\nRecent acquisitions by Intel are out of Scope for the Bug Bounty program for at least 6 months after the acquisition is complete. Products may only be eligible for inclusion if Intel PSIRT supports that product. Other products and companies acquired by Intel which have not yet been branded with Intel trademarks may not be eligible for bounty rewards. If you have a security vulnerability in a product or company acquired by Intel, please send your report to the Intel PSIRT team. \n\n## Third-Party Products\nThird-party products that do or do not contain Intel® branded products or technology fall out of Scope for bounty rewards. However, if the issue is root-caused to an Intel® branded product or technology, please submit your report under the appropriate Product type above.\n\n# Out of Scope (Ineligible Reports)\n[Intel encourages the reporting of all potential vulnerabilities. For vulnerabilities out of scope for the Bug Bounty Program please refer to our Vulnerability Handling Guidelines](https://www.intel.com/content/www/us/en/security-center/vulnerability-handling-guidelines.html). \n\n## General\nAny conduct by a security researcher or reporter that appears to be unlawful, malicious, or criminal in nature will immediately disqualify any submission from the program. Do not engage in extortion. Vulnerabilities in products and technologies that do not meet “**Product Eligibility Criteria**,” are considered out of Scope.\n\n## Credentials\nUsername, password, account identifier, keys, certificates, or other credentials that have been published, leaked, or exposed in some way should be reported to this program to ensure they can be properly investigated, cleaned up, and secured. Credentials are out of Scope for rewards.\n\n## Divestitures\nProducts of former Intel subsidiaries fall out of Scope. Please send vulnerability reports against those products to their respective product security team. This list is not complete but may be used as a guide:\n* McAfee - https://www.mcafee.com/us/threat-center/product-security-bulletins.aspx\n* Wind River - https://www.windriver.com/psirt-policy\n* BlueZ - http://www.bluez.org/development/security-bugs/\n\n## Duplicate Reports\nVulnerabilities already known to Intel fall out of Scope and are not eligible for rewards. This includes both internally identified and externally reported vulnerabilities.\n\n## Intel Open/Prototyping Platforms\nIntel products intended for prototyping use or that are “open” to provide customers with debugging capability are out of Scope for bounty rewards.\n\n## Open Chassis Physical Attacks\nSubmissions that require an attacker to physically open the case, including removing screws or breaking plastic casing (open chassis) to gain access to the internal hardware of a device are out of scope for bounty rewards.\n\n## Owner-Attacker & Physical Access Attacks\nValid submissions against firmware weaknesses requiring physical access or UEFI shell, are out of scope for bounty rewards. \nOperating System access attacks such as Malicious Kernel are generally considered in scope. Weaknesses found in out-of-band management solutions such as BMC, CSME or similar are generally in scope for bounty rewards. \n\n## Pre-Release Products\nVulnerabilities in pre-release product versions (e.g., Beta, Release Candidate) fall out of Scope for bounty rewards.\n\n",
+              "attachments": []
+          },
+          "createdAt": 1681313460
+      },
+      {
+          "content": {
+              "content": "| Product Category| Bounty Eligibility| Bonus Eligibility | Reputation Eligibility |\n| -------- | -------- | -------- | -------- |\n| First Party Products | Yes | Yes | Yes |\n| Third-Party Products | No | No | No |\n| Licensed 1st and 3rd Party Products | No | No | No |\n| Pre-release Products | No | No | No |\n| End of Life Products | No | No | Yes |\n| Recent Acquisitions | No | Maybe | Yes |\n| Divestitures | No | No | No |\n| Open-Source Software | No | No | Yes |\n| Open/Prototyping Platforms | No | No | No |\n| Web Infrastructure | No | No | No |\n| Credentials | No | No | No |\n| Duplicate Reports | No | No | No |\n| Open Chassis Physical Attacks | No | No | No |\n| Owner-Attacker & Physical Access Attacks | No | No | No |\n\n# Common Scope Edge Cases\nSome products may use the Intel® Bug Bounty Program to process external security research submissions through the Intel PSIRT program. These examples are intended as a guideline but may not be complete. Reports in these categories are not eligible for monetary rewards by default. \n\n## End of Life Products\nProducts which have reached an End of Life (EOL), or End of Service (EOS) status fall out of Scope for bounty rewards, however we request that you report any vulnerabilities to PSIRT for disposition.\n\n## Licensed 1st and 3rd Party Products\nIntel licensed products, both first- and third-party, are not eligible for rewards of any kind through the Bug Bounty Program. This exclusion only includes components that are specific to the licensed product(s). These are some examples excluded from Scope:\n* Intel NUC-specific BIOS and software [[Read more]( https://www.intel.com/content/www/us/en/support/articles/000097279/intel-nuc.html)]\n* Asus NUC hardware\n\n## Open-Source Projects\nOpen-source projects fall out of Scope for bounty rewards. Please contact the open-source project maintainer directly. \nSome open-source projects maintained by Intel request vulnerabilities be submitted to Intel PSIRT. For these projects you may submit a report through the Intel® Bug Bounty Program; these reports will not be eligible for rewards. See the project-specific Security.md file for details.\nOpen-source projects that are solely maintained by Intel are in Scope and vulnerabilities should be submitted to the Intel® Bug Bounty Program. See the project-specific Security.md file for details.\n\n## Intel’s Web Infrastructure, i.e.*.intel.com\nIntel’s web infrastructure, i.e., website domains owned and/or operated by Intel, fall out of Scope for bounty rewards. For issues related to Intel's external web presence (Intel.com and related subdomains), please contact Intel's External Security Research team. \nAny submissions to the Intel® Bug Bounty Program in this category will be forwarded internally to the appropriate team. \n\n## Recent Acquisitions\nRecent acquisitions by Intel are out of Scope for the Bug Bounty program for at least 6 months after the acquisition is complete. Products may only be eligible for inclusion if Intel PSIRT supports that product. Other products and companies acquired by Intel which have not yet been branded with Intel trademarks may not be eligible for bounty rewards. If you have a security vulnerability in a product or company acquired by Intel, please send your report to the Intel PSIRT team. \n\n## Third-Party Products\nThird-party products that do or do not contain Intel® branded products or technology fall out of Scope for bounty rewards. However, if the issue is root-caused to an Intel® branded product or technology, please submit your report under the appropriate Product type above.\n\n# Out of Scope (Ineligible Reports)\n[Intel encourages the reporting of all potential vulnerabilities. For vulnerabilities out of scope for the Bug Bounty Program please refer to our Vulnerability Handling Guidelines](https://www.intel.com/content/www/us/en/security-center/vulnerability-handling-guidelines.html). \n\n## General\nAny conduct by a security researcher or reporter that appears to be unlawful, malicious, or criminal in nature will immediately disqualify any submission from the program. Do not engage in extortion. Vulnerabilities in products and technologies that do not meet “**Product Eligibility Criteria**,” are considered out of Scope.\n\n## Credentials\nUsername, password, account identifier, keys, certificates, or other credentials that have been published, leaked, or exposed in some way should be reported to this program to ensure they can be properly investigated, cleaned up, and secured. Credentials are out of Scope for rewards.\n\n## Divestitures\nProducts of former Intel subsidiaries fall out of Scope. Please send vulnerability reports against those products to their respective product security team. This list is not complete but may be used as a guide:\n* McAfee - https://www.mcafee.com/us/threat-center/product-security-bulletins.aspx\n* Wind River - https://www.windriver.com/psirt-policy\n* BlueZ - http://www.bluez.org/development/security-bugs/\n\n## Duplicate Reports\nVulnerabilities already known to Intel fall out of Scope and are not eligible for rewards. This includes both internally identified and externally reported vulnerabilities.\n\n## Intel Open/Prototyping Platforms\nIntel products intended for prototyping use or that are “open” to provide customers with debugging capability are out of Scope for bounty rewards.\n\n## Open Chassis Physical Attacks\nSubmissions that require an attacker to physically open the case, including removing screws or breaking plastic casing (open chassis) to gain access to the internal hardware of a device are out of scope for bounty rewards.\n\n## Owner-Attacker & Physical Access Attacks\nValid submissions against firmware weaknesses requiring physical access or UEFI shell, are out of scope for bounty rewards. \nOperating System access attacks such as Malicious Kernel are generally considered in scope. Weaknesses found in out-of-band management solutions such as BMC, CSME or similar are generally in scope for bounty rewards. \n\n## Pre-Release Products\nVulnerabilities in pre-release product versions (e.g., Beta, Release Candidate) fall out of Scope for bounty rewards.\n\n",
+              "attachments": []
+          },
+          "createdAt": 1702661040
+      },
+      {
+          "content": {
+              "content": "| Product Category| Bounty Eligibility| Bonus Eligibility | Reputation Eligibility |\n| -------- | -------- | -------- | -------- |\n| First Party Products | Yes | Yes | Yes |\n| Third-Party Products | No | No | No |\n| Licensed 1st and 3rd Party Products | No | No | No |\n| Pre-release Products | No | No | No |\n| End of Life Products | No | No | Yes |\n| Recent Acquisitions | No | Maybe | Yes |\n| Divestitures | No | No | No |\n| Open-Source Software | No | No | Yes |\n| Open/Prototyping Platforms | No | No | No |\n| Web Infrastructure | No | No | No |\n| Credentials | No | No | No |\n| Duplicate Reports | No | No | No |\n| Open Chassis Physical Attacks | No | No | No |\n| Owner-Attacker & Physical Access Attacks | No | No | No |\n\n# Common Scope Edge Cases\nSome products may use the Intel® Bug Bounty Program to process external security research submissions through the Intel PSIRT program. These examples are intended as a guideline but may not be complete. Reports in these categories are not eligible for monetary rewards by default. \n\n## End of Life Products\nProducts which have reached an End of Life (EOL), or End of Service (EOS) status fall out of Scope for bounty rewards, however we request that you report any vulnerabilities to PSIRT for disposition.\n\n## Licensed 1st and 3rd Party Products\nIntel licensed products, both first- and third-party, are not eligible for rewards of any kind through the Bug Bounty Program. This exclusion only includes components that are specific to the licensed product(s). These are some examples excluded from Scope:\n* Intel NUC-specific BIOS and software [[Read more]( https://www.intel.com/content/www/us/en/support/articles/000097279/intel-nuc.html)]\n* Asus NUC hardware\n\n## Open-Source Projects\nOpen-source projects fall out of Scope for bounty rewards. Please contact the open-source project maintainer directly. \nSome open-source projects maintained by Intel request vulnerabilities be submitted to Intel PSIRT. For these projects you may submit a report through the Intel® Bug Bounty Program; these reports will not be eligible for rewards. See the project-specific Security.md file for details.\nOpen-source projects that are solely maintained by Intel are in Scope and vulnerabilities should be submitted to the Intel® Bug Bounty Program. See the project-specific Security.md file for details.\n\n## Intel’s Web Infrastructure, i.e.*.intel.com\nIntel’s web infrastructure, i.e., website domains owned and/or operated by Intel, fall out of Scope for bounty rewards. For issues related to Intel's external web presence (Intel.com and related subdomains), please contact Intel's External Security Research team. \nAny submissions to the Intel® Bug Bounty Program in this category will be forwarded internally to the appropriate team. \n\n## Recent Acquisitions\nRecent acquisitions by Intel are out of Scope for the Bug Bounty program for at least 6 months after the acquisition is complete. Products may only be eligible for inclusion if Intel PSIRT supports that product. Other products and companies acquired by Intel which have not yet been branded with Intel trademarks may not be eligible for bounty rewards. If you have a security vulnerability in a product or company acquired by Intel, please send your report to the Intel PSIRT team. \n\n## Third-Party Products\nThird-party products that do or do not contain Intel® branded products or technology fall out of Scope for bounty rewards. However, if the issue is root-caused to an Intel® branded product or technology, please submit your report under the appropriate Product type above.\n\n# Out of Scope (Ineligible Reports)\nIntel encourages the reporting of all potential vulnerabilities. For vulnerabilities out of scope for the Bug Bounty Program please refer to our [Vulnerability Handling Guidelines](https://www.intel.com/content/www/us/en/security-center/vulnerability-handling-guidelines.html). \n\n## General\nAny conduct by a security researcher or reporter that appears to be unlawful, malicious, or criminal in nature will immediately disqualify any submission from the program. Do not engage in extortion. Vulnerabilities in products and technologies that do not meet “**Product Eligibility Criteria**,” are considered out of Scope.\n\n## Credentials\nUsername, password, account identifier, keys, certificates, or other credentials that have been published, leaked, or exposed in some way should be reported to this program to ensure they can be properly investigated, cleaned up, and secured. Credentials are out of Scope for rewards.\n\n## Divestitures\nProducts of former Intel subsidiaries fall out of Scope. Please send vulnerability reports against those products to their respective product security team. This list is not complete but may be used as a guide:\n* McAfee - https://www.mcafee.com/us/threat-center/product-security-bulletins.aspx\n* Wind River - https://www.windriver.com/psirt-policy\n* BlueZ - http://www.bluez.org/development/security-bugs/\n\n## Duplicate Reports\nVulnerabilities already known to Intel fall out of Scope and are not eligible for rewards. This includes both internally identified and externally reported vulnerabilities.\n\n## Intel Open/Prototyping Platforms\nIntel products intended for prototyping use or that are “open” to provide customers with debugging capability are out of Scope for bounty rewards.\n\n## Open Chassis Physical Attacks\nSubmissions that require an attacker to physically open the case, including removing screws or breaking plastic casing (open chassis) to gain access to the internal hardware of a device are out of scope for bounty rewards.\n\n## Owner-Attacker & Physical Access Attacks\nValid submissions against firmware weaknesses requiring physical access or UEFI shell, are out of scope for bounty rewards. \nOperating System access attacks such as Malicious Kernel are generally considered in scope. Weaknesses found in out-of-band management solutions such as BMC, CSME or similar are generally in scope for bounty rewards. \n\n## Pre-Release Products\nVulnerabilities in pre-release product versions (e.g., Beta, Release Candidate) fall out of Scope for bounty rewards.\n\n",
+              "attachments": []
+          },
+          "createdAt": 1702661068
+      }
+  ],
+  "faqs": [
+      {
+          "content": {
+              "content": "**Where can I find the Vulnerability Handling Guidelines?**\nInformation can be found [here](https:///www.intel.com/content/www/us/en/security-center/vulnerability-handling-guidelines.html)\n\n**Is Intel's Web Infrastructure, i.e.*.intel.com inscope?**\nIntel’s web infrastructure, i.e., website domains owned and/or operated by Intel, fall out of Scope. Please send security vulnerability reports against intel.com and/or related web presence to [external.security.research@intel.com](external.security.research@intel.com)\n\n**Where can I find the Intel PSIRT public key?**\nThe Intel's PSIRT public key can be found [here](https://www.intel.com/content/www/us/en/security-center/pgp-public-key.html)\n\n",
+              "attachments": []
+          },
+          "createdAt": 1638360579
+      },
+      {
+          "content": {
+              "content": "**Where can I find the Vulnerability Handling Guidelines?**\nInformation can be found [here](https:///www.intel.com/content/www/us/en/security-center/vulnerability-handling-guidelines.html)\n\n**Is Intel's Web Infrastructure, i.e.*.intel.com inscope?**\nIntel’s web infrastructure, i.e., website domains owned and/or operated by Intel, fall out of Scope. Please send security vulnerability reports against intel.com and/or related web presence to [external.security.research@intel.com](external.security.research@intel.com)\n\n**Where can I find the Intel PSIRT public key?**\nThe Intel's PSIRT public key can be found [here](https://www.intel.com/content/www/us/en/security-center/pgp-public-key.html)\n\n**Are Bounty payments always the same?**\nEligibility for any bug bounty award and award amount determinations are made at Intel’s sole discretion. These are some general guidelines that may vary from published documentation:\n1. Awards may be greater:\n   1. based on the potential impact of the security vulnerability\n   2. for well-written reports with complete reproduction instructions / proof-of-concept (PoC) material. See the eligible report requirements above.\n   3. if a functional mitigation or fix is proposed along with the reported vulnerability.\n2. Intel will award a bounty award for the first eligible report of a security vulnerability.\n3. Awards are limited to one (1) bounty award per eligible root-cause vulnerability.\n4. Intel will award a bounty depending on the vulnerability type and originality, quality, and content of the report.\n5. Intel will recognize awarded security researchers via Intel Security Advisories at or after the time of public disclosure of the vulnerability, in coordination with the security researcher who reported the vulnerability.\n6. Award amounts may change with time. Past rewards do not necessarily guarantee the same reward in the future.\n\n\n**When will a bounty be awarded? What is the schedule for payment?**\nEach bug bounty report is individually evaluated based on the technical details provided in the report. Intel follows the processes below to evaluate and determine the severity of a reported potential security vulnerability. \n* Vulnerability Assessment – Intel PSIRT ensures that all requested information has been provided for Triage. See the Bug Bounty Reporting section above for a list of required information.\n* Triage - A team of Intel product engineers and security experts will determine if a vulnerability is valid, and an eligible Intel product or technology is impacted.\n* Vulnerability severity determination – Intel PSIRT works with the Intel product security engineers and Intel security experts to determine the severity and impact of a vulnerability. \n\n**Can I earn rewards for a report if I was not the first to report it?**\nIn most cases, no. See “**Report Eligibility Criteria**” section for the policy statement. To earn a reward, you must be the first person to submit the vulnerability information to Intel. If your report has been flagged as a duplicate (non-original) we will do our best to provide information to you about the original submission to indicate when and how it was submitted. This may include a CVE number, Intel Security Advisory number, ticket identifier and/or date of the original submission.\n\n",
+              "attachments": []
+          },
+          "createdAt": 1680300475
+      },
+      {
+          "content": {
+              "content": "**Where can I find the Vulnerability Handling Guidelines?**\nInformation can be found [here](https:///www.intel.com/content/www/us/en/security-center/vulnerability-handling-guidelines.html)\n\n**Is Intel's Web Infrastructure, i.e.*.intel.com inscope?**\nIntel’s web infrastructure, i.e., website domains owned and/or operated by Intel, fall out of Scope. Please send security vulnerability reports against intel.com and/or related web presence to [external.security.research@intel.com](external.security.research@intel.com)\n\n**Where can I find the Intel PSIRT public key?**\nThe Intel's PSIRT public key can be found [here](https://www.intel.com/content/www/us/en/security-center/pgp-public-key.html)\n\n**Are Bounty payments always the same?**\nEligibility for any bug bounty award and award amount determinations are made at Intel’s sole discretion. These are some general guidelines that may vary from published documentation:\n1. Awards may be greater:\n   1. based on the potential impact of the security vulnerability\n   2. for well-written reports with complete reproduction instructions / proof-of-concept (PoC) material. See the eligible report requirements above.\n   3. if a functional mitigation or fix is proposed along with the reported vulnerability.\n2. Intel will award a bounty award for the first eligible report of a security vulnerability.\n3. Awards are limited to one (1) bounty award per eligible root-cause vulnerability.\n4. Intel will award a bounty depending on the vulnerability type and originality, quality, and content of the report.\n5. Intel will recognize awarded security researchers via Intel Security Advisories at or after the time of public disclosure of the vulnerability, in coordination with the security researcher who reported the vulnerability.\n6. Award amounts may change with time. Past rewards do not necessarily guarantee the same reward in the future.\n\n\n**When will a bounty be awarded? What is the schedule for payment?**\nEach bug bounty report is individually evaluated based on the technical details provided in the report. Intel follows the processes below to evaluate and determine the severity of a reported potential security vulnerability. \n* Vulnerability Assessment – Intel PSIRT ensures that all requested information has been provided for Triage. See the Bug Bounty Reporting section above for a list of required information.\n* Triage - A team of Intel product engineers and security experts will determine if a vulnerability is valid, and an eligible Intel product or technology is impacted.\n* Vulnerability severity determination – Intel PSIRT works with the Intel product security engineers and Intel security experts to determine the severity and impact of a vulnerability. \n\n**Can I earn rewards for a report if I was not the first to report it?**\nIn most cases, no. See “**Report Eligibility Criteria**” section for the policy statement. To earn a reward, you must be the first person to submit the vulnerability information to Intel. If your report has been flagged as a duplicate (non-original) we will do our best to provide information to you about the original submission to indicate when and how it was submitted. This may include a CVE number, Intel Security Advisory number, ticket identifier and/or date of the original submission.\n\n**Will I be acknowledged for Open-Source Software vulnerabilities?**\nSee the “**Intellectual Property**” section. Intel will provide acknowledgment to the original researcher/reporter for any Submission which reaches a coordinated disclosure status. This includes only reports that have been accepted by Intel PSIRT.\n\n**I sent a vulnerability in an email (PSIRT Direct Contact) before sending it through the Bug Bounty Program. Can I earn a Bounty for it?**\nIn most cases, yes. Rewards can **ONLY** be offered through the Intel Bug Bounty Program, and **NOT** through PSIRT Direct Contact. When using the direct contact method, PSIRT will remind you that if you wish to be eligible for a bounty you MUST use the Bug Bounty Program to submit the vulnerability. A time limit will apply to all submissions that request to be transferred. See “**Report Eligibility Criteria**” section for more details.\n\n\n",
+              "attachments": []
+          },
+          "createdAt": 1680300551
+      }
+  ],
+  "severityAssessments": [
+      {
+          "content": {
+              "content": "\n**Note:** Intel uses the Intigriti platform to administer payments for the Intel Bug Bounty program.\n\n**Bounty Award Payment**\n\nBounty award arrangements under this program, including but not limited to the timing, bounty amount and form of payments, are at Intel’s sole discretion and will be made on a case-by-case basis.\nIntel makes no representations regarding the tax consequences of the payments Intel makes under this program. Participants in this program are responsible for any tax liability associated with bounty award payments.\n\n**Bounty Award Schedule**\n\nEach bug bounty report is individually evaluated based on the technical details provided in the report. Intel generally follows the processes below to evaluate and determine the severity of a reported potential security vulnerability.\n* Vulnerability Assessment – Intel PSIRT ensures that all requested information has been provided for Triage. See the Bug Bounty Reporting section above for a list of required information.\n* Triage - A team of Intel product engineers and security experts will determine if a vulnerability is valid and an eligible Intel product or technology is impacted.\n* Vulnerability severity determination – Intel PSIRT works with the Intel product security engineers and Intel security experts to determine the severity and impact of a vulnerability.\n\nIntel’s bug bounty awards range from $500 up to $100,000. We take into consideration a range of factors when determining the award amount for eligible reports. Those factors include, but are not limited to, the quality of the report, impact of the potential vulnerability, CVSS severity score, whether a POC was provided and the quality of the POC, type of vulnerability.\nThe bounty table is a general guide to the potential award amounts. However, the awards may vary based on the factors mentioned above.\n\n**Bug Bounty Bonus: Pentium®, Celeron®, and Intel Atom® Processors**\nIntel is announcing a new bonus incentive to our bug bounty program, focusing on firmware and hardware within Intel® Pentium®, Intel® Celeron®, and Intel Atom® processors (see below for full platform listing). This bonus incentive will be open to the public for a period of one year, May 11, 2021 - May 10, 2022 and will pay up to $150,000.00 for novel vulnerabilities (1.5x the normal maximum). Additionally, at the end of the one-year period, the top 10 submissions will be identified and recognized, and the top two researchers will be invited to speak (Virtually) at iSecCon (Intel’s internal security conference).\n\nBonus incentive open to the public –submissions must be received by 11:59pm PST on May 10, 2022 to be eligible for the bonus incentive. Submissions received after that date are not eligible for the bonus incentive but may be eligible under Intel’s standard bug bounty program.\nBonus incentive award payout will be multiplier ranging from 1.2-1.5 the standing Bug Bounty payment.\n\n| Vulnerability Severity\t | Intel Bug Bounty Bonus Firmware\t| Intel Bug Bounty Bonus Hardware |\n| -------- | -------- | -------- |\n| Exceptional | Up to $45,000     | Up to $150,000     |\n| Critical | Up to $45,000     | Up to $150,000     |\n| High     | Up to $21,000     | Up to $42,000     |\n| Medium   | Up to $3,900     | Up to $6,500    |\n| Low      | Up to $1,200     | Up to $2,400     |\n\n\n**Please ensure you include \"Bug Bounty Bonus\" in the title of your report**\n\n**End-of-Year Award Package:**\nWithin 3 Months of the end of the one-year window:\n* Intel will select the top 10 research submissions and two researchers that will be invited to Intel iSecCon and potentially other speaking engagements.\n* Intel will notify via email participants that were selected and winners of the top 10 submissions.\n* Intel will issue a blog post outlining the top 10 research submissions received and crediting the researchers, if they consent to being publicly credited.\n* Intel will email the two researchers who will be invited to speak at Intel iSecCon and other speaking engagements.\n\nExample Topics of Interest:\n* Escalation of Privilege\n* Information disclosure\n* Denial of Service\n* Temporary\n* Permanent\n* Ability to alter/modify/change security boundaries\n",
+              "attachments": []
+          },
+          "createdAt": 1638301901
+      },
+      {
+          "content": {
+              "content": "\n**Note:** Intel uses the Intigriti platform to administer payments for the Intel Bug Bounty program.\n\n**Bounty Award Payment**\n\nBounty award arrangements under this program, including but not limited to the timing, bounty amount and form of payments, are at **Intel’s sole discretion and will be made on a case-by-case basis**. These are some general guidelines that may vary from published documentation:\n\n* Awards may be greater:\n1. based on the potential impact of the security vulnerability\n2. for well-written reports with complete reproduction instructions / proof-of-concept (PoC) material. See the eligible report requirements above.\n3. if a functional mitigation or fix is proposed along with the reported vulnerability.\n* Intel will award a bounty award for the first eligible report of a security vulnerability.\n* Awards are limited to one (1) bounty award per eligible root-cause vulnerability.\n* Intel will award a bounty from $500 to $100,000 USD depending on the vulnerability type and originality, quality, and content of the report.\n* Intel will publicly recognize awarded security researchers via Intel Security Advisories at or after the time of public disclosure of the vulnerability, in coordination with the security researcher who reported the vulnerability.\n* Award amounts may change with time. Past rewards do not necessarily guarantee the same reward in the future.\n\n\nIntel makes no representations regarding the tax consequences of the payments Intel makes under this program. Participants in this program are responsible for any tax liability associated with bounty award payments.\n\n**Bounty Award Schedule**\n\nEach bug bounty report is individually evaluated based on the technical details provided in the report. Intel generally follows the processes below to evaluate and determine the severity of a reported potential security vulnerability.\n* Vulnerability Assessment – Intel PSIRT ensures that all requested information has been provided for Triage. See the Bug Bounty Reporting section above for a list of required information.\n* Triage - A team of Intel product engineers and security experts will determine if a vulnerability is valid and an eligible Intel product or technology is impacted.\n* Vulnerability severity determination – Intel PSIRT works with the Intel product security engineers and Intel security experts to determine the severity and impact of a vulnerability.\n\nIntel’s bug bounty awards range from $500 up to $100,000. We take into consideration a range of factors when determining the award amount for eligible reports. Those factors include, but are not limited to, the quality of the report, impact of the potential vulnerability, CVSS severity score, whether a POC was provided and the quality of the POC, type of vulnerability.\nThe bounty table is a general guide to the potential award amounts. However, the awards may vary based on the factors mentioned above.\n\n**Bug Bounty Bonus: Pentium®, Celeron®, and Intel Atom® Processors**\nIntel is announcing a new bonus incentive to our bug bounty program, focusing on firmware and hardware within Intel® Pentium®, Intel® Celeron®, and Intel Atom® processors (see below for full platform listing). This bonus incentive will be open to the public for a period of one year, May 11, 2021 - May 10, 2022 and will pay up to $150,000.00 for novel vulnerabilities (1.5x the normal maximum). Additionally, at the end of the one-year period, the top 10 submissions will be identified and recognized, and the top two researchers will be invited to speak (Virtually) at iSecCon (Intel’s internal security conference).\n\nBonus incentive open to the public –submissions must be received by 11:59pm PST on May 10, 2022 to be eligible for the bonus incentive. Submissions received after that date are not eligible for the bonus incentive but may be eligible under Intel’s standard bug bounty program.\nBonus incentive award payout will be multiplier ranging from 1.2-1.5 the standing Bug Bounty payment.\n\n| Vulnerability Severity\t | Intel Bug Bounty Bonus Firmware\t| Intel Bug Bounty Bonus Hardware |\n| -------- | -------- | -------- |\n| Exceptional | Up to $45,000     | Up to $150,000     |\n| Critical | Up to $45,000     | Up to $150,000     |\n| High     | Up to $21,000     | Up to $42,000     |\n| Medium   | Up to $3,900     | Up to $6,500    |\n| Low      | Up to $1,200     | Up to $2,400     |\n\n\n**Please ensure you include \"Bug Bounty Bonus\" in the title of your report**\n\n**End-of-Year Award Package:**\nWithin 3 Months of the end of the one-year window:\n* Intel will select the top 10 research submissions and two researchers that will be invited to Intel iSecCon and potentially other speaking engagements.\n* Intel will notify via email participants that were selected and winners of the top 10 submissions.\n* Intel will issue a blog post outlining the top 10 research submissions received and crediting the researchers, if they consent to being publicly credited.\n* Intel will email the two researchers who will be invited to speak at Intel iSecCon and other speaking engagements.\n\nExample Topics of Interest:\n* Escalation of Privilege\n* Information disclosure\n* Denial of Service\n* Temporary\n* Permanent\n* Ability to alter/modify/change security boundaries\n",
+              "attachments": []
+          },
+          "createdAt": 1646757196
+      },
+      {
+          "content": {
+              "content": "\n**Note:** Intel uses the Intigriti platform to administer payments for the Intel Bug Bounty program.\n\n**Bounty Award Payment**\n\nBounty award arrangements under this program, including but not limited to the timing, bounty amount and form of payments, are at **Intel’s sole discretion and will be made on a case-by-case basis**. These are some general guidelines that may vary from published documentation:\n\n* Awards may be greater:\n1. based on the potential impact of the security vulnerability\n2. for well-written reports with complete reproduction instructions / proof-of-concept (PoC) material. See the eligible report requirements above.\n3. if a functional mitigation or fix is proposed along with the reported vulnerability.\n* Intel will award a bounty award for the first eligible report of a security vulnerability.\n* Awards are limited to one (1) bounty award per eligible root-cause vulnerability.\n* Intel will award a bounty from $500 to $100,000 USD depending on the vulnerability type and originality, quality, and content of the report.\n* Intel will publicly recognize awarded security researchers via Intel Security Advisories at or after the time of public disclosure of the vulnerability, in coordination with the security researcher who reported the vulnerability.\n* Award amounts may change with time. Past rewards do not necessarily guarantee the same reward in the future.\n\n\nIntel makes no representations regarding the tax consequences of the payments Intel makes under this program. Participants in this program are responsible for any tax liability associated with bounty award payments.\n\n**Bounty Award Schedule**\n\nEach bug bounty report is individually evaluated based on the technical details provided in the report. Intel generally follows the processes below to evaluate and determine the severity of a reported potential security vulnerability.\n* Vulnerability Assessment – Intel PSIRT ensures that all requested information has been provided for Triage. See the Bug Bounty Reporting section above for a list of required information.\n* Triage - A team of Intel product engineers and security experts will determine if a vulnerability is valid and an eligible Intel product or technology is impacted.\n* Vulnerability severity determination – Intel PSIRT works with the Intel product security engineers and Intel security experts to determine the severity and impact of a vulnerability.\n\nIntel’s bug bounty awards range from $500 up to $100,000. We take into consideration a range of factors when determining the award amount for eligible reports. Those factors include, but are not limited to, the quality of the report, impact of the potential vulnerability, CVSS severity score, whether a POC was provided and the quality of the POC, type of vulnerability.\nThe bounty table is a general guide to the potential award amounts. However, the awards may vary based on the factors mentioned above.\n",
+              "attachments": []
+          },
+          "createdAt": 1671557309
+      },
+      {
+          "content": {
+              "content": "See \"**Current Standards in Use**\" and \"**Bounties**\" sections.",
+              "attachments": []
+          },
+          "createdAt": 1680299750
+      }
+  ],
+  "rulesOfEngagements": [
+      {
+          "content": {
+              "content": {
+                  "description": "\n#### By participating in this program, you agree to:\n\n* Respect the [Community Code of Conduct](https://go.intigriti.com/coc)\n* Respect the Intigriti [Terms and Conditions](https://go.intigriti.com/tac)\n* Respect the scope of the program\n* Not discuss or disclose vulnerability information without prior written consent (including PoC's on YouTube and Vimeo)\n\n**Bug Bounty Reporting**\nPlease review these Bug Bounty Program Terms before submitting a report. By submitting your report, you agree to the terms of Intel’s Bug Bounty Program.\n\nIf you follow the program terms, we will not initiate a lawsuit or law enforcement investigation against you in response to your report. Please understand that this waiver does not apply to your security research that involves the networks, systems, information, applications, devices, products, or services of another party (which is not Intel). We cannot and do not authorize security research in the name of other entities.\n\nIn the report please include the following information:\n* The name(s) of the Intel product or technology and the respective version information.\n* Detailed description of the potential security vulnerability.\n* Proof-of-concept that details the reproduction of the potential security vulnerability. The more details provided in the initial report, the easier it will be for Intel to evaluate your report.\n\n**Security Researcher and Reporter Eligibility Criteria - You agree to the following terms:**\n* The Intel products in your report correspond to an item explicitly listed below as “Eligible Intel branded products and technologies”.\n* The vulnerability you identify must be original, not previously reported to Intel, and not publicly disclosed.\n* The report must show that the potential vulnerability has been demonstrated against the most recent publicly available version of the affected product or technology.\n* You are reporting in your individual capacity or, if you are employed by a company or other entity and are reporting on behalf of your employer, you have your employer’s written approval to submit a report to Intel’s Bug Bounty program.\n* You are at least 18 years of age, and, if considered a minor in your place of residence, you have your parent’s or legal guardian’s permission prior to reporting.\n* You are not a resident of a U.S. Government embargoed country.\n* You are not on a U.S. Government list of sanctioned individuals.\n* You are not currently nor have been an employee of Intel Corporation, or an Intel subsidiary, within 6 months prior to submitting a report.\n* You are not currently nor have been under contract to Intel Corporation, or an Intel subsidiary, within 6 months prior to submitting a report.\n* You are neither a family nor household member of any individual who currently or within the past 6 months meets or met the criteria listed in the two bullet points directly above.\n* You agree to participate in testing mitigation effectiveness and coordinating disclosure/release/publication of your finding with Intel.\n* You did not and will not access any personal information that is not your own, including by exploiting the vulnerability.\n* You did not and will not violate any applicable law or regulation, including laws prohibiting unauthorized access to information. To clarify, Intel does not view testing that is done in compliance with the terms and conditions of this bug bounty program as unauthorized.\n* There may be additional restrictions on your eligibility to participate in the bug bounty depending upon your local laws. \n\n**If at any point while researching a vulnerability, you are unsure whether you should continue, immediately send a message to Intel PSIRT (secure@intel.com).**\n\n**Sensitive and Personal Information**\nNever attempt to access anyone else's data or personal information including by exploiting a vulnerability. Such activity is unauthorized. If during your testing you interacted with or obtained access to data or personal information of others, you must:\n* Stop your testing immediately and cease any activity that involves the data or personal information or the vulnerability.\n* Do not save, copy, store, transfer, disclose, or otherwise retain the data or personal information.\n* Alert Intel immediately and support our investigation and mitigation efforts.\nFailure to comply with any of the above will immediately disqualify any report from bounty award eligibility.\n\n**Intellectual Property**\nBy submitting your content to Intel (your “Submission”), you agree that Intel may take all steps needed to validate, mitigate, and disclose the vulnerability, and that you grant Intel any and all rights to your Submission needed to do so.\n\n",
+                  "testingRequirements": {
+                      "intigritiMe": false,
+                      "automatedTooling": null,
+                      "userAgent": null,
+                      "requestHeader": null
+                  },
+                  "safeHarbour": true,
+                  "createdAt": 1638563350
+              },
+              "attachments": []
+          },
+          "createdAt": 1638563350
+      },
+      {
+          "content": {
+              "content": {
+                  "description": "\n#### By participating in this program, you agree to:\n\n* Respect the [Community Code of Conduct](https://go.intigriti.com/coc)\n* Respect the Intigriti [Terms and Conditions](https://go.intigriti.com/tac)\n* Respect the scope of the program\n* Not discuss or disclose vulnerability information without prior written consent (including PoC's on YouTube and Vimeo)\n\n**Bug Bounty Reporting**\nPlease review these Bug Bounty Program Terms before submitting a report. By submitting your report, you agree to the terms of Intel’s Bug Bounty Program.\n\nIf you follow the program terms, we will not initiate a lawsuit or law enforcement investigation against you in response to your report. Please understand that this waiver does not apply to your security research that involves the networks, systems, information, applications, devices, products, or services of another party (which is not Intel). We cannot and do not authorize security research in the name of other entities.\n\nIn the report please include the following information:\n* The name(s) of the Intel product or technology and the respective version information.\n* Detailed description of the potential security vulnerability.\n* Proof-of-concept that details the reproduction of the potential security vulnerability. The more details provided in the initial report, the easier it will be for Intel to evaluate your report.\n\n**Security Researcher and Reporter Eligibility Criteria - You agree to the following terms:**\n* The Intel products in your report correspond to an item explicitly listed below as “Eligible Intel branded products and technologies”.\n* The vulnerability you identify must be original, not previously reported to Intel, and not publicly disclosed.\n* The report must show that the potential vulnerability has been demonstrated against the most recent publicly available version of the affected product or technology.\n* You are reporting in your individual capacity or, if you are employed by a company or other entity and are reporting on behalf of your employer, you have your employer’s written approval to submit a report to Intel’s Bug Bounty program.\n* You are at least 18 years of age, and, if considered a minor in your place of residence, you have your parent’s or legal guardian’s permission prior to reporting.\n* You are not a resident of a U.S. Government embargoed country.\n* You are not on a U.S. Government list of sanctioned individuals.\n* You are not currently nor have been an employee of Intel Corporation, or an Intel subsidiary, within 6 months prior to submitting a report.\n* You are not currently nor have been under contract to Intel Corporation, or an Intel subsidiary, within 6 months prior to submitting a report.\n* You are neither a family nor household member of any individual who currently or within the past 6 months meets or met the criteria listed in the two bullet points directly above.\n* You agree to participate in testing mitigation effectiveness and coordinating disclosure/release/publication of your finding with Intel.\n* You did not and will not access any personal information that is not your own, including by exploiting the vulnerability.\n* You did not and will not violate any applicable law or regulation, including laws prohibiting unauthorized access to information. To clarify, Intel does not view testing that is done in compliance with the terms and conditions of this bug bounty program as unauthorized.\n* There may be additional restrictions on your eligibility to participate in the bug bounty depending upon your local laws. \n\n**If at any point while researching a vulnerability, you are unsure whether you should continue, immediately send a message to Intel PSIRT (secure@intel.com).**\n\n**Sensitive and Personal Information**\nNever attempt to access anyone else's data or personal information including by exploiting a vulnerability. Such activity is unauthorized. If during your testing you interacted with or obtained access to data or personal information of others, you must:\n* Stop your testing immediately and cease any activity that involves the data or personal information or the vulnerability.\n* Do not save, copy, store, transfer, disclose, or otherwise retain the data or personal information.\n* Alert Intel immediately and support our investigation and mitigation efforts.\nFailure to comply with any of the above will immediately disqualify any report from bounty award eligibility.\n\n**Intellectual Property**\nBy submitting your content to Intel (your “Submission”), you agree that Intel may take all steps needed to validate, mitigate, and disclose the vulnerability, and that you grant Intel any and all rights to your Submission needed to do so.\n\n",
+                  "testingRequirements": {
+                      "intigritiMe": false,
+                      "automatedTooling": null,
+                      "userAgent": null,
+                      "requestHeader": null
+                  },
+                  "safeHarbour": false,
+                  "createdAt": 1647592067
+              },
+              "attachments": []
+          },
+          "createdAt": 1647592067
+      },
+      {
+          "content": {
+              "content": {
+                  "description": "# By participating in this program, you agree:\n1.\tTo follow the Intigriti Community Code of Conduct. See “[Intigriti Community Code of Conduct](https://kb.intigriti.com/en/articles/5247238-community-code-of-conduct).”\n2.\tTo follow the Intigriti Terms and Conditions. See “[Intigriti Terms and Conditions](https://go.intigriti.com/tac).”\n3.\tTo follow the Rules of Engagement and scope of the program. See “[Intel Bug Bounty Program Policy](https://www.intel.com/content/www/us/en/security-center/bug-bounty-program.html).”\n4.\tYou will not discuss or disclose vulnerability information with anyone not authorized by Intel without prior written consent from Intel (including PoC's on YouTube, Vimeo, etc). See [Coordinated Vulnerability Disclosure](https://www.intel.com/content/www/us/en/security/security-practices/coordinated-disclosure.html). \n5.\tYou meet the eligibility criteria for this program. See “**Security Researcher and Reporter Eligibility Criteria**” section.\n6.\tYour submission meets the eligibility requirements for this program. See “**Report Eligibility Criteria**” and “**Product Eligibility Criteria**” section.\n7.\tYou will not attempt to access anyone else's data or personal information, including by exploiting a vulnerability. See “**Sensitive and Personal Information**” section.\n8.\tTo have freely given Intel a perpetual license for all information and communications provided through the reporting process. See “**Intellectual Property**” section.\n\n\n# By participating in this program, Intel agrees:\n1.\tTo provide reasonable safe harbor to researchers following all **Rules of Engagement**. See “**Safe Harbor**” section.\n2.\tTo provide named acknowledgement on Intel disclosure(s) that include information provided during the reporting process. See “**Intellectual Property**” section.\n3.\tTo award monetary rewards for valuable security research. See “**Bounties**” section.\n4.\tTo use the current CVSS standard for severity scoring. See “**Current Standards Used**” section.\n5.\tTo follow CVE Numbering Authority Rules. See “**Current Standards Used**” section.\n\n# Violating these rules may result in, but is not limited to:\n1.\tRevocation of Report eligibility,\n2.\tDenial of any or all potential rewards,\n3.\tTemporary or permanent revocation of Security Researcher and Reporter eligibility, and\n4.\tRemoval from current engagements and/or prohibition from future engagement eligibility.\n\n\n# Researcher/Reporter Agreements\n## Product Eligibility Criteria\nIntel encourages the reporting of all potential vulnerabilities.  Intel® branded products and technologies which are maintained and distributed by Intel are eligible for rewards from this program. This includes but may not be limited to the following categories.\n* Processors\n* Server Products\n* Intel® NUC (Next Unit of Computing)\n*\tWireless\n* Ethernet products\n*\tIntel® FPGAs (Field Programmable Gate Array)\n*\tMemory and Storage\n*\tChipsets\n*\tGraphics\n\n**Hardware** – Product specifications may be found on ARK. Processor support timeline may be found [on this help page](https://www.intel.com/content/www/us/en/support/articles/000022396/processors.html). \n**Firmware** – Firmware may be found on the [Download Center](https://www.intel.com/content/www/us/en/download-center/home.html).\n**Software** – Software may be found in a variety of places on the Intel website including [Product Support Tools & Utilities](https://www.intel.com/content/www/us/en/support/topics/utility-tools.html), [Development Tools](https://www.intel.com/content/www/us/en/developer/tools/overview.html), [Developer Catalog](https://www.intel.com/content/www/us/en/developer/tools/software-catalog/overview.html?s=Newest), and [Design-iN Tools Store](https://designintools.intel.com/).\n*Note: All testing resources must be obtained by participating security researchers.*\n\n## Report Eligibility Criteria\nIntel encourages you to submit any report for consideration. For the report to be eligible for bounty award consideration, your report must meet the following requirements:\n1. The report and any accompanying material is first sent to Intel.\n2. The Intel® product(s) in your report correspond to an item in the “Product Eligibility Criteria” section.\n3. The vulnerability you identify must be original, not previously reported to Intel, and not publicly disclosed.\n4. \n\nssssssss\n\n1.\tThe report and any accompanying material is first sent to Intel.\n2.\tThe Intel® product(s) in your report correspond to an item in the “Product Eligibility Criteria” section.\n3.\tThe vulnerability you identify must be original, not previously reported to Intel, and not publicly disclosed.\n4.\tThe report must show that the potential vulnerability has been demonstrated against a currently supported (often the most recent) and publicly available version of the affected product or technology.\n5.\tThe report must contain clear documentation that provides information required for the report to be processed.\n  1. \tMinimum:\n    1. \tName and specific version of the Intel® product(s) the potential issue may impact\n    2.\tHow exploiting it may negatively impact confidentiality, availability, and/or integrity of the affected product(s)\n    3.\tInstructions that, if followed by the Intel product engineering team, clearly demonstrate successful exploitation of the reported issue on an impacted Intel® platform\n    4.\tIdentify the reported Common Weakness Enumeration (CWE)\n  1. Recommended Content:\n     1. Overview\n            1. An overview/summary of the reported issue\n            2. Statement of potential impact\n            3. Name and specific version of the Intel® product(s) the potential issue may impact\n        2. Details\n            1. Detailed explanation of the reported issue\n            2. How it can be exploited\n            3. How exploiting it may negatively impact confidentiality, availability, and/or integrity of the affected product(s)\n            4. Likelihood of a successful exploit\n        3. c.\tProof of Concept (POC)\n            1. Instructions that, if followed by the Intel product engineering team, clearly demonstrate successful exploitation of the reported issue on an impacted Intel® platform\n            2. Information on how any POC code was developed and compiled\n            3. Code required to execute the POC\n            4. Description of the development environment and operating system revisions\n            5. Compiler name, version, options used to compile \n        4. Scoring\n            1. Proposed CVSS score\n            2. Proposed CVSS vector\n            3. Justification for the selections (using the stated specification).  \n            4. Identify the reported Common Weakness Enumeration (CWE)\n6.\t(PSIRT Direct Contact Only) The report was submitted to the Bug Bounty Program within the required period for eligibility: 60 days from notice to resubmit or the date of disclosure, whichever is shorter.\n\nThe more details provided in the initial report, the easier it will be for Intel to evaluate your report. Omitting Proof-of-Concept or Proof-of-Exploit(ability) from a report may result in the report being ineligible for a bounty or a delay in triage of the report.\n",
+                  "testingRequirements": {
+                      "intigritiMe": false,
+                      "automatedTooling": null,
+                      "userAgent": null,
+                      "requestHeader": null
+                  },
+                  "safeHarbour": false,
+                  "createdAt": 1680299022
+              },
+              "attachments": []
+          },
+          "createdAt": 1680299022
+      },
+      {
+          "content": {
+              "content": {
+                  "description": "# By participating in this program, you agree:\n1.\tTo follow the Intigriti Community Code of Conduct. See “[Intigriti Community Code of Conduct](https://kb.intigriti.com/en/articles/5247238-community-code-of-conduct).”\n2.\tTo follow the Intigriti Terms and Conditions. See “[Intigriti Terms and Conditions](https://go.intigriti.com/tac).”\n3.\tTo follow the Rules of Engagement and scope of the program. See “[Intel Bug Bounty Program Policy](https://www.intel.com/content/www/us/en/security-center/bug-bounty-program.html).”\n4.\tYou will not discuss or disclose vulnerability information with anyone not authorized by Intel without prior written consent from Intel (including PoC's on YouTube, Vimeo, etc). See [Coordinated Vulnerability Disclosure](https://www.intel.com/content/www/us/en/security/security-practices/coordinated-disclosure.html). \n5.\tYou meet the eligibility criteria for this program. See “**Security Researcher and Reporter Eligibility Criteria**” section.\n6.\tYour submission meets the eligibility requirements for this program. See “**Report Eligibility Criteria**” and “**Product Eligibility Criteria**” section.\n7.\tYou will not attempt to access anyone else's data or personal information, including by exploiting a vulnerability. See “**Sensitive and Personal Information**” section.\n8.\tTo have freely given Intel a perpetual license for all information and communications provided through the reporting process. See “**Intellectual Property**” section.\n\n\n# By participating in this program, Intel agrees:\n1.\tTo provide reasonable safe harbor to researchers following all **Rules of Engagement**. See “**Safe Harbor**” section.\n2.\tTo provide named acknowledgement on Intel disclosure(s) that include information provided during the reporting process. See “**Intellectual Property**” section.\n3.\tTo award monetary rewards for valuable security research. See “**Bounties**” section.\n4.\tTo use the current CVSS standard for severity scoring. See “**Current Standards Used**” section.\n5.\tTo follow CVE Numbering Authority Rules. See “**Current Standards Used**” section.\n\n# Violating these rules may result in, but is not limited to:\n1.\tRevocation of Report eligibility,\n2.\tDenial of any or all potential rewards,\n3.\tTemporary or permanent revocation of Security Researcher and Reporter eligibility, and\n4.\tRemoval from current engagements and/or prohibition from future engagement eligibility.\n\n\n# Researcher/Reporter Agreements\n## Product Eligibility Criteria\nIntel encourages the reporting of all potential vulnerabilities.  Intel® branded products and technologies which are maintained and distributed by Intel are eligible for rewards from this program. This includes but may not be limited to the following categories.\n* Processors\n* Server Products\n* Intel® NUC (Next Unit of Computing)\n*\tWireless\n* Ethernet products\n*\tIntel® FPGAs (Field Programmable Gate Array)\n*\tMemory and Storage\n*\tChipsets\n*\tGraphics\n\n**Hardware** – Product specifications may be found on ARK. Processor support timeline may be found [on this help page](https://www.intel.com/content/www/us/en/support/articles/000022396/processors.html). \n**Firmware** – Firmware may be found on the [Download Center](https://www.intel.com/content/www/us/en/download-center/home.html).\n**Software** – Software may be found in a variety of places on the Intel website including [Product Support Tools & Utilities](https://www.intel.com/content/www/us/en/support/topics/utility-tools.html), [Development Tools](https://www.intel.com/content/www/us/en/developer/tools/overview.html), [Developer Catalog](https://www.intel.com/content/www/us/en/developer/tools/software-catalog/overview.html?s=Newest), and [Design-iN Tools Store](https://designintools.intel.com/).\n*Note: All testing resources must be obtained by participating security researchers.*\n\n## Report Eligibility Criteria\nIntel encourages you to submit any report for consideration. For the report to be eligible for bounty award consideration, your report must meet the following requirements:\n1. The report and any accompanying material is first sent to Intel.\n2. The Intel® product(s) in your report correspond to an item in the “**Product Eligibility Criteria**” section.\n3. The vulnerability you identify must be original, not previously reported to Intel, and not publicly disclosed.\n4. The report must show that the potential vulnerability has been demonstrated against a currently supported (often the most recent) and publicly available version of the affected product or technology.\n5. The report must contain clear documentation that provides information required for the report to be processed.\n    1. Minimum:\n        1. Name and specific version of the Intel® product(s) the potential issue may impact\n        2.\tHow exploiting it may negatively impact confidentiality, availability, and/or integrity of the affected product(s)\n        3.\tInstructions that, if followed by the Intel product engineering team, clearly demonstrate successful exploitation of the reported issue on an impacted Intel® platform\n        4.\tIdentify the reported Common Weakness Enumeration (CWE)\n    3. Recommended Content:\n        1. Overview\n            1. An overview/summary of the reported issue\n            2. Statement of potential impact\n            3. Name and specific version of the Intel® product(s) the potential issue may impact\n        2. Details\n            1. Detailed explanation of the reported issue\n            2. How it can be exploited\n            3. How exploiting it may negatively impact confidentiality, availability, and/or integrity of the affected product(s)\n            4. Likelihood of a successful exploit\n        3. Proof of Concept (POC)\n            1. Instructions that, if followed by the Intel product engineering team, clearly demonstrate successful exploitation of the reported issue on an impacted Intel® platform\n            2. Information on how any POC code was developed and compiled\n            3. Code required to execute the POC\n            4. Description of the development environment and operating system revisions\n            5. Compiler name, version, options used to compile \n        4. Scoring\n            1. Proposed CVSS score\n            2. Proposed CVSS vector\n            3. Justification for the selections (using the stated specification).  \n            4. Identify the reported Common Weakness Enumeration (CWE)\n6. (PSIRT Direct Contact Only) The report was submitted to the Bug Bounty Program within the required period for eligibility: 60 days from notice to resubmit or the date of disclosure, whichever is shorter.\n\nThe more details provided in the initial report, the easier it will be for Intel to evaluate your report. Omitting Proof-of-Concept or Proof-of-Exploit(ability) from a report may result in the report being ineligible for a bounty or a delay in triage of the report.\n\n## Security Researcher and Reporter Eligibility Criteria\nAll criteria must be met to participate in the Bug Bounty Program. \n1. You are reporting in your individual capacity or, if you are employed by a company or other entity and are reporting on behalf of your employer, you have your employer’s written approval to submit a report to the Intel® Bug Bounty Program.\n2. You are at least 18 years of age, and, if considered a minor in your place of residence, you have your parent’s or legal guardian’s permission prior to reporting.\n3. You are not a resident of a U.S. (United States) Government embargoed country.\n4. You are not on a U.S. Government list of sanctioned individuals.\n5. You are not currently, nor have you been an employee of Intel Corporation, or an Intel subsidiary, within 6 months prior to submitting a report.\n6. You are not currently, nor have you been under contract to Intel Corporation, or an Intel subsidiary, within 6 months prior to submitting a report.\n7. You are neither a family nor household member of any individual who currently or within the past 6 months meets or met the criteria listed in the two bullet points directly above.\n8. You agree to participate in testing mitigation effectiveness and coordinating disclosure/release/publication of your finding with Intel.\n9. You did not and will not access any personal information that is not your own, including by exploiting the vulnerability. \n10. You did not and will not violate any applicable law or regulation, including laws prohibiting unauthorized access to information. To clarify, Intel does not view testing that is done in compliance with the terms and conditions of this Bug Bounty Program as unauthorized. \n11. There may be additional restrictions on your eligibility to participate in the bug bounty depending upon your local laws.\n\n\nIf at any point while researching a vulnerability, you are unsure whether you should continue, immediately send a message to Intel PSIRT (secure@intel.com).\n\n## Sensitive and Personal Information\nNever attempt to access anyone else's data or personal information, including by exploiting a vulnerability. Such activity is unauthorized. If during your research, testing, or communication with Intel you interacted with or obtained access to data or personal information of others, you must:\n* Stop your testing immediately and cease any activity that involves the data or personal information or the vulnerability.\n* Do not save, copy, store, transfer, disclose, or otherwise retain the data or personal information.\n* Alert Intel immediately and support our investigation and mitigation efforts.\n\nFailure to comply with any of the above will immediately disqualify any report from bounty award eligibility.\n\n\n# Intel Agreements\n## Bounties\n",
+                  "testingRequirements": {
+                      "intigritiMe": false,
+                      "automatedTooling": null,
+                      "userAgent": null,
+                      "requestHeader": null
+                  },
+                  "safeHarbour": false,
+                  "createdAt": 1680299361
+              },
+              "attachments": []
+          },
+          "createdAt": 1680299361
+      },
+      {
+          "content": {
+              "content": {
+                  "description": "# By participating in this program, you agree:\n1.\tTo follow the Intigriti Community Code of Conduct. See “[Intigriti Community Code of Conduct](https://kb.intigriti.com/en/articles/5247238-community-code-of-conduct).”\n2.\tTo follow the Intigriti Terms and Conditions. See “[Intigriti Terms and Conditions](https://go.intigriti.com/tac).”\n3.\tTo follow the Rules of Engagement and scope of the program. See “[Intel Bug Bounty Program Policy](https://www.intel.com/content/www/us/en/security-center/bug-bounty-program.html).”\n4.\tYou will not discuss or disclose vulnerability information with anyone not authorized by Intel without prior written consent from Intel (including PoC's on YouTube, Vimeo, etc). See [Coordinated Vulnerability Disclosure](https://www.intel.com/content/www/us/en/security/security-practices/coordinated-disclosure.html). \n5.\tYou meet the eligibility criteria for this program. See “**Security Researcher and Reporter Eligibility Criteria**” section.\n6.\tYour submission meets the eligibility requirements for this program. See “**Report Eligibility Criteria**” and “**Product Eligibility Criteria**” section.\n7.\tYou will not attempt to access anyone else's data or personal information, including by exploiting a vulnerability. See “**Sensitive and Personal Information**” section.\n8.\tTo have freely given Intel a perpetual license for all information and communications provided through the reporting process. See “**Intellectual Property**” section.\n\n\n# By participating in this program, Intel agrees:\n1.\tTo provide reasonable safe harbor to researchers following all **Rules of Engagement**. See “**Safe Harbor**” section.\n2.\tTo provide named acknowledgement on Intel disclosure(s) that include information provided during the reporting process. See “**Intellectual Property**” section.\n3.\tTo award monetary rewards for valuable security research. See “**Bounties**” section.\n4.\tTo use the current CVSS standard for severity scoring. See “**Current Standards Used**” section.\n5.\tTo follow CVE Numbering Authority Rules. See “**Current Standards Used**” section.\n\n# Violating these rules may result in, but is not limited to:\n1.\tRevocation of Report eligibility,\n2.\tDenial of any or all potential rewards,\n3.\tTemporary or permanent revocation of Security Researcher and Reporter eligibility, and\n4.\tRemoval from current engagements and/or prohibition from future engagement eligibility.\n\n\n# Researcher/Reporter Agreements\n## Product Eligibility Criteria\nIntel encourages the reporting of all potential vulnerabilities.  Intel® branded products and technologies which are maintained and distributed by Intel are eligible for rewards from this program. This includes but may not be limited to the following categories.\n* Processors\n* Server Products\n* Intel® NUC (Next Unit of Computing)\n*\tWireless\n* Ethernet products\n*\tIntel® FPGAs (Field Programmable Gate Array)\n*\tMemory and Storage\n*\tChipsets\n*\tGraphics\n\n**Hardware** – Product specifications may be found on ARK. Processor support timeline may be found [on this help page](https://www.intel.com/content/www/us/en/support/articles/000022396/processors.html). \n**Firmware** – Firmware may be found on the [Download Center](https://www.intel.com/content/www/us/en/download-center/home.html).\n**Software** – Software may be found in a variety of places on the Intel website including [Product Support Tools & Utilities](https://www.intel.com/content/www/us/en/support/topics/utility-tools.html), [Development Tools](https://www.intel.com/content/www/us/en/developer/tools/overview.html), [Developer Catalog](https://www.intel.com/content/www/us/en/developer/tools/software-catalog/overview.html?s=Newest), and [Design-iN Tools Store](https://designintools.intel.com/).\n*Note: All testing resources must be obtained by participating security researchers.*\n\n## Report Eligibility Criteria\nIntel encourages you to submit any report for consideration. For the report to be eligible for bounty award consideration, your report must meet the following requirements:\n1. The report and any accompanying material is first sent to Intel.\n2. The Intel® product(s) in your report correspond to an item in the “**Product Eligibility Criteria**” section.\n3. The vulnerability you identify must be original, not previously reported to Intel, and not publicly disclosed.\n4. The report must show that the potential vulnerability has been demonstrated against a currently supported (often the most recent) and publicly available version of the affected product or technology.\n5. The report must contain clear documentation that provides information required for the report to be processed.\n    1. Minimum:\n        1. Name and specific version of the Intel® product(s) the potential issue may impact\n        2.\tHow exploiting it may negatively impact confidentiality, availability, and/or integrity of the affected product(s)\n        3.\tInstructions that, if followed by the Intel product engineering team, clearly demonstrate successful exploitation of the reported issue on an impacted Intel® platform\n        4.\tIdentify the reported Common Weakness Enumeration (CWE)\n    3. Recommended Content:\n        1. Overview\n            1. An overview/summary of the reported issue\n            2. Statement of potential impact\n            3. Name and specific version of the Intel® product(s) the potential issue may impact\n        2. Details\n            1. Detailed explanation of the reported issue\n            2. How it can be exploited\n            3. How exploiting it may negatively impact confidentiality, availability, and/or integrity of the affected product(s)\n            4. Likelihood of a successful exploit\n        3. Proof of Concept (POC)\n            1. Instructions that, if followed by the Intel product engineering team, clearly demonstrate successful exploitation of the reported issue on an impacted Intel® platform\n            2. Information on how any POC code was developed and compiled\n            3. Code required to execute the POC\n            4. Description of the development environment and operating system revisions\n            5. Compiler name, version, options used to compile \n        4. Scoring\n            1. Proposed CVSS score\n            2. Proposed CVSS vector\n            3. Justification for the selections (using the stated specification).  \n            4. Identify the reported Common Weakness Enumeration (CWE)\n6. (PSIRT Direct Contact Only) The report was submitted to the Bug Bounty Program within the required period for eligibility: 60 days from notice to resubmit or the date of disclosure, whichever is shorter.\n\nThe more details provided in the initial report, the easier it will be for Intel to evaluate your report. Omitting Proof-of-Concept or Proof-of-Exploit(ability) from a report may result in the report being ineligible for a bounty or a delay in triage of the report.\n\n## Security Researcher and Reporter Eligibility Criteria\nAll criteria must be met to participate in the Bug Bounty Program. \n1. You are reporting in your individual capacity or, if you are employed by a company or other entity and are reporting on behalf of your employer, you have your employer’s written approval to submit a report to the Intel® Bug Bounty Program.\n2. You are at least 18 years of age, and, if considered a minor in your place of residence, you have your parent’s or legal guardian’s permission prior to reporting.\n3. You are not a resident of a U.S. (United States) Government embargoed country.\n4. You are not on a U.S. Government list of sanctioned individuals.\n5. You are not currently, nor have you been an employee of Intel Corporation, or an Intel subsidiary, within 6 months prior to submitting a report.\n6. You are not currently, nor have you been under contract to Intel Corporation, or an Intel subsidiary, within 6 months prior to submitting a report.\n7. You are neither a family nor household member of any individual who currently or within the past 6 months meets or met the criteria listed in the two bullet points directly above.\n8. You agree to participate in testing mitigation effectiveness and coordinating disclosure/release/publication of your finding with Intel.\n9. You did not and will not access any personal information that is not your own, including by exploiting the vulnerability. \n10. You did not and will not violate any applicable law or regulation, including laws prohibiting unauthorized access to information. To clarify, Intel does not view testing that is done in compliance with the terms and conditions of this Bug Bounty Program as unauthorized. \n11. There may be additional restrictions on your eligibility to participate in the bug bounty depending upon your local laws.\n\n\nIf at any point while researching a vulnerability, you are unsure whether you should continue, immediately send a message to Intel PSIRT (secure@intel.com).\n\n## Sensitive and Personal Information\nNever attempt to access anyone else's data or personal information, including by exploiting a vulnerability. Such activity is unauthorized. If during your research, testing, or communication with Intel you interacted with or obtained access to data or personal information of others, you must:\n* Stop your testing immediately and cease any activity that involves the data or personal information or the vulnerability.\n* Do not save, copy, store, transfer, disclose, or otherwise retain the data or personal information.\n* Alert Intel immediately and support our investigation and mitigation efforts.\n\nFailure to comply with any of the above will immediately disqualify any report from bounty award eligibility.\n\n\n# Intel Agreements\n## Bounties\nBounty award arrangements under this program, including the timing, bounty amount and form of payments, are at Intel’s sole discretion and will be made case-by-case following the principle of **One CVE = One Bounty**.\n\nIntel’s bug bounty awards **range from $500 up to $100,000**. We consider a range of factors when determining the award amount for eligible reports. Those factors include, but are not limited to, the quality of the report, impact of the potential vulnerability, type of vulnerability, CVSS severity score, whether a POC was provided and the quality of the POC (see “**Report Eligibility Criteria**” section). The table below is a general guide to the potential award amounts. However, the awards may vary based on the factors mentioned.\n\n\n| Vulnerability Severity | CVSS Score Range | Intel Software| Intel Firmware | Intel Hardware |\n| -------- | -------- | -------- | -------- | -------- |\n| Critical | 9.0 - 10.0 | Up to $10,000 | Up to $30,000 | Up to $100,000 |\n| High | 7.0 - 8.9 | Up to $5,000 | Up to $15,000 | Up to $30,000 |\n| Medium | 4.0 - 6.9 | Up to $1,500 | Up to $3,000 | Up to $5,000 |\n| Low | 0.1 - 3.9 | Up to $500 | Up to $1,000 | Up to $2,000 |\n\nIntel, at its sole discretion, may reject any submission that we determine does not meet the “**Security Researcher and Reporter Eligibility Criteria**,” “**Product Eligibility Criteria**,“ or “**Report Eligibility Criteria**” sections or that are deemed as ineligible as set forth below.\nIntel makes no representations regarding the tax consequences of the payments Intel makes under this program. Participants in this program are responsible for any tax liability associated with bounty award payments.\n\n## Current Standards in Use\n* Common Vulnerability Scoring System (CVSS): [Version 3.1](https://www.first.org/cvss/calculator/3.1)\n* CVE Numbering Authority Rules: [Version 3.0](https://cve.mitre.org/cve/cna/CNA_Rules_v3.0.pdf)\n\n## Safe Harbor\nIf you follow the program terms, we will not initiate a lawsuit or law enforcement investigation against you in response to your report. Please understand that this waiver does not apply to your security research that involves the networks, systems, information, applications, devices, products, or services of another party (which is not Intel). We cannot and do not authorize security research in the name of other entities.\n\n\n# Shared Agreements\n## Intellectual Property\nBy submitting your content to Intel (your “Submission”), you agree that Intel may take all steps needed to validate, mitigate, and disclose the vulnerability, and that you grant Intel all rights to your Submission needed to do so.\n\nIntel will, to the best of its ability, offer named acknowledgement on any Intel publications which include information provided through the reporting process. For Submissions with multiple collaborators, please ensure all users are included on the report at the time of submission to ensure acknowledgement.\n\nAcknowledgements will utilize the bug bounty platform username only, unless otherwise requested at the time of submission, or anonymity if requested before publication occurs. Limits may apply. Intel will not edit the acknowledged name unless it can be proven to be inaccurate.",
+                  "testingRequirements": {
+                      "intigritiMe": false,
+                      "automatedTooling": null,
+                      "userAgent": null,
+                      "requestHeader": null
+                  },
+                  "safeHarbour": false,
+                  "createdAt": 1680299666
+              },
+              "attachments": []
+          },
+          "createdAt": 1680299666
+      },
+      {
+          "content": {
+              "content": {
+                  "description": "# By participating in this program, you agree:\n1.\tTo follow the Intigriti Community Code of Conduct. See “[Intigriti Community Code of Conduct](https://kb.intigriti.com/en/articles/5247238-community-code-of-conduct).”\n2.\tTo follow the Intel Security Vulnerability Rearcher Community Code of Conduct. See [Security Vulnerability Rearcher Community Code of Conduct](https://www.intel.com/content/www/us/en/security-center/Code_of_Conduct.html)\n3.\tTo follow the Intigriti Terms and Conditions. See “[Intigriti Terms and Conditions](https://go.intigriti.com/tac).”\n4.\tTo follow the Rules of Engagement and scope of the program. See “[Intel Bug Bounty Program Policy](https://www.intel.com/content/www/us/en/security-center/bug-bounty-program.html).”\n5.\tYou will not discuss or disclose vulnerability information with anyone not authorized by Intel without prior written consent from Intel (including PoC's on YouTube, Vimeo, etc). See [Coordinated Vulnerability Disclosure](https://www.intel.com/content/www/us/en/security/security-practices/coordinated-disclosure.html). \n6.\tYou meet the eligibility criteria for this program. See “**Security Researcher and Reporter Eligibility Criteria**” section.\n7.\tYour submission meets the eligibility requirements for this program. See “**Report Eligibility Criteria**” and “**Product Eligibility Criteria**” section.\n8.\tYou will not attempt to access anyone else's data or personal information, including by exploiting a vulnerability. See “**Sensitive and Personal Information**” section.\n9.\tTo have freely given Intel a perpetual license for all information and communications provided through the reporting process. See “**Intellectual Property**” section.\n\n\n# By participating in this program, Intel agrees:\n1.\tTo provide reasonable safe harbor to researchers following all **Rules of Engagement**. See “**Safe Harbor**” section.\n2.\tTo provide named acknowledgement on Intel disclosure(s) that include information provided during the reporting process. See “**Intellectual Property**” section.\n3.\tTo award monetary rewards for valuable security research. See “**Bounties**” section.\n4.\tTo use the current CVSS standard for severity scoring. See “**Current Standards Used**” section.\n5.\tTo follow CVE Numbering Authority Rules. See “**Current Standards Used**” section.\n\n# Violating these rules may result in, but is not limited to:\n1.\tRevocation of Report eligibility,\n2.\tDenial of any or all potential rewards,\n3.\tTemporary or permanent revocation of Security Researcher and Reporter eligibility, and\n4.\tRemoval from current engagements and/or prohibition from future engagement eligibility.\n\n\n# Researcher/Reporter Agreements\n## Product Eligibility Criteria\nIntel encourages the reporting of all potential vulnerabilities.  Intel® branded products and technologies which are maintained and distributed by Intel are eligible for rewards from this program. This includes but may not be limited to the following categories.\n* Processors\n* Server Products\n* Intel® NUC (Next Unit of Computing)\n*\tWireless\n* Ethernet products\n*\tIntel® FPGAs (Field Programmable Gate Array)\n*\tMemory and Storage\n*\tChipsets\n*\tGraphics\n\n**Hardware** – Product specifications may be found on ARK. Processor support timeline may be found [on this help page](https://www.intel.com/content/www/us/en/support/articles/000022396/processors.html). \n**Firmware** – Firmware may be found on the [Download Center](https://www.intel.com/content/www/us/en/download-center/home.html).\n**Software** – Software may be found in a variety of places on the Intel website including [Product Support Tools & Utilities](https://www.intel.com/content/www/us/en/support/topics/utility-tools.html), [Development Tools](https://www.intel.com/content/www/us/en/developer/tools/overview.html), [Developer Catalog](https://www.intel.com/content/www/us/en/developer/tools/software-catalog/overview.html?s=Newest), and [Design-iN Tools Store](https://designintools.intel.com/).\n*Note: All testing resources must be obtained by participating security researchers.*\n\n## Report Eligibility Criteria\nIntel encourages you to submit any report for consideration. For the report to be eligible for bounty award consideration, your report must meet the following requirements:\n1. The report and any accompanying material is first sent to Intel.\n2. The Intel® product(s) in your report correspond to an item in the “**Product Eligibility Criteria**” section.\n3. The vulnerability you identify must be original, not previously reported to Intel, and not publicly disclosed.\n4. The report must show that the potential vulnerability has been demonstrated against a currently supported (often the most recent) and publicly available version of the affected product or technology.\n5. The report must contain clear documentation that provides information required for the report to be processed.\n    1. Minimum:\n        1. Name and specific version of the Intel® product(s) the potential issue may impact\n        2.\tHow exploiting it may negatively impact confidentiality, availability, and/or integrity of the affected product(s)\n        3.\tInstructions that, if followed by the Intel product engineering team, clearly demonstrate successful exploitation of the reported issue on an impacted Intel® platform\n        4.\tIdentify the reported Common Weakness Enumeration (CWE)\n    3. Recommended Content:\n        1. Overview\n            1. An overview/summary of the reported issue\n            2. Statement of potential impact\n            3. Name and specific version of the Intel® product(s) the potential issue may impact\n        2. Details\n            1. Detailed explanation of the reported issue\n            2. How it can be exploited\n            3. How exploiting it may negatively impact confidentiality, availability, and/or integrity of the affected product(s)\n            4. Likelihood of a successful exploit\n        3. Proof of Concept (POC)\n            1. Instructions that, if followed by the Intel product engineering team, clearly demonstrate successful exploitation of the reported issue on an impacted Intel® platform\n            2. Information on how any POC code was developed and compiled\n            3. Code required to execute the POC\n            4. Description of the development environment and operating system revisions\n            5. Compiler name, version, options used to compile \n        4. Scoring\n            1. Proposed CVSS score\n            2. Proposed CVSS vector\n            3. Justification for the selections (using the stated specification).  \n            4. Identify the reported Common Weakness Enumeration (CWE)\n6. (PSIRT Direct Contact Only) The report was submitted to the Bug Bounty Program within the required period for eligibility: 60 days from notice to resubmit or the date of disclosure, whichever is shorter.\n\nThe more details provided in the initial report, the easier it will be for Intel to evaluate your report. Omitting Proof-of-Concept or Proof-of-Exploit(ability) from a report may result in the report being ineligible for a bounty or a delay in triage of the report.\n\n## Security Researcher and Reporter Eligibility Criteria\nAll criteria must be met to participate in the Bug Bounty Program. \n1. You are reporting in your individual capacity or, if you are employed by a company or other entity and are reporting on behalf of your employer, you have your employer’s written approval to submit a report to the Intel® Bug Bounty Program.\n2. You are at least 18 years of age, and, if considered a minor in your place of residence, you have your parent’s or legal guardian’s permission prior to reporting.\n3. You are not a resident of a U.S. (United States) Government embargoed country.\n4. You are not on a U.S. Government list of sanctioned individuals.\n5. You are not currently, nor have you been an employee of Intel Corporation, or an Intel subsidiary, within 6 months prior to submitting a report.\n6. You are not currently, nor have you been under contract to Intel Corporation, or an Intel subsidiary, within 6 months prior to submitting a report.\n7. You are neither a family nor household member of any individual who currently or within the past 6 months meets or met the criteria listed in the two bullet points directly above.\n8. You agree to participate in testing mitigation effectiveness and coordinating disclosure/release/publication of your finding with Intel.\n9. You did not and will not access any personal information that is not your own, including by exploiting the vulnerability. \n10. You did not and will not violate any applicable law or regulation, including laws prohibiting unauthorized access to information. To clarify, Intel does not view testing that is done in compliance with the terms and conditions of this Bug Bounty Program as unauthorized. \n11. There may be additional restrictions on your eligibility to participate in the bug bounty depending upon your local laws.\n\n\nIf at any point while researching a vulnerability, you are unsure whether you should continue, immediately send a message to Intel PSIRT (secure@intel.com).\n\n## Sensitive and Personal Information\nNever attempt to access anyone else's data or personal information, including by exploiting a vulnerability. Such activity is unauthorized. If during your research, testing, or communication with Intel you interacted with or obtained access to data or personal information of others, you must:\n* Stop your testing immediately and cease any activity that involves the data or personal information or the vulnerability.\n* Do not save, copy, store, transfer, disclose, or otherwise retain the data or personal information.\n* Alert Intel immediately and support our investigation and mitigation efforts.\n\nFailure to comply with any of the above will immediately disqualify any report from bounty award eligibility.\n\n\n# Intel Agreements\n## Bounties\nBounty award arrangements under this program, including the timing, bounty amount and form of payments, are at Intel’s sole discretion and will be made case-by-case following the principle of **One CVE = One Bounty**.\n\nIntel’s bug bounty awards **range from $500 up to $100,000**. We consider a range of factors when determining the award amount for eligible reports. Those factors include, but are not limited to, the quality of the report, impact of the potential vulnerability, type of vulnerability, CVSS severity score, whether a POC was provided and the quality of the POC (see “**Report Eligibility Criteria**” section). The table below is a general guide to the potential award amounts. However, the awards may vary based on the factors mentioned.\n\n\n| Vulnerability Severity | CVSS Score Range | Intel Software| Intel Firmware | Intel Hardware |\n| -------- | -------- | -------- | -------- | -------- |\n| Critical | 9.0 - 10.0 | Up to $10,000 | Up to $30,000 | Up to $100,000 |\n| High | 7.0 - 8.9 | Up to $5,000 | Up to $15,000 | Up to $30,000 |\n| Medium | 4.0 - 6.9 | Up to $1,500 | Up to $3,000 | Up to $5,000 |\n| Low | 0.1 - 3.9 | Up to $500 | Up to $1,000 | Up to $2,000 |\n\nIntel, at its sole discretion, may reject any submission that we determine does not meet the “**Security Researcher and Reporter Eligibility Criteria**,” “**Product Eligibility Criteria**,“ or “**Report Eligibility Criteria**” sections or that are deemed as ineligible as set forth below.\nIntel makes no representations regarding the tax consequences of the payments Intel makes under this program. Participants in this program are responsible for any tax liability associated with bounty award payments.\n\n## Current Standards in Use\n* Common Vulnerability Scoring System (CVSS): [Version 3.1](https://www.first.org/cvss/calculator/3.1)\n* CVE Numbering Authority Rules: [Version 3.0](https://cve.mitre.org/cve/cna/CNA_Rules_v3.0.pdf)\n\n## Safe Harbor\nIf you follow the program terms, we will not initiate a lawsuit or law enforcement investigation against you in response to your report. Please understand that this waiver does not apply to your security research that involves the networks, systems, information, applications, devices, products, or services of another party (which is not Intel). We cannot and do not authorize security research in the name of other entities.\n\n\n# Shared Agreements\n## Intellectual Property\nBy submitting your content to Intel (your “Submission”), you agree that Intel may take all steps needed to validate, mitigate, and disclose the vulnerability, and that you grant Intel all rights to your Submission needed to do so.\n\nIntel will, to the best of its ability, offer named acknowledgement on any Intel publications which include information provided through the reporting process. For Submissions with multiple collaborators, please ensure all users are included on the report at the time of submission to ensure acknowledgement.\n\nAcknowledgements will utilize the bug bounty platform username only, unless otherwise requested at the time of submission, or anonymity if requested before publication occurs. Limits may apply. Intel will not edit the acknowledged name unless it can be proven to be inaccurate.",
+                  "testingRequirements": {
+                      "intigritiMe": false,
+                      "automatedTooling": null,
+                      "userAgent": null,
+                      "requestHeader": null
+                  },
+                  "safeHarbour": false,
+                  "createdAt": 1681921190
+              },
+              "attachments": []
+          },
+          "createdAt": 1681921190
+      },
+      {
+          "content": {
+              "content": {
+                  "description": "# By participating in this program, you agree:\n1.\tTo follow the Intigriti Community Code of Conduct. See “[Intigriti Community Code of Conduct](https://kb.intigriti.com/en/articles/5247238-community-code-of-conduct).”\n2.\tTo follow the Intel Security Vulnerability Rearcher Community Code of Conduct. See [Security Vulnerability Rearcher Community Code of Conduct](https://www.intel.com/content/www/us/en/security-center/Code_of_Conduct.html)\n3.\tTo follow the Intigriti Terms and Conditions. See “[Intigriti Terms and Conditions](https://go.intigriti.com/tac).”\n4.\tTo follow the Rules of Engagement and scope of the program. See “[Intel Bug Bounty Program Policy](https://www.intel.com/content/www/us/en/security-center/bug-bounty-program.html).”\n5.\tYou will not discuss or disclose vulnerability information with anyone not authorized by Intel without prior written consent from Intel (including PoC's on YouTube, Vimeo, etc). See [Coordinated Vulnerability Disclosure](https://www.intel.com/content/www/us/en/security/security-practices/coordinated-disclosure.html). \n6.\tYou meet the eligibility criteria for this program. See “**Security Researcher and Reporter Eligibility Criteria**” section.\n7.\tYour submission meets the eligibility requirements for this program. See “**Report Eligibility Criteria**” and “**Product Eligibility Criteria**” section.\n8.\tYou will not attempt to access anyone else's data or personal information, including by exploiting a vulnerability. See “**Sensitive and Personal Information**” section.\n9.\tTo have freely given Intel a perpetual license for all information and communications provided through the reporting process. See “**Intellectual Property**” section.\n\n\n# By participating in this program, Intel agrees:\n1.\tTo provide reasonable safe harbor to researchers following all **Rules of Engagement**. See “**Safe Harbor**” section.\n2.\tTo provide named acknowledgement on Intel disclosure(s) that include information provided during the reporting process. See “**Intellectual Property**” section.\n3.\tTo award monetary rewards for valuable security research. See “**Bounties**” section.\n4.\tTo use the current CVSS standard for severity scoring. See “**Current Standards Used**” section.\n5.\tTo follow CVE Numbering Authority Rules. See “**Current Standards Used**” section.\n\n# Violating these rules may result in, but is not limited to:\n1.\tRevocation of Report eligibility,\n2.\tDenial of any or all potential rewards,\n3.\tTemporary or permanent revocation of Security Researcher and Reporter eligibility, and\n4.\tRemoval from current engagements and/or prohibition from future engagement eligibility.\n\n\n# Researcher/Reporter Agreements\n## Product Eligibility Criteria\nIntel encourages the reporting of all potential vulnerabilities.  Intel® branded products and technologies which are maintained and distributed by Intel are eligible for rewards from this program. This includes but may not be limited to the following categories.\n* Processors\n* Server Products\n* Intel® NUC (Next Unit of Computing)\n*\tWireless\n* Ethernet products\n*\tIntel® FPGAs (Field Programmable Gate Array)\n*\tMemory and Storage\n*\tChipsets\n*\tGraphics\n\n**Hardware** – Product specifications may be found on ARK. Processor support timeline may be found [on this help page](https://www.intel.com/content/www/us/en/support/articles/000022396/processors.html). \n**Firmware** – Firmware may be found on the [Download Center](https://www.intel.com/content/www/us/en/download-center/home.html).\n**Software** – Software may be found in a variety of places on the Intel website including [Product Support Tools & Utilities](https://www.intel.com/content/www/us/en/support/topics/utility-tools.html), [Development Tools](https://www.intel.com/content/www/us/en/developer/tools/overview.html), [Developer Catalog](https://www.intel.com/content/www/us/en/developer/tools/software-catalog/overview.html?s=Newest), and [Design-iN Tools Store](https://designintools.intel.com/).\n*Note: All testing resources must be obtained by participating security researchers.*\n*Note: The [Discontinued Products](https://www.intel.com/content/www/us/en/support/discontinued-products.html) support page can be a useful list for identifying products that are not eligible for this program.*\n\n## Report Eligibility Criteria\nIntel encourages you to submit any report for consideration. For the report to be eligible for bounty award consideration, your report must meet the following requirements:\n1. The report and any accompanying material is first sent to Intel.\n2. The Intel® product(s) in your report correspond to an item in the “**Product Eligibility Criteria**” section.\n3. The vulnerability you identify must be original, not previously reported to Intel, and not publicly disclosed.\n4. The report must show that the potential vulnerability has been demonstrated against a currently supported (often the most recent) and publicly available version of the affected product or technology.\n5. The report must contain clear documentation that provides information required for the report to be processed.\n    1. Minimum:\n        1. Name and specific version of the Intel® product(s) the potential issue may impact\n        2.\tHow exploiting it may negatively impact confidentiality, availability, and/or integrity of the affected product(s)\n        3.\tInstructions that, if followed by the Intel product engineering team, clearly demonstrate successful exploitation of the reported issue on an impacted Intel® platform\n        4.\tIdentify the reported Common Weakness Enumeration (CWE)\n    3. Recommended Content:\n        1. Overview\n            1. An overview/summary of the reported issue\n            2. Statement of potential impact\n            3. Name and specific version of the Intel® product(s) the potential issue may impact\n        2. Details\n            1. Detailed explanation of the reported issue\n            2. How it can be exploited\n            3. How exploiting it may negatively impact confidentiality, availability, and/or integrity of the affected product(s)\n            4. Likelihood of a successful exploit\n        3. Proof of Concept (POC)\n            1. Instructions that, if followed by the Intel product engineering team, clearly demonstrate successful exploitation of the reported issue on an impacted Intel® platform\n            2. Information on how any POC code was developed and compiled\n            3. Code required to execute the POC\n            4. Description of the development environment and operating system revisions\n            5. Compiler name, version, options used to compile \n        4. Scoring\n            1. Proposed CVSS score\n            2. Proposed CVSS vector\n            3. Justification for the selections (using the stated specification).  \n            4. Identify the reported Common Weakness Enumeration (CWE)\n6. (PSIRT Direct Contact Only) The report was submitted to the Bug Bounty Program within the required period for eligibility: 60 days from notice to resubmit or the date of disclosure, whichever is shorter.\n\nThe more details provided in the initial report, the easier it will be for Intel to evaluate your report. Omitting Proof-of-Concept or Proof-of-Exploit(ability) from a report may result in the report being ineligible for a bounty or a delay in triage of the report.\n\n## Security Researcher and Reporter Eligibility Criteria\nAll criteria must be met to participate in the Bug Bounty Program. \n1. You are reporting in your individual capacity or, if you are employed by a company or other entity and are reporting on behalf of your employer, you have your employer’s written approval to submit a report to the Intel® Bug Bounty Program.\n2. You are at least 18 years of age, and, if considered a minor in your place of residence, you have your parent’s or legal guardian’s permission prior to reporting.\n3. You are not a resident of a U.S. (United States) Government embargoed country.\n4. You are not on a U.S. Government list of sanctioned individuals.\n5. You are not currently, nor have you been an employee of Intel Corporation, or an Intel subsidiary, within 6 months prior to submitting a report.\n6. You are not currently, nor have you been under contract to Intel Corporation, or an Intel subsidiary, within 6 months prior to submitting a report.\n7. You are neither a family nor household member of any individual who currently or within the past 6 months meets or met the criteria listed in the two bullet points directly above.\n8. You agree to participate in testing mitigation effectiveness and coordinating disclosure/release/publication of your finding with Intel.\n9. You did not and will not access any personal information that is not your own, including by exploiting the vulnerability. \n10. You did not and will not violate any applicable law or regulation, including laws prohibiting unauthorized access to information. To clarify, Intel does not view testing that is done in compliance with the terms and conditions of this Bug Bounty Program as unauthorized. \n11. There may be additional restrictions on your eligibility to participate in the bug bounty depending upon your local laws.\n\n\nIf at any point while researching a vulnerability, you are unsure whether you should continue, immediately send a message to Intel PSIRT (secure@intel.com).\n\n## Sensitive and Personal Information\nNever attempt to access anyone else's data or personal information, including by exploiting a vulnerability. Such activity is unauthorized. If during your research, testing, or communication with Intel you interacted with or obtained access to data or personal information of others, you must:\n* Stop your testing immediately and cease any activity that involves the data or personal information or the vulnerability.\n* Do not save, copy, store, transfer, disclose, or otherwise retain the data or personal information.\n* Alert Intel immediately and support our investigation and mitigation efforts.\n\nFailure to comply with any of the above will immediately disqualify any report from bounty award eligibility.\n\n\n# Intel Agreements\n## Bounties\nBounty award arrangements under this program, including the timing, bounty amount and form of payments, are at Intel’s sole discretion and will be made case-by-case following the principle of **One CVE = One Bounty**.\n\nIntel’s bug bounty awards **range from $500 up to $100,000**. We consider a range of factors when determining the award amount for eligible reports. Those factors include, but are not limited to, the quality of the report, impact of the potential vulnerability, type of vulnerability, CVSS severity score, whether a POC was provided and the quality of the POC (see “**Report Eligibility Criteria**” section). The table below is a general guide to the potential award amounts. However, the awards may vary based on the factors mentioned.\n\n\n| Vulnerability Severity | CVSS Score Range | Intel Software| Intel Firmware | Intel Hardware |\n| -------- | -------- | -------- | -------- | -------- |\n| Critical | 9.0 - 10.0 | Up to $10,000 | Up to $30,000 | Up to $100,000 |\n| High | 7.0 - 8.9 | Up to $5,000 | Up to $15,000 | Up to $30,000 |\n| Medium | 4.0 - 6.9 | Up to $1,500 | Up to $3,000 | Up to $5,000 |\n| Low | 0.1 - 3.9 | Up to $500 | Up to $1,000 | Up to $2,000 |\n\nIntel, at its sole discretion, may reject any submission that we determine does not meet the “**Security Researcher and Reporter Eligibility Criteria**,” “**Product Eligibility Criteria**,“ or “**Report Eligibility Criteria**” sections or that are deemed as ineligible as set forth below.\nIntel makes no representations regarding the tax consequences of the payments Intel makes under this program. Participants in this program are responsible for any tax liability associated with bounty award payments.\n\n## Current Standards in Use\n* Common Vulnerability Scoring System (CVSS): [Version 3.1](https://www.first.org/cvss/calculator/3.1)\n* CVE Numbering Authority Rules: [Version 3.0](https://cve.mitre.org/cve/cna/CNA_Rules_v3.0.pdf)\n\n## Safe Harbor\nIf you follow the program terms, we will not initiate a lawsuit or law enforcement investigation against you in response to your report. Please understand that this waiver does not apply to your security research that involves the networks, systems, information, applications, devices, products, or services of another party (which is not Intel). We cannot and do not authorize security research in the name of other entities.\n\n\n# Shared Agreements\n## Intellectual Property\nBy submitting your content to Intel (your “Submission”), you agree that Intel may take all steps needed to validate, mitigate, and disclose the vulnerability, and that you grant Intel all rights to your Submission needed to do so.\n\nIntel will, to the best of its ability, offer named acknowledgement on any Intel publications which include information provided through the reporting process. For Submissions with multiple collaborators, please ensure all users are included on the report at the time of submission to ensure acknowledgement.\n\nAcknowledgements will utilize the bug bounty platform username only, unless otherwise requested at the time of submission, or anonymity if requested before publication occurs. Limits may apply. Intel will not edit the acknowledged name unless it can be proven to be inaccurate.",
+                  "testingRequirements": {
+                      "intigritiMe": false,
+                      "automatedTooling": null,
+                      "userAgent": null,
+                      "requestHeader": null
+                  },
+                  "safeHarbour": false,
+                  "createdAt": 1702661214
+              },
+              "attachments": []
+          },
+          "createdAt": 1702661214
+      }
+  ],
+  "bountyTables": [
+      {
+          "content": {
+              "currency": "USD",
+              "bountyRows": [
+                  {
+                      "bountyRanges": [
+                          {
+                              "minScore": 0.1,
+                              "maxScore": 3.9,
+                              "minBounty": {
+                                  "value": 2000.0,
+                                  "currency": "USD"
+                              },
+                              "maxBounty": {
+                                  "value": 2000.0,
+                                  "currency": "USD"
+                              }
+                          },
+                          {
+                              "minScore": 4.0,
+                              "maxScore": 6.9,
+                              "minBounty": {
+                                  "value": 5000.0,
+                                  "currency": "USD"
+                              },
+                              "maxBounty": {
+                                  "value": 5000.0,
+                                  "currency": "USD"
+                              }
+                          },
+                          {
+                              "minScore": 7.0,
+                              "maxScore": 8.9,
+                              "minBounty": {
+                                  "value": 30000.0,
+                                  "currency": "USD"
+                              },
+                              "maxBounty": {
+                                  "value": 30000.0,
+                                  "currency": "USD"
+                              }
+                          },
+                          {
+                              "minScore": 9.0,
+                              "maxScore": 9.4,
+                              "minBounty": {
+                                  "value": 100000.0,
+                                  "currency": "USD"
+                              },
+                              "maxBounty": {
+                                  "value": 100000.0,
+                                  "currency": "USD"
+                              }
+                          },
+                          {
+                              "minScore": 9.5,
+                              "maxScore": 10.0,
+                              "minBounty": {
+                                  "value": 100000.0,
+                                  "currency": "USD"
+                              },
+                              "maxBounty": {
+                                  "value": 100000.0,
+                                  "currency": "USD"
+                              }
+                          }
+                      ],
+                      "bountyTierId": 4
+                  },
+                  {
+                      "bountyRanges": [
+                          {
+                              "minScore": 0.1,
+                              "maxScore": 3.9,
+                              "minBounty": {
+                                  "value": 1000.0,
+                                  "currency": "USD"
+                              },
+                              "maxBounty": {
+                                  "value": 1000.0,
+                                  "currency": "USD"
+                              }
+                          },
+                          {
+                              "minScore": 4.0,
+                              "maxScore": 6.9,
+                              "minBounty": {
+                                  "value": 3000.0,
+                                  "currency": "USD"
+                              },
+                              "maxBounty": {
+                                  "value": 3000.0,
+                                  "currency": "USD"
+                              }
+                          },
+                          {
+                              "minScore": 7.0,
+                              "maxScore": 8.9,
+                              "minBounty": {
+                                  "value": 15000.0,
+                                  "currency": "USD"
+                              },
+                              "maxBounty": {
+                                  "value": 15000.0,
+                                  "currency": "USD"
+                              }
+                          },
+                          {
+                              "minScore": 9.0,
+                              "maxScore": 9.4,
+                              "minBounty": {
+                                  "value": 30000.0,
+                                  "currency": "USD"
+                              },
+                              "maxBounty": {
+                                  "value": 30000.0,
+                                  "currency": "USD"
+                              }
+                          },
+                          {
+                              "minScore": 9.5,
+                              "maxScore": 10.0,
+                              "minBounty": {
+                                  "value": 30000.0,
+                                  "currency": "USD"
+                              },
+                              "maxBounty": {
+                                  "value": 30000.0,
+                                  "currency": "USD"
+                              }
+                          }
+                      ],
+                      "bountyTierId": 3
+                  },
+                  {
+                      "bountyRanges": [
+                          {
+                              "minScore": 0.1,
+                              "maxScore": 3.9,
+                              "minBounty": {
+                                  "value": 500.0,
+                                  "currency": "USD"
+                              },
+                              "maxBounty": {
+                                  "value": 500.0,
+                                  "currency": "USD"
+                              }
+                          },
+                          {
+                              "minScore": 4.0,
+                              "maxScore": 6.9,
+                              "minBounty": {
+                                  "value": 1500.0,
+                                  "currency": "USD"
+                              },
+                              "maxBounty": {
+                                  "value": 1500.0,
+                                  "currency": "USD"
+                              }
+                          },
+                          {
+                              "minScore": 7.0,
+                              "maxScore": 8.9,
+                              "minBounty": {
+                                  "value": 5000.0,
+                                  "currency": "USD"
+                              },
+                              "maxBounty": {
+                                  "value": 5000.0,
+                                  "currency": "USD"
+                              }
+                          },
+                          {
+                              "minScore": 9.0,
+                              "maxScore": 9.4,
+                              "minBounty": {
+                                  "value": 10000.0,
+                                  "currency": "USD"
+                              },
+                              "maxBounty": {
+                                  "value": 10000.0,
+                                  "currency": "USD"
+                              }
+                          },
+                          {
+                              "minScore": 9.5,
+                              "maxScore": 10.0,
+                              "minBounty": {
+                                  "value": 10000.0,
+                                  "currency": "USD"
+                              },
+                              "maxBounty": {
+                                  "value": 10000.0,
+                                  "currency": "USD"
+                              }
+                          }
+                      ],
+                      "bountyTierId": 2
+                  }
+              ],
+              "rewardPolicy": null
+          },
+          "createdAt": 1638777664
+      },
+      {
+          "content": {
+              "currency": "USD",
+              "bountyRows": [
+                  {
+                      "bountyRanges": [
+                          {
+                              "minScore": 0.1,
+                              "maxScore": 3.9,
+                              "minBounty": {
+                                  "value": 2000.0,
+                                  "currency": "USD"
+                              },
+                              "maxBounty": {
+                                  "value": 2000.0,
+                                  "currency": "USD"
+                              }
+                          },
+                          {
+                              "minScore": 4.0,
+                              "maxScore": 6.9,
+                              "minBounty": {
+                                  "value": 5000.0,
+                                  "currency": "USD"
+                              },
+                              "maxBounty": {
+                                  "value": 5000.0,
+                                  "currency": "USD"
+                              }
+                          },
+                          {
+                              "minScore": 7.0,
+                              "maxScore": 8.9,
+                              "minBounty": {
+                                  "value": 30000.0,
+                                  "currency": "USD"
+                              },
+                              "maxBounty": {
+                                  "value": 30000.0,
+                                  "currency": "USD"
+                              }
+                          },
+                          {
+                              "minScore": 9.0,
+                              "maxScore": 9.4,
+                              "minBounty": {
+                                  "value": 100000.0,
+                                  "currency": "USD"
+                              },
+                              "maxBounty": {
+                                  "value": 100000.0,
+                                  "currency": "USD"
+                              }
+                          },
+                          {
+                              "minScore": 9.5,
+                              "maxScore": 10.0,
+                              "minBounty": {
+                                  "value": 100000.0,
+                                  "currency": "USD"
+                              },
+                              "maxBounty": {
+                                  "value": 100000.0,
+                                  "currency": "USD"
+                              }
+                          }
+                      ],
+                      "bountyTierId": 4
+                  },
+                  {
+                      "bountyRanges": [
+                          {
+                              "minScore": 0.1,
+                              "maxScore": 3.9,
+                              "minBounty": {
+                                  "value": 1000.0,
+                                  "currency": "USD"
+                              },
+                              "maxBounty": {
+                                  "value": 1000.0,
+                                  "currency": "USD"
+                              }
+                          },
+                          {
+                              "minScore": 4.0,
+                              "maxScore": 6.9,
+                              "minBounty": {
+                                  "value": 3000.0,
+                                  "currency": "USD"
+                              },
+                              "maxBounty": {
+                                  "value": 3000.0,
+                                  "currency": "USD"
+                              }
+                          },
+                          {
+                              "minScore": 7.0,
+                              "maxScore": 8.9,
+                              "minBounty": {
+                                  "value": 15000.0,
+                                  "currency": "USD"
+                              },
+                              "maxBounty": {
+                                  "value": 15000.0,
+                                  "currency": "USD"
+                              }
+                          },
+                          {
+                              "minScore": 9.0,
+                              "maxScore": 9.4,
+                              "minBounty": {
+                                  "value": 30000.0,
+                                  "currency": "USD"
+                              },
+                              "maxBounty": {
+                                  "value": 30000.0,
+                                  "currency": "USD"
+                              }
+                          },
+                          {
+                              "minScore": 9.5,
+                              "maxScore": 10.0,
+                              "minBounty": {
+                                  "value": 30000.0,
+                                  "currency": "USD"
+                              },
+                              "maxBounty": {
+                                  "value": 30000.0,
+                                  "currency": "USD"
+                              }
+                          }
+                      ],
+                      "bountyTierId": 3
+                  },
+                  {
+                      "bountyRanges": [
+                          {
+                              "minScore": 0.1,
+                              "maxScore": 3.9,
+                              "minBounty": {
+                                  "value": 500.0,
+                                  "currency": "USD"
+                              },
+                              "maxBounty": {
+                                  "value": 500.0,
+                                  "currency": "USD"
+                              }
+                          },
+                          {
+                              "minScore": 4.0,
+                              "maxScore": 6.9,
+                              "minBounty": {
+                                  "value": 1500.0,
+                                  "currency": "USD"
+                              },
+                              "maxBounty": {
+                                  "value": 1500.0,
+                                  "currency": "USD"
+                              }
+                          },
+                          {
+                              "minScore": 7.0,
+                              "maxScore": 8.9,
+                              "minBounty": {
+                                  "value": 5000.0,
+                                  "currency": "USD"
+                              },
+                              "maxBounty": {
+                                  "value": 5000.0,
+                                  "currency": "USD"
+                              }
+                          },
+                          {
+                              "minScore": 9.0,
+                              "maxScore": 9.4,
+                              "minBounty": {
+                                  "value": 10000.0,
+                                  "currency": "USD"
+                              },
+                              "maxBounty": {
+                                  "value": 10000.0,
+                                  "currency": "USD"
+                              }
+                          },
+                          {
+                              "minScore": 9.5,
+                              "maxScore": 10.0,
+                              "minBounty": {
+                                  "value": 10000.0,
+                                  "currency": "USD"
+                              },
+                              "maxBounty": {
+                                  "value": 10000.0,
+                                  "currency": "USD"
+                              }
+                          }
+                      ],
+                      "bountyTierId": 2
+                  }
+              ],
+              "rewardPolicy": null
+          },
+          "createdAt": 1661969533
+      },
+      {
+          "content": {
+              "currency": "USD",
+              "bountyRows": [
+                  {
+                      "bountyRanges": [
+                          {
+                              "minScore": 0.1,
+                              "maxScore": 3.9,
+                              "minBounty": {
+                                  "value": 2000.0,
+                                  "currency": "USD"
+                              },
+                              "maxBounty": {
+                                  "value": 2000.0,
+                                  "currency": "USD"
+                              }
+                          },
+                          {
+                              "minScore": 4.0,
+                              "maxScore": 6.9,
+                              "minBounty": {
+                                  "value": 5000.0,
+                                  "currency": "USD"
+                              },
+                              "maxBounty": {
+                                  "value": 5000.0,
+                                  "currency": "USD"
+                              }
+                          },
+                          {
+                              "minScore": 7.0,
+                              "maxScore": 8.9,
+                              "minBounty": {
+                                  "value": 30000.0,
+                                  "currency": "USD"
+                              },
+                              "maxBounty": {
+                                  "value": 30000.0,
+                                  "currency": "USD"
+                              }
+                          },
+                          {
+                              "minScore": 9.0,
+                              "maxScore": 9.4,
+                              "minBounty": {
+                                  "value": 100000.0,
+                                  "currency": "USD"
+                              },
+                              "maxBounty": {
+                                  "value": 100000.0,
+                                  "currency": "USD"
+                              }
+                          },
+                          {
+                              "minScore": 9.5,
+                              "maxScore": 10.0,
+                              "minBounty": {
+                                  "value": 100000.0,
+                                  "currency": "USD"
+                              },
+                              "maxBounty": {
+                                  "value": 100000.0,
+                                  "currency": "USD"
+                              }
+                          }
+                      ],
+                      "bountyTierId": 4
+                  },
+                  {
+                      "bountyRanges": [
+                          {
+                              "minScore": 0.1,
+                              "maxScore": 3.9,
+                              "minBounty": {
+                                  "value": 1000.0,
+                                  "currency": "USD"
+                              },
+                              "maxBounty": {
+                                  "value": 1000.0,
+                                  "currency": "USD"
+                              }
+                          },
+                          {
+                              "minScore": 4.0,
+                              "maxScore": 6.9,
+                              "minBounty": {
+                                  "value": 3000.0,
+                                  "currency": "USD"
+                              },
+                              "maxBounty": {
+                                  "value": 3000.0,
+                                  "currency": "USD"
+                              }
+                          },
+                          {
+                              "minScore": 7.0,
+                              "maxScore": 8.9,
+                              "minBounty": {
+                                  "value": 15000.0,
+                                  "currency": "USD"
+                              },
+                              "maxBounty": {
+                                  "value": 15000.0,
+                                  "currency": "USD"
+                              }
+                          },
+                          {
+                              "minScore": 9.0,
+                              "maxScore": 9.4,
+                              "minBounty": {
+                                  "value": 30000.0,
+                                  "currency": "USD"
+                              },
+                              "maxBounty": {
+                                  "value": 30000.0,
+                                  "currency": "USD"
+                              }
+                          },
+                          {
+                              "minScore": 9.5,
+                              "maxScore": 10.0,
+                              "minBounty": {
+                                  "value": 30000.0,
+                                  "currency": "USD"
+                              },
+                              "maxBounty": {
+                                  "value": 30000.0,
+                                  "currency": "USD"
+                              }
+                          }
+                      ],
+                      "bountyTierId": 3
+                  },
+                  {
+                      "bountyRanges": [
+                          {
+                              "minScore": 0.1,
+                              "maxScore": 3.9,
+                              "minBounty": {
+                                  "value": 500.0,
+                                  "currency": "USD"
+                              },
+                              "maxBounty": {
+                                  "value": 500.0,
+                                  "currency": "USD"
+                              }
+                          },
+                          {
+                              "minScore": 4.0,
+                              "maxScore": 6.9,
+                              "minBounty": {
+                                  "value": 1500.0,
+                                  "currency": "USD"
+                              },
+                              "maxBounty": {
+                                  "value": 1500.0,
+                                  "currency": "USD"
+                              }
+                          },
+                          {
+                              "minScore": 7.0,
+                              "maxScore": 8.9,
+                              "minBounty": {
+                                  "value": 5000.0,
+                                  "currency": "USD"
+                              },
+                              "maxBounty": {
+                                  "value": 5000.0,
+                                  "currency": "USD"
+                              }
+                          },
+                          {
+                              "minScore": 9.0,
+                              "maxScore": 9.4,
+                              "minBounty": {
+                                  "value": 10000.0,
+                                  "currency": "USD"
+                              },
+                              "maxBounty": {
+                                  "value": 10000.0,
+                                  "currency": "USD"
+                              }
+                          },
+                          {
+                              "minScore": 9.5,
+                              "maxScore": 10.0,
+                              "minBounty": {
+                                  "value": 10000.0,
+                                  "currency": "USD"
+                              },
+                              "maxBounty": {
+                                  "value": 10000.0,
+                                  "currency": "USD"
+                              }
+                          }
+                      ],
+                      "bountyTierId": 2
+                  }
+              ],
+              "rewardPolicy": null
+          },
+          "createdAt": 1688138654
+      }
+  ],
+  "lastContributors": [
+      {
+          "role": "RESEARCHER",
+          "identityChecked": true,
+          "userId": "17a31192-0189-45fd-aa6c-5671108de9de",
+          "avatarId": null,
+          "userName": "vul_pwner"
+      },
+      {
+          "role": "RESEARCHER",
+          "identityChecked": true,
+          "userId": "1886eed9-9fda-46e2-b9cf-4d7367b8ae2c",
+          "avatarId": "public_bucket_46bc23dd-181e-46f5-beec-bc7923955d40-84f71c04-74c7-43f0-984e-f844c3ce3025",
+          "userName": "sim0nsecurity"
+      },
+      {
+          "role": "RESEARCHER",
+          "identityChecked": true,
+          "userId": "2b9dd522-73ff-4ddd-8a21-c80ac8ce4cf9",
+          "avatarId": "public_bucket_3cc40fe8-5a11-4192-a538-f3cf1245cb72-b92c1b6c-0a4e-4615-abc3-3ec43b9507d5",
+          "userName": "max_wang"
+      },
+      {
+          "role": "RESEARCHER",
+          "identityChecked": false,
+          "userId": "2ef7cd01-1739-4c3c-84d9-57bb3dad504e",
+          "avatarId": null,
+          "userName": "ashl"
+      },
+      {
+          "role": "RESEARCHER",
+          "identityChecked": true,
+          "userId": "9883cf21-eff7-4a4f-bd38-320edb8a4a38",
+          "avatarId": null,
+          "userName": "adnanthekhan"
+      },
+      {
+          "role": "RESEARCHER",
+          "identityChecked": true,
+          "userId": "24ba88fe-642c-4b41-b3c7-2c0c0b3b1e81",
+          "avatarId": null,
+          "userName": "johnwickhack"
+      }
+  ],
+  "lastActivity": [
+      {
+          "researcher": {
+              "role": "RESEARCHER",
+              "identityChecked": true,
+              "userId": "2ddbe899-f80c-4055-883d-a8116be9c7d7",
+              "avatarId": null,
+              "userName": "falconcorruption"
+          },
+          "timestamp": 1727909943,
+          "type": 9
+      },
+      {
+          "researcher": {
+              "role": "RESEARCHER",
+              "identityChecked": true,
+              "userId": "2ddbe899-f80c-4055-883d-a8116be9c7d7",
+              "avatarId": null,
+              "userName": "falconcorruption"
+          },
+          "timestamp": 1727909543,
+          "type": 9
+      },
+      {
+          "researcher": {
+              "role": "RESEARCHER",
+              "identityChecked": true,
+              "userId": "2ddbe899-f80c-4055-883d-a8116be9c7d7",
+              "avatarId": null,
+              "userName": "falconcorruption"
+          },
+          "timestamp": 1727909541,
+          "type": 9
+      },
+      {
+          "researcher": {
+              "role": "RESEARCHER",
+              "identityChecked": true,
+              "userId": "2ddbe899-f80c-4055-883d-a8116be9c7d7",
+              "avatarId": null,
+              "userName": "falconcorruption"
+          },
+          "timestamp": 1727902319,
+          "type": 9
+      },
+      {
+          "companyName": "Intel",
+          "logoId": "public_bucket_8c3460fa-ef99-47b2-bed7-740d7ed9182d-f106912f-5225-4549-8873-27f66802f34c",
+          "timestamp": 1727871895,
+          "type": 11
+      },
+      {
+          "companyName": "Intel",
+          "logoId": "public_bucket_8c3460fa-ef99-47b2-bed7-740d7ed9182d-f106912f-5225-4549-8873-27f66802f34c",
+          "timestamp": 1727853640,
+          "type": 11
+      },
+      {
+          "researcher": {
+              "role": "RESEARCHER",
+              "identityChecked": true,
+              "userId": "2ddbe899-f80c-4055-883d-a8116be9c7d7",
+              "avatarId": null,
+              "userName": "falconcorruption"
+          },
+          "timestamp": 1727824811,
+          "type": 9
+      },
+      {
+          "companyName": "Intel",
+          "logoId": "public_bucket_8c3460fa-ef99-47b2-bed7-740d7ed9182d-f106912f-5225-4549-8873-27f66802f34c",
+          "timestamp": 1727816614,
+          "type": 11
+      },
+      {
+          "companyName": "Intel",
+          "logoId": "public_bucket_8c3460fa-ef99-47b2-bed7-740d7ed9182d-f106912f-5225-4549-8873-27f66802f34c",
+          "timestamp": 1727816548,
+          "type": 11
+      },
+      {
+          "companyName": "Intel",
+          "logoId": "public_bucket_8c3460fa-ef99-47b2-bed7-740d7ed9182d-f106912f-5225-4549-8873-27f66802f34c",
+          "timestamp": 1727815540,
+          "type": 11
+      }
+  ],
+  "averagePayout": null,
+  "submissionCount": 0,
+  "acceptedSubmissionCount": 0,
+  "totalPayout": null,
+  "identityCheckedRequired": false,
+  "awardRep": true,
+  "skipTriage": false,
+  "logoId": "public_bucket_8c3460fa-ef99-47b2-bed7-740d7ed9182d-f106912f-5225-4549-8873-27f66802f34c",
+  "hasUpdates": true,
+  "allowCollaboration": true
+}

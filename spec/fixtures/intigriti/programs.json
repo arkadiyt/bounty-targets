@@ -11,10 +11,10 @@
         "confidentialityLevel": 2,
         "companyHandle": "doccle",
         "companyName": "Doccle",
-        "tacRequired": false,
         "companySustainable": true,
         "handle": "doccle",
         "name": "Doccle",
+        "tacRequired": true,
         "description": "Doccle, founded in 2014, is a Belgian company that hosts an online platform where you can receive, pay, share and store your administration in one place. You can add several suppliers to your Doccle account in a few mouse clicks. This way, you will receive all documents in one place. You can also pay, sign or share them via Doccle. All your documents are securely stored in your digital archive. The more companies you add, the more documents you will receive.",
         "minBounty": {
           "value": 0,
