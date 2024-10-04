@@ -36,7 +36,6 @@ module BountyTargets
         uri.query = ::URI.encode_www_form(page: page)
         result = ::JSON.parse(SsrfFilter.get(uri).body)
         page += 1
-
         programs.concat(result['items'].map do |program|
           {
             id: program['slug'],
@@ -60,13 +59,13 @@ module BountyTargets
       response = ::JSON.parse(SsrfFilter.get(uri).body)
       {
         targets: {
-          in_scope: response['scopes'].map do |scope|
+          in_scope: (response['scopes'] || []).map do |scope|
             {
               target: scope['scope'],
               type: scope['scope_type']
             }
           end,
-          out_of_scope: response['out_of_scope'].map do |scope|
+          out_of_scope: (response['out_of_scope'] || []).map do |scope|
             {
               target: scope,
               type: 'other'
