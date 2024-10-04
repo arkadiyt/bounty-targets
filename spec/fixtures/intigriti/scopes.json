@@ -19,7 +19,19 @@
               }
           ],
           "createdAt": 1638481238
-      }
+      },
+      {
+        "content": [
+            {
+                "id": "dd6d5718-737b-44f3-a833-fa74d0462f1f",
+                "type": 6,
+                "endpoint": "endpoint",
+                "bountyTierId": 4,
+                "description": null
+            }
+        ],
+        "createdAt": 1638481240
+    }
   ],
   "inScopes": [
       {

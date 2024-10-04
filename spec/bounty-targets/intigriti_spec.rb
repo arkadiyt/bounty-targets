@@ -53,7 +53,7 @@ describe BountyTargets::Intigriti do
       in_scope: [
         {
           description: nil,
-          endpoint: "(Hardware)\tProcessor (inclusive of micro-code ROM + updates)",
+          endpoint: 'endpoint',
           impact: 'Tier 1',
           type: 'other'
         }
