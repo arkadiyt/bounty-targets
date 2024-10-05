@@ -54,7 +54,7 @@ module BountyTargets
       clients = {
         bugcrowd: BountyTargets::Bugcrowd.new,
         federacy: BountyTargets::Federacy.new,
-        hackenproof: BountyTargets::Hackenproof.new,
+        # hackenproof: BountyTargets::Hackenproof.new,
         hackerone: BountyTargets::Hackerone.new,
         intigriti: BountyTargets::Intigriti.new,
         yeswehack: BountyTargets::YesWeHack.new
