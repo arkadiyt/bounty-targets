@@ -22,7 +22,8 @@ module BountyTargets
       return @scan_results if instance_variable_defined?(:@scan_results)
 
       @scan_results = directory_index.select do |program|
-        program[:confidentiality_level] == 'public' && program[:status] == 'open' && program[:tacRequired] != true
+        program[:confidentiality_level] == 'public' && program[:status] == 'open' && program[:tacRequired] != true &&
+          program[:twoFactorRequired] != true
       end.map do |program|
         program.merge(program_scopes(program))
       end.sort_by do |program|
@@ -62,6 +63,7 @@ module BountyTargets
           status: STATUSES[program['status']],
           confidentiality_level: CONFIDENTIALITY_LEVELS[program['confidentialityLevel']],
           tacRequired: program['tacRequired'],
+          twoFactorRequired: program['twoFactorRequired'],
           min_bounty: program['minBounty'],
           max_bounty: program['maxBounty']
         }
