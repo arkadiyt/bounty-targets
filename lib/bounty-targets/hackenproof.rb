@@ -37,7 +37,8 @@ module BountyTargets
 
       ::Kernel.loop do
         retryable do
-          document = ::JSON.parse(::SsrfFilter.get("https://hackenproof.com/bug-bounty-programs-list?page=#{page}").body)
+          document = ::JSON.parse(::SsrfFilter.get("https://hackenproof.com/bug-bounty-programs-list?page=#{page}",
+            headers: {'hp-partners-bypass' => ENV.fetch('HACKENPROOF', nil)}).body)
         end
         programs.concat(document['programs'].map do |program|
           {
@@ -60,7 +61,8 @@ module BountyTargets
 
     def program_scopes(program)
       retryable do
-        response = ::JSON.parse(::SsrfFilter.get("https://hackenproof.com/bug-bounty-programs-list/#{program[:slug]}").body)
+        response = ::JSON.parse(::SsrfFilter.get("https://hackenproof.com/bug-bounty-programs-list/#{program[:slug]}",
+          headers: {'hp-partners-bypass' => ENV.fetch('HACKENPROOF', nil)}).body)
         grouped = response['scopes'].group_by do |scope|
           scope['out_of_scope']
         end
