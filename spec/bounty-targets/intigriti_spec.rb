@@ -8,11 +8,8 @@ describe BountyTargets::Intigriti do
   end
 
   it 'fetches a list of programs' do
-    programs = File.read('spec/fixtures/intigriti/programs.json')
-    tag = '123'
+    programs = File.read('spec/fixtures/intigriti/programs.html')
     stub_request(:get, %r{/programs}).with(headers: {host: 'www.intigriti.com'})
-      .to_return(status: 200, body: "/_next/static/#{tag}/_buildManifest.js")
-    stub_request(:get, %r{/_next/data/#{tag}/en/programs.json}).with(headers: {host: 'www.intigriti.com'})
       .to_return(status: 200, body: programs)
     expect(client.directory_index).to eq(
       [
@@ -22,20 +19,20 @@ describe BountyTargets::Intigriti do
           handle: 'doccle',
           id: '12715f4b-d10e-415f-a309-6ab042f6158a',
           status: 'open',
-          tacRequired: true,
-          twoFactorRequired: nil,
+          tacRequired: false,
+          twoFactorRequired: false,
           url: 'https://www.intigriti.com/programs/doccle/doccle/detail',
-          max_bounty: {'currency' => 'EUR', 'value' => 2500},
+          max_bounty: {'currency' => 'EUR', 'value' => 4000},
           min_bounty: {'currency' => 'EUR', 'value' => 0},
-          name: 'Doccle'
+          name: 'Doccle Bug Bounty program'
         },
         {
           company_handle: 'bpost',
-          confidentiality_level: 'application',
+          confidentiality_level: 'public',
           handle: 'e-tracker',
           id: 'a09e497e-fd75-4b56-afa0-7a6689389b76',
           tacRequired: false,
-          twoFactorRequired: nil,
+          twoFactorRequired: false,
           max_bounty: {'currency' => 'EUR', 'value' => 0},
           min_bounty: {'currency' => 'EUR', 'value' => 0},
           name: 'e-tracker',
