@@ -3,6 +3,7 @@
 require 'json'
 require 'ssrf_filter'
 require 'uri'
+require 'nokogiri'
 
 module BountyTargets
   class Intigriti
@@ -49,10 +50,9 @@ module BountyTargets
     end
 
     def directory_index
-      page = SsrfFilter.get(::URI.parse('https://www.intigriti.com/programs')).body
-      tag = page.match(%r{/_next/static/([^/]+)/_buildManifest.js})[1]
-      programs = ::JSON.parse(SsrfFilter.get(::URI.parse("https://www.intigriti.com/_next/data/#{tag}/en/programs.json")).body)
-      programs['pageProps']['programs'].map do |program|
+      page = ::Nokogiri::HTML(SsrfFilter.get(::URI.parse('https://www.intigriti.com/programs')).body)
+      programs = JSON.parse(page.css('#__NEXT_DATA__').inner_text)['props']['pageProps']['programs']
+      programs.map do |program|
         {
           id: program['programId'],
           name: program['name'],
