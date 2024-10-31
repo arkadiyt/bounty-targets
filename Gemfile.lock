@@ -60,8 +60,7 @@ GEM
     racc (1.8.0)
     rainbow (3.1.1)
     regexp_parser (2.8.0)
-    rexml (3.3.6)
-      strscan
+    rexml (3.3.9)
     rspec (3.11.0)
       rspec-core (~> 3.11.0)
       rspec-expectations (~> 3.11.0)
@@ -99,7 +98,6 @@ GEM
       simplecov-html (~> 0.10.0)
     simplecov-html (0.10.2)
     ssrf_filter (1.0.8)
-    strscan (3.1.0)
     sync (0.5.0)
     term-ansicolor (1.7.1)
       tins (~> 1.0)

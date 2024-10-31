@@ -11,7 +11,7 @@ Supported platforms:
 - Hackerone
 - Bugcrowd
 - Intigriti
-- Hackenproof
+<!-- - Hackenproof -->
 - YesWeHack
 - Federacy
 
