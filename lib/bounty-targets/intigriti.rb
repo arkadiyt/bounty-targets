@@ -51,7 +51,9 @@ module BountyTargets
 
     def directory_index
       page = ::Nokogiri::HTML(SsrfFilter.get(::URI.parse('https://www.intigriti.com/programs')).body)
-      script = page.css('script')[-1].inner_text.match(/self\.__next_f\.push\(\[1,(.*)\]/)[1]
+      script = page.css('script').max_by do |node|
+        node.to_s.length
+      end.inner_text.match(/self\.__next_f\.push\(\[1,(.*)\]/)[1]
       programs = JSON.parse(JSON.parse(script)[2..])[3]['children'][1][3]['programs']
       programs.map do |program|
         {
