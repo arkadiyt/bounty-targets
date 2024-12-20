@@ -14,30 +14,30 @@ describe BountyTargets::Intigriti do
     expect(client.directory_index).to eq(
       [
         {
-          company_handle: 'doccle',
-          confidentiality_level: 'application',
-          handle: 'doccle',
-          id: '12715f4b-d10e-415f-a309-6ab042f6158a',
-          status: 'open',
-          tacRequired: false,
-          twoFactorRequired: false,
-          url: 'https://www.intigriti.com/programs/doccle/doccle/detail',
-          max_bounty: {'currency' => 'EUR', 'value' => 4000},
-          min_bounty: {'currency' => 'EUR', 'value' => 0},
-          name: 'Doccle Bug Bounty program'
-        },
-        {
-          company_handle: 'bpost',
+          company_handle: 'arbonia',
           confidentiality_level: 'public',
-          handle: 'e-tracker',
-          id: 'a09e497e-fd75-4b56-afa0-7a6689389b76',
-          tacRequired: false,
-          twoFactorRequired: false,
+          handle: 'arboniavdpprogram',
+          id: 'f2a437ca-68cb-455c-81ba-3b8cd1b21cb2',
           max_bounty: {'currency' => 'EUR', 'value' => 0},
           min_bounty: {'currency' => 'EUR', 'value' => 0},
-          name: 'e-tracker',
-          status: 'open',
-          url: 'https://www.intigriti.com/programs/bpost/e-tracker/detail'
+          name: 'Arbonia VDP program',
+          status: 'suspended',
+          tacRequired: false,
+          twoFactorRequired: false,
+          url: 'https://www.intigriti.com/programs/arbonia/arboniavdpprogram/detail'
+        },
+        {
+          company_handle: 'intigriti',
+          confidentiality_level: 'public',
+          handle: 'fastlane',
+          id: 'e56d6838-a1da-46d4-9d89-8154e017ae89',
+          max_bounty: {'currency' => 'EUR', 'value' => 0},
+          min_bounty: {'currency' => 'EUR', 'value' => 0},
+          name: 'Submit your research - Fast lane',
+          status: 'suspended',
+          tacRequired: false,
+          twoFactorRequired: true,
+          url: 'https://www.intigriti.com/programs/intigriti/fastlane/detail'
         }
       ]
     )
