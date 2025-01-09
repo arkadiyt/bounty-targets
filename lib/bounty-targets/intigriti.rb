@@ -44,6 +44,24 @@ module BountyTargets
 
     private
 
+    def find_programs(obj)
+      case obj
+      when Array
+        obj.each do |elm|
+          result = find_programs(elm)
+          return result unless result.nil?
+        end
+      when Hash
+        return obj if obj.key?('programs')
+
+        obj.each do |_, value|
+          result = find_programs(value)
+          return result unless result.nil?
+        end
+      end
+      nil
+    end
+
     def encode(component)
       # Ruby dropped URI.encode, and CGI.escape converts spaces to `+` instead of `%20`
       URI.encode_www_form_component(component).gsub('+', '%20')
@@ -54,7 +72,7 @@ module BountyTargets
       script = page.css('script').max_by do |node|
         node.to_s.length
       end.inner_text.match(/self\.__next_f\.push\(\[1,(.*)\]/)[1]
-      programs = JSON.parse(JSON.parse(script)[2..])[3]['children'][1][3]['programs']
+      programs = find_programs(JSON.parse(JSON.parse(script)[2..]))['programs']
       programs.map do |program|
         {
           id: program['programId'],
