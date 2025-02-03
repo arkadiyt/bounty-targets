@@ -70,7 +70,6 @@ module BountyTargets
           uris
         end
       end.flat_map(&:value)
-      File.write(File.join(output_dir, 'hackerone_schema.graphql'), clients[:hackerone].schema.to_definition)
 
       domains, wildcards = parse_all_uris(uris)
       File.write(File.join(output_dir, 'domains.txt'), domains.join("\n"))
