@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
 require 'base64'
-require 'graphql/client'
-require 'graphql/client/http'
 require 'json'
 require 'kramdown'
 require 'twingly/url/utilities'
@@ -12,7 +10,7 @@ module BountyTargets
     include Retryable
 
     def initialize
-      schema
+      graphql_init
     end
 
     def scan
@@ -36,33 +34,34 @@ module BountyTargets
       Kernel.loop do
         page = nil
         retryable do
-          page = @graphql_client.query(@directory_query, variables: {after: after})
-          raise StandardError, page.errors.details.inspect unless page.errors.details.empty?
+          page = graphql_query(@directory_query, after: after)
+          error = page.dig('errors', 'details')
+          raise StandardError, error unless error.nil?
 
-          programs.concat(page.data.teams.nodes.map do |node|
-            id = Base64.decode64(node.id).gsub(%r{^gid://hackerone/Engagements::Legacy/}, '').to_i
+          programs.concat(page.dig('data', 'teams', 'nodes').map do |node|
+            id = Base64.decode64(node['id']).gsub(%r{^gid://hackerone/Engagements::Legacy/}, '').to_i
             {
-              allows_bounty_splitting: node.allows_bounty_splitting || false,
-              average_time_to_bounty_awarded: node.most_recent_sla_snapshot&.average_time_to_bounty_awarded,
+              allows_bounty_splitting: node['allows_bounty_splitting'] || false,
+              average_time_to_bounty_awarded: node.dig('most_recent_sla_snapshot', 'average_time_to_bounty_awarded'),
               average_time_to_first_program_response:
-                node.most_recent_sla_snapshot&.average_time_to_first_program_response,
-              average_time_to_report_resolved: node.most_recent_sla_snapshot&.average_time_to_report_resolved,
-              handle: node.handle,
+                node.dig('most_recent_sla_snapshot', 'average_time_to_first_program_response'),
+              average_time_to_report_resolved: node.dig('most_recent_sla_snapshot', 'average_time_to_report_resolved'),
+              handle: node['handle'],
               id: id,
-              managed_program: node.triage_active || false,
-              name: node.name,
-              offers_bounties: node.offers_bounties || false,
-              offers_swag: node.offers_swag || false,
-              response_efficiency_percentage: node.response_efficiency_percentage,
-              submission_state: node.submission_state,
-              url: node.url,
-              website: node.website
+              managed_program: node['triage_active'] || false,
+              name: node['name'],
+              offers_bounties: node['offers_bounties'] || false,
+              offers_swag: node['offers_swag'] || false,
+              response_efficiency_percentage: node['response_efficiency_percentage'],
+              submission_state: node['submission_state'],
+              url: node['url'],
+              website: node['website']
             }
           end)
         end
 
-        after = page.data.teams.page_info.end_cursor
-        break unless page.data.teams.page_info.has_next_page
+        after = page.dig('data', 'teams', 'pageInfo', 'endCursor')
+        break unless page.dig('data', 'teams', 'pageInfo', 'hasNextPage')
       end
 
       programs.sort_by do |program|
@@ -78,18 +77,19 @@ module BountyTargets
         page = nil
         page_scopes = nil
         retryable do
-          page = @graphql_client.query(@program_query, variables: {handle: program[:handle], after: after})
-          raise StandardError, page.errors.details.to_s unless page.errors.details.empty?
+          page = graphql_query(@program_query, handle: program[:handle], after: after)
+          error = page.dig('errors', 'details')
+          raise StandardError, error unless error.nil?
 
-          page_scopes = page.data.team.structured_scopes.nodes
-          raise StandardError, 'Some scopes timed out' if page_scopes.any?(&:nil?)
+          page_scopes = page.dig('data', 'team', 'structured_scopes', 'nodes')
+          raise StandardError, 'Some scopes timed out' if page_scopes.any?(&:empty?)
 
-          after = page.data.team.structured_scopes.page_info.end_cursor
+          after = page.dig('data', 'team', 'structured_scopes', 'pageInfo', 'endCursor')
         end
 
-        scopes.concat(page_scopes.map(&:to_h))
+        scopes.concat(page_scopes)
 
-        break unless page.data.team.structured_scopes.page_info.has_next_page
+        break unless page.dig('data', 'team', 'structured_scopes', 'pageInfo', 'hasNextPage')
       end
 
       raise StandardError, 'Got duplicate scopes' if scopes.length != scopes.uniq.length
@@ -105,32 +105,16 @@ module BountyTargets
       [scopes.fetch(true, []), scopes.fetch(false, [])]
     end
 
-    def schema
-      return @schema if instance_variable_defined?(:@schema)
-
-      @http = ::GraphQL::Client::HTTP.new('https://hackerone.com/graphql') do
-        def headers(_context) # rubocop:disable Lint/NestedMethodDefinition
-          @headers ||= begin
-            uri = URI('https://hackerone.com/directory/programs')
-            response = Net::HTTP.start(uri.host, uri.port, use_ssl: true) do |http|
-              http.request(Net::HTTP::Get.new(uri))
-            end
-
-            cookie = response['Set-Cookie']
-            csrf_token = response.body.match(/name="csrf-token"\s+content="([^"]+)"/)[1]
-
-            {
-              cookie: cookie,
-              'x-csrf-token': csrf_token
-            }
-          end
-        end
+    def graphql_init
+      uri = URI('https://hackerone.com/directory/programs')
+      response = Net::HTTP.start(uri.host, uri.port, use_ssl: true) do |http|
+        http.request(Net::HTTP::Get.new(uri))
       end
-      @schema = ::GraphQL::Client.load_schema(@http)
-      @graphql_client = ::GraphQL::Client.new(schema: @schema, execute: @http)
-      @graphql_client.allow_dynamic_queries = true
 
-      @directory_query = @graphql_client.parse <<~GRAPHQL
+      @cookie = response['Set-Cookie']
+      @csrf_token = response.body.match(/name="csrf-token"\s+content="([^"]+)"/)[1]
+
+      @directory_query = <<~GRAPHQL
         query($after: String) {
           teams(first: 50, after: $after, secure_order_by: {started_accepting_at: {_direction: DESC}}, where: {
             _and:[
@@ -176,7 +160,7 @@ module BountyTargets
         }
       GRAPHQL
 
-      @program_query = @graphql_client.parse <<~GRAPHQL
+      @program_query = <<~GRAPHQL
         query($handle: String!, $after: String) {
           team(handle: $handle) {
             structured_scopes(first: 100, after: $after, archived: false) {
@@ -199,8 +183,22 @@ module BountyTargets
           }
         }
       GRAPHQL
+    end
 
-      @schema
+    def graphql_query(query, variables)
+      uri = URI('https://hackerone.com/graphql')
+      response = Net::HTTP.start(uri.host, uri.port, use_ssl: true) do |http|
+        request = Net::HTTP::Post.new(uri)
+        request.content_type = 'application/json'
+        request['Cookie'] = @cookie
+        request['X-Csrf-Token'] = @csrf_token
+        request.body = JSON.generate({
+          query: query,
+          variables: variables
+        })
+        http.request(request)
+      end
+      JSON.parse(response.body)
     end
 
     def uris
