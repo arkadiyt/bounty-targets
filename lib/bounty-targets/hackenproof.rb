@@ -34,7 +34,7 @@ module BountyTargets
       page = 1
       programs = []
       document = nil
-
+    
       ::Kernel.loop do
         retryable do
           document = ::JSON.parse(::SsrfFilter.get("https://hackenproof.com/bug-bounty-programs-list?page=#{page}",
@@ -47,15 +47,17 @@ module BountyTargets
             slug: program['slug'],
             url: "https://hackenproof.com/programs/#{program['slug']}",
             archived: program['state'] == 'archived',
-            triaged_by_hackenproof: program['managed_by_company_name'] == 'HackenProof'
+            triaged_by_hackenproof: program['managed_by_company_name'] == 'HackenProof',
+            min_bounty: program['min_bounty'],
+            max_bounty: program['max_bounty'],
           }
         end)
-
+    
         break if document['next_page'].nil?
-
+    
         page += 1
       end
-
+    
       programs
     end
 
