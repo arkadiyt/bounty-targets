@@ -1,0 +1,109 @@
+{
+  "results": [
+      {
+          "hits": [
+              {
+                  "programId": "4afd6f0f-40a3-4f6d-a332-56b5970d12a0",
+                  "status": 3,
+                  "confidentialityLevel": 4,
+                  "companyHandle": "buhlergroup",
+                  "companyName": "Bühler Group",
+                  "tacRequired": false,
+                  "twoFactorRequired": false,
+                  "companySustainable": false,
+                  "handle": "buhlergroupvdp",
+                  "name": "Bühler Group VDP",
+                  "description": "Every day, billions of people come into contact with Bühler technologies to meet their basic needs for food, mobility, and more. Our technologies are in your smartphone, solar panels, diapers, lipstick, banknotes, the food you eat, and the vehicles you drive. We strive to innovate for a better world, with a special focus on healthy, safe, and sustainable solutions.\nLearn more about Bühler at www.buhlergroup.com.",
+                  "industry": "manufacturing_industrial",
+                  "minBounty": {
+                      "value": 0,
+                      "currency": "EUR"
+                  },
+                  "maxBounty": {
+                      "value": 0,
+                      "currency": "EUR"
+                  },
+                  "lastUpdatedAt": 1745485768,
+                  "lastSubmissionAt": 1745679893,
+                  "logoId": "public_bucket_866f1872-d8f4-4cfa-be92-36b4bcec59af-84bdffdd-9d49-434d-8b1b-7b562088d0cb",
+                  "industryName": "Manufacturing Industrial",
+                  "programType": "Responsible disclosure",
+                  "objectID": "4afd6f0f-40a3-4f6d-a332-56b5970d12a0",
+                  "_highlightResult": {
+                      "companyHandle": {
+                          "value": "buhlergroup",
+                          "matchLevel": "none",
+                          "matchedWords": []
+                      },
+                      "companyName": {
+                          "value": "Bühler Group",
+                          "matchLevel": "none",
+                          "matchedWords": []
+                      },
+                      "handle": {
+                          "value": "buhlergroupvdp",
+                          "matchLevel": "none",
+                          "matchedWords": []
+                      },
+                      "name": {
+                          "value": "Bühler Group VDP",
+                          "matchLevel": "none",
+                          "matchedWords": []
+                      },
+                      "description": {
+                          "value": "Every day, billions of people come into contact with Bühler technologies to meet their basic needs for food, mobility, and more. Our technologies are in your smartphone, solar panels, diapers, lipstick, banknotes, the food you eat, and the vehicles you drive. We strive to innovate for a better world, with a special focus on healthy, safe, and sustainable solutions.\nLearn more about Bühler at www.buhlergroup.com.",
+                          "matchLevel": "none",
+                          "matchedWords": []
+                      },
+                      "industryName": {
+                          "value": "Manufacturing Industrial",
+                          "matchLevel": "none",
+                          "matchedWords": []
+                      }
+                  }
+              }         ],
+          "nbHits": 125,
+          "page": 1,
+          "nbPages": 6,
+          "hitsPerPage": 24,
+          "facets": {
+              "programType": {
+                  "Bug bounty program": 79,
+                  "Responsible disclosure": 46
+              },
+              "industryName": {
+                  "Media and Entertainment": 21,
+                  "Software": 19,
+                  "Manufacturing Consumer": 15,
+                  "Financial Services and Insurance": 13,
+                  "Business and Professional Services": 12,
+                  "Transportation and Logistics": 8,
+                  "Education": 6,
+                  "Retail": 6,
+                  "Hospitals and Healthcare": 5,
+                  "Leisure and Hospitality": 5
+              }
+          },
+          "exhaustiveFacetsCount": true,
+          "exhaustiveNbHits": true,
+          "exhaustiveTypo": true,
+          "exhaustive": {
+              "facetsCount": true,
+              "nbHits": true,
+              "typo": true
+          },
+          "query": "",
+          "params": "facets=%5B%22industryName%22%2C%22programType%22%5D&highlightPostTag=__%2Fais-highlight__&highlightPreTag=__ais-highlight__&hitsPerPage=24&maxValuesPerFacet=10&page=1",
+          "index": "programs_prod",
+          "renderingContent": {},
+          "processingTimeMS": 1,
+          "processingTimingsMS": {
+              "_request": {
+                  "roundTrip": 169
+              },
+              "total": 0
+          },
+          "serverTimeMS": 2
+      }
+  ]
+}

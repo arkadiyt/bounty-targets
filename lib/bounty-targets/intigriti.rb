@@ -68,27 +68,46 @@ module BountyTargets
     end
 
     def directory_index
-      page = ::Nokogiri::HTML(SsrfFilter.get(::URI.parse('https://www.intigriti.com/programs')).body)
-      script = page.css('script').max_by do |node|
-        node.to_s.length
-      end.inner_text.match(/self\.__next_f\.push\(\[1,(.*)\]/)[1]
-      programs = find_programs(JSON.parse(JSON.parse(script)[2..]))['programs']
-      programs.map do |program|
-        {
-          id: program['programId'],
-          name: program['name'],
-          company_handle: program['companyHandle'],
-          handle: program['handle'],
-          url: 'https://www.intigriti.com/programs/' + encode(program['companyHandle']) + '/' +
-            encode(program['handle']) + '/detail',
-          status: STATUSES[program['status']],
-          confidentiality_level: CONFIDENTIALITY_LEVELS[program['confidentialityLevel']],
-          tacRequired: program['tacRequired'],
-          twoFactorRequired: program['twoFactorRequired'],
-          min_bounty: program['minBounty'],
-          max_bounty: program['maxBounty']
-        }
+      programs = []
+      i = 0
+      page_size = 24
+      loop do
+        page = ::JSON.parse(::SsrfFilter.post('https://aazuksyar4-dsn.algolia.net/1/indexes/*/queries', params: {
+          'x-algolia-api-key': '70d8a3400477311f27ce002ec953aeb0',
+          'x-algolia-application-id': 'AAZUKSYAR4'
+        }, body: JSON.generate({
+          requests: [
+            {
+              indexName: 'programs_prod',
+              hitsPerPage: page_size,
+              page: i,
+              query: ''
+            }
+          ]
+        })).body)
+
+        programs.concat(page['results'][0]['hits'].map do |program|
+          {
+            id: program['programId'],
+            name: program['name'],
+            company_handle: program['companyHandle'],
+            handle: program['handle'],
+            url: 'https://www.intigriti.com/programs/' + encode(program['companyHandle']) + '/' +
+              encode(program['handle']) + '/detail',
+            status: STATUSES[program['status']],
+            confidentiality_level: CONFIDENTIALITY_LEVELS[program['confidentialityLevel']],
+            tacRequired: program['tacRequired'],
+            twoFactorRequired: program['twoFactorRequired'],
+            min_bounty: program['minBounty'],
+            max_bounty: program['maxBounty']
+          }
+        end)
+
+        i += 1
+        break if page['results'][0]['hits'].length < page_size
       end
+
+      programs
     end
 
     def program_scopes(program)

@@ -8,36 +8,23 @@ describe BountyTargets::Intigriti do
   end
 
   it 'fetches a list of programs' do
-    programs = File.read('spec/fixtures/intigriti/programs.html')
-    stub_request(:get, %r{/programs}).with(headers: {host: 'www.intigriti.com'})
+    programs = File.read('spec/fixtures/intigriti/programs.json')
+    stub_request(:post, %r{/1/indexes/\*/queries}).with(headers: {host: 'aazuksyar4-dsn.algolia.net'})
       .to_return(status: 200, body: programs)
     expect(client.directory_index).to eq(
       [
         {
-          company_handle: 'arbonia',
+          company_handle: 'buhlergroup',
           confidentiality_level: 'public',
-          handle: 'arboniavdpprogram',
-          id: 'f2a437ca-68cb-455c-81ba-3b8cd1b21cb2',
+          handle: 'buhlergroupvdp',
+          id: '4afd6f0f-40a3-4f6d-a332-56b5970d12a0',
           max_bounty: {'currency' => 'EUR', 'value' => 0},
           min_bounty: {'currency' => 'EUR', 'value' => 0},
-          name: 'Arbonia VDP program',
-          status: 'suspended',
+          name: 'Bühler Group VDP',
+          status: 'open',
           tacRequired: false,
           twoFactorRequired: false,
-          url: 'https://www.intigriti.com/programs/arbonia/arboniavdpprogram/detail'
-        },
-        {
-          company_handle: 'intigriti',
-          confidentiality_level: 'public',
-          handle: 'fastlane',
-          id: 'e56d6838-a1da-46d4-9d89-8154e017ae89',
-          max_bounty: {'currency' => 'EUR', 'value' => 0},
-          min_bounty: {'currency' => 'EUR', 'value' => 0},
-          name: 'Submit your research - Fast lane',
-          status: 'suspended',
-          tacRequired: false,
-          twoFactorRequired: true,
-          url: 'https://www.intigriti.com/programs/intigriti/fastlane/detail'
+          url: 'https://www.intigriti.com/programs/buhlergroup/buhlergroupvdp/detail'
         }
       ]
     )
