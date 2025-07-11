@@ -112,12 +112,12 @@ module BountyTargets
 
     def program_scopes(program)
       url = "https://app.intigriti.com/api/core/public/programs/#{encode(program[:company_handle])}/#{encode(program[:handle])}"
-      targets = (JSON.parse(SsrfFilter.get(url).body)['domains'].max_by do |domains|
+      targets = (JSON.parse(SsrfFilter.get(url).body)['assets'].max_by do |domains|
         domains['createdAt']
       end)['content'].map do |content|
         {
-          type: TYPES[content['type']],
-          endpoint: content['endpoint'],
+          type: TYPES[content['typeId']],
+          endpoint: content['name'],
           description: content['description'],
           impact: TIERS[content['bountyTierId']]
         }

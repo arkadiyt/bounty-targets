@@ -7,13 +7,13 @@
   "handle": "intel",
   "name": "Intel®",
   "description": "Intel® Bug Bounty Program\nIntel Corporation believes that forging relationships with security researchers and fostering security research is a crucial part of our Security First Pledge. We encourage security researchers to work with us to mitigate and coordinate the disclosure of potential security vulnerabilities. By submitting your report, you agree to the terms of the Intel® Bug Bounty Program. Intel reserves the right to alter the terms and conditions of this program at its sole discretion.\n",
-  "domains": [
+  "assets": [
       {
           "content": [
               {
                   "id": "dd6d5718-737b-44f3-a833-fa74d0462f1f",
-                  "type": 6,
-                  "endpoint": "(Hardware)\tProcessor (inclusive of micro-code ROM + updates)",
+                  "typeId": 6,
+                  "name": "(Hardware)\tProcessor (inclusive of micro-code ROM + updates)",
                   "bountyTierId": 4,
                   "description": null
               }
@@ -24,8 +24,8 @@
         "content": [
             {
                 "id": "dd6d5718-737b-44f3-a833-fa74d0462f1f",
-                "type": 6,
-                "endpoint": "endpoint",
+                "typeId": 6,
+                "name": "endpoint",
                 "bountyTierId": 4,
                 "description": null
             }
