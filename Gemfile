@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 gem 'kramdown', '~> 2.4.0'
 gem 'nokogiri', '~> 1.18.8'
 gem 'sentry-raven', '~> 3.1.2'
-gem 'ssrf_filter', '~> 1.0.8'
+gem 'ssrf_filter', '~> 1.3.0'
 gem 'twingly-url', '~> 6.0.4'
 
 group :development, :test do
