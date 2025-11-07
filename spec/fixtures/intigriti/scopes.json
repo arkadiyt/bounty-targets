@@ -7,7 +7,7 @@
   "handle": "intel",
   "name": "Intel®",
   "description": "Intel® Bug Bounty Program\nIntel Corporation believes that forging relationships with security researchers and fostering security research is a crucial part of our Security First Pledge. We encourage security researchers to work with us to mitigate and coordinate the disclosure of potential security vulnerabilities. By submitting your report, you agree to the terms of the Intel® Bug Bounty Program. Intel reserves the right to alter the terms and conditions of this program at its sole discretion.\n",
-  "assets": [
+  "assetsAndGroups": [
       {
           "content": [
               {
