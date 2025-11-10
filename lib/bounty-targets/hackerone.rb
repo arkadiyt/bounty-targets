@@ -121,7 +121,6 @@ module BountyTargets
               {
                 _or: [
                   {submission_state:{_eq:open}},
-                  {submission_state:{_eq:api_only}},
                   {external_program:{}}
                 ]},
                 {_not:{external_program:{}}},
