@@ -112,14 +112,21 @@ module BountyTargets
 
     def program_scopes(program)
       url = "https://app.intigriti.com/api/core/public/programs/#{encode(program[:company_handle])}/#{encode(program[:handle])}"
-      targets = (JSON.parse(SsrfFilter.get(url).body)['assetsAndGroups'].max_by do |domains|
+
+      content = (JSON.parse(SsrfFilter.get(url).body)['assetsAndGroups'].max_by do |domains|
         domains['createdAt']
-      end)['content'].map do |content|
+      end)['content']
+
+      flattened_content = content.flat_map do |target|
+        target.key?('assets') ? target['assets'] : [target]
+      end
+
+      targets = flattened_content.map do |target|
         {
-          type: TYPES[content['typeId']],
-          endpoint: content['name'],
-          description: content['description'],
-          impact: TIERS[content['bountyTierId']]
+          type: TYPES[target['typeId']],
+          endpoint: target['name'],
+          description: target['description'],
+          impact: TIERS[target['bountyTierId']]
         }
       end.group_by do |scope|
         scope[:impact] != 'Out of scope'
