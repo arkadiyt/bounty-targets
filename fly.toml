@@ -13,4 +13,4 @@ kill_timeout = "5s"
   GIT_HOST = "git@github.com:arkadiyt/bounty-targets-data.git"
 
 [processes]
-  cron = "bash -c 'env > /etc/environment && cron -f'"
+  cron = "bash -c \"env > /etc/environment && cronitor configure --api-key $CRONITOR && cron -f\""

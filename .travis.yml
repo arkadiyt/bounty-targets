@@ -1,8 +1,0 @@
-language: ruby
-dist: trusty
-rvm:
-  - ruby-2.6.6
-script:
-  - bundle exec bundler-audit
-  - bundle exec rubocop
-  - bundle exec rspec
