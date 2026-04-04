@@ -7,6 +7,13 @@ require 'bundler/setup'
 require 'sentry-raven'
 require 'bounty-targets/cli'
 
+begin
+  require 'pry-byebug'
+  require 'dotenv/load'
+rescue LoadError
+  # Do nothing when not running in development mode
+end
+
 Raven.configure do |config|
   config.dsn = ENV['SENTRY_DSN'] if ENV.key?('SENTRY_DSN')
   config.excluded_exceptions = %w[Interrupt] # Don't alert for ctrl-c

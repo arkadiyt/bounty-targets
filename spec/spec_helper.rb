@@ -4,6 +4,7 @@ require 'coveralls'
 Coveralls.wear!
 ENV['COVERALLS_NOISY'] = '1'
 require 'webmock/rspec'
+require 'pry-byebug'
 require 'bounty-targets'
 
 Object.class_eval do
