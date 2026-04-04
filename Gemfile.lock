@@ -4,7 +4,7 @@ GEM
     addressable (2.8.9)
       public_suffix (>= 2.0.2, < 8.0)
     ast (2.4.3)
-    bigdecimal (4.0.1)
+    bigdecimal (4.1.1)
     bundler-audit (0.9.3)
       bundler (>= 1.2.0)
       thor (~> 1.0)
@@ -21,6 +21,7 @@ GEM
       rexml
     diff-lcs (1.6.2)
     docile (1.4.1)
+    dotenv (3.2.0)
     faraday (2.14.1)
       faraday-net_http (>= 2.0, < 3.5)
       json
@@ -29,7 +30,7 @@ GEM
       net-http (~> 0.5)
     hashdiff (1.2.1)
     io-console (0.8.2)
-    json (2.18.1)
+    json (2.19.3)
     kramdown (2.4.0)
       rexml
     logger (1.7.0)
@@ -37,14 +38,14 @@ GEM
     mize (0.6.1)
     net-http (0.9.1)
       uri (>= 0.11.1)
-    nokogiri (1.19.1-aarch64-linux-gnu)
+    nokogiri (1.19.2-aarch64-linux-gnu)
       racc (~> 1.4)
-    nokogiri (1.19.1-arm64-darwin)
+    nokogiri (1.19.2-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.19.1-x86_64-linux-gnu)
+    nokogiri (1.19.2-x86_64-linux-gnu)
       racc (~> 1.4)
-    parallel (1.27.0)
-    parser (3.3.10.2)
+    parallel (1.28.0)
+    parser (3.3.11.1)
       ast (~> 2.4.1)
       racc
     prism (1.9.0)
@@ -59,7 +60,7 @@ GEM
     rainbow (3.1.1)
     readline (0.0.4)
       reline
-    regexp_parser (2.11.3)
+    regexp_parser (2.12.0)
     reline (0.6.3)
       io-console (~> 0.5)
     rexml (3.4.4)
@@ -86,7 +87,7 @@ GEM
       rubocop-ast (>= 1.20.1, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 3.0)
-    rubocop-ast (1.49.0)
+    rubocop-ast (1.49.1)
       parser (>= 3.3.7.2)
       prism (~> 1.7)
     rubocop-rspec (2.12.1)
@@ -122,11 +123,13 @@ GEM
 PLATFORMS
   aarch64-linux
   arm64-darwin-22
+  arm64-darwin-25
   x86_64-linux
 
 DEPENDENCIES
   bundler-audit (~> 0.9.1)
   coveralls (~> 0.8.23)
+  dotenv (~> 3.2.0)
   kramdown (~> 2.4.0)
   nokogiri (~> 1.19.0)
   pry-byebug (~> 3.10.1)

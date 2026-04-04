@@ -113,9 +113,9 @@ module BountyTargets
     def program_scopes(program)
       url = "https://app.intigriti.com/api/core/public/programs/#{encode(program[:company_handle])}/#{encode(program[:handle])}"
 
-      content = (JSON.parse(SsrfFilter.get(url).body)['assetsAndGroups'].max_by do |domains|
+      content = (JSON.parse(SsrfFilter.get(url).body)['assetsCollection'].max_by do |domains|
         domains['createdAt']
-      end)['content']
+      end)['content']['assetsAndGroups']
 
       flattened_content = content.flat_map do |target|
         target.key?('assets') ? target['assets'] : [target]
