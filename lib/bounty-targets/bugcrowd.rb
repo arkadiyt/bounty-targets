@@ -38,7 +38,7 @@ module BountyTargets
         response = JSON.parse(SsrfFilter.get(uri).body)
 
         programs = response['engagements'].map do |program|
-          "https://bugcrowd.com#{program['briefUrl']}"
+          program['briefUrl']
         end
         break if programs.empty?
 
