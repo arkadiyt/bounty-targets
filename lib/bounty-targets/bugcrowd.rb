@@ -50,63 +50,13 @@ module BountyTargets
     end
 
     def parse_program(program_link)
-      return parse_engagement(program_link) if program_link.start_with?('https://bugcrowd.com/engagements/')
-
-      uri = URI(program_link)
-      response = ::SsrfFilter.get(uri).body
-      document = ::Nokogiri::HTML(response)
-
-      name = document.css('h1.bc-panel__title').inner_text.strip
-      raise StandardError, 'Bugcrowd program came back blank' if name.empty?
-
-      allows_disclosure = document.css('div.bc-panel__main').all? do |node|
-        node.inner_text !~ /This program does not allow disclosure/
-      end
-
-      safe_harbor = document.css('.bc-stat__title').find do |node|
-        node.inner_text =~ /safe harbor/i
-      end
-      safe_harbor_value = case safe_harbor&.inner_text&.strip
-      when 'Safe harbor'
-        'full'
-      when 'Partial safe harbor'
-        'partial'
-      else
-        'none'
-      end
-
-      max_payout = document.css('.bc-program-card__reward')
-      max_payout_amount = max_payout.inner_text.strip.match(/\A.* – \$([0-9,]+).*per vulnerability\Z/m)
-      max_payout_amount = if max_payout_amount.nil?
-        0
-      else
-        max_payout_amount[1].gsub(',', '').to_i
-      end
-
-      uri.path += '/target_groups.json'
-      groups = ::JSON.parse(::SsrfFilter.get(uri).body)['groups'] || {}
-      {
-        name: name,
-        url: program_link,
-        allows_disclosure: allows_disclosure,
-        managed_by_bugcrowd: true, # Bugcrowd seems to have removed the flag for this / all programs are managed
-        safe_harbor: safe_harbor_value,
-        max_payout: max_payout_amount,
-        targets: {
-          in_scope: scopes_to_hashes(uri, groups.select { |group| group['in_scope'] == true }),
-          out_of_scope: scopes_to_hashes(uri, groups.select { |group| group['in_scope'] == false })
-        }
-      }
-    end
-
-    def parse_engagement(program_link)
       uri = URI(program_link)
       response = ::SsrfFilter.get(uri).body
       document = ::Nokogiri::HTML(response)
 
       brief_url = ::JSON.parse(document.css('div[data-react-class="ResearcherEngagementBrief"]')
         .attr('data-api-endpoints').value)['engagementBriefApi']['getBriefVersionDocument']
-      brief = ::JSON.parse(::SsrfFilter.get(URI("https://bugcrowd.com/#{brief_url}.json")).body)
+      brief = ::JSON.parse(::SsrfFilter.get(URI("https://#{uri.host}/#{brief_url}.json")).body)
       data = brief['data']['brief']
       brief_scope = brief['data']['scope']
       {
