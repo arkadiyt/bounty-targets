@@ -14,7 +14,7 @@ module BountyTargets
         retryable do
           parse_program(program_link)
         end
-      end
+      end.compact
     end
 
     def uris
@@ -38,7 +38,7 @@ module BountyTargets
         response = JSON.parse(SsrfFilter.get(uri).body)
 
         programs = response['engagements'].map do |program|
-          program['briefUrl']
+          "https://bugcrowd.com#{program['briefUrl']}"
         end
         break if programs.empty?
 
@@ -51,8 +51,10 @@ module BountyTargets
 
     def parse_program(program_link)
       uri = URI(program_link)
-      response = ::SsrfFilter.get(uri).body
-      document = ::Nokogiri::HTML(response)
+      response = ::SsrfFilter.get(uri)
+      return if response.code == '403'
+
+      document = ::Nokogiri::HTML(response.body)
 
       brief_url = ::JSON.parse(document.css('div[data-react-class="ResearcherEngagementBrief"]')
         .attr('data-api-endpoints').value)['engagementBriefApi']['getBriefVersionDocument']
