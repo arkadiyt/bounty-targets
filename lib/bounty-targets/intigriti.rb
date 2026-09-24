@@ -72,19 +72,25 @@ module BountyTargets
       i = 0
       page_size = 24
       loop do
-        page = ::JSON.parse(::SsrfFilter.post('https://aazuksyar4-dsn.algolia.net/1/indexes/*/queries', params: {
-          'x-algolia-api-key': '70d8a3400477311f27ce002ec953aeb0',
-          'x-algolia-application-id': 'AAZUKSYAR4'
-        }, body: JSON.generate({
-          requests: [
-            {
-              indexName: 'programs_prod',
-              hitsPerPage: page_size,
-              page: i,
-              query: ''
-            }
-          ]
-        })).body)
+        page = ::JSON.parse(::SsrfFilter.post('https://aazuksyar4-dsn.algolia.net/1/indexes/*/queries',
+          headers: {
+            Referer: 'https://www.intigriti.com/'
+          },
+          params: {
+            'x-algolia-api-key': '70d8a3400477311f27ce002ec953aeb0',
+            'x-algolia-application-id': 'AAZUKSYAR4'
+          },
+          body: JSON.generate({
+            requests: [
+              {
+                indexName: 'programs_prod',
+                hitsPerPage: page_size,
+                page: i,
+                query: ''
+              }
+            ]
+          }))
+        .body)
 
         programs.concat(page['results'][0]['hits'].map do |program|
           {
